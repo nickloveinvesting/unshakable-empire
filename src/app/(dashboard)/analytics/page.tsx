@@ -1,5 +1,6 @@
 import React from 'react';
-import { BarChart3 } from 'lucide-react';
+import Link from 'next/link';
+import { BarChart3, ArrowLeft } from 'lucide-react';
 import { createClient } from '@/lib/supabase/server';
 import { getCompletionTimeline, getConfidenceTrend, getHeatmapData } from '@/app/actions/analytics';
 import { CompletionTimeline } from '@/components/analytics/CompletionTimeline';
@@ -87,6 +88,15 @@ export default async function AnalyticsPage() {
   return (
     <div className="min-h-screen bg-black py-8 px-4">
       <div className="max-w-6xl mx-auto">
+        {/* Back link */}
+        <Link
+          href="/dashboard"
+          className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 rounded-lg px-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Dashboard
+        </Link>
+
         {/* Header */}
         <div className="flex items-center gap-3 mb-8">
           <div className="w-12 h-12 bg-amber-400/10 border border-amber-400/20 rounded-xl flex items-center justify-center">
