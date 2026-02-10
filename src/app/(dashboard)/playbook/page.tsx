@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 import { PLAYBOOK_ENTRIES } from '@/data/playbook';
 import { PlaybookEntry } from '@/components/playbook/PlaybookEntry';
 import { redirect } from 'next/navigation';
-import { BookOpen, ArrowRight } from 'lucide-react';
+import { BookOpen, ArrowRight, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function PlaybookPage() {
@@ -71,6 +71,15 @@ export default async function PlaybookPage() {
     return (
       <div className="min-h-screen bg-black p-6">
         <div className="max-w-5xl mx-auto">
+          {/* Back link */}
+          <Link
+            href="/dashboard"
+            className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 rounded-lg px-2"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Dashboard
+          </Link>
+
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-3">
               <BookOpen className="w-8 h-8 text-amber-400" />
@@ -105,6 +114,15 @@ export default async function PlaybookPage() {
   return (
     <div className="min-h-screen bg-black p-6">
       <div className="max-w-5xl mx-auto">
+        {/* Back link */}
+        <Link
+          href="/dashboard"
+          className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 rounded-lg px-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Dashboard
+        </Link>
+
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">
