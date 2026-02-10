@@ -1,729 +1,851 @@
 import type { DayProtocol } from "@/types/protocol";
 
 export const assetsProtocol: DayProtocol[] = [
+  // ─── WEEK 1: ROLE AUDIT (Days 1–7) ───
   {
     day: 1,
-    title: "Net Worth Snapshot",
-    intention: "Establish a clear baseline of your total net worth to measure progress.",
+    title: "Team Roster and Reality Check",
+    intention:
+      "Map every team member and compare what they actually do each day to what their job description says they should do.",
     tasks: [
       {
-        id: "a1-t1",
-        label: "List all assets and their current values",
-        description: "Include bank accounts, investment accounts, retirement accounts, real estate, vehicles, and personal property.",
+        id: "d1-t1",
+        label: "List every team member and their current role title",
+        description:
+          "Create a simple roster: name, title, department, and who they report to. Include part-time, contract, and virtual team members.",
       },
       {
-        id: "a1-t2",
-        label: "List all liabilities and outstanding balances",
-        description: "Include mortgage, auto loans, student loans, credit cards, personal loans, and any other debts.",
+        id: "d1-t2",
+        label: "Document what each person ACTUALLY does each day",
+        description:
+          "Shadow or interview each team member. Write down the real tasks they spend time on — not the idealized version, the truth.",
       },
       {
-        id: "a1-t3",
-        label: "Calculate your net worth (assets minus liabilities)",
-        description: "This single number is the most important metric in your financial life.",
+        id: "d1-t3",
+        label: "Compare actual daily activities to each person's job description",
+        description:
+          "Place the job description next to the reality list. Highlight every gap, extra duty, and missing responsibility. This is your baseline.",
       },
     ],
     educationalContent:
-      "Your net worth is the scoreboard of your financial life. It tells you whether you are building wealth or falling behind. Track it monthly and watch the trend line rather than fixating on any single data point. A useful rule: your target net worth by a given age should be roughly (your age x annual pre-tax income / 10). If you are 40 earning $100,000, target a net worth of $400,000. This is a guideline, not a judgment -- what matters most is the direction you are moving.",
+      "Most businesses operate with job descriptions that were written once and never updated. The gap between what someone was hired to do and what they actually do every day is where inefficiency hides. Team turnover is the biggest expense in any business — you recruit, interview, hire, onboard, and train someone, and then they walk out. That cycle repeats until you build a structure people want to stay inside. Today you start with radical honesty: what does your team actually look like right now? You cannot architect something you have not measured.",
   },
   {
     day: 2,
-    title: "Investment Account Inventory",
-    intention: "Map every investment account you own and understand what each holds.",
+    title: "Role Outcomes vs. Reality",
+    intention:
+      "Define the top three outcomes each role should deliver and compare them to what is actually happening.",
     tasks: [
       {
-        id: "a2-t1",
-        label: "List all investment and retirement accounts",
-        description: "401(k), IRA, Roth IRA, brokerage, HSA, 529 plans, and any old employer retirement accounts.",
+        id: "d2-t1",
+        label: "Define the top 3 outcomes each role should deliver",
+        description:
+          "For every position on your roster, write down the three most important results that role exists to produce. Think outcomes, not activities.",
       },
       {
-        id: "a2-t2",
-        label: "Log into each account and record current balances and holdings",
-        description: "Note what is invested in each account: funds, stocks, bonds, or cash sitting idle.",
+        id: "d2-t2",
+        label: "Rate each person's current delivery against those outcomes",
+        description:
+          "Score 1-5 for each outcome: 1 = not happening, 3 = inconsistent, 5 = consistently delivered. Be honest, not generous.",
       },
       {
-        id: "a2-t3",
-        label: "Identify any orphaned or forgotten accounts",
-        description: "Old 401(k)s from previous employers are frequently forgotten. Check your records.",
+        id: "d2-t3",
+        label: "Identify the biggest outcome gaps across the team",
+        description:
+          "Where is the greatest distance between what the role should produce and what it actually produces? These gaps are costing you money every day.",
       },
     ],
     educationalContent:
-      "Americans leave behind an estimated $1.65 trillion in forgotten retirement accounts from previous employers. If you have changed jobs multiple times, you may have old 401(k) accounts sitting with former employers. These accounts often remain invested but may be in suboptimal fund choices with higher fees. Consolidating old accounts into a rollover IRA gives you more control, lower fees, and better investment options. However, if your old employer plan has institutional-class funds with very low expense ratios, it may be worth keeping. Evaluate each account individually.",
+      "People stay because they believe in the vision. Revolving doors happen when they lose hope. When a team member does not know what winning looks like in their role, they drift. They fill their day with busy work instead of meaningful output. Defining three clear outcomes per role gives every person a scoreboard. It also gives you, as the leader, a fair and objective way to evaluate performance. Remember — we removed the word sales. We solve problems. Every role on your team exists to solve a specific set of problems. Define those problems clearly and you define the role clearly.",
   },
   {
     day: 3,
-    title: "Asset Allocation Assessment",
-    intention: "Understand your current investment mix and whether it matches your risk tolerance and time horizon.",
+    title: "Right Seat, Right Person Matrix",
+    intention:
+      "Build a matrix that rates every team member on competency and cultural fit to determine who belongs where.",
     tasks: [
       {
-        id: "a3-t1",
-        label: "Calculate your overall asset allocation across all accounts",
-        description: "What percentage is in stocks, bonds, real estate, cash, and alternative investments?",
+        id: "d3-t1",
+        label: "Create a 'right seat, right person' matrix",
+        description:
+          "Build a two-axis grid: X-axis = competency (can they do the job?), Y-axis = cultural fit (do they align with your values?). Plot every team member.",
       },
       {
-        id: "a3-t2",
-        label: "Compare your allocation to a target based on your age and risk tolerance",
-        description: "A common starting point: (110 minus your age) = stock percentage, remainder in bonds and alternatives.",
+        id: "d3-t2",
+        label: "Rate each person on competency (1-10) and cultural fit (1-10)",
+        description:
+          "High competency + high culture = keeper. High competency + low culture = dangerous. Low competency + high culture = trainable. Low both = exit.",
       },
       {
-        id: "a3-t3",
-        label: "Identify any significant over- or under-allocations",
-        description: "Look for drift: has market movement pushed your allocation away from your target?",
+        id: "d3-t3",
+        label: "Identify immediate actions for each quadrant",
+        description:
+          "Document one action per person based on their quadrant: invest, train, coach, or begin a transition plan. Do not ignore the data.",
       },
     ],
     educationalContent:
-      "Asset allocation -- the mix of stocks, bonds, and other assets -- determines approximately 90% of your long-term investment returns. Individual stock selection matters far less than most people think. Your allocation should reflect three factors: time horizon (when you need the money), risk tolerance (how much volatility you can stomach), and risk capacity (how much loss you can financially absorb). A 30-year-old saving for retirement 35 years away can afford 80-90% stocks. A 60-year-old five years from retirement needs more stability. The key is having a deliberate allocation, not one that happened by accident.",
+      "The Unshakable Culture is a team that not only drinks the Kool-Aid, but they make it. A person who is highly skilled but culturally toxic will poison your entire organization. They hit their numbers while destroying morale around them. Conversely, someone who embodies your values but lacks skill is worth investing in — culture is harder to teach than competency. The matrix forces you to separate emotion from evaluation. You may love someone personally but if they score low on both axes, keeping them is unfair to the rest of your team who carries the weight. Build the matrix. Trust the data.",
   },
   {
     day: 4,
-    title: "Retirement Account Optimization",
-    intention: "Maximize the tax advantages of your retirement accounts.",
+    title: "Overlap and Ownership Audit",
+    intention:
+      "Identify roles with overlapping responsibilities and assign clear ownership to eliminate confusion.",
     tasks: [
       {
-        id: "a4-t1",
-        label: "Verify you are contributing enough to get the full employer 401(k) match",
-        description: "Not capturing the full match is leaving free money on the table -- this is priority number one.",
+        id: "d4-t1",
+        label: "Identify roles with overlapping responsibilities",
+        description:
+          "Review your Day 1 activity lists. Where are two or more people doing the same thing? Where does work fall through the cracks because everyone assumes someone else owns it?",
       },
       {
-        id: "a4-t2",
-        label: "Review current contribution rates against annual limits",
-        description: "2024 limits: $23,000 for 401(k), $7,000 for IRA, plus $7,500/$1,000 catch-up if 50+.",
+        id: "d4-t2",
+        label: "Document who should own each overlapping responsibility",
+        description:
+          "For every overlap, assign a single owner. One throat to choke, one person to praise. Shared ownership is no ownership.",
       },
       {
-        id: "a4-t3",
-        label: "Determine whether Roth or Traditional contributions are better for your situation",
-        description: "If you expect higher taxes in retirement, Roth contributions grow and are withdrawn tax-free.",
+        id: "d4-t3",
+        label: "Communicate ownership changes to affected team members",
+        description:
+          "Have a direct conversation with each person affected. Explain what they now own, what they no longer own, and why the change was made.",
       },
     ],
     educationalContent:
-      "The employer 401(k) match is the highest guaranteed return in investing. A 50% match on 6% of salary is an instant 50% return on your money before any market gains. Always contribute at least enough to capture the full match. Beyond that, the Roth vs. Traditional decision depends on whether you believe your tax rate will be higher or lower in retirement. Early-career professionals in lower brackets often benefit from Roth (pay lower taxes now, withdraw tax-free later). High earners in peak earning years may benefit from Traditional (deduct at high rates now, withdraw at potentially lower rates later). Ideally, maintain both types for tax diversification.",
+      "When two people are responsible for something, no one is responsible. Overlapping duties create confusion, duplicated effort, and finger-pointing when things go wrong. The most common overlaps happen in customer communication, inventory management, and follow-up tasks. Clarity of ownership is one of the fastest ways to increase team output without adding headcount. Your business runs whether you are there or not — that creates scalability. But scalability requires every person knowing exactly what they own. Today you eliminate ambiguity. Tomorrow your team operates faster because nobody is waiting for someone else to act.",
   },
   {
     day: 5,
-    title: "Investment Fee Audit",
-    intention: "Identify and eliminate excessive investment fees that silently erode your wealth.",
+    title: "Authority Levels by Role",
+    intention:
+      "Define clear authority levels for each role so team members know what they can decide without asking you.",
     tasks: [
       {
-        id: "a5-t1",
-        label: "Look up the expense ratio of every fund in your portfolio",
-        description: "Check fund fact sheets or Morningstar for each fund's annual expense ratio.",
+        id: "d5-t1",
+        label: "List the most common decisions each team member faces daily",
+        description:
+          "Think about refunds, scheduling, pricing, vendor orders, customer complaints, hiring temps, and spending. What decisions come to you that should not?",
       },
       {
-        id: "a5-t2",
-        label: "Calculate the dollar amount you pay in fees annually",
-        description: "Multiply each account balance by its expense ratio to see the real cost.",
+        id: "d5-t2",
+        label: "Assign authority levels to each decision type",
+        description:
+          "Use three levels: (1) Decide and act — no approval needed. (2) Decide and inform — act, then tell me. (3) Recommend and wait — propose a solution, I approve. Document these for every role.",
       },
       {
-        id: "a5-t3",
-        label: "Identify any funds with expense ratios above 0.50%",
-        description: "Broad-market index funds are available for 0.03-0.10%. Anything above 0.50% needs justification.",
+        id: "d5-t3",
+        label: "Share the authority framework with each team member",
+        description:
+          "Walk each person through their decision rights. Make it clear: 'These are yours. Own them. I trust you.' Watch their confidence shift.",
       },
     ],
     educationalContent:
-      "Investment fees compound against you just as returns compound for you. A 1% annual fee on a $500,000 portfolio costs $5,000 per year. Over 30 years, that 1% fee can consume over 25% of your total wealth. The shift from actively managed funds (average expense ratio 0.60-1.00%) to low-cost index funds (0.03-0.10%) is one of the most impactful financial moves you can make. Research consistently shows that after fees, the vast majority of actively managed funds underperform their benchmark index over 10+ year periods. Keep your fees below 0.20% on average and you will outperform most investors simply by paying less in drag.",
+      "If every decision flows through you, you are not a leader — you are a bottleneck. The number one reason business owners cannot step away is that they have never clearly delegated decision-making authority. Your team is not incapable; they are unclear. When someone asks you a question they should be able to answer themselves, the problem is not them — it is that you never gave them explicit permission to decide. Authority levels remove the guesswork. They also build confidence and speed. A team that can make decisions without you is a team that can scale without you. That is the goal: your business runs whether you are there or not.",
   },
   {
     day: 6,
-    title: "Index Fund Strategy",
-    intention: "Build a simple, effective core portfolio using low-cost index funds.",
+    title: "Weekly KPIs by Role",
+    intention:
+      "Write three measurable KPIs per role that each team member should hit every week.",
     tasks: [
       {
-        id: "a6-t1",
-        label: "Research a three-fund portfolio strategy",
-        description: "A total US stock market fund, a total international fund, and a total bond market fund can cover 100% of your needs.",
+        id: "d6-t1",
+        label: "Write 3 measurable KPIs for each role",
+        description:
+          "KPIs must be specific and numeric. Not 'provide great service' but 'respond to every customer inquiry within 2 hours.' Not 'sell more' but 'close 5 new accounts per week.'",
       },
       {
-        id: "a6-t2",
-        label: "Compare index fund options at your brokerage",
-        description: "Vanguard, Fidelity, and Schwab all offer near-zero-cost index funds. Compare expense ratios.",
+        id: "d6-t2",
+        label: "Verify each KPI is within the team member's control",
+        description:
+          "A KPI someone cannot influence is demoralizing, not motivating. Make sure every metric reflects effort and skill, not external luck.",
       },
       {
-        id: "a6-t3",
-        label: "Determine your target allocation among the three funds",
-        description: "Example: 60% US stock, 25% international stock, 15% bonds. Adjust for your age and risk tolerance.",
+        id: "d6-t3",
+        label: "Set baseline targets using last month's actual performance data",
+        description:
+          "Do not set aspirational targets on day one. Start with current reality, then raise the bar incrementally. People need to win early.",
       },
     ],
     educationalContent:
-      "The three-fund portfolio is one of the most elegant and effective investment strategies available. It provides exposure to thousands of stocks and bonds worldwide in just three funds. John Bogle, founder of Vanguard, championed this approach, and decades of data support it. The beauty is its simplicity: you avoid analysis paralysis, sector bets, and the temptation to time the market. Rebalance once or twice per year, increase contributions when possible, and let time and compound growth do the work. This strategy outperforms the vast majority of professional money managers over 20+ year periods.",
+      "What gets measured gets managed. But what gets measured poorly gets gamed. The difference between a useful KPI and a destructive one is whether it measures the outcome you actually want. If you measure call volume, people will make short, useless calls. If you measure resolution rate, people will solve problems. Choose KPIs that align with the outcomes you defined on Day 2. Three per role is enough — more than five and people lose focus. Weekly measurement gives fast feedback loops. Monthly is too slow to course-correct. People stay because they believe in the vision, but they thrive when they can see their own progress on a scoreboard they trust.",
   },
   {
     day: 7,
-    title: "Tax-Loss Harvesting",
-    intention: "Learn to use investment losses strategically to reduce your tax bill.",
+    title: "Week 1 Review — Biggest Team Gap",
+    intention:
+      "Review the entire first week of audit work, identify your single biggest team gap, and commit to one action to close it.",
     tasks: [
       {
-        id: "a7-t1",
-        label: "Review your taxable brokerage account for positions with unrealized losses",
-        description: "Any position currently worth less than what you paid for it has a harvestable loss.",
+        id: "d7-t1",
+        label: "Review all notes from Days 1-6",
+        description:
+          "Pull together your roster, outcome gaps, right-seat matrix, ownership assignments, authority levels, and KPIs. Look at the full picture.",
       },
       {
-        id: "a7-t2",
-        label: "Understand wash sale rules before making any trades",
-        description: "You cannot buy a substantially identical security within 30 days before or after selling at a loss.",
+        id: "d7-t2",
+        label: "Identify your single biggest team gap",
+        description:
+          "What is the one thing that, if fixed, would have the largest positive impact on team performance? A missing role? A wrong-seat person? A broken process?",
       },
       {
-        id: "a7-t3",
-        label: "Calculate potential tax savings from harvesting current losses",
-        description: "Capital losses offset capital gains dollar-for-dollar, plus up to $3,000 of ordinary income annually.",
+        id: "d7-t3",
+        label: "Define one specific action to close that gap this week",
+        description:
+          "Write down the action, the deadline, and who is responsible. Do not list five things — pick one and execute. Momentum beats perfection.",
       },
     ],
     educationalContent:
-      "Tax-loss harvesting turns market downturns into tax advantages. When you sell an investment at a loss in a taxable account, you can use that loss to offset capital gains and up to $3,000 of ordinary income per year. Unused losses carry forward indefinitely. The key rule to remember is the wash sale rule: if you buy a substantially identical security within 30 days of selling at a loss, the IRS disallows the deduction. The workaround is to replace the sold position with a similar but not identical fund -- for example, selling a Vanguard S&P 500 fund and buying a Fidelity total market fund. This maintains your market exposure while capturing the tax benefit.",
+      "Week 1 was about seeing clearly. You audited roles, outcomes, people, ownership, authority, and KPIs. You now have more clarity about your team than most business owners ever achieve. But clarity without action is just awareness. The most dangerous trap at this stage is trying to fix everything at once. Pick the single biggest gap — the one that costs you the most time, money, or energy — and attack it with focus. Team turnover is the biggest expense in business: recruit, interview, hire, onboard, train, and then they walk out. Every gap you close now reduces that cycle. Every system you install makes your team more durable.",
   },
+
+  // ─── WEEK 2: PERFORMANCE SYSTEMS (Days 8–14) ───
   {
     day: 8,
-    title: "Real Estate as an Asset Class",
-    intention: "Evaluate real estate's role in your overall investment strategy.",
+    title: "Daily Scorecard Design",
+    intention:
+      "Create a simple daily scorecard template for each team member with 3-5 key metrics they report on every day.",
     tasks: [
       {
-        id: "a8-t1",
-        label: "Calculate your current real estate exposure",
-        description: "Include primary residence equity, rental properties, REITs, and real estate funds.",
+        id: "d8-t1",
+        label: "Design a daily scorecard template",
+        description:
+          "Keep it simple: name, date, 3-5 metrics, a yes/no or numeric value for each, and one line for notes. It should take under 2 minutes to fill out.",
       },
       {
-        id: "a8-t2",
-        label: "Assess whether your real estate allocation is appropriate for your portfolio",
-        description: "Many Americans are over-allocated to real estate through their primary residence.",
+        id: "d8-t2",
+        label: "Customize the scorecard for each role using Day 6 KPIs",
+        description:
+          "Translate weekly KPIs into daily inputs. If the weekly target is 5 closed accounts, the daily metric might be 'proposals sent' or 'follow-up calls made.'",
       },
       {
-        id: "a8-t3",
-        label: "Research REIT options for real estate exposure without direct ownership",
-        description: "REITs provide real estate returns, liquidity, and diversification without being a landlord.",
+        id: "d8-t3",
+        label: "Choose a delivery format: spreadsheet, form, or app",
+        description:
+          "Use whatever your team will actually fill out. A Google Form that takes 90 seconds beats a complex dashboard nobody updates.",
       },
     ],
     educationalContent:
-      "Real estate is a powerful wealth-building tool, but many people are unintentionally over-concentrated. If your home represents 60% or more of your net worth, your wealth is highly dependent on a single illiquid asset in a single geographic market. Diversifying through publicly traded REITs (Real Estate Investment Trusts) adds real estate exposure with daily liquidity and broad geographic diversification. REITs are required to distribute at least 90% of taxable income as dividends, making them attractive for income investors. Consider holding REITs in tax-advantaged accounts since their dividends are taxed as ordinary income.",
+      "A daily scorecard does two things: it gives the team member visibility into their own performance, and it gives you early warning signals before a small problem becomes a big one. The key is simplicity. If the scorecard takes more than two minutes, compliance will drop within a week. Three to five metrics is the sweet spot — enough to capture reality, not so many that it feels like bureaucracy. The scorecard is not a surveillance tool. Frame it as a coaching tool: 'This helps me help you.' When people see their own numbers trending in the right direction, ownership and pride follow naturally.",
   },
   {
     day: 9,
-    title: "Alternative Investments",
-    intention: "Explore whether alternative investments have a place in your portfolio.",
+    title: "Scorecard Rollout",
+    intention:
+      "Share scorecards with each team member, explain expectations, and begin daily tracking.",
     tasks: [
       {
-        id: "a9-t1",
-        label: "Learn about common alternative asset classes",
-        description: "Private equity, venture capital, commodities, precious metals, cryptocurrency, collectibles, and private credit.",
+        id: "d9-t1",
+        label: "Meet with each team member individually to introduce their scorecard",
+        description:
+          "Walk through every metric. Explain why it matters, how it connects to the team's goals, and what a 'good day' looks like on their scorecard.",
       },
       {
-        id: "a9-t2",
-        label: "Assess whether you are an accredited investor",
-        description: "Income over $200K ($300K joint) or net worth over $1M (excluding primary residence) qualifies you.",
+        id: "d9-t2",
+        label: "Set the daily submission expectation",
+        description:
+          "Define when scorecards are due — end of day is standard. Make it non-negotiable but low-friction. Consistency is what creates value.",
       },
       {
-        id: "a9-t3",
-        label: "Determine an appropriate allocation to alternatives (if any)",
-        description: "Most financial planners suggest 0-15% in alternatives. Never invest more than you can afford to lose.",
+        id: "d9-t3",
+        label: "Fill out your own scorecard as the leader",
+        description:
+          "Lead by example. If you ask the team to track their metrics daily, you should track yours too. Share it visibly.",
       },
     ],
     educationalContent:
-      "Alternative investments can provide diversification benefits because they often have low correlation with traditional stocks and bonds. However, they typically come with higher fees, lower liquidity, less transparency, and more complexity. Before investing in alternatives, ensure your core portfolio of low-cost index funds is fully funded and your emergency reserves are solid. Alternatives are the icing, not the cake. Cryptocurrency, in particular, should be treated as a high-risk speculative allocation -- not a core holding. If you do include alternatives, keep them to 5-15% of your total portfolio and only use money you can afford to lose entirely.",
+      "Rollout is where most performance systems die. Leaders design a great system, email it to the team, and wonder why nobody uses it a week later. The difference is the conversation. When you sit down one-on-one and explain the scorecard, you communicate three things: I care about your growth, I am paying attention, and I am doing this too. People stay because they believe in the vision — and believing in the vision means seeing that leadership is invested in their success, not just the company's. The daily scorecard is the most granular expression of that investment.",
   },
   {
     day: 10,
-    title: "Tax-Advantaged Account Strategy",
-    intention: "Optimize the order in which you fund your tax-advantaged accounts.",
+    title: "Weekly 1-on-1 Meeting Schedule",
+    intention:
+      "Set up a recurring weekly 1-on-1 meeting with each direct report to review performance and remove obstacles.",
     tasks: [
       {
-        id: "a10-t1",
-        label: "Map out all available tax-advantaged accounts",
-        description: "401(k), IRA, Roth IRA, HSA, 529, SEP-IRA, Solo 401(k), backdoor Roth.",
+        id: "d10-t1",
+        label: "Schedule a recurring weekly 1-on-1 with each direct report",
+        description:
+          "Block 20-30 minutes per person. Same day, same time each week. Consistency signals that this meeting is a priority, not an afterthought.",
       },
       {
-        id: "a10-t2",
-        label: "Determine the optimal contribution order for your situation",
-        description: "Typical priority: 401(k) to match > HSA max > Roth IRA max > 401(k) max > taxable brokerage.",
+        id: "d10-t2",
+        label: "Create a simple 1-on-1 meeting agenda template",
+        description:
+          "Structure: (1) Review scorecard data from the week. (2) What is going well? (3) What is your biggest obstacle? (4) One thing to improve next week. (5) Anything you need from me?",
       },
       {
-        id: "a10-t3",
-        label: "Set up or increase contributions to the next account in your priority list",
-        description: "If you are not maximizing the top priority, take action today to increase contributions.",
+        id: "d10-t3",
+        label: "Communicate the purpose of 1-on-1s to the team",
+        description:
+          "Frame it clearly: 'This is YOUR meeting. It is not a performance review. It is 20 minutes every week for me to help you succeed and for you to tell me what you need.'",
       },
     ],
     educationalContent:
-      "The order in which you fund accounts matters enormously over a lifetime. The general priority is: (1) Employer 401(k) up to the full match -- this is free money. (2) Max out your HSA if eligible -- triple tax advantage. (3) Max out a Roth IRA -- tax-free growth and withdrawal. (4) Go back and max out your 401(k) to the annual limit. (5) Consider a backdoor Roth IRA if your income exceeds Roth limits. (6) Fund taxable brokerage accounts. If you are self-employed, a SEP-IRA or Solo 401(k) allows much higher contribution limits. Every dollar in a tax-advantaged account works harder than a dollar in a taxable account because you keep more of the returns.",
+      "The weekly 1-on-1 is the highest-leverage leadership activity that exists. In 20 minutes you can catch a problem before it becomes a crisis, coach a skill before it becomes a gap, and reinforce a behavior before it fades. Most managers skip 1-on-1s when they get busy — which is exactly when they are most needed. The data is clear: employees who have regular 1-on-1s with their manager are three times more likely to be engaged. Engagement drives retention, and retention eliminates the most expensive cycle in business — the revolving door of recruiting, hiring, training, and losing people.",
   },
   {
     day: 11,
-    title: "Portfolio Rebalancing",
-    intention: "Learn and implement a disciplined rebalancing strategy.",
+    title: "Performance Improvement Process",
+    intention:
+      "Document a clear, fair, and progressive performance improvement process from verbal warning to termination.",
     tasks: [
       {
-        id: "a11-t1",
-        label: "Compare your current allocation to your target allocation",
-        description: "Market movements cause drift. Check if any asset class has drifted more than 5% from target.",
+        id: "d11-t1",
+        label: "Document your performance improvement process",
+        description:
+          "Write out the steps: (1) Verbal coaching conversation. (2) Written warning with specific expectations and timeline. (3) Formal Performance Improvement Plan (PIP) with 30-day measurable goals. (4) Termination if PIP goals are not met.",
       },
       {
-        id: "a11-t2",
-        label: "Choose a rebalancing method: calendar-based or threshold-based",
-        description: "Calendar: rebalance quarterly or annually. Threshold: rebalance when any class drifts 5%+ from target.",
+        id: "d11-t2",
+        label: "Create a written warning template",
+        description:
+          "Include: date, specific behavior or metric that is below standard, the expected standard, the timeline to improve, and consequences of continued underperformance.",
       },
       {
-        id: "a11-t3",
-        label: "Execute rebalancing trades if your portfolio has drifted significantly",
-        description: "Preferably rebalance by directing new contributions to underweight classes rather than selling overweight ones.",
+        id: "d11-t3",
+        label: "Create a PIP (Performance Improvement Plan) template",
+        description:
+          "Include: specific goals with measurable targets, resources and support provided, weekly check-in dates, and a clear 30-day deadline. Fair, documented, and objective.",
       },
     ],
     educationalContent:
-      "Rebalancing is the discipline of selling what has gone up and buying what has gone down to maintain your target allocation. It feels counterintuitive but it systematically forces you to buy low and sell high. The simplest approach: set a calendar reminder to rebalance once or twice per year. When possible, rebalance by directing new contributions to the underweight asset class rather than selling (this avoids triggering taxable gains in taxable accounts). In tax-advantaged accounts like your 401(k) or IRA, there are no tax consequences to rebalancing trades, so you can rebalance freely.",
+      "Most leaders avoid difficult performance conversations because they do not have a system. Without a documented process, every situation feels personal and subjective. A written performance improvement process protects the team member (they know exactly what is expected and get a fair chance to improve), protects you (documented steps reduce legal risk), and protects the rest of the team (who watch closely to see if underperformance is tolerated). The Unshakable Culture is not about being nice — it is about being fair. Fair means clear expectations, honest feedback, real support, and real consequences. That is how you build a team that not only drinks the Kool-Aid, but makes it.",
   },
   {
     day: 12,
-    title: "Dividend Strategy",
-    intention: "Understand how dividends work and whether a dividend strategy fits your plan.",
+    title: "First 1-on-1 Using Scorecard Data",
+    intention:
+      "Conduct your first 1-on-1 meeting using real scorecard data and focus on one specific improvement area per person.",
     tasks: [
       {
-        id: "a12-t1",
-        label: "Calculate total dividend income across your portfolio",
-        description: "Check year-to-date distributions in each account to see how much passive income dividends generate.",
+        id: "d12-t1",
+        label: "Review each person's scorecard data before their 1-on-1",
+        description:
+          "Look for patterns across the week. Which metrics are consistently strong? Which are lagging? Come prepared with observations, not opinions.",
       },
       {
-        id: "a12-t2",
-        label: "Ensure dividends are set to reinvest automatically (DRIP)",
-        description: "Automatic reinvestment compounds your returns. Verify DRIP is enabled in all accounts.",
+        id: "d12-t2",
+        label: "Conduct each 1-on-1 using your agenda template",
+        description:
+          "Follow the structure: review data, celebrate wins, identify obstacles, agree on one improvement focus for next week. Keep it conversational, not interrogational.",
       },
       {
-        id: "a12-t3",
-        label: "Understand the tax implications of dividends in taxable accounts",
-        description: "Qualified dividends are taxed at capital gains rates; ordinary dividends are taxed as income.",
+        id: "d12-t3",
+        label: "Document the agreed improvement focus for each person",
+        description:
+          "Write it down. Both of you should know what 'better' looks like next week. This becomes the first item you review in the next 1-on-1.",
       },
     ],
     educationalContent:
-      "Dividends are powerful but widely misunderstood. A stock paying a 3% dividend is not giving you free money -- the stock price drops by the dividend amount on the ex-dividend date. The total return (price appreciation plus dividends) is what matters. However, dividends do provide behavioral benefits: they create a tangible income stream that makes investors less likely to panic-sell during downturns. For tax efficiency, hold dividend-paying investments in tax-advantaged accounts when possible. In taxable accounts, prioritize qualified dividends (held 60+ days) which are taxed at the lower capital gains rate rather than ordinary income rates.",
+      "The first 1-on-1 sets the tone for every one that follows. If it feels punitive, people will dread it. If it feels supportive, people will look forward to it. The scorecard data gives you objectivity — you are not saying 'I feel like you are underperforming,' you are saying 'Your response time averaged 4 hours last week and our target is 2. What is getting in the way?' Data removes defensiveness. It also removes favoritism. Everyone is measured the same way. We removed the word sales. We solve problems. Your 1-on-1 is where you solve the problem of helping each person become their best. That is leadership.",
   },
   {
     day: 13,
-    title: "Bond Allocation Strategy",
-    intention: "Ensure your fixed-income allocation provides the stability and income your portfolio needs.",
+    title: "Recognition System Design",
+    intention:
+      "Create a structured recognition system that rewards top performers and reinforces the behaviors you want to see repeated.",
     tasks: [
       {
-        id: "a13-t1",
-        label: "Review your current bond or fixed-income holdings",
-        description: "Include bond funds, treasury securities, CDs, money market funds, and I Bonds.",
+        id: "d13-t1",
+        label: "Design a recognition system for your team",
+        description:
+          "Decide what you will recognize (hitting KPIs, living the values, going above and beyond) and how (public shout-out, bonus, gift card, extra time off, team lunch).",
       },
       {
-        id: "a13-t2",
-        label: "Assess whether your bond duration matches your timeline",
-        description: "Shorter duration bonds fluctuate less; longer duration bonds offer higher yields but more volatility.",
+        id: "d13-t2",
+        label: "Set a budget and cadence for recognition",
+        description:
+          "Weekly small recognition (verbal, public praise) costs nothing. Monthly larger recognition (gift card, bonus) needs a budget. Plan both.",
       },
       {
-        id: "a13-t3",
-        label: "Research I Bonds and Treasury securities for risk-free inflation protection",
-        description: "I Bonds adjust for inflation and can be purchased directly from TreasuryDirect.gov.",
+        id: "d13-t3",
+        label: "Announce the recognition system to the team",
+        description:
+          "Tell the team exactly what gets recognized and how. Transparency makes recognition motivating rather than political. Everyone should know how to earn it.",
       },
     ],
     educationalContent:
-      "Bonds serve two critical roles in a portfolio: reducing volatility and providing income. When stocks drop 30%, a bond allocation limits your total portfolio decline and provides stability to rebalance from. The bond allocation debate often centers on total bond market funds versus Treasury-only funds. Treasuries carry no credit risk (backed by the U.S. government) and tend to perform best during stock market crashes. I Bonds are a unique offering: they are inflation-adjusted, backed by the government, tax-deferred, and state-tax-free. You can purchase up to $10,000 per person per year directly from TreasuryDirect.gov. They are one of the best risk-free investments available.",
+      "Recognition is the cheapest and most underused tool in leadership. A sincere, specific, public acknowledgment of great work costs nothing and produces outsized results. The key word is specific — 'Great job this week' is meaningless. 'Sarah, you resolved 47 customer tickets this week with a 98% satisfaction rating — that is outstanding' is powerful. People stay because they believe in the vision, but they stay longer when they feel seen. The Unshakable Culture is built on people who feel valued, challenged, and recognized. Top performers who are never recognized eventually stop being top performers — or they leave to find a place that notices.",
   },
   {
     day: 14,
-    title: "Week 2 Review: Investment Policy Statement",
-    intention: "Document your investment strategy in a written Investment Policy Statement.",
+    title: "Week 2 Review — Scorecard Compliance and Patterns",
+    intention:
+      "Review whether scorecards were consistently filled in, analyze the data for patterns, and assess the health of your new performance systems.",
     tasks: [
       {
-        id: "a14-t1",
-        label: "Draft your Investment Policy Statement (IPS)",
-        description: "Include: goals, time horizon, risk tolerance, target allocation, rebalancing rules, and fund selection criteria.",
+        id: "d14-t1",
+        label: "Audit scorecard compliance: who filled them in and who did not?",
+        description:
+          "Check every day of the past week. Missing scorecards are an early warning sign. Address non-compliance immediately — the system only works if it is used.",
       },
       {
-        id: "a14-t2",
-        label: "Review all notes from Days 1-13 and consolidate action items",
-        description: "Create a prioritized list of changes to implement in your portfolio.",
+        id: "d14-t2",
+        label: "Analyze scorecard data for team-wide patterns",
+        description:
+          "Are there metrics nobody is hitting? That might be a system problem, not a people problem. Are there standout performers? Learn what they are doing differently.",
       },
       {
-        id: "a14-t3",
-        label: "Set a date to implement your top-priority portfolio changes",
-        description: "Do not let analysis paralysis prevent action. Schedule a specific date to execute.",
+        id: "d14-t3",
+        label: "Refine any metrics that proved unclear or unmeasurable",
+        description:
+          "If a metric confused people or could not be tracked accurately, fix it now. The scorecard must be simple, clear, and trusted to survive long-term.",
       },
     ],
     educationalContent:
-      "An Investment Policy Statement is a written document that guides your investment decisions. It removes emotion from the process by pre-committing to a strategy during calm, rational moments. When markets crash and fear takes over, you pull out your IPS and follow the plan instead of panic-selling. Your IPS should include: your investment objectives, time horizon for each goal, target asset allocation, acceptable drift ranges before rebalancing, criteria for selecting funds (e.g., expense ratio below 0.20%), and rules for when you will and will not make changes. This document is your anchor during market turbulence.",
+      "Two weeks in, you now have real data on your team's performance — possibly for the first time ever. Most businesses operate on gut feeling. You are now operating on numbers. The patterns in this data tell you where to invest your coaching time, where your systems are broken, and where your team is already strong. Resist the urge to overhaul everything at once. Refine, do not rebuild. The performance system you installed this week will compound over time — small improvements in daily metrics create massive annual results. Your business runs whether you are there or not. That creates scalability. And scalability starts with systems that measure reality.",
   },
+
+  // ─── WEEK 3: CULTURE BUILDING (Days 15–21) ───
   {
     day: 15,
-    title: "529 Education Savings Plans",
-    intention: "Optimize college savings or evaluate whether a 529 plan fits your situation.",
+    title: "Draft Core Values",
+    intention:
+      "Draft 3-5 company core values that define who you are, how you operate, and what you will not tolerate.",
     tasks: [
       {
-        id: "a15-t1",
-        label: "Determine if a 529 plan is appropriate for your education savings needs",
-        description: "529 plans offer tax-free growth for qualified education expenses at any accredited institution.",
+        id: "d15-t1",
+        label: "Draft 3-5 core values for your company",
+        description:
+          "Use language that is real and specific, not corporate fluff. Think: 'Givers, not takers.' 'Burn the boats mentality.' 'We solve problems, we do not sell.' 'Say it to their face, not behind their back.'",
       },
       {
-        id: "a15-t2",
-        label: "Research your state's 529 plan for potential state tax deductions",
-        description: "Over 30 states offer tax deductions or credits for contributions to their state's plan.",
+        id: "d15-t2",
+        label: "For each value, write a one-sentence definition and one example behavior",
+        description:
+          "A value without a behavior is just a poster on the wall. Define what each value looks like in action on a Tuesday afternoon.",
       },
       {
-        id: "a15-t3",
-        label: "Review the investment options and fees in your current or prospective 529",
-        description: "Many state plans use age-based portfolios that automatically become more conservative as the child ages.",
+        id: "d15-t3",
+        label: "Pressure-test each value: would you fire a top performer for violating it?",
+        description:
+          "If the answer is no, it is a preference, not a value. Real values have teeth. They cost you something to enforce.",
       },
     ],
     educationalContent:
-      "529 plans are the most tax-efficient way to save for education. Contributions grow tax-free and withdrawals for qualified education expenses are tax-free at the federal level. Many states also offer a state income tax deduction for contributions. Starting in 2024, unused 529 funds can be rolled into a Roth IRA for the beneficiary (up to $35,000 lifetime, subject to annual Roth contribution limits, and the account must have been open 15+ years). This addresses the biggest objection to 529 plans: the fear of over-funding. You can also change the beneficiary to another family member at any time, making these accounts flexible across generations.",
+      "The Unshakable Culture starts with values that are non-negotiable, not aspirational. Most companies list values like 'integrity' and 'excellence' — words so generic they mean nothing. Your values should be specific enough to make hiring decisions, firing decisions, and daily behavior decisions. 'Givers, not takers' means you will let go of someone who hits their numbers but hoards information from teammates. 'Burn the boats mentality' means you will invest in someone who is all-in even if they are still developing their skills. Values are not what you say — they are who you keep and who you let go.",
   },
   {
     day: 16,
-    title: "HSA as an Investment Vehicle",
-    intention: "Maximize the investment potential of your Health Savings Account.",
+    title: "Team Input on Core Values",
+    intention:
+      "Share your draft values with the team, gather honest input, and identify what resonates and what is missing.",
     tasks: [
       {
-        id: "a16-t1",
-        label: "Check if your HSA provider allows investing beyond the cash balance",
-        description: "Many HSA providers let you invest funds above a minimum cash threshold in mutual funds or ETFs.",
+        id: "d16-t1",
+        label: "Share your draft values with the entire team",
+        description:
+          "Present the values in a team meeting or shared document. Do not present them as final — present them as a draft you want their honest input on.",
       },
       {
-        id: "a16-t2",
-        label: "Select low-cost index fund investments for your HSA",
-        description: "If your provider has limited options, consider transferring to a provider like Fidelity with better investment choices.",
+        id: "d16-t2",
+        label: "Ask each team member: do these resonate? What is missing?",
+        description:
+          "Give people space to respond honestly. Use anonymous written responses if your culture is not yet safe enough for public disagreement.",
       },
       {
-        id: "a16-t3",
-        label: "Develop a strategy for paying medical expenses out of pocket to let HSA grow",
-        description: "Pay current medical bills from your checking account and let HSA investments compound tax-free.",
+        id: "d16-t3",
+        label: "Note which values generated the strongest agreement and which generated pushback",
+        description:
+          "Pushback is valuable data. If a value does not resonate with the team, either the wording is wrong or the value is aspirational rather than real.",
       },
     ],
     educationalContent:
-      "The HSA is the only account in the tax code with triple tax advantages: tax-deductible contributions, tax-free growth, and tax-free withdrawals for qualified medical expenses. But here is the advanced strategy: there is no time limit on reimbursement. You can pay medical expenses out of pocket today, save the receipts, and reimburse yourself from the HSA years or decades later -- after the investments have grown tax-free. After age 65, the HSA functions like a traditional IRA for non-medical expenses (withdrawals taxed as income but no penalty). This makes the HSA one of the most powerful wealth-building tools available, not just a medical spending account.",
+      "Culture is not top-down. You can set the direction, but the team has to own it. When people help create the values, they internalize them. When values are imposed, they tolerate them. The difference shows up in moments of stress — when a customer is difficult, when a deadline is tight, when nobody is watching. A team that helped write the values lives by them instinctively. A team that had values handed to them treats them as corporate decoration. People stay because they believe in the vision. Giving them a voice in defining that vision is how belief becomes ownership.",
   },
   {
     day: 17,
-    title: "Backdoor Roth IRA Strategy",
-    intention: "Understand and potentially implement the backdoor Roth IRA strategy if you are a high earner.",
+    title: "Finalize and Document Core Values",
+    intention:
+      "Lock in your final core values and create a simple, accessible document the team can reference every day.",
     tasks: [
       {
-        id: "a17-t1",
-        label: "Determine if your income exceeds the Roth IRA contribution limits",
-        description: "2024 limits: $161,000 for single filers, $240,000 for married filing jointly (modified AGI).",
+        id: "d17-t1",
+        label: "Finalize your 3-5 core values based on team feedback",
+        description:
+          "Incorporate the strongest input. Remove anything that felt forced. Keep the language direct and memorable — if it sounds like a mission statement, simplify it.",
       },
       {
-        id: "a17-t2",
-        label: "Understand the backdoor Roth IRA process if you exceed income limits",
-        description: "Contribute to a non-deductible Traditional IRA, then convert to Roth. Be aware of the pro-rata rule.",
+        id: "d17-t2",
+        label: "Create a values document with definitions and example behaviors",
+        description:
+          "One page. Each value, its definition, and one concrete 'this is what it looks like' example. Print it, post it, share it digitally.",
       },
       {
-        id: "a17-t3",
-        label: "Check for existing Traditional IRA balances that would trigger the pro-rata rule",
-        description: "Pre-tax Traditional IRA balances complicate backdoor Roth conversions. Consider rolling them into a 401(k).",
+        id: "d17-t3",
+        label: "Commit to using values language in your daily leadership",
+        description:
+          "Start referencing values in meetings, 1-on-1s, and decisions: 'That is a givers-not-takers move.' 'That decision has burn-the-boats energy.' Values live in language.",
       },
     ],
     educationalContent:
-      "The backdoor Roth IRA is a legal strategy that allows high-income earners to contribute to a Roth IRA despite exceeding income limits. The process: (1) Contribute to a non-deductible Traditional IRA. (2) Convert the balance to a Roth IRA. The critical issue is the pro-rata rule: if you have existing pre-tax Traditional IRA balances, the conversion is partially taxable based on the ratio of pre-tax to after-tax IRA funds across all your IRAs. The solution: roll existing Traditional IRA balances into your employer's 401(k) before executing the backdoor Roth. A mega backdoor Roth through your 401(k) (if your plan allows after-tax contributions) can enable even larger Roth conversions.",
+      "Values become culture when they show up in daily conversation, not just in an onboarding deck. The companies with the strongest cultures reference their values constantly — in praise, in correction, in hiring, and in firing. When a new person hears the team naturally use values language, they absorb the culture without being taught it. That is the Unshakable Culture: a team that not only drinks the Kool-Aid, but they make it. Your values document is not the culture — it is the seed. The culture grows when you water it with consistent language and consistent behavior every single day.",
   },
   {
     day: 18,
-    title: "International Diversification",
-    intention: "Evaluate and optimize your international investment exposure.",
+    title: "Team Feedback Channel",
+    intention:
+      "Start a recurring feedback loop so the team can surface problems, ideas, and concerns without waiting for a crisis.",
     tasks: [
       {
-        id: "a18-t1",
-        label: "Calculate your current international stock and bond allocation",
-        description: "Include international index funds, foreign stock holdings, and emerging market exposure.",
+        id: "d18-t1",
+        label: "Choose a feedback format: anonymous survey or open forum",
+        description:
+          "If trust is high, an open forum works. If trust is still building, start with an anonymous weekly survey (Google Form, Typeform, or similar). Ask 3-5 questions max.",
       },
       {
-        id: "a18-t2",
-        label: "Compare your international allocation to global market capitalization",
-        description: "Non-US stocks represent approximately 40% of global market cap. Many portfolios are significantly underweight.",
+        id: "d18-t2",
+        label: "Design your first weekly feedback survey",
+        description:
+          "Suggested questions: (1) What went well this week? (2) What frustrated you? (3) What is one thing leadership could do better? (4) Rate your energy this week 1-10.",
       },
       {
-        id: "a18-t3",
-        label: "Research the tax implications of international investments",
-        description: "Foreign tax credits may offset taxes paid to other countries on international dividends.",
+        id: "d18-t3",
+        label: "Send the first survey and commit to reviewing results every week",
+        description:
+          "The survey only builds trust if people see that you read it and act on it. Share a summary of themes with the team each week — even if you cannot fix everything immediately.",
       },
     ],
     educationalContent:
-      "Home bias -- the tendency to invest disproportionately in your home country's markets -- is one of the most common portfolio mistakes. US stocks represent about 60% of global market cap, yet many American investors hold 90%+ in domestic equities. International diversification reduces country-specific risk and has historically smoothed portfolio returns. There are extended periods where international stocks outperform US stocks (2000-2009, for example). A 25-40% allocation to international stocks provides meaningful diversification without excessive currency risk. Hold international funds in taxable accounts when possible to capture the Foreign Tax Credit.",
+      "Most leaders hear about problems too late — after someone has already quit, after a customer has already left, after a process has already failed for months. A feedback channel shortens the distance between problem and awareness. The key is follow-through: if you ask for feedback and do nothing with it, you train people to stop giving feedback. If you ask for feedback and visibly act on even one thing, you train people to keep talking. Revolving doors happen when people lose hope. A feedback loop is proof that their voice matters. That is how you turn a team of employees into a team of owners.",
   },
   {
     day: 19,
-    title: "Concentrated Stock Positions",
-    intention: "Assess and manage the risk of concentrated positions in individual stocks.",
+    title: "Team-Led Problem Solving Session",
+    intention:
+      "Run your first session where the team — not you — solves a real operational issue.",
     tasks: [
       {
-        id: "a19-t1",
-        label: "Identify any single stock representing more than 10% of your portfolio",
-        description: "Include employer stock from RSUs, stock options, ESPP shares, and individual stock picks.",
+        id: "d19-t1",
+        label: "Choose a real operational problem to bring to the team",
+        description:
+          "Pick something meaningful but not catastrophic. A recurring customer complaint, a workflow bottleneck, a communication breakdown. Something they experience daily.",
       },
       {
-        id: "a19-t2",
-        label: "Develop a plan to diversify concentrated positions over time",
-        description: "Consider selling a fixed amount monthly, using a 10b5-1 plan, or donating appreciated shares to charity.",
+        id: "d19-t2",
+        label: "Facilitate the session: present the problem, then step back",
+        description:
+          "State the problem clearly. Then say: 'I want the team to solve this. I am here to listen.' Resist the urge to jump in with your solution. Let them think, debate, and decide.",
       },
       {
-        id: "a19-t3",
-        label: "Understand the tax implications of selling concentrated positions",
-        description: "Long-term gains (held 1+ years) are taxed at preferential rates. Harvest losses to offset gains.",
+        id: "d19-t3",
+        label: "Document the team's solution and assign an owner to implement it",
+        description:
+          "Whatever they decide, support it. Assign one person to own the implementation. Follow up next week. This builds problem-solving muscle in the team.",
       },
     ],
     educationalContent:
-      "A concentrated stock position is one of the most dangerous risks in personal finance. Enron employees lost their retirement savings because they held mostly Enron stock. Even great companies can decline dramatically -- a single stock can lose 50-90% of its value while the broad market recovers. If any single holding exceeds 10% of your portfolio, you have meaningful concentration risk. The emotional attachment to a stock that has made you money (or that your employer gave you) makes this hard, but the math is clear: diversification is the only free lunch in investing. Systematically reduce concentrated positions over 12-24 months to spread out the tax impact.",
+      "The fastest way to build an independent team is to stop being the one with all the answers. When the team solves a problem themselves, they gain confidence, ownership, and capability. When you solve it for them, they gain dependence. Today is a leadership test — can you sit in a room, present a problem, and not solve it? Can you let the team struggle, debate, and arrive at a solution that might be different from yours? Your business runs whether you are there or not. That only happens when the team trusts their own judgment. This session is where that trust starts to form.",
   },
   {
     day: 20,
-    title: "Behavioral Finance and Investor Psychology",
-    intention: "Recognize and defend against the psychological biases that destroy investment returns.",
+    title: "Peer Recognition Program",
+    intention:
+      "Implement a system where team members publicly recognize great work from each other — not just from leadership.",
     tasks: [
       {
-        id: "a20-t1",
-        label: "Identify your biggest behavioral investing weakness",
-        description: "Common biases: panic selling, chasing performance, overconfidence, loss aversion, recency bias.",
+        id: "d20-t1",
+        label: "Introduce the peer recognition concept to the team",
+        description:
+          "Explain the idea: every week, each team member can publicly call out one colleague who did something great. It can be a Slack message, a meeting shout-out, or a shared document.",
       },
       {
-        id: "a20-t2",
-        label: "Set up guardrails to prevent emotional investment decisions",
-        description: "Automate contributions, use a written IPS, add a 48-hour waiting period before any trade.",
+        id: "d20-t2",
+        label: "Choose a format and launch it today",
+        description:
+          "Options: a dedicated Slack channel (#wins), a section in the weekly team meeting, a shared Google Doc, or a physical board in the office. Pick one and launch it now.",
       },
       {
-        id: "a20-t3",
-        label: "Commit to a rule: no portfolio changes based on news headlines",
-        description: "Write down this commitment and post it where you will see it during market turbulence.",
+        id: "d20-t3",
+        label: "Lead by example — post the first peer recognition yourself",
+        description:
+          "Recognize someone on the team publicly using the new system. Be specific about what they did and why it mattered. Model the behavior you want to see.",
       },
     ],
     educationalContent:
-      "The average stock fund investor earns 3-4% less per year than the funds they invest in. The reason is not bad fund selection -- it is bad behavior. Investors buy after prices have risen (greed) and sell after prices have fallen (fear), systematically buying high and selling low. This behavior gap costs more than fees, taxes, or poor fund selection combined. The antidote is automation and pre-commitment: automate contributions so you invest consistently regardless of market conditions, write an Investment Policy Statement so you follow a plan instead of emotions, and add a mandatory 48-hour cooling period before making any changes to your portfolio. The best portfolio is one you can stick with.",
+      "Recognition from a peer often means more than recognition from a boss. When a colleague takes the time to publicly acknowledge your work, it signals that the team sees you, not just management. Peer recognition also reveals informal leaders — the people who naturally uplift others. These are the culture carriers you want to invest in. A team that celebrates each other is a team that protects each other. That is the Unshakable Culture: givers, not takers. People who lift others up instead of tearing them down. Peer recognition is the daily practice that makes this real.",
   },
   {
     day: 21,
-    title: "Estate and Beneficiary Review for Investment Accounts",
-    intention: "Ensure all investment accounts have correct beneficiary designations and estate alignment.",
+    title: "Week 3 Review — Culture Assessment",
+    intention:
+      "Assess what culture looks like now, identify where the cracks are, and plan how to reinforce what is working.",
     tasks: [
       {
-        id: "a21-t1",
-        label: "Review beneficiary designations on every retirement and investment account",
-        description: "Check primary and contingent beneficiaries on 401(k), IRA, Roth IRA, brokerage, and life insurance.",
+        id: "d21-t1",
+        label: "Review feedback survey results from this week",
+        description:
+          "Read every response. Look for themes: what keeps coming up? What surprised you? Where is energy high? Where is it low?",
       },
       {
-        id: "a21-t2",
-        label: "Verify TOD (Transfer on Death) designations on taxable accounts",
-        description: "TOD designations allow taxable accounts to pass directly to heirs without probate.",
+        id: "d21-t2",
+        label: "Assess: what does culture look like now vs. Day 1?",
+        description:
+          "Has communication improved? Are people more engaged? Is there more ownership? Be honest about both the progress and the gaps.",
       },
       {
-        id: "a21-t3",
-        label: "Ensure designations align with your estate plan and will",
-        description: "Beneficiary designations override wills. Misalignment creates legal conflicts and unintended outcomes.",
+        id: "d21-t3",
+        label: "Identify the biggest culture crack and one action to address it",
+        description:
+          "Every team has a crack — a place where the values are not lived consistently. Name it. Define one action to reinforce the standard. Culture is maintained through correction, not just celebration.",
       },
     ],
     educationalContent:
-      "Beneficiary designations are one of the most overlooked aspects of investment management. These designations override your will, meaning if your 401(k) beneficiary is an ex-spouse from a form you filled out 15 years ago, they will receive the account regardless of what your current will says. Review every account's beneficiary designation annually and after any life change. For each account, name a primary beneficiary and a contingent beneficiary (who inherits if the primary predeceases you). For inherited IRAs, the 2019 SECURE Act now requires most non-spouse beneficiaries to empty the account within 10 years, which has significant tax planning implications.",
+      "Three weeks in, your team has role clarity, performance systems, values, feedback channels, and peer recognition. That is more cultural infrastructure than most companies build in a year. But infrastructure is not culture — behavior is culture. Culture is what happens when nobody is watching. It is how people treat each other on a hard day. It is whether someone speaks up when they see a problem or stays silent. The cracks in culture are not always visible from the top. That is why the feedback loop matters. That is why peer recognition matters. You are building a team that polices its own standards. That is the Unshakable Culture — self-sustaining, self-correcting, unbreakable.",
   },
+
+  // ─── WEEK 4: INDEPENDENCE TESTING (Days 22–30) ───
   {
     day: 22,
-    title: "Socially Responsible and ESG Investing",
-    intention: "Evaluate whether values-aligned investing has a place in your portfolio.",
+    title: "2-Hour Absence Test",
+    intention:
+      "Step away from the business for 2 hours without giving instructions. Observe what happens when the team operates without you.",
     tasks: [
       {
-        id: "a22-t1",
-        label: "Learn what ESG (Environmental, Social, Governance) investing means",
-        description: "ESG funds screen companies based on environmental practices, social impact, and governance quality.",
+        id: "d22-t1",
+        label: "Step away for 2 hours — tell no one what to do before leaving",
+        description:
+          "Do not prep the team. Do not assign tasks. Do not say 'call me if you need anything.' Just leave. Let them operate. This is the test.",
       },
       {
-        id: "a22-t2",
-        label: "Review available ESG fund options at your brokerage",
-        description: "Compare fees, holdings, and performance of ESG alternatives to your current funds.",
+        id: "d22-t2",
+        label: "Document what happened during your absence",
+        description:
+          "When you return, review: Were customers served? Were decisions made? Did anyone panic? Did anything fall through the cracks? Write it all down.",
       },
       {
-        id: "a22-t3",
-        label: "Decide whether to incorporate ESG criteria into your investment strategy",
-        description: "Values-aligned investing can complement your core strategy without sacrificing long-term returns.",
+        id: "d22-t3",
+        label: "Note what questions or issues waited for your return",
+        description:
+          "What piled up in your inbox? What did someone 'save for when you got back'? These are the areas where the team still depends on you.",
       },
     ],
     educationalContent:
-      "ESG investing has grown rapidly, with over $35 trillion in assets globally. The evidence on ESG performance is mixed: some studies show comparable or slightly better risk-adjusted returns, while others show slight underperformance due to reduced diversification and higher fees. If values-aligned investing is important to you, look for ESG index funds with low expense ratios (0.10-0.20%) rather than actively managed ESG funds with higher fees. Also examine what the ESG label actually means -- the criteria vary significantly between providers. A total market index fund already includes the best-governed companies; ESG funds simply overweight them.",
+      "This is the moment of truth. Everything you have built over three weeks gets tested right now. Two hours is short enough that nothing catastrophic should happen, but long enough to reveal dependencies. If the team operates smoothly, your systems are working. If things stall, you have found exactly where the bottleneck lives — and it is probably a decision authority gap or a missing SOP. Your business runs whether you are there or not. That creates scalability. Today you measure how close you are to that reality. Do not be discouraged if things break. That is the point — you need to see what breaks so you can fix it.",
   },
   {
     day: 23,
-    title: "Taxable Account Tax Efficiency",
-    intention: "Optimize your taxable brokerage account for maximum after-tax returns.",
+    title: "Debrief and First SOP",
+    intention:
+      "Review what broke during the 2-hour absence and write a Standard Operating Procedure for the number one failure point.",
     tasks: [
       {
-        id: "a23-t1",
-        label: "Review asset location across your accounts",
-        description: "Place tax-inefficient assets (bonds, REITs) in tax-advantaged accounts and tax-efficient assets (index funds) in taxable accounts.",
+        id: "d23-t1",
+        label: "Identify the #1 thing that went wrong during your absence",
+        description:
+          "Was it a customer issue nobody handled? A decision nobody made? A process that stalled? Pick the single most impactful failure.",
       },
       {
-        id: "a23-t2",
-        label: "Switch to tax-managed or ETF versions of funds in taxable accounts",
-        description: "ETFs are generally more tax-efficient than mutual funds due to their creation/redemption mechanism.",
+        id: "d23-t2",
+        label: "Write an SOP for that specific issue",
+        description:
+          "Standard Operating Procedure: step-by-step instructions anyone on the team can follow to handle this situation without you. Keep it to one page.",
       },
       {
-        id: "a23-t3",
-        label: "Set up specific lot identification for your brokerage account",
-        description: "This allows you to choose which shares to sell for maximum tax efficiency when you rebalance.",
+        id: "d23-t3",
+        label: "Share the SOP with the relevant team member and walk through it",
+        description:
+          "Do not just email it. Sit with the person, walk through each step, and ask them to explain it back to you. Understanding is confirmed by teaching, not reading.",
       },
     ],
     educationalContent:
-      "Asset location -- where you hold different types of investments -- can add 0.25-0.75% to your after-tax returns annually. The principle: place the most tax-inefficient investments in tax-advantaged accounts and the most tax-efficient investments in taxable accounts. Tax-inefficient holdings include bonds (interest taxed as ordinary income), REITs (dividends taxed as ordinary income), and actively managed funds (frequent capital gains distributions). Tax-efficient holdings include broad US stock index funds, international stock index funds, and municipal bonds (tax-free interest). This single optimization costs nothing to implement and generates meaningful after-tax improvement over decades.",
+      "An SOP is a promise to your team: 'You will never be left wondering what to do in this situation again.' Most businesses operate on tribal knowledge — information that lives in one person's head. When that person is out sick, on vacation, or quits, the knowledge leaves with them. SOPs transfer tribal knowledge into organizational knowledge. They are the foundation of a business that runs without you. Every time something breaks in your absence, you have found a gap in your SOPs. Today you close one. Over time, you will build a playbook so complete that any competent person could step into any role and operate effectively on day one.",
   },
   {
     day: 24,
-    title: "Rental Property Analysis",
-    intention: "Evaluate rental real estate as a wealth-building strategy.",
+    title: "Assign a Team Lead for the Day",
+    intention:
+      "Designate a team lead who handles all decisions in your absence, and prepare them for the half-day test tomorrow.",
     tasks: [
       {
-        id: "a24-t1",
-        label: "Analyze current rental properties (if any) for true cash-on-cash return",
-        description: "Include all expenses: mortgage, taxes, insurance, maintenance, vacancy, property management.",
+        id: "d24-t1",
+        label: "Choose a team lead for tomorrow's half-day absence",
+        description:
+          "Pick the person who scored highest on your right-seat matrix for both competency and cultural fit. This is a development opportunity, not a punishment.",
       },
       {
-        id: "a24-t2",
-        label: "Research the 1% rule and cap rate for your local market",
-        description: "The 1% rule: monthly rent should be at least 1% of purchase price. Cap rate = net operating income / price.",
+        id: "d24-t2",
+        label: "Brief the team lead on their authority and responsibilities",
+        description:
+          "Be explicit: 'You make all decisions while I am gone. Use the authority framework from Day 5. If something falls outside that framework, use your best judgment and document the decision.'",
       },
       {
-        id: "a24-t3",
-        label: "Assess whether rental real estate fits your time, capital, and risk tolerance",
-        description: "Direct ownership requires active management. REITs offer passive exposure without landlord responsibilities.",
+        id: "d24-t3",
+        label: "Announce to the team that this person is in charge tomorrow",
+        description:
+          "Public announcement matters. It gives the team lead legitimacy and tells the rest of the team who to go to. Do not undermine this by saying 'but call me if it is really important.'",
       },
     ],
     educationalContent:
-      "Rental real estate builds wealth through four mechanisms: cash flow (monthly rent minus expenses), appreciation (property value growth), mortgage paydown (tenant pays your mortgage), and tax benefits (depreciation shelters cash flow from taxes). However, most new investors underestimate expenses and overestimate returns. A realistic expense ratio for rental properties is 40-50% of gross rent (including vacancies, maintenance, property management, insurance, taxes, and capital expenditures). If you do not enjoy property management or cannot comfortably handle a $10,000 emergency repair, REITs provide similar returns with complete liquidity and no 2am phone calls.",
+      "Leadership development is not a seminar — it is a stretch assignment with real stakes. When you put someone in charge for a day, you accelerate their growth more than months of training could. You also learn something critical: who on your team can lead? The person you choose today may be your future operations manager, your second-in-command, or your replacement when you are ready to scale to the next level. Your business runs whether you are there or not. That only works if someone else can lead. Today you start building that bench.",
   },
   {
     day: 25,
-    title: "Retirement Projections",
-    intention: "Model your retirement readiness and identify any savings gaps.",
+    title: "Half-Day Absence Test",
+    intention:
+      "Step away for half a day while your team lead runs operations. Measure what holds and what breaks.",
     tasks: [
       {
-        id: "a25-t1",
-        label: "Use a retirement calculator to project your retirement savings trajectory",
-        description: "Input current savings, annual contributions, expected returns (7% nominal), and years to retirement.",
+        id: "d25-t1",
+        label: "Step away for half a day — your team lead runs everything",
+        description:
+          "Leave for 4-5 hours. Do not check in. Do not hover. Do not text 'How is it going?' Trust the system you built and the person you chose.",
       },
       {
-        id: "a25-t2",
-        label: "Estimate your annual retirement spending needs",
-        description: "A common estimate is 70-80% of pre-retirement income, but calculate your actual expected expenses.",
+        id: "d25-t2",
+        label: "Have your team lead document every decision they made",
+        description:
+          "Ask them to keep a simple log: time, situation, decision, outcome. This gives you visibility without micromanagement.",
       },
       {
-        id: "a25-t3",
-        label: "Apply the 4% rule to determine if your projected savings support your spending",
-        description: "The 4% rule: you can safely withdraw 4% of your portfolio in year one, adjusted for inflation annually.",
+        id: "d25-t3",
+        label: "Document results when you return",
+        description:
+          "What went well? What went wrong? How did the team lead perform? How did the rest of the team respond to someone else being in charge? Write it all down.",
       },
     ],
     educationalContent:
-      "The 4% rule, based on the Trinity Study, suggests that a diversified portfolio can sustain a 4% initial withdrawal rate (adjusted for inflation) over a 30-year retirement with high historical success rates. For a $60,000 annual need, you would need $1.5 million (60,000 / 0.04). However, the 4% rule has limitations: it is based on historical US market returns, assumes a 30-year retirement, and does not account for flexibility. More conservative planners use 3.5%. More aggressive approaches use dynamic withdrawal strategies that adjust spending based on portfolio performance. The key insight: run the numbers now so you know exactly where you stand and what adjustments to make.",
+      "Half a day is long enough for real situations to arise. Customer complaints, unexpected issues, decisions that require judgment — these will happen. The question is not whether problems occur. The question is whether your team can handle them. If your team lead made good decisions, your systems are working. If they struggled, you have found a coaching opportunity. Either way, you win. Team turnover is the biggest expense in any business. Developing leaders internally is the antidote. When people see a growth path inside your organization, they stop looking outside it. This half-day test is career development disguised as an absence.",
   },
   {
     day: 26,
-    title: "Social Security Optimization",
-    intention: "Understand your Social Security benefits and develop a claiming strategy.",
+    title: "Half-Day Debrief and SOP Gaps",
+    intention:
+      "Debrief the half-day absence with your team lead, identify what worked and what SOPs are missing.",
     tasks: [
       {
-        id: "a26-t1",
-        label: "Create or log into your account at ssa.gov to review your estimated benefits",
-        description: "Check your earnings history for accuracy and review benefit estimates at ages 62, 67, and 70.",
+        id: "d26-t1",
+        label: "Debrief with your team lead one-on-one",
+        description:
+          "Review their decision log. Discuss each situation: what did they consider? What was hard? What would they do differently? Coach, do not criticize.",
       },
       {
-        id: "a26-t2",
-        label: "Understand the impact of claiming age on your lifetime benefits",
-        description: "Benefits increase approximately 8% per year for each year you delay from 62 to 70.",
+        id: "d26-t2",
+        label: "Identify what worked well and what needs an SOP",
+        description:
+          "Separate the wins from the gaps. For every gap, ask: 'Could an SOP have prevented this?' If yes, add it to your SOP backlog.",
       },
       {
-        id: "a26-t3",
-        label: "Factor Social Security into your retirement income plan",
-        description: "Social Security replaces roughly 40% of pre-retirement income for average earners.",
+        id: "d26-t3",
+        label: "Give the team lead specific feedback and a development action",
+        description:
+          "Tell them one thing they did exceptionally well and one specific thing to work on. Assign a development action they can practice before the full-day test on Day 28.",
       },
     ],
     educationalContent:
-      "The claiming age decision for Social Security is one of the most impactful financial decisions you will make. Claiming at 62 (the earliest) permanently reduces your benefit by 25-30% compared to your full retirement age (67 for most). Delaying to 70 increases your benefit by about 24% beyond full retirement age. For most healthy individuals, delaying to 70 maximizes lifetime benefits because the breakeven point is typically around age 80, and average life expectancy is about 85. For married couples, the higher earner should almost always delay to 70, as their benefit becomes the survivor benefit for the spouse. Create your ssa.gov account today to verify your earnings record and benefit estimates.",
+      "The debrief is where learning happens. Without it, the half-day absence was just a day off. With it, it becomes a coaching session that builds leadership capability. Ask open-ended questions: 'Walk me through the hardest decision you made.' 'What did you notice about the team's behavior when I was not here?' 'What authority did you wish you had?' Their answers will tell you exactly what to fix. People stay because they believe in the vision, and they believe deeper when they see themselves growing inside it. Your team lead just had a growth experience most employees never get. Acknowledge it. Invest in it.",
   },
   {
     day: 27,
-    title: "Charitable Giving Strategy",
-    intention: "Align your charitable giving with tax-efficient wealth transfer strategies.",
+    title: "Top 3 Recurring Issue SOPs",
+    intention:
+      "Write SOPs for the top three recurring issues your team cannot handle alone, closing the biggest gaps before the full-day test.",
     tasks: [
       {
-        id: "a27-t1",
-        label: "Review your current charitable giving and its tax treatment",
-        description: "Are you itemizing deductions? If not, charitable contributions may not reduce your taxes.",
+        id: "d27-t1",
+        label: "List the top 3 recurring issues that required your involvement",
+        description:
+          "Pull from your 2-hour test, half-day test, and daily experience. What situations keep landing on your desk that the team should handle themselves?",
       },
       {
-        id: "a27-t2",
-        label: "Research donor-advised funds as a charitable giving vehicle",
-        description: "DAFs allow you to bunch contributions in one year, get the deduction now, and distribute to charities over time.",
+        id: "d27-t2",
+        label: "Write a one-page SOP for each of the 3 issues",
+        description:
+          "Each SOP: problem description, step-by-step resolution process, decision thresholds, escalation criteria, and who owns it. Keep it clear enough that a new hire could follow it.",
       },
       {
-        id: "a27-t3",
-        label: "Consider donating appreciated stock instead of cash",
-        description: "Donating stock held 1+ years avoids capital gains tax and provides a deduction for the full market value.",
+        id: "d27-t3",
+        label: "Review all 3 SOPs with the relevant team members",
+        description:
+          "Walk through each SOP with the person who will use it. Have them practice the scenario if possible. Confirm understanding before tomorrow's full-day test.",
       },
     ],
     educationalContent:
-      "Strategic charitable giving can significantly reduce your tax burden while supporting causes you care about. The most powerful technique: donate appreciated stock (or mutual fund shares) held for more than one year directly to a charity or donor-advised fund. You avoid paying capital gains tax on the appreciation and receive a tax deduction for the full current market value. A donor-advised fund (DAF) adds flexibility: contribute a large amount in a high-income year to maximize the deduction, then distribute grants to individual charities over many years. If you do not itemize deductions due to the standard deduction, bunching two years of charitable giving into one year via a DAF can push you above the itemizing threshold.",
+      "Three SOPs may not sound like much, but if they cover the three most common points of failure, they eliminate the majority of your team's dependency on you. The Pareto principle applies: 80% of the problems your team brings to you come from 20% of the situations. Nail those situations with clear SOPs and you free yourself from the daily firefighting that keeps you trapped in the business instead of working on it. Your business runs whether you are there or not. That creates scalability. These three SOPs are the bridge between a business that needs you every day and a business that needs your vision, not your presence.",
   },
   {
     day: 28,
-    title: "Investment Account Security and Access",
-    intention: "Secure your investment accounts and ensure trusted people can access them if needed.",
+    title: "Full-Day Absence Test",
+    intention:
+      "Step away for an entire day. Your team runs everything. You are completely unreachable.",
     tasks: [
       {
-        id: "a28-t1",
-        label: "Enable two-factor authentication on all brokerage and retirement accounts",
-        description: "Use an authenticator app rather than SMS for stronger security.",
+        id: "d28-t1",
+        label: "Step away for a full day — you are unreachable",
+        description:
+          "No phone, no email, no Slack, no 'just checking in.' Your team lead is in charge. Your SOPs are in place. Your authority framework is clear. Trust the system.",
       },
       {
-        id: "a28-t2",
-        label: "Document account access instructions for a trusted person",
-        description: "In an emergency, someone needs to know what accounts exist and how to access them.",
+        id: "d28-t2",
+        label: "Have your team lead keep a detailed decision and incident log",
+        description:
+          "Every decision, every issue, every customer interaction — logged with time, situation, action taken, and result. This is your data for tomorrow's debrief.",
       },
       {
-        id: "a28-t3",
-        label: "Review and update your Trusted Contact designation at each brokerage",
-        description: "SEC rules allow brokerages to contact your Trusted Contact if they suspect exploitation or incapacitation.",
+        id: "d28-t3",
+        label: "Observe your own emotional response during the day away",
+        description:
+          "Are you anxious? Relieved? Bored? Your emotional reaction reveals how much of your identity is tied to being needed vs. being effective. Journal about it.",
       },
     ],
     educationalContent:
-      "Investment account security requires both protection from unauthorized access and ensured access for authorized people in emergencies. Every major brokerage now offers a Trusted Contact designation -- a person the firm can reach out to if they notice unusual account activity, suspect financial exploitation, or cannot reach you. This is different from a power of attorney but serves as an important safety net. Separately, maintain a secure document (encrypted or stored with your attorney) listing all accounts, institutions, and access information so your family or executor can manage your investments if you become incapacitated or pass away.",
+      "A full day away is the ultimate test of everything you have built. The systems, the culture, the authority framework, the SOPs, the team lead — it all gets tested at once. This is also a test of you. Can you let go? Many business owners sabotage this test by checking in, hovering, or finding excuses to be available. If you cannot step away for one day, you do not have a business — you have a job you own. Your business runs whether you are there or not. That creates scalability. Today you prove it or you find out exactly what still needs work. Either outcome is valuable. Only avoidance is wasteful.",
   },
   {
     day: 29,
-    title: "Portfolio Stress Test",
-    intention: "Test how your portfolio would perform in historical market downturns.",
+    title: "Full-Day Debrief and Independence Rating",
+    intention:
+      "Debrief the full-day absence, rate your team's independence on a scale of 1-10, and identify the remaining gap.",
     tasks: [
       {
-        id: "a29-t1",
-        label: "Model how your current allocation would have performed in the 2008 financial crisis",
-        description: "The S&P 500 dropped 57% from peak to trough. What would your total portfolio have lost?",
+        id: "d29-t1",
+        label: "Debrief the full-day test with your team lead and the full team",
+        description:
+          "Review the decision log. What went right? What broke? What was handled without any issue? Celebrate the wins publicly — the team just ran your business without you.",
       },
       {
-        id: "a29-t2",
-        label: "Assess whether you could emotionally and financially withstand a 40-50% stock decline",
-        description: "If the answer is no, your stock allocation may be too aggressive for your risk tolerance.",
+        id: "d29-t2",
+        label: "Rate your team's independence 1-10",
+        description:
+          "1 = total chaos without you. 10 = you could leave for a month and nothing would miss a beat. Be honest. Most teams after this protocol land between 6 and 8. That is real progress.",
       },
       {
-        id: "a29-t3",
-        label: "Verify your withdrawal plan (if retired) survives a prolonged downturn",
-        description: "Sequence of returns risk is the biggest threat to retirees. Ensure you have 2-3 years of spending in safe assets.",
+        id: "d29-t3",
+        label: "Define the gap between your current rating and a 10",
+        description:
+          "What specific capabilities, SOPs, or leadership development would close the remaining gap? Write them down. These become your next 30-day priorities.",
       },
     ],
     educationalContent:
-      "Stress testing reveals whether your risk tolerance on paper matches your risk tolerance in reality. In the 2008 crisis, a 100% stock portfolio lost 57%. A 60/40 portfolio lost about 35%. A 40/60 portfolio lost about 20%. Which of these could you live through without selling? Your honest answer determines your appropriate allocation. Remember: the worst time to discover you cannot handle volatility is during a crash, when selling locks in losses and prevents recovery. For retirees, the concept of a cash bucket (1-3 years of spending in high-yield savings or short-term bonds) provides a buffer so you never have to sell stocks during a downturn to fund living expenses.",
+      "The gap between your current independence rating and a 10 is your roadmap for the next phase of team development. A team that scores 7 is a team that can handle daily operations but struggles with exceptions. A team that scores 9 can handle exceptions but may struggle with strategic decisions. A perfect 10 means you have built a self-managing organization — which is the ultimate goal. Do not be discouraged if you are at a 6 or 7. Four weeks ago, you might have been at a 2. That trajectory matters more than the absolute number. People stay because they believe in the vision. Today, your team proved they can carry that vision without you in the room.",
   },
   {
     day: 30,
-    title: "Assets Protocol Completion and Forward Plan",
-    intention: "Consolidate your progress and commit to a long-term investment discipline.",
+    title: "30-Day Assessment — Team Architecture Transformation",
+    intention:
+      "Retake the Team Architecture assessment, compare scores, document your biggest improvement, and set the course for the next phase.",
     tasks: [
       {
-        id: "a30-t1",
-        label: "Review your Investment Policy Statement and update with any changes from this protocol",
-        description: "Your IPS should now reflect your finalized allocation, fund selections, and rebalancing rules.",
+        id: "d30-t1",
+        label: "Retake the Team Architecture quiz and compare to your Day 1 score",
+        description:
+          "Answer every question honestly. Compare your answers to 30 days ago. Where did you improve the most? Where is there still work to do?",
       },
       {
-        id: "a30-t2",
-        label: "Set up automatic investment contributions if not already in place",
-        description: "Automation is the single most powerful wealth-building habit. Set it and let compound interest work.",
+        id: "d30-t2",
+        label: "Document your single biggest team improvement over the past 30 days",
+        description:
+          "What changed the most? Was it role clarity, performance visibility, cultural alignment, or team independence? Name it, measure it, and own it.",
       },
       {
-        id: "a30-t3",
-        label: "Schedule quarterly portfolio check-ins on your calendar",
-        description: "Review allocation, rebalance if needed, and check beneficiary designations quarterly.",
-      },
-      {
-        id: "a30-t4",
-        label: "Calculate your projected net worth in 10 years based on your current plan",
-        description: "Seeing the long-term trajectory reinforces the discipline to stay the course.",
+        id: "d30-t3",
+        label: "Write your top 3 priorities for the next 30 days of team development",
+        description:
+          "Based on your independence rating gap, your scorecard data, and your feedback surveys, define the three most impactful things to work on next. The protocol ends; the building never stops.",
       },
     ],
     educationalContent:
-      "You have completed 30 days of intentional asset-building education and action. The most important takeaway is this: wealth is built not by finding the perfect investment but by consistently investing in a diversified, low-cost portfolio and refusing to deviate from the plan during market turbulence. The gap between the average investor and the market return is almost entirely explained by behavior, not strategy. Your edge is discipline, automation, and patience. Keep fees low, stay diversified, rebalance periodically, and let compound interest work over decades. You are building an unshakable empire -- and the assets pillar is your engine of growth.",
+      "Thirty days ago, you started with a team roster and a question: are the right people in the right seats doing the right things? Today you have role clarity, performance scorecards, weekly 1-on-1s, core values, feedback loops, peer recognition, authority frameworks, SOPs, a trained team lead, and proof that your business can operate without you. That is a Team Architecture transformation. But here is the truth Toby would tell you: this is not the finish line, it is the foundation. The Unshakable Culture is a team that not only drinks the Kool-Aid, but they make it. Your team is beginning to make it. Keep building. Keep measuring. Keep developing your people. Team turnover is the most expensive problem in business — and you just built the systems that make people want to stay. Your business runs whether you are there or not. That creates scalability. That creates freedom. That creates an empire.",
   },
 ];

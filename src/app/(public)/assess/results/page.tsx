@@ -10,6 +10,81 @@ import { saveAssessment } from '@/app/actions/assessment';
 import { useUser } from '@/hooks/useUser';
 import { Shield, ArrowRight } from 'lucide-react';
 
+function RadarChart({ data }: { data: { category: string; score: number }[] }) {
+  const cx = 150, cy = 150, r = 110;
+  const n = data.length;
+
+  const getPoint = (index: number, value: number) => {
+    const angle = (Math.PI * 2 * index) / n - Math.PI / 2;
+    const dist = (value / 100) * r;
+    return { x: cx + dist * Math.cos(angle), y: cy + dist * Math.sin(angle) };
+  };
+
+  const gridLevels = [25, 50, 75, 100];
+
+  return (
+    <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 mb-6">
+      <h3 className="text-white font-bold text-lg mb-4 text-center">Category Radar</h3>
+      <svg viewBox="0 0 300 300" className="w-full max-w-[300px] mx-auto">
+        {/* Grid polygons */}
+        {gridLevels.map((level) => {
+          const points = Array.from({ length: n }, (_, i) => {
+            const p = getPoint(i, level);
+            return `${p.x},${p.y}`;
+          }).join(' ');
+          return (
+            <polygon
+              key={level}
+              points={points}
+              fill="none"
+              stroke="#3f3f46"
+              strokeWidth={level === 100 ? 1 : 0.5}
+              opacity={0.6}
+            />
+          );
+        })}
+        {/* Axis lines */}
+        {data.map((_, i) => {
+          const p = getPoint(i, 100);
+          return <line key={i} x1={cx} y1={cy} x2={p.x} y2={p.y} stroke="#3f3f46" strokeWidth={0.5} opacity={0.6} />;
+        })}
+        {/* Data polygon */}
+        <polygon
+          points={data.map((d, i) => { const p = getPoint(i, d.score); return `${p.x},${p.y}`; }).join(' ')}
+          fill="#FBBF24"
+          fillOpacity={0.15}
+          stroke="#FBBF24"
+          strokeWidth={2}
+        />
+        {/* Data points */}
+        {data.map((d, i) => {
+          const p = getPoint(i, d.score);
+          return <circle key={i} cx={p.x} cy={p.y} r={3.5} fill="#FBBF24" />;
+        })}
+        {/* Labels */}
+        {data.map((d, i) => {
+          const p = getPoint(i, 125);
+          const short = d.category.length > 14 ? d.category.slice(0, 12) + '...' : d.category;
+          return (
+            <text
+              key={i}
+              x={p.x}
+              y={p.y}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fill="#a1a1aa"
+              fontSize={9}
+              fontWeight={500}
+            >
+              {short}
+            </text>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}
+
 export default function ResultsPage() {
   const router = useRouter();
   const { selectedPillars, answers, quizCompleted } = useQuizStore();
@@ -50,7 +125,7 @@ export default function ResultsPage() {
   }
 
   const interpretation = getInterpretationCopy(result.overallBand, result.pillarLabel);
-  const bandColor = result.overallBand === 'critical' ? 'text-red-400' : result.overallBand === 'developing' ? 'text-amber-400' : result.overallBand === 'established' ? 'text-blue-400' : 'text-emerald-400';
+  const bandColor = result.overallBand === 'critical' ? 'text-red-400' : result.overallBand === 'weak' ? 'text-orange-400' : result.overallBand === 'developing' ? 'text-amber-400' : result.overallBand === 'strong' ? 'text-blue-400' : 'text-emerald-400';
 
   return (
     <div className="min-h-screen bg-black py-8 px-4">
@@ -70,10 +145,12 @@ export default function ResultsPage() {
           <p className="text-zinc-400 text-sm mt-4 max-w-md mx-auto">{interpretation}</p>
         </div>
 
+        <RadarChart data={result.radarData} />
+
         <div className="space-y-3 mb-8">
           <h3 className="text-white font-bold text-lg">Category Breakdown</h3>
           {result.categoryScores.map((cs) => {
-            const color = cs.band === 'critical' ? 'bg-red-400' : cs.band === 'developing' ? 'bg-amber-400' : cs.band === 'established' ? 'bg-blue-400' : 'bg-emerald-400';
+            const color = cs.band === 'critical' ? 'bg-red-400' : cs.band === 'weak' ? 'bg-orange-400' : cs.band === 'developing' ? 'bg-amber-400' : cs.band === 'strong' ? 'bg-blue-400' : 'bg-emerald-400';
             return (
               <div key={cs.category} className="bg-zinc-900/40 border border-zinc-800 rounded-xl p-4">
                 <div className="flex justify-between mb-2">

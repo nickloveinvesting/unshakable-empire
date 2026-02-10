@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, Settings, BookOpen } from 'lucide-react';
+import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, Settings, BookOpen, LogOut } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@/hooks/useUser';
+import { createClient } from '@/lib/supabase/client';
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -16,6 +17,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const { profile, loading } = useUser();
   const router = useRouter();
   const pathname = usePathname();
+
+  const handleLogout = async () => {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push('/login');
+  };
 
   if (loading) {
     return (
@@ -55,7 +62,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <Shield className="w-6 h-6 text-amber-400" />
           <span className="text-white font-bold text-sm">Unshakable Empire</span>
         </div>
-        <nav className="flex flex-col gap-1">
+        <nav className="flex flex-col gap-1 flex-1">
           {NAV_ITEMS.map((item) => {
             const active = pathname === item.href || pathname.startsWith(item.href + '/');
             return (
@@ -65,6 +72,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             );
           })}
         </nav>
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-zinc-500 hover:text-red-400 hover:bg-red-400/5 transition-all mt-auto"
+        >
+          <LogOut className="w-4 h-4" />Sign Out
+        </button>
       </aside>
 
       {/* Main content */}
@@ -81,6 +94,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </Link>
           );
         })}
+        <button onClick={handleLogout} className="flex flex-col items-center gap-0.5 min-w-[44px] min-h-[44px] justify-center rounded-lg transition-all text-zinc-500 hover:text-red-400">
+          <LogOut className="w-5 h-5" />
+          <span className="text-[10px] font-medium">Sign Out</span>
+        </button>
       </nav>
     </div>
   );

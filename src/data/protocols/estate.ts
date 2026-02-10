@@ -3,727 +3,848 @@ import type { DayProtocol } from "@/types/protocol";
 export const estateProtocol: DayProtocol[] = [
   {
     day: 1,
-    title: "Estate Planning Foundation",
-    intention: "Understand why estate planning matters and assess your current state.",
+    title: "Map Your Buyer's Journey",
+    intention:
+      "Document every step a lead takes from first awareness to closed deal so you can see the full picture before optimizing anything.",
     tasks: [
       {
-        id: "e1-t1",
-        label: "Determine whether you currently have a will or trust in place",
-        description: "If you die without a will (intestate), the state decides how your assets are distributed.",
+        id: "d1-t1",
+        label: "List every stage a prospect goes through before buying",
+        description:
+          "Start from the very first touchpoint (ad, referral, social post, Google search) and map each step all the way to the signed contract or purchase. Include awareness, interest, consideration, decision, and close.",
       },
       {
-        id: "e1-t2",
-        label: "List your immediate family members and dependents",
-        description: "Spouse, children, parents, and anyone who depends on you financially or would inherit from you.",
+        id: "d1-t2",
+        label: "Document the specific actions and channels at each stage",
+        description:
+          "For each stage write down what the prospect actually does: clicks an ad, visits a landing page, fills out a form, books a call, attends a demo, receives a proposal, signs. Track every stage: Ad to Landing Page to Website to Booking to Call to Close.",
       },
       {
-        id: "e1-t3",
-        label: "Identify your primary estate planning goals",
-        description: "Asset protection, minimizing taxes, providing for dependents, charitable giving, business succession.",
+        id: "d1-t3",
+        label: "Create a visual funnel map you can reference and share",
+        description:
+          "Use a whiteboard, spreadsheet, or tool like Miro or Lucidchart. This map becomes your conversion intelligence blueprint. Every team member should be able to look at it and understand the journey.",
       },
     ],
     educationalContent:
-      "Estate planning is not just for the wealthy -- it is for anyone who has people they care about, assets they want to protect, or wishes they want honored. Without a will, your state's intestacy laws determine who inherits your property, who becomes guardian of your minor children, and how your affairs are settled. This process (probate) is public, slow, and expensive. A basic estate plan -- will, power of attorney, healthcare directive, and beneficiary designations -- takes 2-4 hours with an attorney and costs $500-$2,000. The cost of not having one is measured in family conflict, legal fees, and outcomes you would never have chosen.",
+      "Most businesses have never actually mapped their buyer's journey end to end. They have pieces -- an ad here, a website there, a salesperson somewhere -- but no connected map. Without a map you cannot find the leaks. Think of it like plumbing: you need to see the whole pipe system before you can find where the water is draining out. Track every stage: Ad, Landing Page, Website, Booking, Call, Close. Where did they drop off and why? That question is the foundation of Conversion Intelligence. You cannot optimize what you have not mapped.",
   },
   {
     day: 2,
-    title: "Last Will and Testament",
-    intention: "Understand what a will does and take steps to create or update yours.",
+    title: "Audit Your Tracking Infrastructure",
+    intention:
+      "Identify where you currently have tracking installed and where you are flying blind.",
     tasks: [
       {
-        id: "e2-t1",
-        label: "Learn what a will covers: asset distribution, guardianship, and executor appointment",
-        description: "A will names who gets your property, who raises your children, and who manages the process.",
+        id: "d2-t1",
+        label: "Check which analytics and tracking tools are currently installed",
+        description:
+          "Review your website for Google Analytics, Facebook Pixel, LinkedIn Insight Tag, Google Tag Manager, heatmap tools, and any other tracking scripts. Document what is active and what is missing.",
       },
       {
-        id: "e2-t2",
-        label: "Choose your executor -- the person who will carry out your will's instructions",
-        description: "Pick someone responsible, organized, and willing. Consider naming an alternate executor.",
+        id: "d2-t2",
+        label: "Identify gaps in your tracking at each funnel stage",
+        description:
+          "Walk through your funnel map from Day 1. At each stage ask: Can I see how many people are here? Can I see who drops off? If the answer is no, mark it as a tracking gap.",
       },
       {
-        id: "e2-t3",
-        label: "If you have minor children, choose a guardian and discuss it with them",
-        description: "This is the most important decision in your will. Failing to name a guardian lets a judge decide.",
+        id: "d2-t3",
+        label: "Verify UTM codes and source attribution are in place",
+        description:
+          "Check that every ad, email link, and social post uses UTM parameters so you know exactly where every lead came from. Without UTMs you are guessing which channels work.",
       },
     ],
     educationalContent:
-      "Your will is the foundational document of your estate plan. It does three critical things: (1) Names who receives your property (beneficiaries). (2) Designates a guardian for minor children. (3) Appoints an executor to manage the estate settlement process. Important limitations: a will only controls assets in your individual name. Assets held jointly, in trusts, or with beneficiary designations (retirement accounts, life insurance) pass outside the will. This is why beneficiary designations must align with your overall plan. A will must go through probate -- a court-supervised process that is public, can take 6-18 months, and typically costs 3-7% of the estate value in legal fees.",
+      "You cannot manage what you do not measure. Most businesses are spending money on marketing with no idea which dollars are actually producing results. If you are spending time, money, and energy on Google SEO, trust me, that is wasted money -- Google is a resume. People check you out there but they do not discover you there the way you think. The point is: know what each channel actually does for you with data, not assumptions. Every dollar in, you need to know exactly what comes back out. That starts with tracking.",
   },
   {
     day: 3,
-    title: "Revocable Living Trust",
-    intention: "Evaluate whether a revocable living trust should be part of your estate plan.",
+    title: "Install and Verify Tracking at Every Stage",
+    intention:
+      "Close every tracking gap so you have full visibility across your entire funnel.",
     tasks: [
       {
-        id: "e3-t1",
-        label: "Learn the key differences between a will and a revocable living trust",
-        description: "A trust avoids probate, provides privacy, and allows seamless asset management if you become incapacitated.",
+        id: "d3-t1",
+        label: "Install missing analytics and pixels on your website and landing pages",
+        description:
+          "Set up Google Analytics 4 if not already active. Install or verify your Facebook/Meta Pixel, Google Ads conversion tracking, and any platform-specific pixels. Use Google Tag Manager to centralize all tags.",
       },
       {
-        id: "e3-t2",
-        label: "Assess whether a trust makes sense for your situation",
-        description: "Generally beneficial if you own real estate, have assets over $100K, want privacy, or live in a high-probate-cost state.",
+        id: "d3-t2",
+        label: "Set up form tracking and CRM logging for lead capture points",
+        description:
+          "Ensure every form submission, chat inquiry, and phone call is logged in your CRM with the source and timestamp. If a lead comes in, you should know exactly where they came from and when.",
       },
       {
-        id: "e3-t3",
-        label: "Research estate planning attorneys in your area",
-        description: "Ask for referrals from your financial advisor, CPA, or trusted friends who have completed estate planning.",
+        id: "d3-t3",
+        label: "Test every tracking point to confirm data is flowing correctly",
+        description:
+          "Submit test forms, click test ads, and walk through your funnel as a prospect would. Check that every event fires and every lead appears in your CRM with correct attribution.",
       },
     ],
     educationalContent:
-      "A revocable living trust is a legal entity that holds your assets during your lifetime and distributes them after death without going through probate. While you are alive, you maintain full control as the trustee and can modify or revoke the trust at any time. The benefits: (1) Avoids probate -- assets transfer immediately and privately. (2) Incapacity planning -- your successor trustee manages assets seamlessly if you become unable to. (3) Privacy -- unlike a will, which becomes public record during probate, a trust remains private. (4) Multi-state property -- if you own real estate in multiple states, a trust avoids probate in each state. The cost of a trust is higher than a simple will ($1,500-$5,000), but for most homeowners, the probate savings alone justify the expense.",
+      "Installing tracking is not glamorous work but it is the foundation of every dollar of marketing ROI you will ever measure. Think of it this way: if you run a McDonald's, you know exactly how many burgers you sold, how much each cost to make, and what your profit margin is on every item. Same quarter pounder with cheese in London as in the US. Why? Because it was repeatable and measurable. Your marketing needs the same precision. Every stage of your funnel should have a number attached to it. If it does not, you are running your business on feelings instead of facts.",
   },
   {
     day: 4,
-    title: "Funding Your Trust",
-    intention: "Ensure your trust actually works by transferring assets into it.",
+    title: "Baseline Your Conversion Rates",
+    intention:
+      "Pull hard numbers at every funnel stage so you know exactly where you stand today.",
     tasks: [
       {
-        id: "e4-t1",
-        label: "Understand what 'funding a trust' means",
-        description: "A trust only controls assets that have been retitled in the trust's name. An unfunded trust is useless.",
+        id: "d4-t1",
+        label: "Calculate conversion rates at each stage of your funnel",
+        description:
+          "How many people see your ad vs. click it? How many land on your page vs. fill out the form? How many book a call vs. show up? How many calls convert to sales? Get the percentage at every transition.",
       },
       {
-        id: "e4-t2",
-        label: "List all assets that should be transferred into your trust",
-        description: "Real estate, bank accounts, brokerage accounts, business interests, and valuable personal property.",
+        id: "d4-t2",
+        label: "Document your baseline metrics in a single reference sheet",
+        description:
+          "Create a spreadsheet or dashboard row with today's date and every conversion rate: impressions to clicks, clicks to leads, leads to appointments, appointments to closes, and overall funnel conversion rate.",
       },
       {
-        id: "e4-t3",
-        label: "Begin the retitling process for your primary assets",
-        description: "Real estate requires a new deed. Bank and brokerage accounts need title changes with the institution.",
+        id: "d4-t3",
+        label: "Calculate your current cost per acquisition and customer lifetime value",
+        description:
+          "Total marketing spend divided by total customers acquired gives you CPA. Compare that to what a customer is worth over their lifetime. If CPA is higher than LTV, your funnel is losing money.",
       },
     ],
     educationalContent:
-      "The most common estate planning failure is creating a trust and then not funding it. An unfunded trust is like an empty safe -- it exists but protects nothing. Funding a trust means retitling assets so the trust is the owner: your home deed is transferred to the trust, bank accounts are retitled in the trust's name, and brokerage accounts are updated. This does not trigger any tax consequences for a revocable trust because you are still the beneficial owner. Note: retirement accounts (401k, IRA) and life insurance should NOT be retitled to the trust -- instead, the trust should be named as the beneficiary if that aligns with your plan. Work with your attorney to create a funding checklist specific to your assets.",
+      "Baseline metrics are your before picture. Without them you will never know if your optimizations are actually working or if you are just rearranging deck chairs. Here is the mindset: every dollar in, we know you are gonna get $35 back. That is the goal. But you cannot get there if you do not know where you are starting from. Most businesses guess at their conversion rates. They say things like 'we close about half our leads' but when you actually look at the data it is 15%. Get the real numbers. Write them down. Date them. You will compare against these numbers for the next 26 days.",
   },
   {
     day: 5,
-    title: "Power of Attorney",
-    intention: "Designate someone to make financial decisions on your behalf if you cannot.",
+    title: "Find Your Biggest Drop-Off Point",
+    intention:
+      "Identify the single stage in your funnel where you are losing the most prospects.",
     tasks: [
       {
-        id: "e5-t1",
-        label: "Understand the two types: Durable Financial Power of Attorney and Springing POA",
-        description: "Durable POA takes effect immediately. Springing POA activates only upon incapacitation.",
+        id: "d5-t1",
+        label: "Compare conversion rates across all funnel stages to find the weakest link",
+        description:
+          "Look at your baseline numbers from Day 4. Which transition has the lowest percentage? That is your biggest leak. It might be landing page to lead, or lead to booked call, or booked call to close.",
       },
       {
-        id: "e5-t2",
-        label: "Choose your financial agent (attorney-in-fact)",
-        description: "Select someone you trust completely with your finances. Consider naming a successor agent.",
+        id: "d5-t2",
+        label: "Quantify the revenue impact of the drop-off",
+        description:
+          "Calculate how much additional revenue you would generate if you improved that one conversion rate by even 10-20%. This gives you a dollar figure to justify the optimization effort.",
       },
       {
-        id: "e5-t3",
-        label: "Discuss your financial values and wishes with your chosen agent",
-        description: "They need to understand your investment philosophy, charitable intentions, and financial priorities.",
+        id: "d5-t3",
+        label: "Gather qualitative data around the drop-off point",
+        description:
+          "Talk to your sales team, read support tickets, check chat logs, and review any feedback from prospects who dropped off. The numbers tell you where; the stories tell you why.",
       },
     ],
     educationalContent:
-      "A Durable Financial Power of Attorney is arguably the most important document in your estate plan for your lifetime. If you become incapacitated without one -- through illness, accident, or cognitive decline -- your family must petition a court for guardianship or conservatorship. This court process is expensive ($5,000-$15,000+), time-consuming (weeks to months), public, and emotionally draining. During that time, no one can access your accounts, pay your bills, or manage your investments. A properly drafted POA allows your chosen agent to step in immediately and seamlessly manage your finances. Choose your agent carefully: this person will have broad authority over your financial life.",
+      "Your funnel is only as strong as its weakest stage. If you are getting thousands of clicks but nobody fills out the form, your landing page is the problem -- not your ad budget. If people book calls but never show up, your confirmation and reminder process is broken. Where did they drop off and why? That is the question that separates businesses that grow from businesses that throw money at marketing and hope. Focus on the biggest leak first. Fixing one stage by 20% can double your revenue without spending a single extra dollar on ads.",
   },
   {
     day: 6,
-    title: "Healthcare Directive and Living Will",
-    intention: "Document your medical treatment preferences and designate a healthcare proxy.",
+    title: "Diagnose Why Leads Drop Off",
+    intention:
+      "Analyze the root cause behind your biggest funnel leak so you can fix it with precision.",
     tasks: [
       {
-        id: "e6-t1",
-        label: "Create or update your Advance Healthcare Directive",
-        description: "This document specifies your wishes regarding life-sustaining treatment, resuscitation, and organ donation.",
+        id: "d6-t1",
+        label: "Evaluate messaging at the drop-off stage",
+        description:
+          "Is the message clear? Does the headline match what the ad promised? Is the value proposition obvious within 5 seconds? Misaligned messaging between stages is the number one cause of drop-off.",
       },
       {
-        id: "e6-t2",
-        label: "Designate a Healthcare Proxy (Medical Power of Attorney)",
-        description: "Choose someone who understands your values and can make medical decisions if you cannot communicate.",
+        id: "d6-t2",
+        label: "Assess friction and user experience at the drop-off stage",
+        description:
+          "How many form fields are you asking for? How many clicks to complete the action? Does the page load fast on mobile? Every extra step or second of load time costs you conversions.",
       },
       {
-        id: "e6-t3",
-        label: "Have a detailed conversation with your healthcare proxy about your wishes",
-        description: "Discuss end-of-life preferences, quality of life values, and specific scenarios so they can honor your intentions.",
+        id: "d6-t3",
+        label: "Review timing and follow-up processes at the drop-off stage",
+        description:
+          "How long does it take to respond to a new lead? If it is more than 5 minutes you are losing deals. Check whether automated follow-up exists and whether the timing matches buyer urgency.",
       },
     ],
     educationalContent:
-      "An Advance Healthcare Directive (also called a Living Will) and Healthcare Proxy work together to ensure your medical wishes are honored when you cannot speak for yourself. The directive specifies your preferences: Do you want life-sustaining treatment if you are terminally ill? Under what conditions would you want artificial nutrition or ventilation? Do you want to be an organ donor? The healthcare proxy gives someone legal authority to make medical decisions based on your stated wishes and their understanding of your values. Without these documents, medical decisions default to state law and family members may disagree about your care, leading to anguish and legal battles at the worst possible time.",
+      "There are really only four reasons prospects drop off at any stage: messaging, timing, friction, or follow-up. Messaging means the prospect does not understand the value or the promise changed between stages. Timing means you responded too slowly or the offer was not relevant to where they are in their decision. Friction means the process is too complicated -- too many fields, too many steps, too much thinking required. Follow-up means nobody reached back out, or they reached out too late. Diagnose which one it is before you start changing things, or you will fix the wrong problem.",
   },
   {
     day: 7,
-    title: "Beneficiary Designation Audit",
-    intention: "Ensure all beneficiary designations are current, correct, and aligned with your estate plan.",
+    title: "Week 1 Review: Funnel Map and Baseline",
+    intention:
+      "Consolidate everything you have learned this week into a documented funnel map with baseline metrics.",
     tasks: [
       {
-        id: "e7-t1",
-        label: "Pull beneficiary records for all accounts that use beneficiary designations",
-        description: "401(k), IRA, Roth IRA, life insurance, annuities, HSA, 529 plans, brokerage TOD designations.",
+        id: "d7-t1",
+        label: "Finalize your visual funnel map with conversion rates at each stage",
+        description:
+          "Update your Day 1 funnel map with the actual conversion percentages from Day 4. Label every transition with its rate. This is your Conversion Intelligence baseline document.",
       },
       {
-        id: "e7-t2",
-        label: "Verify that primary and contingent beneficiaries are correct on every account",
-        description: "Check names, percentages, and whether designations have been updated after life changes.",
+        id: "d7-t2",
+        label: "Document your biggest drop-off point and diagnosis",
+        description:
+          "Write a clear summary: where the biggest leak is, why it is happening (messaging, timing, friction, or follow-up), and the estimated revenue impact of fixing it.",
       },
       {
-        id: "e7-t3",
-        label: "Update any outdated designations immediately",
-        description: "Contact the custodian or insurer to submit new beneficiary forms where needed.",
+        id: "d7-t3",
+        label: "Set Week 2 priorities based on your funnel analysis",
+        description:
+          "Next week focuses on channel audit. Prepare by listing every marketing channel and gathering spend data. Know where your money is going before you start evaluating ROI.",
       },
     ],
     educationalContent:
-      "Beneficiary designations are the most overlooked and most consequential element of estate planning. These designations supersede your will and trust for the accounts they apply to. If your 401(k) beneficiary form still names an ex-spouse, they will receive the account -- regardless of what your will says, regardless of what your current spouse expects. This creates devastating outcomes that are entirely preventable. Review designations on every account annually and after every major life event. For each account, name both a primary and contingent beneficiary. Consider whether per stirpes (passes to the beneficiary's heirs if they predecease you) or per capita (divides equally among surviving beneficiaries) distribution is appropriate.",
+      "Week 1 is the diagnostic phase and you now have something most businesses never build: a documented, data-backed funnel map. You know your stages, your conversion rates, your biggest leak, and why it exists. This is like getting an MRI before surgery instead of just cutting and hoping. Build repeatable closing sequences so that nobody can screw up. That starts with knowing exactly what the sequence looks like today. Keep this document updated -- it is your conversion intelligence command center for every decision you make going forward.",
   },
   {
     day: 8,
-    title: "Digital Estate Planning",
-    intention: "Ensure your digital assets and accounts are accessible and protected after death.",
+    title: "List Every Marketing Channel and Spend",
+    intention:
+      "Create a complete inventory of every channel you use and what you spend on each.",
     tasks: [
       {
-        id: "e8-t1",
-        label: "Create an inventory of all digital accounts and assets",
-        description: "Email, social media, cloud storage, cryptocurrency, domain names, online businesses, digital subscriptions.",
+        id: "d8-t1",
+        label: "List every marketing channel you currently use",
+        description:
+          "Include paid channels (Google Ads, Facebook/Meta Ads, LinkedIn Ads, YouTube Ads), organic channels (SEO, social media, content marketing), referrals, email, direct mail, events, partnerships, and any other source of leads.",
       },
       {
-        id: "e8-t2",
-        label: "Document access credentials in a secure, accessible location",
-        description: "Use a password manager with emergency access features, or a sealed letter with your attorney.",
+        id: "d8-t2",
+        label: "Document monthly spend on each channel including hidden costs",
+        description:
+          "Include ad spend, software tools, agency fees, content creation costs, and the value of time your team spends on each channel. If you are doing it yourself, your time has a dollar value too.",
       },
       {
-        id: "e8-t3",
-        label: "Set up legacy contacts or inactive account managers where available",
-        description: "Google, Apple, Facebook, and other platforms offer legacy settings. Configure them now.",
+        id: "d8-t3",
+        label: "Record the number of leads generated from each channel last month",
+        description:
+          "Pull data from your CRM, analytics, and ad platforms. If you cannot attribute leads to a specific channel, that is a tracking gap from Week 1 that needs to be fixed.",
       },
     ],
     educationalContent:
-      "Digital assets are an increasingly significant part of modern estates, yet most estate plans do not address them. Cryptocurrency wallets without accessible private keys are lost forever -- an estimated $140 billion in Bitcoin is permanently inaccessible. Online businesses, domain names, and social media accounts with significant followings have real monetary value. Photos stored only in cloud accounts may be inaccessible to grieving family members. Create a comprehensive digital asset inventory, store credentials securely (a password manager with emergency access is ideal), and configure legacy settings on platforms that offer them. Include instructions for digital assets in your estate plan so your executor knows what exists and how to access it.",
+      "Most businesses have no idea what they actually spend on marketing across all channels. They know their ad budget but forget about the agency fee, the software subscriptions, the time spent creating content, and the networking events. When you add it all up, the real marketing spend is often 2-3x what they thought. This week is about getting honest with yourself about where every dollar goes and what it produces. If you are spending time, money, and energy on Google SEO, trust me, that is wasted money. Google is a resume -- people check you out there, they do not discover you there. Know what each channel actually does.",
   },
   {
     day: 9,
-    title: "Life Insurance in Estate Planning",
-    intention: "Understand how life insurance integrates with your estate plan for maximum benefit.",
+    title: "Calculate Cost Per Lead by Channel",
+    intention:
+      "Determine which channels deliver the cheapest leads and which are burning money.",
     tasks: [
       {
-        id: "e9-t1",
-        label: "Review how life insurance proceeds will be distributed",
-        description: "Life insurance passes to beneficiaries outside of probate, making it an efficient wealth transfer tool.",
+        id: "d9-t1",
+        label: "Calculate cost per lead for every channel",
+        description:
+          "Divide total monthly spend on each channel by the number of leads it generated. Example: $2,000 on Facebook Ads producing 40 leads = $50 CPL. Do this for every single channel.",
       },
       {
-        id: "e9-t2",
-        label: "Evaluate whether an Irrevocable Life Insurance Trust (ILIT) would benefit you",
-        description: "An ILIT keeps life insurance proceeds out of your taxable estate for estate tax purposes.",
+        id: "d9-t2",
+        label: "Rank channels from lowest to highest cost per lead",
+        description:
+          "Create a ranked list. The cheapest CPL channel is not always the best (lead quality matters) but this ranking reveals which channels are inefficient at the top of the funnel.",
       },
       {
-        id: "e9-t3",
-        label: "Ensure life insurance coverage is adequate for estate liquidity needs",
-        description: "If your estate has illiquid assets (real estate, business), life insurance can provide cash for taxes and expenses.",
+        id: "d9-t3",
+        label: "Note lead quality differences between channels",
+        description:
+          "A $20 lead that never converts is more expensive than a $100 lead that closes. Flag which channels produce leads that actually become customers vs. which produce tire-kickers.",
       },
     ],
     educationalContent:
-      "Life insurance plays a dual role in estate planning: it provides financial security for dependents and creates liquidity for the estate. If your estate consists primarily of illiquid assets (a business, real estate, or art), your heirs may need to sell assets quickly to pay estate taxes, debts, and settlement costs. Life insurance proceeds provide immediate cash to cover these obligations without a forced sale. For estates that may be subject to estate tax (currently over $13.61 million for individuals, $27.22 million for married couples), an Irrevocable Life Insurance Trust (ILIT) keeps the insurance proceeds out of the taxable estate. The trust owns the policy, so the death benefit is not included in your estate. This is one of the most effective estate tax reduction strategies available.",
+      "Cost per lead is the first layer of channel intelligence but it is not the whole story. A cheap lead that never buys is not a bargain -- it is a distraction. You need to track CPL alongside conversion rate and customer lifetime value to get the full picture. The goal is to get to a place where every dollar in, we know you are gonna get $35 back. That means you know exactly what a lead costs, what percentage close, and what a closed customer is worth. When you have those three numbers for every channel, you can make decisions with confidence instead of guessing.",
   },
   {
     day: 10,
-    title: "Joint Ownership and Titling",
-    intention: "Review how your assets are titled and understand the estate planning implications.",
+    title: "Calculate Return on Ad Spend by Channel",
+    intention:
+      "Determine which paid channels produce the highest return for every dollar invested.",
     tasks: [
       {
-        id: "e10-t1",
-        label: "Review the titling of all major assets: real estate, vehicles, bank and investment accounts",
-        description: "Is each asset in your name alone, joint with rights of survivorship, tenants in common, or in a trust?",
+        id: "d10-t1",
+        label: "Calculate ROAS for each paid channel",
+        description:
+          "ROAS = Revenue generated from channel divided by spend on channel. A ROAS of 5x means every $1 spent produced $5 in revenue. Calculate this for every paid channel you run.",
       },
       {
-        id: "e10-t2",
-        label: "Understand how each titling method affects asset transfer at death",
-        description: "Joint tenancy passes automatically to the surviving owner. Tenants in common goes through probate.",
+        id: "d10-t2",
+        label: "Compare ROAS across channels to identify clear winners and losers",
+        description:
+          "Side by side, which channel gives you the most revenue per dollar? Which gives the least? A channel with 2x ROAS and a channel with 10x ROAS should not receive equal budgets.",
       },
       {
-        id: "e10-t3",
-        label: "Determine if any assets need to be retitled to align with your estate plan",
-        description: "Incorrect titling can override your will and trust, sending assets to unintended recipients.",
+        id: "d10-t3",
+        label: "Factor in customer lifetime value for a true ROI picture",
+        description:
+          "If a customer from Google Ads spends $500 upfront but $5,000 over their lifetime, the true ROAS is much higher than the initial purchase suggests. Calculate LTV-adjusted ROAS for each channel.",
       },
     ],
     educationalContent:
-      "Asset titling is the hidden mechanism that determines who actually receives your property at death, often overriding your will. Property held as joint tenants with rights of survivorship passes automatically to the surviving co-owner, bypassing the will entirely. This is often desirable for a married couple's home but can create problems in second marriages or blended families. Tenants in common allows each owner to leave their share to whomever they choose through their will. Community property states have additional rules. Review every asset title carefully and ensure it aligns with your overall estate plan. A single misaligned title can undermine years of careful planning.",
+      "ROAS is the metric that separates professional marketers from amateurs. Amateurs look at clicks and impressions. Professionals look at revenue per dollar spent. The benchmark varies by industry but here is the mindset you need: every dollar in, we know you are gonna get $35 back. That is the level of clarity you are building toward. When you know your ROAS by channel, you stop guessing about where to put your budget. You also stop falling for vanity metrics -- a channel that gets tons of clicks but no revenue is a money pit, not a marketing strategy.",
   },
   {
     day: 11,
-    title: "Estate Tax Planning Basics",
-    intention: "Understand estate taxes and whether your estate may be subject to them.",
+    title: "Identify Top and Bottom Performing Channels",
+    intention:
+      "Clearly distinguish your winning channels from your losing channels based on data.",
     tasks: [
       {
-        id: "e11-t1",
-        label: "Learn the current federal estate tax exemption and rate",
-        description: "The exemption is $13.61 million per individual (2024). Amounts above the exemption are taxed at 40%.",
+        id: "d11-t1",
+        label: "Identify your top 2 performing marketing channels",
+        description:
+          "Based on CPL, ROAS, lead quality, and total revenue generated, which two channels are your strongest? These are the channels you should be investing more in.",
       },
       {
-        id: "e11-t2",
-        label: "Determine if your state has a separate estate or inheritance tax",
-        description: "12 states and DC have estate taxes, and 6 states have inheritance taxes, often with lower exemptions.",
+        id: "d11-t2",
+        label: "Identify your bottom 2 performing marketing channels",
+        description:
+          "Which two channels have the worst combination of high cost and low return? These are candidates for reduction or elimination. Do not keep spending out of habit.",
       },
       {
-        id: "e11-t3",
-        label: "Estimate your total taxable estate including life insurance and retirement accounts",
-        description: "Your taxable estate may be larger than your net worth -- it includes life insurance death benefits you own.",
+        id: "d11-t3",
+        label: "Document why each channel performs the way it does",
+        description:
+          "Is your top channel winning because of audience fit, creative quality, or offer alignment? Is your bottom channel losing because of targeting, budget, or fundamental channel mismatch? Understanding why prevents repeating mistakes.",
       },
     ],
     educationalContent:
-      "While the current federal estate tax exemption of $13.61 million per individual ($27.22 million for married couples) shelters most estates, this exemption is scheduled to sunset in 2026, potentially dropping to approximately $7 million per individual. State estate taxes are a more immediate concern: states like Massachusetts and Oregon have exemptions as low as $1 million. Your taxable estate includes everything you own or control: home, investments, retirement accounts, life insurance death benefits (if you own the policy), business interests, and personal property. Married couples can use portability to combine their exemptions, but this requires filing an estate tax return for the first spouse to die, even if no tax is owed.",
+      "Here is a hard truth: most businesses spread their marketing budget across too many channels and do none of them well. They are on every social platform, running ads everywhere, posting content that nobody sees, and wondering why nothing works. The answer is focus. When you identify your top 2 channels and go deep on them, your results compound. When you keep spending on channels that do not work because 'you might miss something,' you are subsidizing failure. Kill the losers. Feed the winners. That is the discipline that separates businesses that scale from businesses that stall.",
   },
   {
     day: 12,
-    title: "Gifting Strategies",
-    intention: "Use strategic gifting to transfer wealth to heirs while reducing your taxable estate.",
+    title: "Reallocate Budget to Winners",
+    intention:
+      "Cut spending on your worst channel and redirect that budget to your best channel.",
     tasks: [
       {
-        id: "e12-t1",
-        label: "Understand the annual gift tax exclusion",
-        description: "You can gift up to $18,000 per recipient per year (2024) without any gift tax reporting or consequences.",
+        id: "d12-t1",
+        label: "Reduce or eliminate spend on your worst-performing channel",
+        description:
+          "If a channel has negative or marginal ROAS and low lead quality, cut it. Do not reduce by 10% -- make a meaningful cut or shut it off entirely. Half measures produce half results.",
       },
       {
-        id: "e12-t2",
-        label: "Evaluate whether annual gifting should be part of your estate plan",
-        description: "A couple with 3 children can gift $108,000/year ($18,000 x 2 parents x 3 children) with no tax impact.",
+        id: "d12-t2",
+        label: "Reallocate that budget to your best-performing channel",
+        description:
+          "Take the dollars you freed up and invest them into the channel with the highest ROAS. Test whether increased spend maintains the same return rate or if there are diminishing returns at higher budgets.",
       },
       {
-        id: "e12-t3",
-        label: "Explore 529 plan superfunding as an accelerated gifting strategy",
-        description: "You can contribute 5 years of annual exclusion gifts at once to a 529 plan ($90,000 per beneficiary in 2024).",
+        id: "d12-t3",
+        label: "Set a 2-week checkpoint to evaluate the reallocation results",
+        description:
+          "Mark your calendar for 14 days from now. At that point compare CPL, ROAS, and total revenue against your baseline. Data will tell you whether the reallocation is working.",
       },
     ],
     educationalContent:
-      "Strategic gifting is one of the simplest and most effective estate planning tools. The annual gift tax exclusion ($18,000 per recipient in 2024) allows you to transfer significant wealth over time with no tax consequences for either party. A married couple with three children and three grandchildren can transfer $216,000 per year ($18,000 x 2 donors x 6 recipients) -- that is over $2 million per decade, completely tax-free. Gifts of appreciated assets transfer the donor's cost basis to the recipient, so consider this for assets with low basis. In contrast, assets inherited at death receive a stepped-up basis, eliminating capital gains. This basis rule influences whether it is better to gift during life or transfer at death.",
+      "The hardest part of marketing optimization is not finding the data -- it is acting on it. Business owners know a channel is not working but they keep spending because they are afraid to miss out or because they already invested so much. That is the sunk cost fallacy and it will drain your budget. Be ruthless with underperformers. The money you free up from a dead channel can double your investment in a channel that actually works. Same quarter pounder with cheese in London as in the US -- McDonald's does not keep menu items that do not sell. Neither should you keep channels that do not convert.",
   },
   {
     day: 13,
-    title: "Charitable Estate Planning",
-    intention: "Integrate charitable giving into your estate plan for tax benefits and legacy impact.",
+    title: "Set Up an A/B Test on Your Best Channel",
+    intention:
+      "Start testing variations on your best channel to push conversion rates even higher.",
     tasks: [
       {
-        id: "e13-t1",
-        label: "Identify causes or organizations you want to support through your estate",
-        description: "Consider charities, educational institutions, religious organizations, or community foundations.",
+        id: "d13-t1",
+        label: "Choose one variable to test on your best-performing channel",
+        description:
+          "Pick ONE thing to test: ad headline, ad image/video, landing page headline, call-to-action, offer, or audience targeting. Never test multiple variables at once or you will not know what caused the change.",
       },
       {
-        id: "e13-t2",
-        label: "Learn about charitable remainder trusts and charitable lead trusts",
-        description: "CRTs provide income to you now and the remainder to charity. CLTs provide income to charity now and the remainder to heirs.",
+        id: "d13-t2",
+        label: "Create the variation and launch the A/B test",
+        description:
+          "Build the alternate version. Set up the test in your ad platform or landing page tool with equal budget split. Ensure both versions run to the same audience under the same conditions.",
       },
       {
-        id: "e13-t3",
-        label: "Consider naming a charity as the beneficiary of your IRA or retirement account",
-        description: "Retirement accounts are the most tax-efficient assets to leave to charity because charities pay no income tax on withdrawals.",
+        id: "d13-t3",
+        label: "Define the success metric and minimum sample size before results come in",
+        description:
+          "Decide in advance what you are measuring (CTR, conversion rate, CPL) and how many impressions or leads you need before declaring a winner. Do not call the test early based on gut feeling.",
       },
     ],
     educationalContent:
-      "Charitable estate planning creates a powerful trifecta: it supports causes you care about, reduces estate taxes, and can provide income during your lifetime. The most tax-efficient charitable bequest is leaving retirement account assets (IRA, 401k) to charity. These accounts are subject to both estate tax and income tax when inherited by individuals, but charities receive them tax-free. Meanwhile, leave assets with a stepped-up basis (real estate, stocks) to heirs, who receive them income-tax-free. A Donor-Advised Fund (DAF) in your estate plan allows your family to continue your charitable legacy by making grants to charities of their choosing. A charitable remainder trust can provide income to you or your heirs for life, with the remainder going to charity.",
+      "A/B testing is how you turn a good channel into a great channel. The best marketers in the world are not geniuses who guess right -- they are disciplined testers who let data decide. Every ad, every landing page, every email should be treated as a hypothesis. Test the headline. Test the image. Test the offer. Test the audience. But test one thing at a time. Build repeatable closing sequences so that nobody can screw up -- and the way you build those is by testing until you find what works, then locking it in as the standard.",
   },
   {
     day: 14,
-    title: "Week 2 Review: Estate Document Checklist",
-    intention: "Confirm your core estate documents are in place or scheduled for creation.",
+    title: "Week 2 Review: Channel Performance Summary",
+    intention:
+      "Review the impact of your channel audit and budget reallocation. Plan for automation week.",
     tasks: [
       {
-        id: "e14-t1",
-        label: "Complete the estate document checklist",
-        description: "Will, revocable trust, financial POA, healthcare directive, HIPAA authorization -- check or schedule each.",
+        id: "d14-t1",
+        label: "Compare your current CPL to your Day 4 baseline",
+        description:
+          "Has your overall cost per lead improved since you cut the underperformer and reallocated budget? If yes, quantify the improvement. If not, investigate what went wrong.",
       },
       {
-        id: "e14-t2",
-        label: "Identify any missing documents and schedule action to create them",
-        description: "If any core documents are missing, book a consultation with an estate planning attorney this week.",
+        id: "d14-t2",
+        label: "Review A/B test progress and any early indicators",
+        description:
+          "Check if your test from Day 13 has enough data yet. If not, let it run. If early results are dramatic (one version is 3x better), note it but wait for statistical significance before acting.",
       },
       {
-        id: "e14-t3",
-        label: "Organize existing estate documents in one secure, accessible location",
-        description: "Physical originals in a fireproof safe, digital copies in encrypted cloud storage, and location shared with executor.",
+        id: "d14-t3",
+        label: "Plan your Week 3 automation priorities",
+        description:
+          "Next week you will build lead follow-up automations, nurture sequences, and re-engagement campaigns. Audit your current follow-up process now so you know exactly what needs to be automated.",
       },
     ],
     educationalContent:
-      "The five essential estate planning documents are: (1) Last Will and Testament -- directs asset distribution and names guardians. (2) Revocable Living Trust -- avoids probate and manages incapacity. (3) Durable Financial Power of Attorney -- authorizes someone to manage your finances. (4) Advance Healthcare Directive / Living Will -- specifies medical treatment preferences. (5) HIPAA Authorization -- allows designated people to access your medical information. Without all five, there are gaps that can cause delay, expense, and family conflict. Store original documents in a fireproof safe (not a bank safe deposit box, which may be sealed at death). Give your executor and agents copies, and ensure they know where originals are located.",
+      "Two weeks in and you now have a mapped funnel, baseline metrics, tracked channels, and a data-driven budget allocation. You are already operating at a higher level than 90% of businesses. The channel audit is not a one-time exercise -- it should happen monthly. Markets shift, ad costs change, and what worked last quarter may not work next quarter. The discipline is in the rhythm: measure, analyze, decide, act, repeat. Every dollar in, we know you are gonna get $35 back. You are building the infrastructure to make that a reality.",
   },
   {
     day: 15,
-    title: "Guardianship and Minor Children Planning",
-    intention: "Ensure your children are cared for according to your wishes if both parents are unavailable.",
+    title: "Audit Your Lead Follow-Up Process",
+    intention:
+      "Evaluate how quickly and effectively you respond to new leads today.",
     tasks: [
       {
-        id: "e15-t1",
-        label: "Select primary and backup guardians for minor children",
-        description: "Consider values, parenting style, financial stability, location, and the guardian's willingness.",
+        id: "d15-t1",
+        label: "Measure your current average lead response time",
+        description:
+          "From the moment a lead fills out a form or sends an inquiry, how long does it take for someone to respond? Check your CRM timestamps. The industry benchmark is under 5 minutes. Most businesses take hours or days.",
       },
       {
-        id: "e15-t2",
-        label: "Discuss your choice with the potential guardians and get their agreement",
-        description: "Never assume someone is willing to take on this responsibility. Have the conversation.",
+        id: "d15-t2",
+        label: "Document your current follow-up sequence step by step",
+        description:
+          "What happens after a lead comes in? Who gets notified? What is the first outreach? How many follow-ups happen? What is the cadence? If the answer is 'it depends on who is working,' that is a broken process.",
       },
       {
-        id: "e15-t3",
-        label: "Consider separating guardianship of children from financial management",
-        description: "The best person to raise your children may not be the best person to manage their inheritance.",
+        id: "d15-t3",
+        label: "Identify follow-up gaps and inconsistencies",
+        description:
+          "Are some leads falling through the cracks? Are follow-ups happening on weekends and evenings? Is the messaging consistent regardless of who responds? Document every gap you find.",
       },
     ],
     educationalContent:
-      "Naming a guardian for minor children is the most emotionally difficult and most important decision in estate planning. If both parents die without a named guardian, a court will decide who raises your children -- and the court may not choose the person you would have chosen. Key considerations: Does the potential guardian share your values and parenting philosophy? Can they handle the financial and emotional responsibility? Are they in a stable life situation? Is their location workable? Many parents separate the roles: a guardian raises the children while a trustee manages the inheritance. This prevents overburdening one person and ensures professional financial management of your children's assets. Review guardian designations as your children grow and your relationships evolve.",
+      "Speed to lead is one of the most researched topics in sales and the data is unambiguous: responding to a lead within 5 minutes makes you 21 times more likely to qualify that lead compared to responding in 30 minutes. After an hour, your odds of qualifying drop by 90%. Yet the average business response time is over 40 hours. That means leads are going to your competitors while you are getting around to responding. This week you are going to fix that with automation. Build repeatable closing sequences so that nobody can screw up -- that starts with making sure every single lead gets a response within minutes, not hours.",
   },
   {
     day: 16,
-    title: "Special Needs Planning",
-    intention: "Address estate planning for family members with disabilities or special needs.",
+    title: "Set Up Instant Automated Follow-Up",
+    intention:
+      "Ensure every new lead receives a response within 5 minutes, automatically.",
     tasks: [
       {
-        id: "e16-t1",
-        label: "Determine if any beneficiaries receive government benefits that could be affected by inheritance",
-        description: "SSI, Medicaid, and other means-tested benefits can be lost if a beneficiary inherits directly.",
+        id: "d16-t1",
+        label: "Set up an automated email or SMS response triggered on lead submission",
+        description:
+          "Configure your CRM or email tool to send an immediate, personalized response the moment a new lead comes in. Include their name, acknowledge what they inquired about, and set expectations for next steps.",
       },
       {
-        id: "e16-t2",
-        label: "Research Special Needs Trusts (SNTs) or ABLE accounts",
-        description: "These tools preserve government benefit eligibility while providing supplemental support.",
+        id: "d16-t2",
+        label: "Set up internal notifications so your team is alerted instantly",
+        description:
+          "Configure Slack, email, or SMS alerts to your sales team the moment a new lead arrives. The automation buys you time but a human follow-up within 15 minutes is still the goal.",
       },
       {
-        id: "e16-t3",
-        label: "Write a Letter of Intent for any special needs family members",
-        description: "Document care routines, preferences, medical needs, and your vision for their quality of life.",
+        id: "d16-t3",
+        label: "Test the automation end to end as if you were a new lead",
+        description:
+          "Submit a test inquiry through every lead capture form. Verify the automated response arrives within 5 minutes, the content is correct and personalized, and the internal notification fires properly.",
       },
     ],
     educationalContent:
-      "A direct inheritance or gift to a person with disabilities who receives means-tested government benefits (SSI, Medicaid) can disqualify them from those benefits. A Special Needs Trust (also called Supplemental Needs Trust) solves this: assets in the trust supplement government benefits without replacing them. The trust can pay for things government programs do not cover: vacations, entertainment, technology, education, and quality of life enhancements. If you have a family member with special needs, every part of your estate plan must be coordinated to protect their benefits: will, trust, life insurance beneficiaries, and the estate plans of grandparents and other relatives who might leave assets to them. An ABLE account (Achieving a Better Life Experience) is a simpler option for smaller amounts, allowing up to $100,000 without affecting SSI eligibility.",
+      "Automation is not about replacing human connection -- it is about making sure no lead ever falls through the cracks. The automated response acknowledges the lead instantly and sets expectations while your team prepares a personalized follow-up. Think of it like a restaurant: the host seats you immediately and hands you a menu. You do not wait 30 minutes wondering if anyone knows you are there. Same quarter pounder with cheese in London as in the US -- the process is the same every time because it is automated and systematized. Your lead follow-up should work the same way.",
   },
   {
     day: 17,
-    title: "Business Succession Planning",
-    intention: "Create a plan for your business to continue or transition after your death or disability.",
+    title: "Write Your Lead Nurture Email Sequence",
+    intention:
+      "Create a 5-email sequence that educates and converts leads who do not buy immediately.",
     tasks: [
       {
-        id: "e17-t1",
-        label: "Determine what would happen to your business if you died tomorrow",
-        description: "Without a succession plan, your business may be forced to close or sell at a steep discount.",
+        id: "d17-t1",
+        label: "Write Email 1: Value-first welcome that establishes credibility",
+        description:
+          "Deliver a quick win, useful insight, or relevant resource within the first email. Do not sell. Build trust by proving you understand their problem better than they do.",
       },
       {
-        id: "e17-t2",
-        label: "Identify potential successors: family members, partners, key employees, or outside buyers",
-        description: "Who has the ability, desire, and resources to continue the business?",
+        id: "d17-t2",
+        label: "Write Emails 2-4: Education, case studies, and objection handling",
+        description:
+          "Email 2: teach something relevant to their problem. Email 3: share a case study or testimonial. Email 4: address the biggest objection your prospects have (price, timing, trust). Each email should provide value and build toward the offer.",
       },
       {
-        id: "e17-t3",
-        label: "Obtain a business valuation or estimate for estate planning purposes",
-        description: "Knowing your business's fair market value is essential for estate tax planning and equitable distribution.",
+        id: "d17-t3",
+        label: "Write Email 5: Clear call to action with urgency or scarcity",
+        description:
+          "The final email in the sequence should present a clear next step (book a call, schedule a demo, make a purchase) with a reason to act now. This is where you ask for the sale directly.",
       },
     ],
     educationalContent:
-      "Business succession planning is critical for business owners, yet fewer than 30% of family businesses have a formal succession plan. Without one, a business owner's death can trigger: forced liquidation at fire-sale prices, loss of key customer and vendor relationships, employee departures, and estate tax bills that force a sale. Key succession tools include: buy-sell agreements (funded with life insurance) that provide a pre-arranged buyer and funds at an agreed price, key person insurance to cover the financial impact of losing a critical team member, and gradual ownership transition to identified successors. Start planning at least 5-10 years before your intended exit to maximize value and minimize disruption.",
+      "Most leads are not ready to buy the moment they find you. Research shows that 80% of sales require 5 or more follow-up touches, but 44% of salespeople give up after one. A nurture sequence bridges that gap automatically. Each email should move the prospect closer to a decision by building trust, demonstrating expertise, and removing objections. The sequence should feel like a helpful advisor, not a desperate salesperson. Build repeatable closing sequences so that nobody can screw up. This email sequence runs whether you are awake or asleep, whether your best salesperson is working or on vacation.",
   },
   {
     day: 18,
-    title: "Buy-Sell Agreements",
-    intention: "Protect your business interests and provide liquidity for your estate through buy-sell planning.",
+    title: "Deploy and Test Your Nurture Sequence",
+    intention:
+      "Get your lead nurture sequence live in your email or CRM tool and verify it works flawlessly.",
     tasks: [
       {
-        id: "e18-t1",
-        label: "Determine if you need a buy-sell agreement (any business with co-owners)",
-        description: "Buy-sell agreements define what happens to ownership shares when an owner dies, becomes disabled, or exits.",
+        id: "d18-t1",
+        label: "Load your 5-email sequence into your email marketing or CRM platform",
+        description:
+          "Set up the emails with proper spacing (typically 2-3 days apart), correct sender information, subject lines, and any personalization tokens. Configure the trigger so new leads automatically enter the sequence.",
       },
       {
-        id: "e18-t2",
-        label: "Understand the three types: Cross-Purchase, Entity Redemption, and Hybrid",
-        description: "Each has different tax, insurance, and structural implications. Consult with an attorney.",
+        id: "d18-t2",
+        label: "Test the entire sequence by enrolling yourself as a test lead",
+        description:
+          "Go through the full sequence as a recipient. Check formatting on mobile and desktop, verify links work, confirm personalization fields populate correctly, and read every email for clarity and tone.",
       },
       {
-        id: "e18-t3",
-        label: "Ensure the agreement is funded with adequate life and disability insurance",
-        description: "An unfunded buy-sell is just a promise. Insurance provides the cash to execute the agreement.",
+        id: "d18-t3",
+        label: "Set up tracking on every email in the sequence",
+        description:
+          "Enable open rate tracking, click tracking, and reply tracking. Tag leads who click specific links so you can identify warm prospects. Set up alerts for replies so your team can jump on engaged leads.",
       },
     ],
     educationalContent:
-      "A buy-sell agreement is a contract between business co-owners that pre-determines what happens to an owner's interest upon death, disability, retirement, or desire to sell. It serves three critical purposes: (1) It prevents unwanted people (such as an owner's heirs or ex-spouse) from becoming business partners. (2) It establishes a fair price for the business interest, preventing disputes. (3) It provides liquidity so the deceased owner's family receives cash instead of an illiquid business interest. The agreement must be funded -- typically with life insurance and disability insurance. Without funding, the surviving owners may not have the cash to buy the deceased's share, forcing a sale or creating a hostile partnership with the heirs.",
+      "Deploying a nurture sequence is where most businesses stall because it feels like a lot of setup. But once it is running, it works for you 24 hours a day, 7 days a week, with perfect consistency. Every lead gets the same quality follow-up regardless of who entered them into the system. Same quarter pounder with cheese in London as in the US -- because the system is the same every time. The key is testing before you go live. A broken link, a missing personalization field, or a typo in your subject line can tank your results. Spend the time to test it right.",
   },
   {
     day: 19,
-    title: "Retirement Account Estate Planning",
-    intention: "Optimize how your retirement accounts transfer to heirs with minimum tax impact.",
+    title: "Identify Your Cold Lead Inventory",
+    intention:
+      "Find every lead from the past 90 days who inquired but never purchased and quantify the opportunity.",
     tasks: [
       {
-        id: "e19-t1",
-        label: "Understand the SECURE Act's 10-year distribution rule for inherited IRAs",
-        description: "Most non-spouse beneficiaries must now empty inherited IRAs within 10 years, accelerating taxes.",
+        id: "d19-t1",
+        label: "Pull a list of all leads from the past 90 days who did not convert",
+        description:
+          "Query your CRM for contacts who entered as leads in the last 90 days but have no associated sale, closed deal, or purchase. This is your cold lead list. Count them.",
       },
       {
-        id: "e19-t2",
-        label: "Evaluate Roth conversion strategies to reduce future tax burden on heirs",
-        description: "Converting Traditional IRA to Roth means you pay the tax now so your heirs inherit tax-free.",
+        id: "d19-t2",
+        label: "Segment cold leads by how far they got in your funnel",
+        description:
+          "Did they just fill out a form? Did they book a call but not show? Did they attend a call but not buy? Each segment needs a different re-engagement approach because their objections are different.",
       },
       {
-        id: "e19-t3",
-        label: "Review whether your retirement account beneficiaries should be individuals or your trust",
-        description: "Naming a trust as IRA beneficiary adds control but may accelerate required distributions.",
+        id: "d19-t3",
+        label: "Estimate the potential revenue if you re-engaged even 10% of cold leads",
+        description:
+          "Multiply your cold lead count by 10% and then by your average deal value. This is money sitting in your CRM waiting to be activated. Most businesses are shocked by this number.",
       },
     ],
     educationalContent:
-      "The SECURE Act of 2019 fundamentally changed retirement account inheritance. Previously, non-spouse beneficiaries could stretch IRA distributions over their lifetime (the 'stretch IRA'). Now, most must empty the account within 10 years of the owner's death, potentially pushing heirs into higher tax brackets. This makes Roth conversions especially valuable: by converting Traditional IRA funds to Roth (paying tax now at your rate), your heirs inherit tax-free Roth funds. Even with the 10-year rule, Roth distributions have no tax impact. Strategic partial Roth conversions during lower-income years (early retirement, between jobs, or before Social Security starts) can dramatically reduce the total tax burden across generations.",
+      "Your CRM is full of money you have already paid to acquire. Every cold lead cost you ad dollars, time, and effort to generate. Letting them sit untouched is like paying for inventory and leaving it in the warehouse. These people already raised their hand and said they were interested -- they just were not ready at that specific moment. Circumstances change. Budgets reset. Timing shifts. A well-crafted re-engagement campaign can convert 5-15% of cold leads who would otherwise never come back. That is revenue with zero additional acquisition cost.",
   },
   {
     day: 20,
-    title: "Real Estate in Estate Planning",
-    intention: "Address how real property will transfer efficiently within your estate plan.",
+    title: "Build Your Cold Lead Re-Engagement Campaign",
+    intention:
+      "Create a multi-channel campaign to re-engage leads who went cold and bring them back into your funnel.",
     tasks: [
       {
-        id: "e20-t1",
-        label: "Review the titling of all real estate you own",
-        description: "Is each property titled in your name, jointly, in a trust, or in an LLC?",
+        id: "d20-t1",
+        label: "Write a re-engagement email sequence for cold leads",
+        description:
+          "Create 3 emails: (1) A 'we noticed you were interested' email with a new value offer. (2) A case study or testimonial showing results. (3) A final 'last chance' email with a specific call to action and deadline.",
       },
       {
-        id: "e20-t2",
-        label: "Understand the stepped-up basis benefit for inherited real estate",
-        description: "Heirs receive a cost basis equal to the property's fair market value at your death, eliminating capital gains.",
+        id: "d20-t2",
+        label: "Set up a retargeting ad campaign for cold leads",
+        description:
+          "Upload your cold lead list as a custom audience in Facebook/Meta and Google. Run retargeting ads with a different angle than what they originally saw -- new offer, new social proof, or new messaging.",
       },
       {
-        id: "e20-t3",
-        label: "Transfer real property into your trust if appropriate",
-        description: "Real estate in a trust avoids probate and allows for seamless management if you become incapacitated.",
+        id: "d20-t3",
+        label: "Launch both the email and retargeting campaigns simultaneously",
+        description:
+          "Coordinate timing so cold leads see your email and your retargeting ads in the same window. Multi-channel re-engagement converts at 2-3x the rate of single-channel outreach.",
       },
     ],
     educationalContent:
-      "Real estate presents unique estate planning challenges because it is illiquid, often high-value, and subject to location-specific laws. The stepped-up basis at death is one of the most valuable tax benefits in the entire code: if you bought a property for $200,000 and it is worth $800,000 at death, your heirs' cost basis is $800,000 -- they can sell immediately and pay zero capital gains tax on $600,000 of appreciation. This is why gifting real estate during life (which transfers your original low basis) is usually inferior to transferring at death (which steps up the basis). Transfer real estate into your revocable living trust to avoid probate, which is especially important if you own property in multiple states -- without a trust, your estate goes through probate in each state where you own real property.",
+      "Re-engagement is one of the highest-ROI activities in marketing because the acquisition cost is already paid. You are not generating new leads -- you are reactivating leads you already own. The key is approaching them with something new. If they did not buy the first time, sending them the exact same message will not work. Change the angle: new offer, new proof, new urgency, or new format. A prospect who ignored your email might respond to a retargeting ad with a video testimonial. Every dollar in, we know you are gonna get $35 back -- and re-engagement dollars have some of the highest returns because the hard work of getting their attention was already done.",
   },
   {
     day: 21,
-    title: "Irrevocable Trusts for Asset Protection and Tax Planning",
-    intention: "Explore advanced trust strategies for wealth protection and estate tax reduction.",
+    title: "Week 3 Review: Automation Health Check",
+    intention:
+      "Verify all automations are running correctly and review early performance metrics.",
     tasks: [
       {
-        id: "e21-t1",
-        label: "Learn the difference between revocable and irrevocable trusts",
-        description: "Revocable trusts provide no asset protection or tax benefits. Irrevocable trusts provide both, but you give up control.",
+        id: "d21-t1",
+        label: "Check that instant follow-up automation is firing for every new lead",
+        description:
+          "Review your CRM logs from the past week. Did every new lead receive an automated response within 5 minutes? If any were missed, find out why and fix the gap.",
       },
       {
-        id: "e21-t2",
-        label: "Evaluate whether an irrevocable trust would benefit your estate plan",
-        description: "Generally beneficial if your estate may be subject to estate taxes or if you need creditor protection.",
+        id: "d21-t2",
+        label: "Review nurture sequence performance: open rates, click rates, replies",
+        description:
+          "Check email analytics. Industry average open rates are 20-25%. Click rates are 2-5%. If you are below these benchmarks, your subject lines or content need work. If you are above, your messaging is resonating.",
       },
       {
-        id: "e21-t3",
-        label: "Research common irrevocable trust types: ILIT, GRAT, SLAT, QPRT",
-        description: "Each serves a specific purpose. An estate planning attorney can recommend the right structure.",
+        id: "d21-t3",
+        label: "Review re-engagement campaign early results",
+        description:
+          "How many cold leads opened the re-engagement email? How many clicked? Has anyone replied or re-booked? Check retargeting ad impressions and clicks. Document early indicators even if the campaign is still young.",
       },
     ],
     educationalContent:
-      "Irrevocable trusts are powerful tools, but they involve giving up ownership and control of the assets placed in them. The trade-off: assets in an irrevocable trust are generally protected from creditors and excluded from your taxable estate. Common types include: (1) ILIT (Irrevocable Life Insurance Trust) -- keeps life insurance proceeds out of your estate. (2) GRAT (Grantor Retained Annuity Trust) -- transfers appreciation to heirs with minimal gift tax. (3) SLAT (Spousal Lifetime Access Trust) -- removes assets from your estate while your spouse retains indirect access. (4) QPRT (Qualified Personal Residence Trust) -- transfers your home to heirs at a reduced gift tax value. These strategies require professional guidance and are most beneficial for estates approaching or exceeding the estate tax exemption.",
+      "Automations are not 'set and forget' -- they are 'set, monitor, and optimize.' The first version of any automation is a draft. You launch it, watch the data, and improve it. If open rates are low, test new subject lines. If click rates are low, test new calls to action. If replies are coming in but not converting, your sales process needs work. The beauty of automation is that every improvement you make applies to every future lead automatically. Build repeatable closing sequences so that nobody can screw up. That is what you are doing right now -- building the machine that runs without you.",
   },
   {
     day: 22,
-    title: "Family Communication and Letter of Intent",
-    intention: "Communicate your estate plan and personal wishes to your family to prevent conflict.",
+    title: "Document Your Best Marketing Campaign",
+    intention:
+      "Create a step-by-step playbook for your best-performing campaign so anyone on your team could run it.",
     tasks: [
       {
-        id: "e22-t1",
-        label: "Write a Letter of Intent to your family",
-        description: "This non-legal document explains your decisions, your values, and your wishes beyond what legal documents cover.",
+        id: "d22-t1",
+        label: "Choose your single best-performing marketing campaign and document every step",
+        description:
+          "From ad creation to targeting to landing page to follow-up to close -- write down every single step in order. Include the tools used, the copy, the images, the targeting parameters, and the timing.",
       },
       {
-        id: "e22-t2",
-        label: "Schedule a family meeting to discuss your estate plan at a high level",
-        description: "You need not share every detail, but your family should understand the plan exists and where to find it.",
+        id: "d22-t2",
+        label: "Include performance benchmarks and expected results in the playbook",
+        description:
+          "Document what a successful run looks like: expected CPL, conversion rate, ROAS, and timeline to results. This gives whoever runs the campaign a standard to measure against.",
       },
       {
-        id: "e22-t3",
-        label: "Document funeral and memorial preferences",
-        description: "Burial vs. cremation, service preferences, and any pre-arrangements you have made.",
+        id: "d22-t3",
+        label: "Test the playbook by having someone else review it for clarity",
+        description:
+          "Hand the document to a team member or contractor and ask if they could execute it without your help. If they have questions, the playbook needs more detail. Iterate until it is self-contained.",
       },
     ],
     educationalContent:
-      "The number one cause of family conflict after a death is not the estate plan itself but the lack of communication about it. When family members are surprised by the contents of a will or trust, emotions run high and litigation often follows. A proactive family conversation -- even a brief one -- can prevent years of conflict. You do not need to share account balances or specific asset values. Instead, communicate: (1) That an estate plan exists and where to find it. (2) Who the executor/trustee is and why you chose them. (3) Your general intentions and the values behind your decisions. (4) Any unequal distributions and the reasoning. A Letter of Intent, though not legally binding, provides context and emotional connection that legal documents cannot.",
+      "This is where Conversion Intelligence becomes a business asset instead of personal knowledge. If your marketing only works when you personally run it, you do not have a system -- you have a dependency. Same quarter pounder with cheese in London as in the US. Why? Because it was repeatable. McDonald's did not need Ray Kroc standing in every kitchen. They documented the process so precisely that anyone could follow it and get the same result. Your marketing playbook should work the same way. Document it so well that a new hire could run your best campaign on day one.",
   },
   {
     day: 23,
-    title: "Executor and Trustee Selection",
-    intention: "Choose the right people or institutions to manage your estate and trusts.",
+    title: "Audit Messaging Consistency",
+    intention:
+      "Ensure your brand message is consistent across every channel and touchpoint.",
     tasks: [
       {
-        id: "e23-t1",
-        label: "Evaluate your current executor and trustee choices",
-        description: "Are they still willing, capable, and appropriate for the role?",
+        id: "d23-t1",
+        label: "Review your messaging across website, social media, email, and ads",
+        description:
+          "Pull up your website homepage, your social media bios and recent posts, your email templates, and your ad copy. Read them side by side. Is the core message, value proposition, and tone consistent?",
       },
       {
-        id: "e23-t2",
-        label: "Consider whether a professional fiduciary or corporate trustee is appropriate",
-        description: "For complex estates or family dynamics, a professional trustee provides objectivity and expertise.",
+        id: "d23-t2",
+        label: "Identify messaging inconsistencies or contradictions",
+        description:
+          "Does your website say one thing while your ads promise something different? Does your social media tone match your email tone? Inconsistency confuses prospects and erodes trust.",
       },
       {
-        id: "e23-t3",
-        label: "Discuss expectations and responsibilities with your chosen fiduciaries",
-        description: "Ensure they understand the time commitment, legal duties, and your specific expectations.",
+        id: "d23-t3",
+        label: "Create a core messaging document with approved language",
+        description:
+          "Write your official value proposition, tagline, key benefits, and brand voice guidelines in one document. This becomes the reference that every piece of content and every ad must align with.",
       },
     ],
     educationalContent:
-      "Choosing the right executor and trustee is as important as the estate plan itself. An executor manages the probate process: gathering assets, paying debts and taxes, and distributing property. This typically takes 12-18 months and requires organization, financial literacy, and patience. A trustee manages trust assets, which can span decades for trusts that benefit minor children or provide lifetime income to a surviving spouse. The ideal fiduciary is trustworthy, financially competent, organized, and able to be impartial. For large or complex estates, or when family dynamics are contentious, a professional trustee (bank trust department or independent trust company) provides objectivity and expertise for an annual fee of 0.5-1.5% of trust assets.",
+      "Messaging inconsistency is a silent conversion killer. When a prospect sees an ad that promises one thing, clicks to a landing page that says something slightly different, and then gets an email with yet another angle, trust erodes. They may not consciously notice the inconsistency but subconsciously they feel uncertain. Uncertainty kills conversions. The fix is simple: one core message, adapted for each channel but never contradicted. Build repeatable closing sequences so that nobody can screw up -- and that means the message is the same whether the prospect finds you through an ad, a referral, or a Google search.",
   },
   {
     day: 24,
-    title: "Protecting Heirs from Themselves",
-    intention: "Build safeguards into your estate plan to protect beneficiaries from poor decisions.",
+    title: "Create Your 90-Day Content Calendar",
+    intention:
+      "Plan what content you will publish each week for the next 90 days to maintain consistent marketing momentum.",
     tasks: [
       {
-        id: "e24-t1",
-        label: "Assess whether any beneficiaries need protection from themselves",
-        description: "Consider age, maturity, spending habits, substance issues, susceptibility to predators or bad influences.",
+        id: "d24-t1",
+        label: "Define your content pillars -- 3-5 core topics you will consistently cover",
+        description:
+          "These should align with your prospects' biggest questions, pain points, and objections. Every piece of content should relate back to one of these pillars and ultimately drive toward your offer.",
       },
       {
-        id: "e24-t2",
-        label: "Learn about spendthrift provisions and incentive trusts",
-        description: "Spendthrift clauses protect trust assets from beneficiaries' creditors. Incentive provisions reward positive behavior.",
+        id: "d24-t2",
+        label: "Map out 12 weeks of content with specific topics and formats",
+        description:
+          "For each week assign: what topic, what format (blog, video, social post, email, podcast), what channel, and what call to action. You do not need to create the content yet -- just plan it.",
       },
       {
-        id: "e24-t3",
-        label: "Determine appropriate distribution schedules for each beneficiary",
-        description: "Options: immediate lump sum, staged distributions (1/3 at 25, 1/3 at 30, 1/3 at 35), or lifetime trust.",
+        id: "d24-t3",
+        label: "Schedule content creation and publishing deadlines",
+        description:
+          "Assign dates for when each piece of content needs to be drafted, reviewed, and published. If you have a team, assign ownership. If it is just you, batch creation days for efficiency.",
       },
     ],
     educationalContent:
-      "Leaving a large inheritance outright to a young or irresponsible beneficiary can be destructive. Studies show that one-third of heirs who receive a lump-sum inheritance have negative savings within two years. Trusts with structured distributions protect against this: instead of receiving everything at once, a beneficiary might receive distributions at ages 25, 30, and 35, or receive income only with the principal preserved for the next generation. Spendthrift provisions prevent beneficiaries from pledging trust assets to creditors or assigning their interest to others. Incentive provisions can reward education completion, employment, or matching charitable contributions. The goal is not to control from the grave but to create a structure that supports wise decision-making.",
+      "Content without a calendar is a hobby. Content with a calendar is a strategy. The reason most businesses are inconsistent with content is that they create it reactively -- when they feel inspired or when they remember. A content calendar eliminates that randomness. You know exactly what you are publishing, when, and where. The content itself should serve your funnel: top-of-funnel content attracts attention, middle-of-funnel content builds trust, and bottom-of-funnel content drives action. Every piece should have a purpose and a call to action. Ninety days of planned content gives you three months of consistent marketing without daily scrambling.",
   },
   {
     day: 25,
-    title: "Blended Family Estate Planning",
-    intention: "Address the unique challenges of estate planning with stepchildren, ex-spouses, and blended families.",
+    title: "Automate Review and Testimonial Collection",
+    intention:
+      "Set up a system that automatically collects social proof from satisfied clients.",
     tasks: [
       {
-        id: "e25-t1",
-        label: "Identify potential conflicts between your current spouse and children from prior relationships",
-        description: "The most common conflict: surviving spouse has access to all assets and children from prior relationships receive nothing.",
+        id: "d25-t1",
+        label: "Identify the optimal moment to ask for a review or testimonial",
+        description:
+          "This is usually right after a positive outcome, successful delivery, or key milestone. Map the trigger point in your customer journey where satisfaction is highest.",
       },
       {
-        id: "e25-t2",
-        label: "Explore trust structures that protect both your spouse and your children",
-        description: "A QTIP trust provides income to your surviving spouse while preserving the principal for your children.",
+        id: "d25-t2",
+        label: "Set up an automated review request email or SMS at that trigger point",
+        description:
+          "Configure your CRM to send a review request automatically when the trigger event occurs. Include a direct link to your Google, Yelp, or industry-specific review platform. Make it one click, not three.",
       },
       {
-        id: "e25-t3",
-        label: "Review and update all beneficiary designations with blended family considerations",
-        description: "Ensure designations reflect your actual wishes, not a default from a previous relationship.",
+        id: "d25-t3",
+        label: "Create a system to capture and repurpose testimonials across channels",
+        description:
+          "Build a testimonial library. When a great review comes in, save it and repurpose it as social media content, landing page proof, email copy, and ad creative. One testimonial should be used in at least 5 places.",
       },
     ],
     educationalContent:
-      "Blended families create estate planning challenges that default legal rules handle poorly. If you leave everything to your current spouse and they remarry or change their own estate plan, your children from a prior relationship may inherit nothing. A QTIP trust (Qualified Terminable Interest Property) solves this elegantly: it provides income to your surviving spouse for life, ensuring they are cared for, while preserving the trust principal for distribution to your children after the spouse passes. Other tools include prenuptial agreements that address estate planning, separate trusts for separate property, and clear beneficiary designations that reflect your specific family structure. Open communication with your spouse about your estate planning intentions is essential in blended family situations.",
+      "Social proof is the most powerful conversion tool you have and most businesses leave it to chance. They wait for reviews to show up organically instead of systematically requesting them. The data is clear: 93% of consumers say online reviews influence their purchase decisions. A product with 5 reviews is 270% more likely to be purchased than one with no reviews. Automate the ask so it happens every time, with every satisfied client, without anyone on your team having to remember. Build repeatable closing sequences so that nobody can screw up -- and review collection should be part of that sequence, not an afterthought.",
   },
   {
     day: 26,
-    title: "Long-Term Care and Medicaid Planning",
-    intention: "Plan for long-term care costs without depleting your entire estate.",
+    title: "Build Your Marketing Dashboard",
+    intention:
+      "Create a single-page view of your most important marketing metrics so you can make decisions at a glance.",
     tasks: [
       {
-        id: "e26-t1",
-        label: "Research Medicaid eligibility rules in your state",
-        description: "Medicaid covers long-term care but has strict asset and income limits. Rules vary significantly by state.",
+        id: "d26-t1",
+        label: "Select your 5-7 key marketing metrics",
+        description:
+          "At minimum: cost per lead (CPL), return on ad spend (ROAS), conversion rate by funnel stage, total pipeline value, and lead response time. Add customer acquisition cost (CAC) and lifetime value (LTV) if available.",
       },
       {
-        id: "e26-t2",
-        label: "Understand Medicaid's look-back period for asset transfers",
-        description: "Gifts or transfers made within 5 years of applying for Medicaid may trigger a penalty period.",
+        id: "d26-t2",
+        label: "Build a one-page dashboard using a spreadsheet or BI tool",
+        description:
+          "Use Google Sheets, Excel, Google Data Studio, or a tool like Databox or Geckoboard. The dashboard should update weekly at minimum and be accessible to everyone who needs it.",
       },
       {
-        id: "e26-t3",
-        label: "Evaluate long-term care insurance as part of your estate preservation strategy",
-        description: "LTC insurance preserves your assets by covering care costs that would otherwise deplete your estate.",
+        id: "d26-t3",
+        label: "Set up data sources to feed the dashboard automatically where possible",
+        description:
+          "Connect your ad platforms, CRM, and analytics tools so the dashboard pulls live data. Manual data entry is acceptable for now but automation is the goal for sustainability.",
       },
     ],
     educationalContent:
-      "Long-term care is the single largest threat to estate preservation. The average nursing home costs $90,000-$120,000 per year, and the average stay is 2.5 years. Without insurance or advance planning, this can consume a significant portion of a lifetime's savings. Medicaid will cover long-term care costs, but only after you have spent down nearly all of your assets (the exact amount varies by state). The 5-year look-back period means that transferring assets to family members shortly before applying for Medicaid results in a penalty period during which you must pay for care yourself. Planning must begin well in advance -- ideally 5-10 years or more before care is needed. Options include LTC insurance, irrevocable trusts established outside the look-back period, and Medicaid-compliant annuities.",
+      "A dashboard is not a report -- it is a decision-making tool. Reports tell you what happened. Dashboards tell you what to do next. Every number on your dashboard should answer a question: Is our CPL going up or down? Is our ROAS healthy? Are leads converting at an acceptable rate? Is our pipeline growing or shrinking? If a number is green, keep doing what you are doing. If it is red, investigate and act. Every dollar in, we know you are gonna get $35 back -- and the dashboard is how you verify that in real time instead of finding out at the end of the quarter that you were losing money.",
   },
   {
     day: 27,
-    title: "Tax Basis Planning and Wealth Transfer",
-    intention: "Optimize the tax basis of assets you transfer to maximize what your heirs actually keep.",
+    title: "Establish Your Weekly Marketing Review Meeting",
+    intention:
+      "Create a recurring rhythm for reviewing marketing performance and making data-driven decisions.",
     tasks: [
       {
-        id: "e27-t1",
-        label: "Identify your lowest cost-basis assets",
-        description: "These are the assets with the most built-in capital gains -- real estate, stocks, and business interests purchased long ago.",
+        id: "d27-t1",
+        label: "Schedule a recurring weekly marketing review meeting",
+        description:
+          "Block 30-60 minutes every week, same day and time. If you are a solo operator, this is a meeting with yourself. If you have a team, include everyone who touches marketing and sales.",
       },
       {
-        id: "e27-t2",
-        label: "Understand when to gift assets during life vs. transfer at death",
-        description: "Gifts carry over your cost basis. Inherited assets receive a stepped-up basis. This difference can save tens of thousands.",
+        id: "d27-t2",
+        label: "Create a standing meeting agenda",
+        description:
+          "Agenda items: (1) Review dashboard metrics vs. targets. (2) What tests are running and results. (3) Budget allocation review. (4) What worked this week. (5) What to test next week. (6) Action items with owners and deadlines.",
       },
       {
-        id: "e27-t3",
-        label: "Evaluate which assets to leave to charity vs. heirs based on tax efficiency",
-        description: "Leave highly-taxed assets (retirement accounts) to charity and low-basis assets (real estate) to heirs.",
+        id: "d27-t3",
+        label: "Run your first weekly marketing review using the agenda and dashboard",
+        description:
+          "Go through the agenda with your dashboard in front of you. Make at least one data-driven decision about budget, testing, or strategy. Document the decision and the action item. This is now your weekly rhythm.",
       },
     ],
     educationalContent:
-      "Tax basis planning is one of the most overlooked opportunities in estate planning. When you gift an asset during your lifetime, the recipient inherits your original cost basis. If you bought stock for $10,000 and it is now worth $100,000, gifting it to your child means they have a $10,000 basis and will owe capital gains tax on $90,000 when they sell. However, if they inherit the same stock at your death, their basis is stepped up to $100,000 (the value at death), and they can sell immediately with zero capital gains tax. This stepped-up basis is one of the most valuable tax provisions in the code. The optimal strategy: gift high-basis assets (or cash) during life and hold low-basis, highly appreciated assets until death for the step-up.",
+      "The weekly marketing review is the habit that keeps everything else in this protocol running. Without it, dashboards go unchecked, tests run without analysis, and budgets drift back to old patterns. The meeting is short and focused -- 30 minutes is enough if you have a clear agenda and a dashboard to reference. The agenda should always end with action items: what are we changing, who is responsible, and when is it done? Same quarter pounder with cheese in London as in the US -- the consistency of the process is what produces consistent results. Your weekly review is the process that makes your marketing repeatable.",
   },
   {
     day: 28,
-    title: "Estate Plan Review Triggers and Maintenance",
-    intention: "Build a system to keep your estate plan current as your life changes.",
+    title: "Test a New Marketing Variation",
+    intention:
+      "Run one new experiment this week to continuously improve your marketing results.",
     tasks: [
       {
-        id: "e28-t1",
-        label: "Create a list of life events that trigger an estate plan review",
-        description: "Marriage, divorce, birth, death, move to new state, significant asset change, law changes, health changes.",
+        id: "d28-t1",
+        label: "Choose one marketing variable to test based on your biggest opportunity",
+        description:
+          "Review your funnel data and dashboard. Where is the biggest remaining gap? Choose a test that targets that gap: new ad copy, new landing page design, new offer, new audience segment, or new channel.",
       },
       {
-        id: "e28-t2",
-        label: "Schedule an annual estate plan review on your calendar",
-        description: "Pick a date each year to review documents, beneficiaries, titling, and fiduciary designations.",
+        id: "d28-t2",
+        label: "Design and launch the test with a clear hypothesis",
+        description:
+          "Write your hypothesis: 'If I change X, I expect Y to improve by Z%.' Set up the test with a control and variation, equal budget or traffic split, and a defined timeframe.",
       },
       {
-        id: "e28-t3",
-        label: "Create a relationship with an estate planning attorney for ongoing updates",
-        description: "Having an attorney who knows your family and plan makes updates faster and less expensive.",
+        id: "d28-t3",
+        label: "Add the test to your weekly review agenda for tracking",
+        description:
+          "Document what you are testing, when it launched, what the success metric is, and when you will evaluate results. This ensures the test gets reviewed and actioned, not forgotten.",
       },
     ],
     educationalContent:
-      "An estate plan is not a set-it-and-forget-it document. Life changes, tax law changes, and relationship changes all require updates. The most common triggers for estate plan review: (1) Marriage or divorce. (2) Birth or adoption of a child or grandchild. (3) Death of a beneficiary, executor, or trustee. (4) Moving to a different state (state laws vary significantly). (5) Significant change in net worth. (6) Change in tax laws. (7) Change in health status. (8) Starting or selling a business. At minimum, review your plan annually even if nothing has changed, to confirm everything remains aligned with your wishes. A 30-minute annual review can prevent catastrophic oversights that take years and thousands of dollars to fix.",
+      "Continuous testing is the engine of marketing improvement. The businesses that win at marketing are not the ones with the biggest budgets -- they are the ones that test the most and learn the fastest. Every test either confirms what works (which you keep) or reveals what does not (which you kill). Either outcome is valuable. The discipline is in always having a test running. If you are not testing, you are assuming -- and assumptions are the most expensive thing in marketing. Track every stage: Ad to Landing Page to Website to Booking to Call to Close. Test at the stage where you have the biggest drop-off.",
   },
   {
     day: 29,
-    title: "Estate Plan Stress Test",
-    intention: "Test your estate plan against real-world scenarios to find gaps.",
+    title: "Create Your 90-Day Marketing Forecast",
+    intention:
+      "Project your expected leads, conversion rates, and revenue impact for the next 90 days based on your data.",
     tasks: [
       {
-        id: "e29-t1",
-        label: "Scenario: You die tomorrow. Walk through exactly what happens",
-        description: "Who is notified? Who manages your affairs? Where do your assets go? What problems arise?",
+        id: "d29-t1",
+        label: "Forecast expected leads per month based on current channel performance",
+        description:
+          "Using your CPL and budget data, project how many leads each channel will produce over the next 3 months. Factor in any budget changes, seasonal trends, or new channels you plan to launch.",
       },
       {
-        id: "e29-t2",
-        label: "Scenario: You become permanently incapacitated. What happens?",
-        description: "Who manages your finances? Who makes medical decisions? Is there a gap in authority or access?",
+        id: "d29-t2",
+        label: "Forecast expected revenue based on current conversion rates and deal values",
+        description:
+          "Multiply projected leads by your conversion rate and average deal value. This gives you a marketing-driven revenue forecast. Compare it to your revenue goals -- is there a gap?",
       },
       {
-        id: "e29-t3",
-        label: "Scenario: You and your spouse die simultaneously. What happens to your children?",
-        description: "Is guardianship clearly designated? Can the guardian access funds? Is the trust funded and functional?",
+        id: "d29-t3",
+        label: "Identify what must improve to hit your revenue goal and build an action plan",
+        description:
+          "If your forecast falls short, identify the lever to pull: more leads (increase budget), higher conversion rate (optimize funnel), or higher deal value (adjust pricing or upsells). Write the specific actions you will take.",
       },
     ],
     educationalContent:
-      "Stress testing your estate plan reveals gaps that are invisible on paper. Walk through each scenario step by step: Who discovers the situation first? Can they find your documents? Do they know who to call? Can your executor access your accounts? Are there delays caused by missing documents, incorrect titling, or outdated beneficiary designations? Do your children have a guardian who can act immediately? Will there be enough liquid cash to cover expenses during the settlement period? These questions expose real-world problems that legal documents alone cannot solve. Share the results of this exercise with your attorney and make any necessary updates.",
+      "Forecasting is where Conversion Intelligence becomes a strategic business tool instead of just a marketing exercise. When you can say with confidence that your marketing will produce a specific number of leads, convert at a known rate, and generate a projected revenue figure, you can plan your business around it. You can hire ahead. You can invest in capacity. You can set goals that are grounded in data instead of hope. Every dollar in, we know you are gonna get $35 back -- and a forecast is the document that proves it to yourself, your team, and your stakeholders.",
   },
   {
     day: 30,
-    title: "Estate Protocol Completion and Legacy Commitment",
-    intention: "Celebrate your estate planning progress and commit to protecting your legacy.",
+    title: "30-Day Conversion Intelligence Assessment",
+    intention:
+      "Measure your progress over the past 30 days, celebrate your wins, and lock in the systems that will keep your marketing running.",
     tasks: [
       {
-        id: "e30-t1",
-        label: "Review your complete estate planning action list and mark completed items",
-        description: "Acknowledge the significant work you have done to protect your family and legacy.",
+        id: "d30-t1",
+        label: "Retake the Conversion Intelligence quiz and compare scores to Day 1",
+        description:
+          "Go back to the Pillar 4 assessment and answer every question again based on where you are today. Compare your new score to your original score. Quantify the improvement.",
       },
       {
-        id: "e30-t2",
-        label: "Identify your top 3 remaining estate planning priorities and set deadlines",
-        description: "Complex items like trust creation or business succession planning may take additional time.",
+        id: "d30-t2",
+        label: "Document your biggest marketing improvement from this 30-day protocol",
+        description:
+          "What single change had the biggest impact? Was it fixing the drop-off point, reallocating budget, automating follow-up, or re-engaging cold leads? Write it down as your top lesson learned.",
       },
       {
-        id: "e30-t3",
-        label: "Write a legacy statement: what do you want your life to mean?",
-        description: "Beyond money, what values, lessons, and impact do you want to leave behind?",
+        id: "d30-t3",
+        label: "Review all systems: funnel tracking, automations, dashboard, weekly review",
+        description:
+          "Walk through every system you built this month. Is tracking still working? Are automations still firing? Is the dashboard current? Is the weekly review on the calendar? Fix anything that has drifted.",
       },
       {
-        id: "e30-t4",
-        label: "Share your estate plan's existence and location with key people",
-        description: "Your executor, spouse, adult children, and attorney should all know where your documents are.",
+        id: "d30-t4",
+        label: "Set your next 90-day Conversion Intelligence goals",
+        description:
+          "Based on your forecast and assessment, set 3 specific goals for the next quarter: a CPL target, a conversion rate target, and a revenue target. Put them on your dashboard and review them weekly.",
       },
     ],
     educationalContent:
-      "Completing this 30-day estate planning protocol puts you in the top 10% of Americans when it comes to estate preparedness. Over 60% of American adults have no estate plan at all, and many who do have plans that are outdated or unfunded. Your estate plan is more than a collection of legal documents -- it is a declaration of your values, your love for your family, and your intention to protect what you have built. The financial aspect ensures your wealth transfers efficiently. The personal aspect ensures your wishes are honored and your family is spared unnecessary conflict and expense. You are building an unshakable empire -- and an empire endures only when the succession plan is as strong as the foundation.",
+      "Thirty days ago you may not have known your conversion rates, your cost per lead, or your return on ad spend. Today you have a mapped funnel, tracked channels, automated follow-up, a nurture sequence, a re-engagement campaign, a documented playbook, a content calendar, a marketing dashboard, and a weekly review rhythm. That is a complete Conversion Intelligence system. Same quarter pounder with cheese in London as in the US -- because the system is repeatable, measurable, and does not depend on any single person to run it. Build repeatable closing sequences so that nobody can screw up. You have built exactly that. Now protect it, improve it, and let it compound. Every dollar in, we know you are gonna get $35 back. That is the standard. Hold yourself to it.",
   },
 ];

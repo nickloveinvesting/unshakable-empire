@@ -11,10 +11,10 @@ export { incomeProtocol } from "./income";
 export { estateProtocol } from "./estate";
 
 export const PROTOCOL_DATA: Record<PillarSlug, DayProtocol[]> = {
-  protection: protectionProtocol,
-  assets: assetsProtocol,
-  income: incomeProtocol,
-  estate: estateProtocol,
+  'ceo-command': protectionProtocol,
+  'team': assetsProtocol,
+  'revenue': incomeProtocol,
+  'conversion': estateProtocol,
 };
 
 export function getProtocolBySlug(slug: PillarSlug): DayProtocol[] {

@@ -12,6 +12,7 @@ interface AuthFormProps {
 
 export default function AuthForm({ mode }: AuthFormProps) {
   const router = useRouter();
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -40,7 +41,11 @@ export default function AuthForm({ mode }: AuthFormProps) {
           if (authError) throw authError;
           router.push('/dashboard');
         } else {
-          const { error: authError } = await supabase.auth.signUp({ email, password });
+          const { error: authError } = await supabase.auth.signUp({
+            email,
+            password,
+            options: { data: { full_name: fullName } },
+          });
           if (authError) throw authError;
           router.push('/dashboard');
         }
@@ -50,7 +55,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
         setIsLoading(false);
       }
     },
-    [email, password, isLogin, router]
+    [fullName, email, password, isLogin, router]
   );
 
   return (
@@ -69,6 +74,12 @@ export default function AuthForm({ mode }: AuthFormProps) {
           <p className="text-zinc-400 text-sm">{subtitle}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
+          {!isLogin && (
+            <div>
+              <label htmlFor="fullName" className="block text-zinc-400 text-sm font-medium mb-1.5">Full Name</label>
+              <input id="fullName" type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} placeholder="John Smith" required autoComplete="name" className="w-full px-4 py-3 bg-zinc-900/80 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-400/60 focus:border-transparent transition-all" />
+            </div>
+          )}
           <div>
             <label htmlFor="email" className="block text-zinc-400 text-sm font-medium mb-1.5">Email</label>
             <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@company.com" required autoComplete="email" className="w-full px-4 py-3 bg-zinc-900/80 border border-zinc-700 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-400/60 focus:border-transparent transition-all" />

@@ -3,727 +3,924 @@ import type { DayProtocol } from "@/types/protocol";
 export const incomeProtocol: DayProtocol[] = [
   {
     day: 1,
-    title: "Cash Flow Snapshot",
-    intention: "Map every dollar flowing in and out to understand your true financial picture.",
+    title: "Top 10 Client Revenue Ranking",
+    intention:
+      "Identify your highest-value clients and understand why they chose you.",
     tasks: [
       {
-        id: "i1-t1",
-        label: "List all sources of monthly income",
-        description: "Include salary, side income, rental income, dividends, interest, and any other cash inflows.",
+        id: "d1-t1",
+        label: "List your top 10 clients ranked by total revenue generated",
+        description:
+          "Pull actual numbers. Who has paid you the most over their lifetime as a client?",
       },
       {
-        id: "i1-t2",
-        label: "Export the last 3 months of bank and credit card statements",
-        description: "Download transactions to see actual spending, not what you think you spend.",
+        id: "d1-t2",
+        label: "Note how long each top-10 client has been with you",
+        description:
+          "Document the start date of each relationship. Are your best clients long-term or recent?",
       },
       {
-        id: "i1-t3",
-        label: "Calculate your average monthly income and average monthly spending",
-        description: "The gap between these two numbers is your wealth-building capacity.",
+        id: "d1-t3",
+        label:
+          "Write down why each of the top 10 originally chose to work with you",
+        description:
+          "What problem brought them to you? What made them say yes? This is the seed of your avatar.",
       },
     ],
     educationalContent:
-      "Cash flow is the lifeblood of your financial empire. It does not matter how much you earn if you spend it all. The gap between income and expenses -- your savings rate -- is the most controllable factor in building wealth. A 20% savings rate means you are living on 80% of your income. Increasing that to 30% accelerates your wealth-building timeline by years. Most people who feel stretched are not under-earning; they have cash flow leaks they have never identified. The next 30 days will help you find them, plug them, and redirect that money toward building your empire.",
+      "Stop being sales and start being solutions. Nobody wants to be sold, but everybody wants a problem solved. Your top 10 clients by revenue are not random -- they represent a pattern. They found you because you solved a specific problem better than anyone else. Understanding why they chose you is the foundation of building a predictable revenue pipeline. Most business owners have never done this exercise. They chase anyone with a pulse and a wallet instead of studying the clients who already love them. Today you start reverse-engineering what makes your best clients tick. That client that comes back time and time and time again -- that is a client for life. Your job today is to figure out what those clients have in common.",
   },
   {
     day: 2,
-    title: "Expense Categorization",
-    intention: "Organize spending into clear categories to identify opportunities for optimization.",
+    title: "Client Demographics Deep-Dive",
+    intention:
+      "Document the demographic profile of your best clients to find the pattern.",
     tasks: [
       {
-        id: "i2-t1",
-        label: "Categorize all expenses into: Fixed, Variable, and Discretionary",
-        description: "Fixed: rent, insurance, loan payments. Variable: groceries, utilities. Discretionary: dining, entertainment.",
+        id: "d2-t1",
+        label:
+          "For each top-10 client, document their industry and business type",
+        description:
+          "Are they in the same industry? Adjacent industries? Completely scattered? Look for clusters.",
       },
       {
-        id: "i2-t2",
-        label: "Identify your top 5 spending categories by total amount",
-        description: "Housing, transportation, and food typically dominate. See where your money actually goes.",
+        id: "d2-t2",
+        label: "Record company size, annual revenue, and number of employees",
+        description:
+          "Do your best clients tend to be startups, mid-market, or enterprise? There is a sweet spot.",
       },
       {
-        id: "i2-t3",
-        label: "Flag any recurring subscriptions or automatic charges you forgot about",
-        description: "The average American has 12 paid subscriptions. Review every single one.",
+        id: "d2-t3",
+        label: "Note their geographic location and market position",
+        description:
+          "Are they local, regional, or national? Are they market leaders or challengers? Document the pattern.",
       },
     ],
     educationalContent:
-      "The 50/30/20 framework is a useful starting point: 50% of after-tax income on needs (housing, utilities, groceries, insurance, minimum debt payments), 30% on wants (dining, entertainment, travel, hobbies), and 20% on savings and extra debt payments. However, to build wealth faster, high performers aim for 50/20/30 -- with 30% going to savings and investing. The real power comes from auditing your actual numbers against these targets. Most people discover that their 'needs' category contains items that are actually 'wants' in disguise -- premium cable packages, new car payments when a used car would work, or a larger apartment than necessary.",
+      "Demographics are the skeleton of your ideal client avatar. When someone says their target market is 'anyone with plumbing problems,' that is NOT an avatar -- that is a prayer. An avatar has a specific industry, a specific company size, a specific revenue range, and a specific geographic footprint. The more specific you get, the more powerful your marketing and sales become. You stop wasting time on leads that will never close and start attracting clients who are pre-qualified before they ever talk to you. Today you are mining your own data for the demographic fingerprint of your best clients. The answers are already in your business -- you just have not looked for them yet.",
   },
   {
     day: 3,
-    title: "Subscription Audit",
-    intention: "Eliminate subscription waste -- the silent cash flow killer.",
+    title: "Client Psychographics Discovery",
+    intention:
+      "Uncover the emotional drivers and pain points that made your best clients buy.",
     tasks: [
       {
-        id: "i3-t1",
-        label: "List every active subscription and its monthly cost",
-        description: "Streaming, software, gym, meal kits, apps, cloud storage, magazines, boxes, memberships.",
+        id: "d3-t1",
+        label:
+          "Identify the primary pain point each top-10 client had before working with you",
+        description:
+          "What was keeping them up at night? What problem were they desperate to solve?",
       },
       {
-        id: "i3-t2",
-        label: "Rate each subscription: Essential, Nice-to-Have, or Cancel",
-        description: "Be honest. If you have not used it in 30 days, it is probably not essential.",
+        id: "d3-t2",
+        label: "Document what motivated each client to finally take action",
+        description:
+          "Was it a triggering event, a deadline, frustration, or an aspiration? What made them move NOW?",
       },
       {
-        id: "i3-t3",
-        label: "Cancel at least 2 subscriptions today and redirect the savings",
-        description: "Even $30/month saved equals $360/year. Over 30 years invested at 8%, that is over $40,000.",
+        id: "d3-t3",
+        label:
+          "Note the emotional language each client used when describing their problem",
+        description:
+          "Did they say 'frustrated,' 'overwhelmed,' 'stuck,' 'scared'? Their words become your marketing language.",
       },
     ],
     educationalContent:
-      "Americans spend an average of $219 per month on subscriptions, and 42% of people are paying for subscriptions they have forgotten about. Subscription services are designed with frictionless sign-up and friction-filled cancellation because companies know inertia works in their favor. Fight back by doing a complete audit quarterly. A useful trick: switch all subscriptions to a single credit card, then review that card statement to see every recurring charge in one place. For services you want to keep, check if annual billing offers a discount (many give 15-20% off for paying yearly).",
+      "Demographics tell you WHO your client is. Psychographics tell you WHY they buy. And why they buy is far more important than who they are. Two companies in the same industry with the same revenue can have completely different buying motivations. One buys because they are in pain and need a fix. The other buys because they see an opportunity and want to grow. Your marketing, your sales conversations, and your positioning should speak directly to the emotional state of your ideal client. When someone reads your message and thinks 'that is exactly how I feel,' you have won before the sales call even starts. Stop selling features. Start solving the specific emotional problem your best clients share.",
   },
   {
     day: 4,
-    title: "Fixed Expense Optimization",
-    intention: "Reduce your largest fixed costs -- housing, insurance, and debt payments.",
+    title: "Ideal Avatar Construction",
+    intention:
+      "Synthesize the patterns into a detailed, documented ideal client avatar.",
     tasks: [
       {
-        id: "i4-t1",
-        label: "Review your housing costs as a percentage of gross income",
-        description: "Target: 25-28% of gross income or less. Above 30% puts significant pressure on your cash flow.",
+        id: "d4-t1",
+        label:
+          "Identify the top 3 patterns your best clients share across demographics and psychographics",
+        description:
+          "What industry, size, pain point, or motivation appears most frequently? These are your avatar anchors.",
       },
       {
-        id: "i4-t2",
-        label: "Shop your auto and home insurance for better rates",
-        description: "Get 3 competing quotes. Loyalty to one insurer rarely pays off -- rates vary significantly.",
+        id: "d4-t2",
+        label:
+          "Write a one-page ideal client avatar document with specific details",
+        description:
+          "Include industry, company size, revenue range, decision-maker title, primary pain point, buying trigger, and desired outcome.",
       },
       {
-        id: "i4-t3",
-        label: "Review your cell phone and internet plans for potential savings",
-        description: "Call your providers and negotiate or switch to a lower-cost plan that meets your actual usage.",
+        id: "d4-t3",
+        label: "Give your avatar a name and make it feel like a real person",
+        description:
+          "Naming your avatar makes it concrete. 'We are targeting Regional Rick' is more actionable than 'mid-market companies.'",
       },
     ],
     educationalContent:
-      "Fixed expenses are the biggest lever in your budget because they recur every month without any action. Reducing a fixed expense by $100/month saves $1,200/year every year going forward with zero ongoing effort. The three largest categories for most households are housing, transportation, and insurance. If your housing costs exceed 30% of gross income, you are house-rich and cash-poor. Car payments average $700/month for new vehicles -- buying a 2-3 year old car can cut this in half while still getting a reliable vehicle with remaining warranty. These big-category optimizations create more savings than hundreds of small daily cutbacks combined.",
+      "Your ideal client avatar is the single most important document in your revenue pipeline. Every marketing dollar, every sales conversation, every piece of content should be aimed at this one person. When your avatar is vague, your marketing is vague, your sales pitch is vague, and your results are vague. When your avatar is razor-sharp, everything gets easier. You know exactly where to find them, what to say to them, and how to close them. The businesses that dominate their markets are not the ones with the best product -- they are the ones with the clearest understanding of exactly who they serve and exactly what problem they solve. 'Anyone with plumbing problems' is NOT an avatar. 'A homeowner in the suburbs with a house built before 1990 who just discovered their pipes are corroding' -- now that is an avatar.",
   },
   {
     day: 5,
-    title: "Debt Inventory and Strategy",
-    intention: "Map all debts and choose the optimal payoff strategy.",
+    title: "Avatar Team Alignment",
+    intention:
+      "Share the ideal client avatar with your team and align everyone on who you are targeting.",
     tasks: [
       {
-        id: "i5-t1",
-        label: "List all debts with balance, interest rate, minimum payment, and payoff date",
-        description: "Include mortgage, auto, student loans, credit cards, personal loans, medical debt, and any other obligations.",
+        id: "d5-t1",
+        label:
+          "Present the ideal client avatar to your team in a meeting or document share",
+        description:
+          "Walk through the demographics, psychographics, pain points, and buying triggers. Make it vivid.",
       },
       {
-        id: "i5-t2",
-        label: "Calculate your total monthly debt payments and debt-to-income ratio",
-        description: "Total monthly debt payments divided by gross monthly income. Above 36% is a red flag.",
+        id: "d5-t2",
+        label:
+          "Ask your team: does this match who we are currently targeting in our marketing and sales?",
+        description:
+          "Get honest feedback. Your frontline team often sees mismatches that leadership misses.",
       },
       {
-        id: "i5-t3",
-        label: "Choose your payoff method: Avalanche (highest rate first) or Snowball (lowest balance first)",
-        description: "Avalanche saves the most money. Snowball builds momentum with quick wins. Pick what you will stick with.",
+        id: "d5-t3",
+        label:
+          "Identify any gaps between the avatar and your current marketing, messaging, or targeting",
+        description:
+          "Document where your outreach does not match your avatar. These gaps are revenue leaks.",
       },
     ],
     educationalContent:
-      "Not all debt is equal. High-interest debt (credit cards at 20%+) is an emergency that should be attacked aggressively. Moderate-interest debt (student loans at 5-7%, auto loans) should be paid on schedule while you build investments. Low-interest debt (mortgage at 3-4%) can actually be beneficial when your investments earn more than the loan costs. The avalanche method (paying off highest interest rate first) is mathematically optimal and saves the most money. The snowball method (smallest balance first) provides psychological wins that keep you motivated. Research shows the snowball method actually has higher completion rates because motivation matters more than math when it comes to behavior change.",
+      "An avatar that lives in the founder's head but nowhere else is useless. Every person on your team -- sales, marketing, customer service, operations -- needs to know exactly who your ideal client is. When your sales team qualifies leads against the avatar, they stop wasting time on bad fits. When your marketing team creates content for the avatar, conversion rates go up. When your customer service team understands the avatar's expectations, retention improves. Alignment is everything. If your team cannot describe your ideal client in 30 seconds, you have a communication problem that is costing you revenue. Today is about getting everyone on the same page so every action your business takes is aimed at the right target.",
   },
   {
     day: 6,
-    title: "Credit Card Optimization",
-    intention: "Turn credit cards from a liability into a tool that works for you.",
+    title: "Client Base Avatar Scoring",
+    intention:
+      "Score your entire client base against the avatar to see how aligned your business really is.",
     tasks: [
       {
-        id: "i6-t1",
-        label: "List all credit cards with their interest rate, annual fee, and rewards structure",
-        description: "Understanding your card lineup helps you use the right card for each purchase.",
+        id: "d6-t1",
+        label:
+          "Score each current client on a 1-10 scale for avatar fit",
+        description:
+          "10 = perfect match on demographics, psychographics, and profitability. 1 = total misfit.",
       },
       {
-        id: "i6-t2",
-        label: "Set up automatic full-balance payment on all credit cards",
-        description: "Paying in full every month means you never pay interest. This is non-negotiable for wealth building.",
+        id: "d6-t2",
+        label:
+          "Calculate the percentage of clients that score 7 or above",
+        description:
+          "This is your avatar alignment rate. Below 50% means you are spending too much energy on wrong-fit clients.",
       },
       {
-        id: "i6-t3",
-        label: "Optimize your card usage to maximize cash back or points",
-        description: "Use category-specific cards for groceries, gas, and dining to earn 3-5% back on everyday spending.",
+        id: "d6-t3",
+        label:
+          "Identify your lowest-scoring clients and assess whether to transition or release them",
+        description:
+          "Misfit clients consume disproportionate time, create complaints, and drag down profitability. Be honest.",
       },
     ],
     educationalContent:
-      "Credit cards are a powerful financial tool when used correctly and a devastating trap when used poorly. The cardinal rule: never carry a balance. Credit card interest rates (often 20-28%) compound monthly and can turn a $5,000 balance into years of payments. If you currently carry a balance, a 0% balance transfer offer can give you 12-21 months to pay it off interest-free. Once you are paying in full monthly, credit card rewards become free money -- top cards return 2-5% on spending categories, which can amount to $1,000-$3,000 per year for an average household. But rewards only benefit you if you are not paying interest.",
+      "This exercise is uncomfortable but necessary. Most businesses discover that 30-50% of their client base does not match their ideal avatar. These misfit clients are not just neutral -- they are actively harmful. They take more time, generate more complaints, pay less, and refer other misfit clients. Meanwhile, your avatar-fit clients are easier to serve, more profitable, more loyal, and they refer other great clients. The courage to say 'this client is not a fit' and either transition them or let them go is one of the hardest decisions in business. But every hour you spend on a misfit client is an hour you are not spending on finding and serving another perfect-fit client. Revenue quality matters more than revenue quantity.",
   },
   {
     day: 7,
-    title: "Budgeting System Setup",
-    intention: "Implement a budgeting system you will actually use consistently.",
+    title: "Week 1 Review -- Avatar Clarity",
+    intention:
+      "Review your Week 1 progress and document your number one insight about your ideal client.",
     tasks: [
       {
-        id: "i7-t1",
-        label: "Choose a budgeting method: Zero-Based, Envelope, or Pay-Yourself-First",
-        description: "Zero-based assigns every dollar a job. Envelope uses spending limits. Pay-yourself-first automates savings first.",
+        id: "d7-t1",
+        label:
+          "Review all notes from Days 1-6 and identify the single biggest insight about your ideal client",
+        description:
+          "What surprised you? What pattern did you not expect? This insight should reshape how you sell.",
       },
       {
-        id: "i7-t2",
-        label: "Set up your chosen budgeting tool",
-        description: "Options: YNAB, Monarch, spreadsheet, or the simple Pay-Yourself-First automated approach.",
+        id: "d7-t2",
+        label: "Refine your avatar document based on this week's findings",
+        description:
+          "Update any details that changed as you dug deeper. The avatar is a living document.",
       },
       {
-        id: "i7-t3",
-        label: "Create your first month's budget based on your cash flow analysis",
-        description: "Use your actual spending data from Day 1 as the starting point, then adjust toward your goals.",
+        id: "d7-t3",
+        label:
+          "Set one specific action for next week based on your avatar insight",
+        description:
+          "Will you adjust targeting, change messaging, fire a client, or shift your marketing? Decide now.",
       },
     ],
     educationalContent:
-      "The best budgeting system is the one you will actually use. If you are detail-oriented, zero-based budgeting (where every dollar is assigned to a category) provides maximum control. If you want simplicity, the Pay-Yourself-First method is unbeatable: automate savings and investments on payday, then spend the rest guilt-free. This requires only two actions -- setting up automatic transfers and spending less than what remains. Many high earners use this approach because it requires minimal ongoing maintenance. The key insight: a budget is not about restriction. It is about intentional allocation. Every dollar should have a purpose: spend, save, invest, or give.",
+      "Week 1 was about clarity. You cannot build a predictable revenue pipeline if you do not know exactly who you are building it for. The businesses that grow fastest are not the ones that serve everyone -- they are the ones that serve a specific someone better than anyone else. Your avatar is not a restriction; it is a focus multiplier. Every dollar you spend marketing to the right person returns 5-10x more than a dollar spent marketing to everyone. Every sales conversation with an avatar-fit lead closes faster and at higher value than a conversation with a random prospect. As you move into Week 2, you will build a sales process designed specifically for this avatar. The clearer your avatar, the more powerful that process will be.",
   },
   {
     day: 8,
-    title: "Income Tax Optimization",
-    intention: "Reduce your tax burden through legal strategies and maximize take-home pay.",
+    title: "Sales Process Mapping",
+    intention:
+      "Document your current sales process from first contact to close so you can improve it.",
     tasks: [
       {
-        id: "i8-t1",
-        label: "Review your most recent tax return and identify your effective tax rate",
-        description: "Effective rate = total tax paid / total income. This is the true percentage you pay.",
+        id: "d8-t1",
+        label:
+          "Map every step in your current sales process from initial contact to signed deal",
+        description:
+          "Include lead generation, first response, discovery call, proposal, follow-up, negotiation, and close.",
       },
       {
-        id: "i8-t2",
-        label: "Identify all deductions and credits you may be missing",
-        description: "Student loan interest, educator expenses, energy credits, childcare credits, retirement contribution deductions.",
+        id: "d8-t2",
+        label:
+          "Identify the average time between each step and overall sales cycle length",
+        description:
+          "How long does it take from first touch to closed deal? Where do deals stall or die?",
       },
       {
-        id: "i8-t3",
-        label: "Adjust your W-4 withholding if you consistently get a large refund",
-        description: "A large refund means you gave the government an interest-free loan. Reduce withholding and invest the difference.",
+        id: "d8-t3",
+        label:
+          "Document any steps that are inconsistent, skipped, or handled differently by different team members",
+        description:
+          "Inconsistency in the sales process means unpredictable results. Find the variations.",
       },
     ],
     educationalContent:
-      "The U.S. tax code has over 75,000 pages of provisions, and many of them are designed to incentivize specific behaviors: saving for retirement, buying a home, starting a business, going to school, and giving to charity. If you are not taking advantage of these provisions, you are voluntarily paying more tax than required. The difference between your marginal tax rate (the rate on your last dollar) and your effective tax rate (the average rate on all dollars) reveals how much tax planning is already working for you. A large refund is not a bonus -- it is your money that you lent to the government at 0% interest. Adjust withholding so you break even or owe slightly at tax time, and invest the extra take-home pay throughout the year.",
+      "You cannot improve what you have not documented. Most businesses have a sales process that lives in someone's head -- and it changes depending on who you ask. That is not a process; that is chaos. A documented sales process means every lead gets the same experience, every deal follows the same steps, and you can measure where deals fall apart. The best sales organizations treat their process like a recipe: specific ingredients, specific steps, specific order. When a recipe produces a bad result, you can identify which step went wrong. When you are winging it, you have no idea why some deals close and others do not. Today you are turning your sales chaos into a documented, repeatable system.",
   },
   {
     day: 9,
-    title: "Side Income Assessment",
-    intention: "Evaluate opportunities to create additional income streams beyond your primary job.",
+    title: "Discovery Question Scripting",
+    intention:
+      "Write the discovery questions that uncover your prospect's real problem before you pitch anything.",
     tasks: [
       {
-        id: "i9-t1",
-        label: "List your marketable skills, knowledge, and experience",
-        description: "What do people ask you for help with? What do you know that others would pay to learn?",
+        id: "d9-t1",
+        label:
+          "Write 10 discovery questions your team should ask BEFORE presenting any solution",
+        description:
+          "Focus on understanding the prospect's situation, pain, impact, and desired outcome before you ever talk about what you sell.",
       },
       {
-        id: "i9-t2",
-        label: "Research 3 potential side income opportunities that align with your skills",
-        description: "Freelancing, consulting, online courses, tutoring, rental income, content creation, e-commerce.",
+        id: "d9-t2",
+        label:
+          "Organize questions into categories: Situation, Problem, Impact, and Need",
+        description:
+          "Situation: where are you now? Problem: what is not working? Impact: what is it costing you? Need: what would success look like?",
       },
       {
-        id: "i9-t3",
-        label: "Calculate the potential hourly return of each opportunity",
-        description: "Not all side income is worth your time. Compare the effective hourly rate to your current earnings.",
+        id: "d9-t3",
+        label:
+          "Practice asking these questions out loud until they sound natural, not scripted",
+        description:
+          "Read them aloud, adjust the wording, and rehearse until the questions flow like a conversation.",
       },
     ],
     educationalContent:
-      "Multiple income streams are the hallmark of financial resilience. Relying on a single paycheck means one decision by one employer can eliminate 100% of your income overnight. Even a modest side income of $500-$1,000/month provides a psychological and financial buffer that reduces stress and accelerates wealth building. The most valuable side income leverages your existing expertise: a marketer doing freelance consulting, an accountant doing tax preparation, a teacher offering tutoring. These activities earn $50-$200+ per hour because they use skills you already have. Avoid trading time for minimum wage -- focus on opportunities where your unique knowledge creates disproportionate value.",
+      "The biggest mistake in sales is presenting a solution before you understand the problem. When you pitch too early, you are guessing. You are talking about features the prospect may not care about while ignoring the one thing keeping them up at night. Discovery questions flip the dynamic: instead of you convincing the prospect, the prospect convinces themselves. When someone says out loud 'this problem is costing me $50,000 a month,' they do not need you to sell them -- they need you to solve it. Stop being sales and start being solutions. Nobody wants to be sold, but everybody wants a problem solved. The discovery phase is where trust is built, needs are uncovered, and the close becomes inevitable.",
   },
   {
     day: 10,
-    title: "Passive Income Foundations",
-    intention: "Understand and begin building income streams that do not require your active time.",
+    title: "Solutions-Based Pitch Rewrite",
+    intention:
+      "Reframe your entire pitch around solving problems instead of pitching features.",
     tasks: [
       {
-        id: "i10-t1",
-        label: "Learn the difference between active, portfolio, and passive income",
-        description: "Active = you work for it. Portfolio = dividends and interest. Passive = business income without material participation.",
+        id: "d10-t1",
+        label:
+          "Write down your current pitch -- the way you describe what you do today",
+        description:
+          "Be honest. Record or write exactly what you say when someone asks 'what does your company do?'",
       },
       {
-        id: "i10-t2",
-        label: "Assess your current passive income (if any)",
-        description: "Dividends, interest, rental income after property management, royalties, licensing fees, affiliate income.",
+        id: "d10-t2",
+        label:
+          "Rewrite the pitch to lead with the problem you solve, not the product you sell",
+        description:
+          "Before: 'We offer cloud-based accounting software.' After: 'We help small business owners stop losing money to bookkeeping errors.'",
       },
       {
-        id: "i10-t3",
-        label: "Choose one passive income stream to develop over the next 12 months",
-        description: "Be realistic: true passive income requires significant upfront investment of time, money, or both.",
+        id: "d10-t3",
+        label:
+          "Test the new pitch on 3 people today and note their reaction",
+        description:
+          "Does the new version spark curiosity and conversation? Or do their eyes glaze over? Adjust accordingly.",
       },
     ],
     educationalContent:
-      "True passive income is rare and almost always requires significant upfront investment. Rental properties require capital and ongoing management (or management fees). Dividend portfolios require hundreds of thousands of dollars to generate meaningful income. Digital products (courses, ebooks, templates) require months of creation time before generating any revenue. The path to passive income is: (1) Build active income and save aggressively. (2) Invest savings in income-producing assets. (3) Reinvest returns until passive income covers your expenses. This process typically takes 10-20 years of disciplined saving and investing. Beware of anyone promising passive income with no upfront investment -- that is marketing, not reality.",
+      "Features tell, solutions sell. When you lead with 'we have a 99.9% uptime SLA and 256-bit encryption,' you are speaking your language, not your client's language. When you lead with 'we make sure your business never goes offline and your data never gets stolen,' you are speaking to their fear and their desired outcome. The best pitch in the world is not about you at all -- it is entirely about the client. It says: I understand your problem. I have solved it before. Here is what life looks like after we fix it. That is solutions, not sales. The companies that dominate their markets are not the ones with the most features -- they are the ones that articulate the problem and the transformation better than anyone else.",
   },
   {
     day: 11,
-    title: "Salary Negotiation Preparation",
-    intention: "Prepare to earn what you are worth in your primary career.",
+    title: "Objection Handling Scripts",
+    intention:
+      "Document the top objections you hear and write confident, empathetic handling scripts.",
     tasks: [
       {
-        id: "i11-t1",
-        label: "Research market salary data for your role and experience level",
-        description: "Use Glassdoor, Levels.fyi, Payscale, LinkedIn Salary, and industry salary surveys.",
+        id: "d11-t1",
+        label:
+          "List the top 5 objections your sales team hears most often",
+        description:
+          "Common ones: too expensive, need to think about it, we are happy with our current provider, bad timing, need to talk to my partner.",
       },
       {
-        id: "i11-t2",
-        label: "Document your key achievements, metrics, and impact over the past year",
-        description: "Quantify your contributions: revenue generated, costs saved, efficiency improved, projects delivered.",
+        id: "d11-t2",
+        label:
+          "Write a handling script for each objection that acknowledges, reframes, and redirects",
+        description:
+          "Acknowledge the concern. Reframe it as a reason to move forward. Redirect to the value and the cost of inaction.",
       },
       {
-        id: "i11-t3",
-        label: "Draft your salary negotiation talking points",
-        description: "Frame the conversation around the value you deliver, not your personal financial needs.",
+        id: "d11-t3",
+        label:
+          "Practice each objection response until your team can deliver it naturally",
+        description:
+          "Role-play the objection and response. Confidence comes from repetition, not talent.",
       },
     ],
     educationalContent:
-      "The lifetime cost of not negotiating your salary is staggering. A single $5,000 raise at age 25, compounded through future raises and retirement contributions, can be worth over $600,000 by retirement. Yet most people never negotiate because they fear confrontation or believe their employer will offer fair pay automatically. Employers budget for negotiation -- they expect it and often have room to increase initial offers by 10-20%. The key is preparation: know the market rate for your role, document your measurable contributions, and practice your ask out loud. The best time to negotiate is when you have leverage: after a strong review, after completing a major project, or when you have an outside offer.",
+      "Objections are not rejections -- they are requests for more information or reassurance. When a prospect says 'it is too expensive,' they are really saying 'I do not yet see enough value to justify the price.' When they say 'I need to think about it,' they are saying 'I am not confident enough to decide right now.' Every objection has a root cause, and your script should address the root cause, not just the surface words. The best objection handlers do three things: (1) Acknowledge -- 'I completely understand, that is a valid concern.' (2) Reframe -- 'Let me ask you this: what is it costing you to NOT solve this problem?' (3) Redirect -- 'Based on what you told me earlier about [their pain point], how much longer can you afford to wait?' This is not manipulation -- it is helping the prospect make a fully informed decision.",
   },
   {
     day: 12,
-    title: "Career Income Trajectory",
-    intention: "Plan your career moves strategically to maximize lifetime earnings.",
+    title: "Sales Role-Play Practice",
+    intention:
+      "Practice the entire sales process with your team to build confidence and consistency.",
     tasks: [
       {
-        id: "i12-t1",
-        label: "Map your target income for 1, 3, and 5 years from now",
-        description: "What would it take to earn 20%, 50%, and 100% more than you do today?",
+        id: "d12-t1",
+        label:
+          "Role-play the full sales process with a team member: discovery, diagnosis, presentation, close",
+        description:
+          "One person plays the prospect, the other runs the process. Switch roles and repeat.",
       },
       {
-        id: "i12-t2",
-        label: "Identify the skills or credentials that would accelerate your income growth",
-        description: "What promotions, certifications, or career pivots would produce the biggest income jumps?",
+        id: "d12-t2",
+        label:
+          "Record the role-play and review it together for strengths and improvement areas",
+        description:
+          "Watching yourself sell is uncomfortable but incredibly revealing. Note pacing, tone, and question quality.",
       },
       {
-        id: "i12-t3",
-        label: "Invest in one skill development activity this week",
-        description: "Read a book, take an online course, attend a workshop, or schedule a conversation with a mentor.",
+        id: "d12-t3",
+        label:
+          "Identify the top 3 improvements and practice those specific moments again",
+        description:
+          "Did you rush through discovery? Fumble an objection? Forget to ask for the close? Drill the weak spots.",
       },
     ],
     educationalContent:
-      "Your earning potential is your single largest financial asset. A person earning $75,000/year who works for 30 more years will generate over $2.25 million in pre-tax income -- and that is without any raises. Strategic career development can double or triple that figure. The highest-ROI career investments are: (1) developing leadership and management skills, (2) building expertise in high-demand technical areas, (3) expanding your professional network, and (4) gaining negotiation skills. Job-hopping every 2-3 years in early career typically produces faster salary growth than loyalty to one employer, as internal raises average 3-5% while external moves average 10-20% increases.",
+      "Professional athletes practice every day. Professional musicians rehearse constantly. But most salespeople never practice -- they only perform live with real prospects and real money on the line. That is insane. Role-playing is the fastest way to improve your sales skills because it gives you reps without consequences. You can stumble, get feedback, adjust, and try again. The best sales teams role-play weekly. They practice discovery questions until they flow naturally. They rehearse objection handling until they respond with confidence instead of panic. They drill the close until asking for the business feels as natural as shaking hands. If your team does not practice, they are practicing on your prospects -- and it is costing you revenue.",
   },
   {
     day: 13,
-    title: "Freelance and Consulting Income",
-    intention: "Explore leveraging your expertise through freelance or consulting work.",
+    title: "Solutions Language Installation",
+    intention:
+      "Rewrite any marketing, sales materials, or scripts that sound salesy instead of solutions-focused.",
     tasks: [
       {
-        id: "i13-t1",
-        label: "Define your freelance or consulting service offering",
-        description: "What specific problem can you solve? Who would pay for it? What is the deliverable?",
+        id: "d13-t1",
+        label:
+          "Audit your website, emails, and sales collateral for salesy language",
+        description:
+          "Look for phrases like 'buy now,' 'limited time,' 'best in class,' or anything that feels like a pitch instead of a conversation.",
       },
       {
-        id: "i13-t2",
-        label: "Set your hourly or project-based rate",
-        description: "A starting formula: take your desired annual income, divide by 1,000 for an hourly consulting rate.",
+        id: "d13-t2",
+        label:
+          "Rewrite salesy copy to focus on problems solved and outcomes delivered",
+        description:
+          "Replace 'Our award-winning platform' with 'Stop losing 10 hours a week to manual processes.' Lead with the client's world, not yours.",
       },
       {
-        id: "i13-t3",
-        label: "Create a simple landing page or portfolio to attract clients",
-        description: "Even a one-page website with your services, background, and contact info establishes credibility.",
+        id: "d13-t3",
+        label:
+          "Create a 'banned words' list and a 'preferred language' guide for your team",
+        description:
+          "Ban: cutting-edge, synergy, best-in-class, revolutionary. Prefer: solve, fix, save, grow, protect, simplify.",
       },
     ],
     educationalContent:
-      "Consulting and freelancing are among the fastest paths to additional income because they leverage skills you already have. The key to commanding premium rates is specialization: a general freelance writer might earn $30/hour, while a financial services content specialist can charge $150-$300/hour. The narrower your niche, the fewer competitors you face and the more you can charge. Start by reaching out to your existing network -- former colleagues, industry contacts, and LinkedIn connections. Most freelancers find their first clients through warm introductions, not cold outreach. Begin with one or two clients to test the waters before scaling.",
+      "Language shapes perception. When your marketing sounds like every other company -- 'innovative solutions for modern businesses' -- you become invisible. When your marketing sounds like a friend who understands the client's exact problem -- 'tired of chasing invoices every month?' -- you become magnetic. The shift from sales language to solutions language is not cosmetic. It fundamentally changes how prospects perceive you. Sales language positions you as a vendor trying to take their money. Solutions language positions you as a partner trying to solve their problem. Nobody wants to be sold, but everybody wants a problem solved. Go through every client touchpoint and ask: does this sound like we are selling, or does this sound like we understand their problem? If it sounds like selling, rewrite it.",
   },
   {
     day: 14,
-    title: "Week 2 Review: Cash Flow Optimization Plan",
-    intention: "Consolidate your first two weeks of findings into an actionable cash flow plan.",
+    title: "Week 2 Review -- Sales Process Audit",
+    intention:
+      "Review your sales process documentation and assess team adoption.",
     tasks: [
       {
-        id: "i14-t1",
-        label: "Calculate your new monthly savings rate after optimizations",
-        description: "How much more can you save and invest per month based on the changes you have identified?",
+        id: "d14-t1",
+        label:
+          "Confirm that your sales process, discovery questions, objection scripts, and pitch are documented in one place",
+        description:
+          "Everything should be in a single playbook that any team member can reference at any time.",
       },
       {
-        id: "i14-t2",
-        label: "Set up automatic transfers for your optimized savings amount",
-        description: "Automate the improved savings rate before you have a chance to spend the freed-up cash.",
+        id: "d14-t2",
+        label:
+          "Ask your team: are you following the documented process on every deal? What needs adjustment?",
+        description:
+          "Process adoption is the real challenge. Get honest feedback about what works and what feels forced.",
       },
       {
-        id: "i14-t3",
-        label: "Create an income growth action plan for the next 90 days",
-        description: "What specific steps will you take to increase income: negotiation, side hustle launch, or skill development?",
+        id: "d14-t3",
+        label:
+          "Identify the one biggest weakness in your sales process and create a plan to fix it this week",
+        description:
+          "Is discovery too shallow? Are objections fumbled? Is follow-up inconsistent? Pick one and fix it.",
       },
     ],
     educationalContent:
-      "After two weeks of cash flow analysis, you should have a clear picture of where your money goes and where the opportunities are. The most impactful actions typically are: (1) eliminating high-interest debt, (2) reducing your largest fixed expenses, (3) automating a higher savings rate, and (4) creating at least one additional income stream. The compound effect of these changes is remarkable: saving an extra $500/month invested at 8% annual return grows to over $745,000 in 30 years. You are not just saving money -- you are building the foundation of an empire. The next two weeks focus on income growth and advanced strategies.",
+      "A sales process that is documented but not followed is just a decoration. The real test of Week 2 is not whether you created the documents -- it is whether your team is using them. Adoption requires three things: (1) The process must be simple enough to follow without friction. (2) The team must believe the process works better than winging it. (3) There must be accountability -- someone checking that the process is being followed. If your team reverts to old habits, it is usually because the process is too complicated or they do not trust it yet. Simplify, demonstrate results, and inspect consistently. As you move into Week 3, you will build the offer structure that your sales process delivers. A great process selling a mediocre offer still underperforms. Next week, we fix the offer.",
   },
   {
     day: 15,
-    title: "Business Revenue Analysis",
-    intention: "If you own a business or side hustle, analyze revenue and profitability with precision.",
+    title: "Offer Ladder Mapping",
+    intention:
+      "Map every product and service you offer by price point to see the full picture.",
     tasks: [
       {
-        id: "i15-t1",
-        label: "Break down your business revenue by product, service, or customer segment",
-        description: "Identify which offerings generate the most revenue and which are most profitable.",
+        id: "d15-t1",
+        label:
+          "List every product or service you currently offer with its price point",
+        description:
+          "Include one-time purchases, recurring services, add-ons, and any bundled offerings.",
       },
       {
-        id: "i15-t2",
-        label: "Calculate your profit margin on each revenue stream",
-        description: "Revenue without profit is just busy work. Know your margins.",
+        id: "d15-t2",
+        label:
+          "Arrange them from lowest to highest price on a visual ladder or chart",
+        description:
+          "Can a client see a clear path from entry-level purchase to premium offering? Or are there gaps?",
       },
       {
-        id: "i15-t3",
-        label: "Identify your top 20% of customers or products that drive 80% of profit",
-        description: "The Pareto Principle applies to most businesses. Focus your energy on the highest-value segments.",
+        id: "d15-t3",
+        label:
+          "Note which offerings generate the most revenue and which generate the most profit",
+        description:
+          "Revenue and profit are different. Some high-revenue offerings may have thin margins while smaller offerings may be highly profitable.",
       },
     ],
     educationalContent:
-      "The Pareto Principle (80/20 rule) is remarkably consistent in business: 80% of your profit often comes from 20% of your customers or products. Once you identify this high-value segment, the strategy becomes clear: invest more time, marketing, and resources into serving and expanding that segment while reducing time spent on low-margin activities. Many business owners are so busy working in their business that they never step back to analyze which activities actually generate profit. Revenue is vanity; profit is sanity; cash flow is reality. A $500,000 business with 10% profit margins earns less than a $200,000 business with 30% margins.",
+      "An offer ladder is the strategic arrangement of your products and services from lowest price to highest price, designed to move clients upward over time. Think of it like a staircase: each step builds on the previous one and leads naturally to the next. Without an offer ladder, you have random products at random prices with no client journey. With an offer ladder, you have a deliberate path that captures increasing value as the client relationship deepens. The businesses that maximize lifetime value do not sell one thing -- they sell a journey. A gym does not just sell memberships; they sell memberships, then personal training, then nutrition coaching, then premium retreats. Each step increases the client's investment and the value they receive. Today you are mapping your current ladder to see where the gaps are.",
   },
   {
     day: 16,
-    title: "Pricing Strategy Review",
-    intention: "Evaluate whether your pricing captures the full value you deliver.",
+    title: "Offer Gap Analysis",
+    intention:
+      "Identify the gaps in your offer ladder that are costing you revenue.",
     tasks: [
       {
-        id: "i16-t1",
-        label: "Compare your pricing to 5 competitors in your market",
-        description: "Are you priced at, above, or below market? Does your pricing reflect your quality and positioning?",
+        id: "d16-t1",
+        label:
+          "Identify gaps in your offer ladder -- is there a clear path from entry offer to premium?",
+        description:
+          "Can someone start with a low-risk, low-cost offering and naturally progress to your highest-value service?",
       },
       {
-        id: "i16-t2",
-        label: "Calculate the cost of delivering your product or service",
-        description: "Include direct costs, overhead, your time, and opportunity cost.",
+        id: "d16-t2",
+        label:
+          "Determine if you have an entry-level offer that reduces risk for new clients",
+        description:
+          "A low-cost or free entry point (audit, assessment, trial, consultation) gets people in the door. Do you have one?",
       },
       {
-        id: "i16-t3",
-        label: "Test a 10-20% price increase on one offering",
-        description: "Many businesses undercharge. A price increase goes straight to profit with no additional work.",
+        id: "d16-t3",
+        label:
+          "Design one new offering that fills the biggest gap in your ladder",
+        description:
+          "If there is a jump from $500 to $5,000, you need something in between. Design it today.",
       },
     ],
     educationalContent:
-      "Underpricing is the most common mistake among service providers and small business owners. The fear of losing customers leads to leaving significant money on the table. A 10% price increase on a $100,000 revenue business adds $10,000 in revenue with zero additional cost -- it goes directly to profit. Most businesses can implement a 10-15% price increase and lose fewer than 5% of customers. The math strongly favors higher prices: losing 5% of customers while increasing prices 15% results in higher profit. Price anchoring, tiered pricing, and value-based pricing (pricing based on the value you deliver, not the time you spend) are powerful strategies for capturing more of the value you create.",
+      "The most common offer ladder gap is the jump from free to expensive. If your only options are 'free consultation' and '$10,000 engagement,' you are losing everyone who is interested but not ready for the big commitment. You need a bridge offer -- something in the $500-$2,000 range that lets prospects experience your value with limited risk. This could be a paid audit, a workshop, a starter package, or a pilot project. The bridge offer serves two purposes: it generates revenue on its own, and it pre-qualifies clients for your premium services. Clients who invest in a bridge offer and see results are 5-10x more likely to upgrade than cold prospects. Fill the gap and watch your conversion rates climb.",
   },
   {
     day: 17,
-    title: "Recurring Revenue Models",
-    intention: "Explore how to create predictable, recurring income streams.",
+    title: "Upsell and Cross-Sell Path Design",
+    intention:
+      "Create a deliberate path that guides clients from one purchase to the next.",
     tasks: [
       {
-        id: "i17-t1",
-        label: "Identify aspects of your work that could become recurring revenue",
-        description: "Retainers, memberships, subscriptions, maintenance contracts, or ongoing service agreements.",
+        id: "d17-t1",
+        label:
+          "For each offering, define the natural next purchase a client should make",
+        description:
+          "After someone buys X, what should they buy next? Map the logical progression for every product.",
       },
       {
-        id: "i17-t2",
-        label: "Research subscription or membership models in your industry",
-        description: "What are others offering on a recurring basis? What value keeps customers paying month after month?",
+        id: "d17-t2",
+        label:
+          "Create upsell scripts or prompts that your team can use at key moments",
+        description:
+          "When is the right time to suggest the next step? What should the team say? Write it down.",
       },
       {
-        id: "i17-t3",
-        label: "Design one recurring revenue offering you could launch",
-        description: "Define the deliverable, pricing, and minimum commitment period.",
+        id: "d17-t3",
+        label:
+          "Identify cross-sell opportunities between different product or service lines",
+        description:
+          "Does buying product A make product B more valuable? Bundle them or offer B as a natural complement.",
       },
     ],
     educationalContent:
-      "Recurring revenue transforms a business from a feast-or-famine cycle into a predictable income engine. A business with $10,000/month in recurring revenue starts every month knowing that income is already secured before doing any new sales. This stability allows you to plan, invest, and sleep better. Common models include: monthly retainers for professional services, membership communities with ongoing value, subscription products with regular delivery, and maintenance contracts for ongoing support. The key to retention is delivering consistent value that exceeds the monthly cost. Customer acquisition is 5-7x more expensive than retention, so recurring models that keep customers are inherently more profitable.",
+      "The easiest sale you will ever make is to an existing client. They already trust you, they already see your value, and they have already said yes once. Yet most businesses invest 90% of their sales effort in acquiring new clients and almost nothing in growing existing relationships. An upsell path does not feel salesy when it is genuinely the next step the client needs. A financial planner who helps someone with retirement planning and then says 'we should also look at your estate plan' is not upselling -- they are being thorough. A web designer who builds a site and then offers ongoing maintenance is not being pushy -- they are protecting the client's investment. Design your upsell paths around the client's natural journey, and they will thank you for suggesting the next step.",
   },
   {
     day: 18,
-    title: "Debt Acceleration Strategy",
-    intention: "Implement an aggressive plan to eliminate high-interest debt faster.",
+    title: "Client Lifetime Value Calculation",
+    intention:
+      "Calculate the true lifetime value of your best clients to understand what a client is really worth.",
     tasks: [
       {
-        id: "i18-t1",
-        label: "Calculate how much extra you can direct toward debt each month",
-        description: "Use the savings from your expense optimization to accelerate debt payoff.",
+        id: "d18-t1",
+        label:
+          "Calculate the total revenue from each of your top 10 clients over the entire relationship",
+        description:
+          "Add up every dollar they have ever paid you. Include initial purchase, renewals, upsells, and add-ons.",
       },
       {
-        id: "i18-t2",
-        label: "Research balance transfer or debt consolidation options",
-        description: "A 0% balance transfer card or lower-rate personal loan can save hundreds or thousands in interest.",
+        id: "d18-t2",
+        label: "Calculate your average client lifetime value (LTV) across all clients",
+        description:
+          "Total revenue from all clients divided by total number of clients. This is your baseline LTV.",
       },
       {
-        id: "i18-t3",
-        label: "Set a specific debt-free date and track progress weekly",
-        description: "Having a concrete target date creates urgency and motivation to stay on track.",
+        id: "d18-t3",
+        label:
+          "Compare your top-10 LTV to your average LTV -- what is the gap?",
+        description:
+          "If your top 10 are worth 5x or 10x your average client, that tells you the power of avatar-fit clients and a complete offer ladder.",
       },
     ],
     educationalContent:
-      "High-interest debt is a wealth destroyer. Credit card debt at 24% APR effectively earns a negative 24% return on the balance. No investment consistently returns 24%, so paying off high-interest debt is the best guaranteed return available. The debt acceleration strategy: (1) Stop adding new debt. (2) Pay minimums on everything except your target debt. (3) Throw every extra dollar at the target debt. (4) When it is paid off, roll that payment into the next debt. This snowball of payments accelerates over time. A 0% balance transfer can buy you 12-21 months of interest-free payoff time -- just make sure you pay it off before the promotional rate expires, and avoid the trap of using the freed-up credit card.",
+      "Client lifetime value is the most important number in your business that you are probably not tracking. When you know your LTV, you know exactly how much you can afford to spend to acquire a client and still be profitable. If your average client is worth $25,000 over their lifetime, spending $2,500 to acquire them is a 10x return. But if you do not know your LTV, you are guessing -- and most businesses guess low, which means they underinvest in marketing and sales. That client that comes back time and time and time again -- that is a client for life. And a client for life is worth exponentially more than a one-time buyer. Your offer ladder exists to maximize LTV by giving clients reasons to keep buying, keep growing, and keep referring.",
   },
   {
     day: 19,
-    title: "Mortgage Optimization",
-    intention: "Evaluate whether refinancing or restructuring your mortgage improves your cash flow.",
+    title: "Client Onboarding Process Design",
+    intention:
+      "Design an onboarding experience that builds loyalty and sets the stage for lifetime value.",
     tasks: [
       {
-        id: "i19-t1",
-        label: "Review your current mortgage terms: rate, balance, and remaining term",
-        description: "Know exactly where you stand with your largest debt obligation.",
+        id: "d19-t1",
+        label:
+          "Map your current client onboarding process from signed deal to first value delivered",
+        description:
+          "What happens after someone says yes? Is it smooth and intentional, or chaotic and inconsistent?",
       },
       {
-        id: "i19-t2",
-        label: "Check current refinancing rates and calculate potential monthly savings",
-        description: "A refinance makes sense when you can lower your rate by 0.75-1%+ and plan to stay 3+ years.",
+        id: "d19-t2",
+        label:
+          "Design a structured onboarding experience that delivers a quick win within the first 7 days",
+        description:
+          "The faster a new client sees value, the more confident they feel about their decision. Create that early win.",
       },
       {
-        id: "i19-t3",
-        label: "Evaluate biweekly payment strategy",
-        description: "Paying half your monthly payment every two weeks results in one extra payment per year, saving years off your mortgage.",
+        id: "d19-t3",
+        label:
+          "Build a welcome sequence -- emails, calls, or touchpoints that make new clients feel valued",
+        description:
+          "A welcome email, a personal call from leadership, a kickoff meeting, and a 30-day check-in. Map the touchpoints.",
       },
     ],
     educationalContent:
-      "Your mortgage is likely your largest monthly expense, so even small optimizations have outsized impact. Refinancing to a lower rate can save hundreds per month, but factor in closing costs (typically 2-3% of the loan amount) to calculate your breakeven point. The biweekly payment hack is simple: instead of 12 monthly payments, you make 26 half-payments (equivalent to 13 full payments per year). This single extra payment per year can cut 4-7 years off a 30-year mortgage and save tens of thousands in interest. However, before accelerating mortgage payments, compare your mortgage rate to potential investment returns. If your mortgage rate is 3-4% and you can earn 7-8% investing, the math favors investing the extra money instead.",
+      "Client onboarding is where lifetime value is won or lost. The first 30 days of a client relationship set the tone for everything that follows. A disorganized, slow, or impersonal onboarding experience creates buyer's remorse. A smooth, proactive, and value-driven onboarding experience creates loyalty. The best onboarding processes have three elements: (1) A quick win -- deliver tangible value within the first week so the client feels smart for choosing you. (2) Clear expectations -- tell them exactly what will happen, when, and what you need from them. (3) Proactive communication -- do not wait for them to ask questions; anticipate and answer them before they arise. Companies that invest in onboarding see higher retention, higher upsell rates, and more referrals. It is the highest-ROI activity in your client journey.",
   },
   {
     day: 20,
-    title: "Student Loan Strategy",
-    intention: "Optimize your student loan repayment for maximum cash flow and total savings.",
+    title: "Referral System Design",
+    intention:
+      "Create or document a referral program that turns happy clients into your best salespeople.",
     tasks: [
       {
-        id: "i20-t1",
-        label: "List all student loans with servicer, balance, rate, and repayment plan",
-        description: "Federal and private loans have very different options. Know which type you have.",
+        id: "d20-t1",
+        label:
+          "Document how your current referrals happen -- is it structured or random?",
+        description:
+          "Do you actively ask for referrals? Do you have a process? Or do they just happen occasionally by accident?",
       },
       {
-        id: "i20-t2",
-        label: "Evaluate income-driven repayment plans for federal loans",
-        description: "IDR plans cap payments at 10-20% of discretionary income and offer forgiveness after 20-25 years.",
+        id: "d20-t2",
+        label:
+          "Design a formal referral program with clear incentives and a simple ask",
+        description:
+          "What does the referring client get? What does the new client get? Make it easy and rewarding for both sides.",
       },
       {
-        id: "i20-t3",
-        label: "Assess whether Public Service Loan Forgiveness (PSLF) applies to your situation",
-        description: "If you work for a qualifying employer, PSLF forgives remaining balance after 120 qualifying payments.",
+        id: "d20-t3",
+        label:
+          "Create the referral ask script and identify the best moment to use it",
+        description:
+          "The best time to ask for a referral is right after delivering a win. Script the ask so it feels natural, not awkward.",
       },
     ],
     educationalContent:
-      "Student loan strategy depends heavily on your specific situation. For high-balance, low-rate federal loans, income-driven repayment with PSLF can result in significant forgiveness -- but only if you work for qualifying public service or nonprofit employers for 10 years. For private loans or those not pursuing forgiveness, refinancing to a lower rate can save thousands. The key decision: should you pay off aggressively or invest the difference? At loan rates below 5%, investing the extra money typically produces better long-term results due to the stock market's historical 7-10% annual return. Above 6-7%, paying off the debt provides a guaranteed return that is hard to beat.",
+      "Referred clients close faster, pay more, stay longer, and refer others. They are the highest-quality leads in your pipeline. Yet most businesses leave referrals entirely to chance. A structured referral program transforms word-of-mouth from random luck into a predictable revenue channel. The key elements: (1) Identify your most delighted clients -- they are the ones most likely to refer. (2) Make the ask easy -- 'Do you know one other person who is dealing with [the problem you solve]?' (3) Incentivize -- a discount, a gift, a donation in their name, or simply genuine gratitude. (4) Follow up -- when someone refers you, close the loop and tell them the outcome. Happy clients want to help you. They just need to be asked, reminded, and thanked. Build the system and referrals become your most profitable acquisition channel.",
   },
   {
     day: 21,
-    title: "Emergency Income Plan",
-    intention: "Build a plan for maintaining income during unexpected job loss or business disruption.",
+    title: "Week 3 Review -- Offer Ladder Completeness",
+    intention:
+      "Review your offer ladder and identify the biggest remaining revenue gap.",
     tasks: [
       {
-        id: "i21-t1",
-        label: "Estimate how long your emergency fund would sustain you without income",
-        description: "Divide your emergency fund by your monthly essential expenses.",
+        id: "d21-t1",
+        label:
+          "Review your complete offer ladder -- is every step filled from entry to premium?",
+        description:
+          "Walk through the ladder. Can a new client enter at the bottom and progress naturally to the top?",
       },
       {
-        id: "i21-t2",
-        label: "Identify 3 ways you could generate income within 30 days if needed",
-        description: "Freelancing, consulting, gig work, selling unused items, temporary employment, or leveraging your network.",
+        id: "d21-t2",
+        label:
+          "Assess whether your upsell, cross-sell, and referral systems are documented and ready to execute",
+        description:
+          "Documentation without execution is academic. Are these systems live and being used?",
       },
       {
-        id: "i21-t3",
-        label: "Update your resume and LinkedIn profile as a proactive measure",
-        description: "Having these ready eliminates delay and stress if you suddenly need to find new employment.",
+        id: "d21-t3",
+        label:
+          "Identify the biggest revenue gap remaining -- what single change would increase revenue the most?",
+        description:
+          "Is it a missing offer? A broken upsell path? No referral system? A weak onboarding experience? Name it.",
       },
     ],
     educationalContent:
-      "Financial resilience means having a plan for when things go wrong, not just when they go right. The average job search takes 3-6 months. If you were laid off today, would your emergency fund bridge that gap? Beyond savings, your professional network is your most valuable income insurance. Studies consistently show that 60-80% of jobs are filled through networking, not applications. Invest in relationships before you need them. Keep your LinkedIn profile updated, stay active in professional communities, and nurture relationships with former colleagues and industry contacts. This network is an asset that pays dividends throughout your career.",
+      "Your offer ladder is the architecture of your revenue. It captures the full lifetime value of every client who enters your world. Without it, you are leaving money on the table at every stage. A complete offer ladder has five components: (1) A lead magnet or free entry point that attracts the avatar. (2) A low-risk bridge offer that converts interest into revenue. (3) A core offering that delivers your primary value. (4) Premium or VIP offerings for clients who want more. (5) A referral mechanism that turns clients into advocates. If any of these five are missing, you have a gap that is costing you revenue every single month. As you move into Week 4, you will install the tracking and measurement systems that make your revenue predictable instead of random. Revenue should be predictable, not random -- and that starts with measuring everything.",
   },
   {
     day: 22,
-    title: "Digital Income Opportunities",
-    intention: "Explore income opportunities in the digital economy.",
+    title: "Sales Pipeline Setup",
+    intention:
+      "Set up or audit your sales pipeline with clearly defined stages.",
     tasks: [
       {
-        id: "i22-t1",
-        label: "Assess your potential for creating digital products",
-        description: "Online courses, ebooks, templates, software tools, or digital downloads that sell while you sleep.",
+        id: "d22-t1",
+        label:
+          "Define your pipeline stages: Lead, Qualified, Proposal, Negotiation, Close",
+        description:
+          "Every deal should sit in one stage at all times. Define exactly what qualifies a deal to move to the next stage.",
       },
       {
-        id: "i22-t2",
-        label: "Research affiliate marketing and referral income in your niche",
-        description: "Many companies pay 10-50% commissions for referring customers through affiliate programs.",
+        id: "d22-t2",
+        label:
+          "Set up your pipeline in a CRM or tracking tool with these stages",
+        description:
+          "Use a CRM, spreadsheet, or project management tool. The format matters less than the discipline of tracking every deal.",
       },
       {
-        id: "i22-t3",
-        label: "Evaluate content creation as an income stream",
-        description: "Blog, YouTube, podcast, or newsletter -- content builds audience and creates multiple monetization paths.",
+        id: "d22-t3",
+        label:
+          "Enter every current open deal into the pipeline at the correct stage",
+        description:
+          "Get a real-time snapshot of your pipeline today. How many deals are at each stage? What is the total value?",
       },
     ],
     educationalContent:
-      "The digital economy has created income opportunities that did not exist a decade ago. Digital products -- online courses, templates, software -- have near-zero marginal cost after creation, meaning every additional sale is almost pure profit. A well-crafted online course can generate income for years with minimal ongoing effort. Content creation (blogs, YouTube, podcasts, newsletters) builds an audience that can be monetized through advertising, sponsorships, affiliate marketing, and product sales. The catch: building an audience takes months or years of consistent effort before generating meaningful income. Treat it as a long-term investment, not a get-rich-quick scheme.",
+      "A sales pipeline is the X-ray of your revenue. It shows you exactly where every potential deal stands, how much revenue is in play, and where deals are getting stuck. Without a pipeline, revenue feels random -- some months are great, others are terrible, and you do not know why. With a pipeline, you can see problems coming weeks before they hit your bank account. If your pipeline is thin at the top, you know you need more leads. If deals are stuck in the proposal stage, you know your proposals need work. If deals keep dying after the first call, your discovery process needs improvement. Revenue should be predictable, not random. A well-managed pipeline is how you make it predictable.",
   },
   {
     day: 23,
-    title: "Investment Income Growth",
-    intention: "Grow passive income from your investment portfolio.",
+    title: "Conversion Rate Analysis",
+    intention:
+      "Calculate your conversion rate at each pipeline stage to find where deals die.",
     tasks: [
       {
-        id: "i23-t1",
-        label: "Calculate your current annual investment income",
-        description: "Total dividends, interest, and distributions from all investment accounts.",
+        id: "d23-t1",
+        label:
+          "Calculate the conversion rate from each pipeline stage to the next",
+        description:
+          "What percentage of leads become qualified? Qualified to proposal? Proposal to close? Track each transition.",
       },
       {
-        id: "i23-t2",
-        label: "Set a 12-month target for increasing investment income",
-        description: "Increasing contributions and optimizing asset allocation can meaningfully boost investment income.",
+        id: "d23-t2",
+        label:
+          "Identify the stage with the biggest drop-off in your pipeline",
+        description:
+          "This is your revenue bottleneck. If 80% of deals die between proposal and close, that is where you focus.",
       },
       {
-        id: "i23-t3",
-        label: "Explore high-yield savings accounts and money market funds for cash reserves",
-        description: "Idle cash should earn competitive interest. Top high-yield savings accounts offer 4-5% APY.",
+        id: "d23-t3",
+        label:
+          "Develop a specific plan to improve conversion at your weakest stage",
+        description:
+          "Better qualification? Stronger proposals? Faster follow-up? Address the root cause of the drop-off.",
       },
     ],
     educationalContent:
-      "Investment income grows through two mechanisms: contributing more capital and optimizing yield. Before chasing higher yields, ensure your emergency fund and short-term savings are in high-yield savings accounts earning competitive rates. Money sitting in a traditional bank savings account at 0.01% when high-yield accounts offer 4-5% is one of the most common and easily fixable financial mistakes. For longer-term investment income, a well-diversified portfolio of dividend-paying stocks, bonds, and REITs can generate 3-5% annual income. The power of reinvesting this income is enormous: $500,000 generating 4% produces $20,000/year, and reinvesting it grows the base for even more future income.",
+      "Conversion rates reveal the truth about your sales process. A 50% conversion from lead to qualified but 10% from proposal to close tells a very specific story: you are good at finding prospects but bad at closing them. A 10% lead-to-qualified rate but 80% close rate tells the opposite story: you close well but your lead generation attracts the wrong people. The math is simple but powerful. If you have 100 leads per month with a 2% close rate, you close 2 deals. Improving that close rate to 4% doubles your revenue without generating a single additional lead. Most businesses obsess over getting more leads when the real opportunity is converting the leads they already have. Fix the leakiest stage of your pipeline first -- it is almost always faster and cheaper than generating more leads.",
   },
   {
     day: 24,
-    title: "Tax-Advantaged Income Strategies",
-    intention: "Use the tax code to keep more of every dollar you earn.",
+    title: "Revenue Source Tracking",
+    intention:
+      "Track revenue by source to understand which channels drive the most business.",
     tasks: [
       {
-        id: "i24-t1",
-        label: "Review self-employment tax deductions if you have side income",
-        description: "Home office, mileage, equipment, health insurance, retirement contributions, and professional development.",
+        id: "d24-t1",
+        label:
+          "Track every deal this week by its original source: referral, organic, paid, networking, cold outreach",
+        description:
+          "Ask every prospect: how did you hear about us? Log the answer for every deal in your pipeline.",
       },
       {
-        id: "i24-t2",
-        label: "Explore the Qualified Business Income (QBI) deduction",
-        description: "If you have pass-through business income, you may deduct up to 20% under Section 199A.",
+        id: "d24-t2",
+        label:
+          "Analyze historical data -- which source has generated the most revenue over the past 12 months?",
+        description:
+          "Look at closed deals, not just leads. Some sources generate lots of leads but few deals; others convert at a high rate.",
       },
       {
-        id: "i24-t3",
-        label: "Maximize retirement account contributions to reduce taxable income",
-        description: "Each dollar contributed to a pre-tax retirement account reduces your current year tax bill.",
+        id: "d24-t3",
+        label:
+          "Rank your revenue sources by both volume and conversion quality",
+        description:
+          "The best source is not the one that produces the most leads -- it is the one that produces the most closed revenue.",
       },
     ],
     educationalContent:
-      "Self-employment and business ownership unlock tax deductions that W-2 employees cannot access. The home office deduction, vehicle mileage, health insurance premiums, retirement plan contributions (SEP-IRA up to 25% of net self-employment income), and the QBI deduction can collectively reduce your tax bill by thousands of dollars. The QBI deduction alone allows a 20% deduction on qualified business income for pass-through entities (sole proprietors, LLCs, S-Corps, partnerships), subject to income thresholds and limitations. If you have any self-employment income, even side hustle earnings, work with a tax professional to ensure you are capturing every legitimate deduction.",
+      "Not all revenue sources are equal. A referral that closes 60% of the time at premium pricing is infinitely more valuable than a cold lead that closes 2% of the time at discounted pricing. Yet most businesses treat all leads the same and allocate marketing budget based on volume rather than quality. Revenue source tracking gives you the data to invest wisely. If referrals are your highest-converting, highest-value source, you should be investing heavily in your referral program. If paid advertising produces lots of leads but few closed deals, you are burning money. The businesses that grow predictably are the ones that know exactly which channels produce profitable clients and double down on those channels while cutting the ones that do not perform.",
   },
   {
     day: 25,
-    title: "Negotiation Skills for Income Growth",
-    intention: "Develop negotiation skills that increase income in every area of life.",
+    title: "Customer Acquisition Cost Calculation",
+    intention:
+      "Calculate what it costs you to acquire a client through each channel.",
     tasks: [
       {
-        id: "i25-t1",
-        label: "Learn the BATNA framework (Best Alternative to a Negotiated Agreement)",
-        description: "Your negotiating power comes from having alternatives. What is your best option if the negotiation fails?",
+        id: "d25-t1",
+        label:
+          "Calculate your total customer acquisition cost (CAC) across all channels",
+        description:
+          "Total sales and marketing spend divided by total new clients acquired. This is your blended CAC.",
       },
       {
-        id: "i25-t2",
-        label: "Practice negotiating one bill or service rate this week",
-        description: "Call your internet provider, insurance company, or a vendor and ask for a better rate.",
+        id: "d25-t2",
+        label:
+          "Break down CAC by channel -- what does it cost to acquire a client from each source?",
+        description:
+          "Referral CAC, paid advertising CAC, organic CAC, networking CAC. They will be dramatically different.",
       },
       {
-        id: "i25-t3",
-        label: "Document three negotiation opportunities in your professional or business life",
-        description: "Client rates, vendor costs, salary, contract terms -- where can negotiation increase your income or reduce costs?",
+        id: "d25-t3",
+        label:
+          "Compare CAC to LTV for each channel -- which channels are profitable and which are not?",
+        description:
+          "A healthy LTV-to-CAC ratio is 3:1 or higher. If a channel's ratio is below 2:1, it may not be sustainable.",
       },
     ],
     educationalContent:
-      "Negotiation is one of the highest-ROI skills you can develop. A single successful salary negotiation can be worth $500,000+ over your career. A single client rate increase can add $10,000+ per year. Even routine negotiations -- cable bill, insurance premium, vendor pricing -- save hundreds to thousands annually. The foundation of effective negotiation is preparation: know the market rates, understand your leverage (your BATNA), and be willing to walk away. Most people accept the first number they are given because they have not prepared an alternative. The simple act of asking -- politely, with supporting data -- results in a better outcome 70%+ of the time. You do not get what you deserve; you get what you negotiate.",
+      "Customer acquisition cost is the most misunderstood metric in business. Most companies either do not track it at all or track only their blended average, which hides enormous differences between channels. When you break CAC down by channel, the picture becomes clear. Referrals might cost $200 per client while paid ads cost $2,000. If both client types generate the same revenue, referrals are 10x more efficient. The LTV-to-CAC ratio is your profitability compass: below 1:1 means you are losing money on every client. Between 1:1 and 3:1 is break-even to moderate profit. Above 3:1 is healthy. Above 5:1 means you are potentially underinvesting in growth -- you could spend more on acquisition and still be highly profitable. Revenue should be predictable, not random, and knowing your CAC by channel is what makes it predictable.",
   },
   {
     day: 26,
-    title: "Income Protection Through Diversification",
-    intention: "Build income resilience by diversifying your sources of income.",
+    title: "90-Day Revenue Forecast",
+    intention:
+      "Build a data-driven revenue forecast for the next 90 days based on your pipeline.",
     tasks: [
       {
-        id: "i26-t1",
-        label: "Map your current income sources and the percentage each represents",
-        description: "If one source represents more than 70% of your income, you have dangerous concentration.",
+        id: "d26-t1",
+        label:
+          "List every deal in your pipeline with its stage, value, and estimated close date",
+        description:
+          "This is your raw forecast data. Be realistic about close dates -- optimism bias kills forecasts.",
       },
       {
-        id: "i26-t2",
-        label: "Identify 2-3 income sources you could develop within 6 months",
-        description: "Consulting, rental income, dividend income, digital products, part-time work, or freelancing.",
+        id: "d26-t2",
+        label:
+          "Apply your stage conversion rates to weight each deal by probability of closing",
+        description:
+          "A deal in the proposal stage with a 40% historical close rate should be weighted at 40% of its value.",
       },
       {
-        id: "i26-t3",
-        label: "Take the first action step toward your next income stream today",
-        description: "Send an email, post a listing, create an account, make a call -- momentum starts with one step.",
+        id: "d26-t3",
+        label:
+          "Create a 90-day forecast by month: Month 1, Month 2, Month 3 expected revenue",
+        description:
+          "Sum the weighted values by expected close month. This is your probability-weighted forecast.",
       },
     ],
     educationalContent:
-      "Income diversification follows the same logic as investment diversification: do not put all your eggs in one basket. A household with income from employment, a side business, and investments is far more resilient than one relying entirely on a single employer. The ideal income portfolio evolves over time: in your 20s-30s, active income dominates (salary, freelancing). In your 40s-50s, you build portfolio income (dividends, interest). In your 60s+, passive income and portfolio income replace active income. Each income stream you add reduces your dependence on any single source and accelerates your path to financial freedom. Start where you are and add one new stream at a time.",
+      "A revenue forecast is not a wish list -- it is a probability-weighted projection based on real data. The difference between a CEO who says 'I think we will do $200,000 next quarter' and one who says 'Based on our pipeline of $600,000 with a 35% weighted close rate, we are projecting $210,000 with a range of $180,000 to $240,000' is the difference between hope and strategy. Forecasting forces you to confront reality: is your pipeline big enough to hit your targets? Are deals moving through stages fast enough? Do you need more leads, better conversion, or both? When your forecast shows a gap, you have weeks to fix it instead of discovering the shortfall when it hits your bank account. Revenue should be predictable, not random -- and forecasting is how you make it so.",
   },
   {
     day: 27,
-    title: "Lifestyle Inflation Defense",
-    intention: "Prevent lifestyle inflation from consuming your income growth.",
+    title: "Weekly Revenue Review Installation",
+    intention:
+      "Set up a recurring weekly revenue review meeting to keep your pipeline healthy.",
     tasks: [
       {
-        id: "i27-t1",
-        label: "Calculate how much your expenses have increased over the past 3 years",
-        description: "Has your spending risen as fast as or faster than your income?",
+        id: "d27-t1",
+        label:
+          "Schedule a weekly revenue review meeting with a fixed day, time, and attendee list",
+        description:
+          "Put it on the calendar as a recurring event. This meeting is non-negotiable -- it is the heartbeat of your revenue system.",
       },
       {
-        id: "i27-t2",
-        label: "Implement a rule: save at least 50% of every raise or income increase",
-        description: "This lets you enjoy some improvement in lifestyle while ensuring most of the increase builds wealth.",
+        id: "d27-t2",
+        label:
+          "Create the meeting agenda: pipeline review, conversion rates, forecast updates, action items",
+        description:
+          "Cover: new leads added, deals advanced, deals lost, conversion rates by stage, updated forecast, and blockers.",
       },
       {
-        id: "i27-t3",
-        label: "Identify one area where lifestyle inflation has crept in and create a cap",
-        description: "Dining out, vehicle costs, clothing, or entertainment -- pick one and set a spending ceiling.",
+        id: "d27-t3",
+        label:
+          "Assign ownership -- who is responsible for updating the pipeline before each meeting?",
+        description:
+          "Data hygiene is critical. If the pipeline is not updated, the meeting is useless. Assign clear responsibility.",
       },
     ],
     educationalContent:
-      "Lifestyle inflation is the silent wealth killer. As income rises, spending rises to match -- and the gap between income and expenses (your wealth-building capacity) stays the same or even shrinks. A doctor earning $300,000 with $290,000 in expenses builds less wealth than a teacher earning $60,000 with $40,000 in expenses. The 50% rule is a powerful antidote: commit to saving at least 50% of every raise, bonus, or income increase before you adjust your lifestyle. If you get a $10,000 raise, $5,000 goes automatically to investments and you enjoy $5,000 in improved lifestyle. Over a career with multiple raises, this single habit can generate hundreds of thousands in additional wealth.",
+      "The weekly revenue review is the single most important meeting in a revenue-driven business. It is where you catch problems early, celebrate wins, and hold the team accountable. Without it, pipeline data goes stale, deals slip through the cracks, and revenue surprises become the norm. The agenda should be tight and consistent: (1) Pipeline snapshot -- total value by stage. (2) Movement -- what deals advanced, stalled, or were lost this week? (3) Conversion -- are stage-to-stage rates improving or declining? (4) Forecast -- has the 90-day projection changed? (5) Actions -- what specifically will each person do this week to move deals forward? Keep the meeting under 30 minutes. Focus on data and actions, not opinions and excuses. This cadence turns revenue management from a quarterly panic into a weekly discipline.",
   },
   {
     day: 28,
-    title: "Financial Systems and Automation",
-    intention: "Build a fully automated financial system that runs with minimal intervention.",
+    title: "Revenue Stream Profitability Analysis",
+    intention:
+      "Identify your most and least profitable revenue streams so you know where to invest.",
     tasks: [
       {
-        id: "i28-t1",
-        label: "Automate all bill payments to avoid late fees and credit damage",
-        description: "Set up autopay for every recurring bill: mortgage, utilities, insurance, credit cards, loans.",
+        id: "d28-t1",
+        label:
+          "Calculate the profit margin on each revenue stream or product line",
+        description:
+          "Revenue minus cost of delivery, including labor, materials, overhead, and your time.",
       },
       {
-        id: "i28-t2",
-        label: "Automate savings and investment contributions on payday",
-        description: "Set transfers to trigger on your payday so you pay yourself first before spending.",
+        id: "d28-t2",
+        label:
+          "Rank your revenue streams from most profitable to least profitable",
+        description:
+          "Not by revenue -- by profit margin. The highest-revenue stream may not be the most profitable.",
       },
       {
-        id: "i28-t3",
-        label: "Set up a money flow system with dedicated accounts",
-        description: "Checking for bills, checking for spending, high-yield savings for emergency fund, brokerage for investing.",
+        id: "d28-t3",
+        label:
+          "Decide what to double down on, what to optimize, and what to eliminate",
+        description:
+          "Double down on high-margin streams. Optimize mid-margin streams. Eliminate or price-increase low-margin streams.",
       },
     ],
     educationalContent:
-      "A fully automated financial system is the operational backbone of your cash flow strategy. The ideal setup: (1) Paycheck deposits into a central checking account. (2) Automatic transfers on payday: retirement contributions from paycheck, savings to high-yield account, investments to brokerage, and bills from bills-only checking. (3) Remaining money is your guilt-free spending. This system requires 2-3 hours to set up and runs with almost zero maintenance. The psychological benefit is enormous: you never have to decide whether to save or invest because it happens automatically. Willpower is finite; systems are infinite. The wealthiest people do not have more discipline -- they have better systems.",
+      "Revenue is vanity; profit is sanity. A $500,000 revenue stream with a 10% margin earns less profit than a $200,000 stream with a 40% margin. Yet many businesses chase revenue growth without asking whether the revenue is actually profitable. The most common trap is the high-revenue, low-margin client who consumes enormous resources and prevents you from serving more profitable clients. When you rank by profitability instead of revenue, the picture often changes dramatically. You may discover that your smallest offering is actually your most profitable, or that your biggest client is barely breaking even. These insights drive strategic decisions: what to promote, what to price-increase, and what to sunset. Profitability analysis is not a one-time exercise -- build it into your quarterly review.",
   },
   {
     day: 29,
-    title: "Cash Flow Projections and Scenario Planning",
-    intention: "Model your financial future under different income and expense scenarios.",
+    title: "Revenue Dashboard Creation",
+    intention:
+      "Build a one-page revenue dashboard that gives you weekly visibility into your pipeline health.",
     tasks: [
       {
-        id: "i29-t1",
-        label: "Create a 12-month cash flow projection with your current plan",
-        description: "Month by month, project income, expenses, savings, and net worth growth.",
+        id: "d29-t1",
+        label:
+          "Design a one-page revenue dashboard with key metrics: pipeline value, close rate, CAC, LTV, and forecast",
+        description:
+          "Keep it simple. Five to seven metrics maximum. If it takes more than 60 seconds to read, it is too complex.",
       },
       {
-        id: "i29-t2",
-        label: "Model a best-case scenario: what if income increases 20% and expenses stay flat?",
-        description: "See how aggressive income growth without lifestyle inflation transforms your trajectory.",
+        id: "d29-t2",
+        label:
+          "Populate the dashboard with your current data from this month's work",
+        description:
+          "Fill in real numbers, not placeholders. This is your baseline -- the starting point for improvement.",
       },
       {
-        id: "i29-t3",
-        label: "Model a worst-case scenario: what if you lose your primary income for 6 months?",
-        description: "Test whether your emergency fund, side income, and spending cuts would sustain you.",
+        id: "d29-t3",
+        label:
+          "Commit to updating the dashboard weekly as part of your revenue review meeting",
+        description:
+          "A dashboard that is not updated is worse than no dashboard. Build the update into your weekly cadence.",
       },
     ],
     educationalContent:
-      "Scenario planning turns anxiety about the future into actionable preparation. By modeling best-case, expected, and worst-case outcomes, you can plan for each without being blindsided. The best-case scenario shows you the power of staying disciplined -- how quickly wealth compounds when income grows and expenses are controlled. The worst-case scenario reveals vulnerabilities: is your emergency fund adequate? Could side income cover essentials? How quickly could you reduce spending? Having a written plan for each scenario means you will make rational decisions under stress instead of emotional ones. The goal is not to predict the future but to be prepared for whatever it brings.",
+      "A revenue dashboard is your cockpit instrument panel. A pilot does not fly by looking out the window and guessing -- they check their instruments constantly. Your revenue dashboard should tell you at a glance: (1) How much revenue is in the pipeline? (2) What is our close rate? (3) What does it cost to acquire a client? (4) What is a client worth over their lifetime? (5) What is our 90-day forecast? These five numbers, tracked weekly, give you more revenue intelligence than most businesses have in their entire existence. The dashboard does not need to be fancy -- a simple spreadsheet works. What matters is that it is accurate, updated weekly, and reviewed by everyone who influences revenue. When the numbers are visible, behavior changes. What gets measured gets managed.",
   },
   {
     day: 30,
-    title: "Income Protocol Completion and Commitment",
-    intention: "Celebrate your cash flow transformation and commit to ongoing financial discipline.",
+    title: "30-Day Revenue Pipeline Assessment",
+    intention:
+      "Complete your 30-day transformation by measuring improvement and committing to ongoing discipline.",
     tasks: [
       {
-        id: "i30-t1",
-        label: "Calculate your new monthly savings rate compared to Day 1",
-        description: "Measure the concrete improvement in your wealth-building capacity over 30 days.",
+        id: "d30-t1",
+        label:
+          "Retake the Revenue Pipeline assessment and compare your scores to Day 1",
+        description:
+          "How has your avatar clarity, sales process, offer ladder, and revenue tracking improved? Measure the change.",
       },
       {
-        id: "i30-t2",
-        label: "Write down your top 3 cash flow commitments going forward",
-        description: "Automate savings, avoid lifestyle inflation, and grow income -- or your own personal priorities.",
+        id: "d30-t2",
+        label:
+          "Document your top 3 revenue insights from the past 30 days",
+        description:
+          "What did you learn about your clients, your process, your offers, or your numbers that changed your perspective?",
       },
       {
-        id: "i30-t3",
-        label: "Set a 90-day check-in date to review your cash flow system",
-        description: "Schedule a specific date to review whether your system is working and make adjustments.",
-      },
-      {
-        id: "i30-t4",
-        label: "Share your biggest cash flow insight with someone who needs to hear it",
-        description: "Teaching reinforces learning and helps the people around you build stronger financial foundations.",
+        id: "d30-t3",
+        label:
+          "Identify your single biggest revenue improvement opportunity for the next 90 days",
+        description:
+          "What one change -- in your avatar targeting, sales process, offer ladder, or pipeline management -- would have the biggest impact?",
       },
     ],
     educationalContent:
-      "Over the past 30 days, you have dissected your cash flow, eliminated waste, optimized expenses, developed income growth strategies, and built automated systems. This is the engine of your empire. Cash flow is what funds every other pillar: protection premiums, investment contributions, estate planning costs, and daily living. Guard it fiercely. The commitment you make today -- to track, optimize, and grow your cash flow -- will compound over decades into a level of financial freedom most people only dream about. You are not just managing money; you are engineering an unshakable financial future. Keep building.",
+      "Thirty days ago, your revenue may have felt unpredictable, random, and stressful. Today you have an ideal client avatar, a documented sales process, a complete offer ladder, and a pipeline tracking system. You have shifted from hoping for revenue to engineering it. But this is not the end -- it is the beginning. Revenue systems require ongoing attention: weekly pipeline reviews, quarterly avatar refinement, continuous sales process improvement, and regular offer ladder optimization. The businesses that build empires are not the ones that set up systems once and forget them. They are the ones that treat revenue like a discipline, not a department. Revenue should be predictable, not random. You now have the tools to make it so. Stop being sales and start being solutions -- because nobody wants to be sold, but everybody wants a problem solved. Keep building your empire.",
   },
 ];

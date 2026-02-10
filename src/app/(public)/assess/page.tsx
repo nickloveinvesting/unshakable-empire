@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Shield, LayoutDashboard, Users, DollarSign, Target } from 'lucide-react';
+import { Shield, Crosshair, Users, DollarSign, Target, ArrowLeft } from 'lucide-react';
 import { PILLAR_MAP } from '@/types/quiz';
 import type { PillarId } from '@/types/quiz';
+import { useUser } from '@/hooks/useUser';
+import Link from 'next/link';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  LayoutDashboard: <LayoutDashboard className="w-6 h-6" />,
+  Crosshair: <Crosshair className="w-6 h-6" />,
   Users: <Users className="w-6 h-6" />,
   DollarSign: <DollarSign className="w-6 h-6" />,
   Target: <Target className="w-6 h-6" />,
@@ -15,10 +17,20 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export default function AssessPage() {
   const router = useRouter();
+  const { user } = useUser();
 
   return (
     <div className="min-h-screen bg-black py-8 px-4">
       <div className="max-w-2xl mx-auto">
+        {user && (
+          <Link
+            href="/dashboard"
+            className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Dashboard
+          </Link>
+        )}
         <div className="text-center mb-10">
           <div className="w-16 h-16 bg-amber-400/10 border border-amber-400/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Shield className="w-8 h-8 text-amber-400" />

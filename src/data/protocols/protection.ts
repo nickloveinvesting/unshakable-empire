@@ -1,734 +1,880 @@
 import type { DayProtocol } from "@/types/protocol";
 
 export const protectionProtocol: DayProtocol[] = [
+  // ───────────────────────────────────────────────
+  // WEEK 1 — Time Audit & Awareness
+  // ───────────────────────────────────────────────
   {
     day: 1,
-    title: "Emergency Fund Reality Check",
-    intention: "Understand where you stand with your financial safety net and set a clear target.",
+    title: "The Time Truth",
+    intention:
+      "Before you can reclaim your time, you have to see where it actually goes. Today is about radical honesty with yourself.",
     tasks: [
       {
-        id: "p1-t1",
-        label: "Calculate your current emergency fund balance",
-        description: "Log into your savings accounts and total up all liquid emergency reserves.",
+        id: "d1-t1",
+        label: "Write down every task you did today and how long it took",
+        description:
+          "Carry a notepad or use your phone. Log every activity from the moment you start working until you stop — emails, calls, meetings, fires, deep work, everything. No task is too small to record.",
       },
       {
-        id: "p1-t2",
-        label: "Determine your monthly essential expenses",
-        description: "Add up rent/mortgage, utilities, insurance premiums, food, transportation, and minimum debt payments.",
+        id: "d1-t2",
+        label: "Measure your total hours worked today",
+        description:
+          "Add up every logged minute. Get an exact count of how many hours you actually spent working today — not how many hours you think you worked.",
       },
       {
-        id: "p1-t3",
-        label: "Calculate how many months of expenses your fund covers",
-        description: "Divide your emergency fund balance by your monthly essentials to see your runway.",
+        id: "d1-t3",
+        label: "Reflect: which tasks could someone else have done?",
+        description:
+          "Review your log with fresh eyes. Highlight every task that did not require your unique expertise, relationships, or decision-making authority. Be brutally honest.",
       },
     ],
     educationalContent:
-      "A fully funded emergency reserve should cover 3-6 months of essential living expenses. If you are self-employed or have variable income, aim for 6-12 months. This fund is your first line of defense against financial shocks -- job loss, medical emergencies, or unexpected repairs. Keep it in a high-yield savings account where it is liquid but still earning interest.",
+      "Most CEOs dramatically overestimate how much time they spend on strategic work and underestimate how much time disappears into low-value tasks. The time audit is the single most eye-opening exercise in the entire CEO Command Center protocol. When you see in black and white that you spent 45 minutes answering emails that your assistant could have handled, or two hours troubleshooting an operations issue your manager should own, the case for change makes itself. You cannot manage what you do not measure — and your time is the most finite resource your business has.",
   },
   {
     day: 2,
-    title: "Emergency Fund Action Plan",
-    intention: "Create a concrete plan to build or strengthen your emergency fund.",
+    title: "The Dollar Value of Your Hours",
+    intention:
+      "Not all work is created equal. Today you will assign a dollar value to every task and see where your highest-leverage hours actually go.",
     tasks: [
       {
-        id: "p2-t1",
-        label: "Set your emergency fund target amount",
-        description: "Based on yesterday's assessment, choose your target: 3, 6, or 12 months of expenses.",
+        id: "d2-t1",
+        label: "Categorize yesterday's tasks as $10/hr, $100/hr, or $1000/hr work",
+        description:
+          "Go through your Day 1 time log. $10/hr tasks are things anyone can do (data entry, scheduling, basic emails). $100/hr tasks require skill but not you specifically (project management, standard client calls). $1000/hr tasks are CEO-level — vision, strategy, key relationships, high-value deals.",
       },
       {
-        id: "p2-t2",
-        label: "Set up an automatic monthly transfer to your emergency savings",
-        description: "Even $50/month creates momentum. Automate the transfer on payday so you pay yourself first.",
+        id: "d2-t2",
+        label: "Measure: what percentage of your time went to $1000/hr tasks?",
+        description:
+          "Calculate the percentage. Most first-time CEOs discover they spend less than 10% of their time on $1000/hr work. Record this number — it is your baseline.",
       },
       {
-        id: "p2-t3",
-        label: "Identify one expense to redirect toward your emergency fund this month",
-        description: "Find a subscription, dining expense, or discretionary spend you can temporarily redirect.",
+        id: "d2-t3",
+        label: "Reflect: identify one $10/hr task you will delegate this week",
+        description:
+          "Pick the easiest win. Choose one low-value task you do repeatedly and commit to handing it off this week. Write down who will take it, when you will train them, and what 'good enough' looks like.",
       },
     ],
     educationalContent:
-      "The power of automation cannot be overstated. When saving is automatic, you remove the decision fatigue and willpower required to manually transfer funds each month. Studies show that people who automate their savings accumulate 3x more over time than those who rely on manual deposits. Start where you are and increase the amount quarterly.",
+      "Here is the math that changes everything: if your business generates $500K in revenue and you work 2,000 hours a year, your time is worth $250/hr at minimum. Every hour you spend on $10/hr work — filing, scheduling, basic email — costs your business $240 in lost opportunity. The CEO's job is not to do things right; it is to make sure the right things get done. Delegation is not about being lazy. It is about respecting the value of your position and the potential of your team. The fastest-growing companies are led by CEOs who ruthlessly protect their highest-value hours.",
   },
   {
     day: 3,
-    title: "Health Insurance Deep Dive",
-    intention: "Ensure your health insurance coverage matches your actual needs and risk profile.",
+    title: "The CEO-Only List",
+    intention:
+      "Clarity is power. Today you will define the short list of tasks that truly require you — and only you — to perform.",
     tasks: [
       {
-        id: "p3-t1",
-        label: "Review your current health insurance plan details",
-        description: "Locate your policy documents and note your deductible, out-of-pocket max, copays, and network type.",
+        id: "d3-t1",
+        label: "Create a CEO-Only task list — things ONLY you can do",
+        description:
+          "Write down every task that genuinely cannot be done by anyone else in your organization. These are tasks that require your unique vision, your key relationships, your signature authority, or your strategic judgment.",
       },
       {
-        id: "p3-t2",
-        label: "List all prescriptions and recurring medical needs",
-        description: "Document medications, specialist visits, and ongoing treatments to verify they are covered.",
+        id: "d3-t2",
+        label: "Measure: how many items are on it? (Target: under 5)",
+        description:
+          "Count the items. If your list has more than five items, you are still holding on to work that could be delegated. Challenge each item: is this truly CEO-only, or is it CEO-comfortable?",
       },
       {
-        id: "p3-t3",
-        label: "Check if your current providers are in-network",
-        description: "Verify that your doctors, specialists, and preferred hospital are within your plan's network.",
+        id: "d3-t3",
+        label: "Reflect: what are you holding onto that is not on this list?",
+        description:
+          "This is the hard question. What tasks do you keep doing out of habit, perfectionism, or distrust? Those are the biggest drains on your leadership capacity. Write them down.",
       },
     ],
     educationalContent:
-      "Health insurance is the foundation of financial protection. A single hospital stay can exceed $30,000 without coverage. When evaluating plans, do not just look at the monthly premium -- calculate your total potential annual cost by adding premiums plus the out-of-pocket maximum. An HSA-eligible high-deductible plan can be a powerful wealth-building tool if you are generally healthy.",
+      "The difference between a CEO and an operator is the length of their task list. Operators do everything. CEOs do only what only they can do. Your CEO-Only list should be shockingly short: set the vision, make high-stakes decisions, cultivate key relationships, develop leaders, and allocate capital. Everything else — even things you are great at, even things you enjoy — belongs to someone else. The hardest part of becoming a true CEO is letting go of the work that made you successful as an individual contributor. But your business will never outgrow your capacity to lead if you are buried in tasks your team should own.",
   },
   {
     day: 4,
-    title: "Health Insurance Optimization",
-    intention: "Maximize the value of your health benefits and reduce unnecessary healthcare costs.",
+    title: "Strategic Time Blocks",
+    intention:
+      "Your calendar reveals your true priorities. Today you will carve out protected strategic time and defend it like revenue.",
     tasks: [
       {
-        id: "p4-t1",
-        label: "Review HSA or FSA eligibility and contribution limits",
-        description: "If eligible, confirm you are maximizing tax-advantaged health savings contributions.",
+        id: "d4-t1",
+        label: "Block 2 hours of strategic time on tomorrow's calendar — no meetings, no fires",
+        description:
+          "Open your calendar right now and block two consecutive hours for CEO-level strategic work. Label it 'CEO Strategic Block' and treat it as the most important meeting of your day. No phone, no email, no interruptions.",
       },
       {
-        id: "p4-t2",
-        label: "Schedule any overdue preventive care appointments",
-        description: "Most plans cover annual physicals, dental cleanings, and screenings at no cost.",
+        id: "d4-t2",
+        label: "Measure: did you protect yesterday's strategic block? (Y/N)",
+        description:
+          "If you set a block yesterday, answer honestly: did you keep it? If not, what invaded it? Track this daily — the pattern of what breaks your blocks reveals your biggest operational gaps.",
       },
       {
-        id: "p4-t3",
-        label: "Compare your current plan cost against alternatives",
-        description: "If open enrollment is approaching, research comparable plans on your employer portal or healthcare.gov.",
+        id: "d4-t3",
+        label: "Reflect: what would you work on if you had 2 uninterrupted hours?",
+        description:
+          "Write down the one project, strategy, or relationship that would move the needle most if you gave it two full hours of focused attention. This is likely the work you have been avoiding because the urgent keeps crowding out the important.",
       },
     ],
     educationalContent:
-      "Health Savings Accounts (HSAs) are the only triple-tax-advantaged account in the U.S. tax code: contributions are tax-deductible, growth is tax-free, and withdrawals for qualified medical expenses are tax-free. After age 65, you can withdraw for any purpose (paying ordinary income tax like a traditional IRA). If you can afford to pay medical expenses out of pocket, letting your HSA grow invested is one of the most powerful long-term strategies available.",
+      "Research from Cal Newport and others shows that a CEO's most valuable output comes from deep, uninterrupted thinking — yet the average executive is interrupted every 11 minutes and takes 25 minutes to regain full focus. That means most CEOs never actually do deep work during a normal business day. Strategic time blocks are not a luxury; they are a business necessity. The companies that innovate, pivot, and grow fastest are led by executives who fiercely protect thinking time. Your team can survive without you for two hours. Your business cannot survive without your strategic vision indefinitely.",
   },
   {
     day: 5,
-    title: "Life Insurance Foundation",
-    intention: "Assess whether your life insurance coverage adequately protects your dependents.",
+    title: "Fire-Fighting Forensics",
+    intention:
+      "Every fire you fight as CEO reveals a system that is missing or broken. Today you will diagnose your fire triggers so you can prevent them.",
     tasks: [
       {
-        id: "p5-t1",
-        label: "List all current life insurance policies and coverage amounts",
-        description: "Include employer-provided group life, individual term, and any permanent policies.",
+        id: "d5-t1",
+        label: "Identify your top 3 fire-fighting triggers this week",
+        description:
+          "Look back over the past five days. What pulled you out of CEO-level work and into firefighting mode? Name the three most common or most disruptive triggers. Be specific: 'client complaint about delivery timeline' not 'client issues.'",
       },
       {
-        id: "p5-t2",
-        label: "Calculate your life insurance need using the DIME method",
-        description: "DIME = Debt + Income replacement (10-12x annual) + Mortgage payoff + Education funding for children.",
+        id: "d5-t2",
+        label: "Measure: how many times were you pulled into a fire today?",
+        description:
+          "Track it in real time. Every time someone brings you a problem that is not on your CEO-Only list, make a tally mark. Count them at the end of the day.",
       },
       {
-        id: "p5-t3",
-        label: "Identify any coverage gap between current and needed amounts",
-        description: "Subtract current coverage from your calculated need to find your gap.",
+        id: "d5-t3",
+        label: "Reflect: which fire could have been prevented with a system?",
+        description:
+          "Choose the most recurring fire from your list. Ask: what process, checklist, decision rule, or team empowerment would have prevented this from ever reaching my desk? Write down the system that would solve it.",
       },
     ],
     educationalContent:
-      "The DIME method provides a comprehensive view of life insurance needs. Debt covers all outstanding obligations. Income replacement ensures your family maintains their standard of living for 10-12 years. Mortgage payoff eliminates the largest monthly expense. Education funds secure your children's future. For most families, a 20-30 year level term policy provides the best value. Avoid whole life unless you have maxed all other tax-advantaged vehicles and need permanent coverage for estate planning.",
+      "Firefighting feels productive because it is urgent, visible, and you get immediate feedback when you solve the problem. But it is a trap. Every fire you fight personally reinforces your team's dependency on you and prevents you from doing the strategic work that would eliminate fires permanently. The CEO who spends their day solving problems is a very expensive employee — not a leader. The goal is not to fight fires faster; it is to install the sprinkler systems so fires do not start. Every recurring problem is a missing system. Your job is to build the systems, not to be the system.",
   },
   {
     day: 6,
-    title: "Life Insurance Action Steps",
-    intention: "Close any life insurance gaps and ensure beneficiary designations are current.",
+    title: "The Ideal CEO Week",
+    intention:
+      "Today you will design the weekly schedule that reflects who you need to become as a CEO — not who you have been as an operator.",
     tasks: [
       {
-        id: "p6-t1",
-        label: "Verify beneficiary designations on all life insurance policies",
-        description: "Confirm primary and contingent beneficiaries are correct and up to date.",
+        id: "d6-t1",
+        label: "Draft your ideal weekly schedule — assign CEO blocks, team blocks, and off blocks",
+        description:
+          "Map out Monday through Friday. Allocate specific time blocks for: CEO strategic work, team development and meetings, client-facing activities, administrative necessities, and personal recovery. Be intentional about every hour.",
       },
       {
-        id: "p6-t2",
-        label: "Get quotes for additional term life coverage if a gap exists",
-        description: "Use comparison sites or contact a fee-only insurance advisor for competitive quotes.",
+        id: "d6-t2",
+        label: "Measure: hours allocated to strategy vs. operations",
+        description:
+          "In your ideal schedule, count the hours dedicated to strategic CEO work versus operational execution. Your target: at least 40% of your work week should be CEO-level strategic time.",
       },
       {
-        id: "p6-t3",
-        label: "Review employer life insurance portability options",
-        description: "Understand whether your group coverage can convert to an individual policy if you leave your employer.",
+        id: "d6-t3",
+        label: "Reflect: what has to change for this schedule to become real?",
+        description:
+          "Compare your ideal schedule to your current reality. What gaps exist? What needs to be delegated, automated, or eliminated to make this schedule possible within 90 days? Write down the three biggest changes required.",
       },
     ],
     educationalContent:
-      "Beneficiary designations on life insurance policies supersede your will. This means even if your will says your assets go to your spouse, an outdated beneficiary designation naming an ex-spouse will be honored. Review these designations annually and after any major life event: marriage, divorce, birth of a child, or death of a beneficiary. Also consider naming a contingent beneficiary and, for larger policies, a trust as the beneficiary for added control.",
+      "Your calendar is the physical manifestation of your priorities. If you say strategy matters but your calendar is wall-to-wall meetings and reactive tasks, your actions contradict your words. The ideal CEO week is not aspirational — it is architectural. You are designing the structure your leadership will operate within. The most effective CEOs batch similar activities together: strategy on Monday mornings, team one-on-ones on Tuesday afternoons, client development on Wednesdays. This reduces context-switching and creates predictability for your team. Your schedule will not become ideal overnight, but without a target, you will never get there.",
   },
   {
     day: 7,
-    title: "Auto Insurance Review",
-    intention: "Ensure your auto insurance provides proper protection without overpaying.",
+    title: "Week 1 Review — The Awareness Reckoning",
+    intention:
+      "Step back and see the full picture of your first week. Awareness without action is just entertainment — today you turn insight into commitment.",
     tasks: [
       {
-        id: "p7-t1",
-        label: "Review your current auto insurance declarations page",
-        description: "Note your liability limits, collision/comprehensive deductibles, and any endorsements.",
+        id: "d7-t1",
+        label: "Review your week: how many hours did you work? How many were CEO-level?",
+        description:
+          "Total your hours for the week. Then calculate how many of those hours were spent on tasks from your CEO-Only list. Express it as a percentage. This is your Week 1 CEO Effectiveness Score.",
       },
       {
-        id: "p7-t2",
-        label: "Verify your liability limits are at least 100/300/100",
-        description: "Higher liability limits protect your assets. The cost difference for higher limits is often minimal.",
+        id: "d7-t2",
+        label: "Measure: compare your actual week to your ideal week from Day 6",
+        description:
+          "Lay your ideal schedule next to your actual time log. Where are the biggest gaps? Which blocks got protected and which got invaded? Document the variance.",
       },
       {
-        id: "p7-t3",
-        label: "Check if you qualify for any available discounts",
-        description: "Multi-policy, safe driver, low mileage, defensive driving course, and professional association discounts.",
+        id: "d7-t3",
+        label: "Reflect: what is one thing you will do differently next week?",
+        description:
+          "Choose one specific, actionable change for Week 2. Not a vague intention like 'delegate more' but a concrete commitment like 'I will not answer Slack messages between 9 and 11 AM.' Write it down and share it with an accountability partner.",
       },
     ],
     educationalContent:
-      "Most people carry the state minimum liability coverage, which is dangerously low. If you cause an accident with injuries exceeding your policy limits, you are personally liable for the difference. With medical costs what they are, a serious accident can easily exceed $300,000 in claims. Raising your limits from state minimum to 100/300/100 (or 250/500/250 if you have significant assets) typically costs only $20-50 more per month. This is one of the highest-value insurance improvements you can make.",
+      "Week 1 is about truth-telling. Most CEOs who complete this week discover they spend 70-80% of their time on work that someone earning a fraction of their compensation could do. That realization stings — but it is the catalyst for transformation. The gap between your current schedule and your ideal schedule represents trapped revenue, delayed growth, and unnecessary stress. Every percentage point you shift from operational to strategic work compounds over time. A CEO who moves from 10% strategic to 40% strategic does not just quadruple their strategic output — they create the space for their business to grow beyond their personal capacity.",
   },
+
+  // ───────────────────────────────────────────────
+  // WEEK 2 — Decision Filters & Delegation
+  // ───────────────────────────────────────────────
   {
     day: 8,
-    title: "Homeowners or Renters Insurance",
-    intention: "Protect your home and possessions against loss, theft, and liability claims.",
+    title: "The Decision Inventory",
+    intention:
+      "You are making far more decisions than a CEO should. Today you will catalog every decision to find the ones you should never touch again.",
     tasks: [
       {
-        id: "p8-t1",
-        label: "Review your homeowners or renters insurance policy",
-        description: "Check dwelling coverage, personal property limits, liability coverage, and deductible amounts.",
+        id: "d8-t1",
+        label: "List every decision you made today",
+        description:
+          "From the moment you started working, write down every decision — big and small. Approving an expense, answering a client question, choosing a vendor, resolving a team conflict. Capture them all.",
       },
       {
-        id: "p8-t2",
-        label: "Create or update a home inventory of valuable items",
-        description: "Photograph or video your possessions room by room and store the record in the cloud.",
+        id: "d8-t2",
+        label: "Measure: how many decisions required YOU specifically?",
+        description:
+          "Review your list and mark each decision as 'CEO-required' or 'could have been delegated.' Count the totals. Most CEOs find that fewer than 20% of their daily decisions truly require their involvement.",
       },
       {
-        id: "p8-t3",
-        label: "Verify your personal property coverage is replacement cost, not actual cash value",
-        description: "Replacement cost pays to replace items at current prices; actual cash value deducts depreciation.",
+        id: "d8-t3",
+        label: "Reflect: which decisions could your team make with clear guidelines?",
+        description:
+          "Identify the delegatable decisions that keep landing on your desk. For each one, ask: what guideline, rule, or authority level would my team need to handle this without me? Write down the top three.",
       },
     ],
     educationalContent:
-      "A home inventory is the single most important thing you can do to ensure a smooth insurance claim. After a fire, theft, or natural disaster, you will need to prove what you owned and its value. Walk through every room with your phone camera, open drawers and closets, and narrate the contents. Store the video in cloud storage (not on a local drive that could be destroyed). Update annually or when you make significant purchases. Renters insurance is equally critical -- your landlord's policy covers the building, not your belongings or your liability.",
+      "Decision fatigue is real and scientifically proven. Every decision you make — no matter how small — depletes the same mental resource pool you need for your highest-stakes choices. A CEO who spends the morning approving purchase orders and resolving scheduling conflicts has less cognitive capacity available when a strategic opportunity appears in the afternoon. The solution is not making decisions faster; it is making fewer decisions. Every decision you successfully delegate is one more unit of mental energy preserved for the choices that actually move your business forward.",
   },
   {
     day: 9,
-    title: "Umbrella Insurance",
-    intention: "Add an extra layer of liability protection above your auto and home policies.",
+    title: "Decision Rules for Your Team",
+    intention:
+      "Your team asks you questions because they do not have clear decision-making frameworks. Today you will give them the rules to decide on their own.",
     tasks: [
       {
-        id: "p9-t1",
-        label: "Determine if you currently have an umbrella insurance policy",
-        description: "Check with your insurance agent or review your policy portfolio.",
+        id: "d9-t1",
+        label: "Write 3 decision rules your team can follow without asking you",
+        description:
+          "Based on your Day 8 analysis, create three clear, specific rules. Example: 'Any expense under $500 is auto-approved by the department manager.' 'Client reschedule requests are handled by the account manager — no CEO approval needed.' Make them unambiguous.",
       },
       {
-        id: "p9-t2",
-        label: "Assess your need based on net worth and risk exposure",
-        description: "Anyone with assets to protect -- home equity, savings, investments -- benefits from umbrella coverage.",
+        id: "d9-t2",
+        label: "Measure: number of decisions that hit your desk today",
+        description:
+          "Keep a running count of every decision someone brings to you or you involve yourself in. Compare this to yesterday's count. The goal is a downward trend starting this week.",
       },
       {
-        id: "p9-t3",
-        label: "Get a quote for a $1M umbrella policy",
-        description: "Umbrella policies typically cost $200-$400/year for $1M in additional liability coverage.",
+        id: "d9-t3",
+        label: "Reflect: what is the worst that happens if your team makes a wrong call?",
+        description:
+          "For each decision rule you created, imagine the worst-case scenario if your team gets it wrong. Most of the time, the cost of a bad delegated decision is far less than the cost of bottlenecking every decision through you.",
       },
     ],
     educationalContent:
-      "An umbrella insurance policy provides liability coverage above and beyond your auto and homeowners policies. For a few hundred dollars per year, you get $1-5 million in additional protection. This covers scenarios like a serious car accident where injuries exceed your auto policy limits, someone getting injured on your property, or even a defamation lawsuit. If your net worth exceeds your auto and home liability limits combined, an umbrella policy is essential. It is one of the most cost-effective forms of insurance available.",
+      "The reason your team keeps coming to you is not that they are incapable — it is that you have not given them permission and parameters to decide. Decision rules transform your team from order-takers into decision-makers. The best decision rules share three traits: they are specific enough to apply without interpretation, they define the boundaries of authority clearly, and they include an escalation path for edge cases. When you publish these rules, you are not losing control. You are scaling your judgment across the organization. One CEO's decision-making ability is a bottleneck. A team of empowered decision-makers is a growth engine.",
   },
   {
     day: 10,
-    title: "Disability Insurance",
-    intention: "Protect your most valuable asset -- your ability to earn income.",
+    title: "The Delegation Handoff",
+    intention:
+      "Delegation is not dumping. Today you will execute a proper delegation handoff with written instructions and clear expectations.",
     tasks: [
       {
-        id: "p10-t1",
-        label: "Check if you have disability insurance through your employer",
-        description: "Review short-term and long-term disability benefits, including the percentage of income covered.",
+        id: "d10-t1",
+        label: "Delegate one recurring task to a team member today with written instructions",
+        description:
+          "Choose a task you do weekly or daily that is not on your CEO-Only list. Write step-by-step instructions. Include: what the task is, why it matters, what 'done well' looks like, common mistakes to avoid, and who to ask if they get stuck.",
       },
       {
-        id: "p10-t2",
-        label: "Calculate the gap between employer coverage and your actual income needs",
-        description: "Most employer plans cover 60% of base salary and may cap at a certain amount.",
+        id: "d10-t2",
+        label: "Measure: estimate the weekly time saved by this delegation",
+        description:
+          "Calculate how many minutes or hours per week this task currently costs you. Multiply by 50 weeks. That is the annual time you are reclaiming for CEO-level work.",
       },
       {
-        id: "p10-t3",
-        label: "Research individual disability insurance options",
-        description: "Individual policies offer own-occupation coverage and are portable if you change jobs.",
+        id: "d10-t3",
+        label: "Reflect: did the result meet your standard? If not, what instruction was missing?",
+        description:
+          "After the task is completed, review the output. If it falls short of your expectations, do not take the task back — improve the instructions. The gap is almost always in the briefing, not in the person.",
       },
     ],
     educationalContent:
-      "You are 3-4 times more likely to become disabled during your working years than to die. Yet most people have life insurance and skip disability coverage. If you could not work for 6 months or more, could your family maintain its lifestyle? Employer-provided disability insurance is a great start, but it typically covers only 60% of base salary (excluding bonuses), is taxable if your employer pays the premiums, and disappears when you leave the company. A supplemental individual policy with own-occupation definition ensures you are covered if you cannot perform your specific job, even if you could do other work.",
+      "The number one reason delegation fails is unclear instructions, not incompetent team members. When you have done a task for years, you have internalized dozens of micro-decisions that you make unconsciously. Your team does not have that context. Effective delegation requires what military strategists call 'commander's intent' — explain the desired outcome and the boundaries, then trust your people to find the path. Write instructions once, refine them through feedback, and you create a reusable asset that works even when you hire the next person. The short-term investment in documentation pays exponential dividends in long-term freedom.",
   },
   {
     day: 11,
-    title: "Identity Theft Protection",
-    intention: "Implement proactive measures to protect your identity and financial accounts.",
+    title: "The If-Then Playbook",
+    intention:
+      "Most team questions follow patterns. Today you will build a decision playbook that handles the most common scenarios without your involvement.",
     tasks: [
       {
-        id: "p11-t1",
-        label: "Place a credit freeze at all three major bureaus",
-        description: "Freeze your credit at Equifax, Experian, and TransUnion -- it is free and prevents unauthorized accounts.",
+        id: "d11-t1",
+        label:
+          "Create an 'If X, Then Y' decision guide for your team's 3 most common questions",
+        description:
+          "Identify the three questions your team asks you most frequently. For each one, write a clear If-Then rule. Example: 'If a client requests a refund under $200, then process it immediately and log the reason. If over $200, escalate to [manager name].'",
       },
       {
-        id: "p11-t2",
-        label: "Set up credit monitoring alerts",
-        description: "Use a free service like Credit Karma or your bank's monitoring tool to get real-time alerts.",
+        id: "d11-t2",
+        label: "Measure: how many questions from your team today?",
+        description:
+          "Track every question, request, or decision that a team member brings to you today. Record the question and who asked it. This data reveals your delegation gaps.",
       },
       {
-        id: "p11-t3",
-        label: "Review your credit reports for any unfamiliar accounts",
-        description: "Pull free reports from AnnualCreditReport.com and check for accounts you did not open.",
+        id: "d11-t3",
+        label: "Reflect: which question keeps coming back that should not?",
+        description:
+          "Look for the repeat offenders — questions you have answered multiple times. These are the highest-value candidates for your If-Then playbook because eliminating them creates permanent time savings.",
       },
     ],
     educationalContent:
-      "Identity theft affects over 15 million Americans annually, with average losses exceeding $1,000 per incident. A credit freeze is the single most effective preventive measure -- it blocks anyone from opening new credit accounts in your name. When you need to apply for credit, you can temporarily lift the freeze using a PIN. This is different from a fraud alert, which only requires creditors to verify your identity but does not block them from proceeding. Combining a freeze with active monitoring creates a strong defense layer.",
+      "The If-Then playbook is one of the most powerful tools in the CEO Command Center. It codifies your judgment into a scalable system. Every time you answer a team question, you are solving a problem once. Every time you add that answer to the playbook, you are solving it forever. The best-run organizations operate on playbooks, not on the CEO's availability. McDonald's does not need a genius running each location because the systems are the genius. Your business may not be McDonald's, but the principle is identical: the more of your decision-making you can systematize, the less your business depends on your physical presence.",
   },
   {
     day: 12,
-    title: "Digital Security Audit",
-    intention: "Secure your financial accounts against unauthorized access and cyber threats.",
+    title: "The CEO Silence Test",
+    intention:
+      "Today you will test a radical hypothesis: your team can solve most problems without you if you simply stop answering.",
     tasks: [
       {
-        id: "p12-t1",
-        label: "Enable two-factor authentication on all financial accounts",
-        description: "Set up 2FA on banking, brokerage, retirement accounts, and email (use an authenticator app, not SMS).",
+        id: "d12-t1",
+        label: "Do NOT answer any non-urgent team question for 4 hours today",
+        description:
+          "Set the boundary clearly: tell your team you are in a strategic block and will not be available for non-emergency issues from [start time] to [end time]. Define what constitutes a genuine emergency (hint: very few things qualify).",
       },
       {
-        id: "p12-t2",
-        label: "Update passwords on your most critical financial accounts",
-        description: "Use a password manager to generate and store unique, strong passwords for each account.",
+        id: "d12-t2",
+        label: "Measure: how many questions resolved themselves?",
+        description:
+          "At the end of your 4-hour block, review the questions or messages that came in. How many were already resolved by the time you looked? How many turned out to not need your input at all? Track the numbers.",
       },
       {
-        id: "p12-t3",
-        label: "Check if your email has been compromised in known data breaches",
-        description: "Visit haveibeenpwned.com to see if your email appears in any breach databases.",
+        id: "d12-t3",
+        label: "Reflect: what did you do with that reclaimed time?",
+        description:
+          "Honestly assess how you used those four hours. Did you do CEO-level strategic work? Did you catch up on tasks? Did you feel anxious about being unavailable? Your emotional response reveals how dependent you have become on being needed.",
       },
     ],
     educationalContent:
-      "Your email account is the skeleton key to your financial life. Anyone with access to your email can reset passwords on banking, investment, and insurance accounts. Protect it with the strongest security available: a hardware security key or authenticator app (not SMS-based 2FA, which is vulnerable to SIM-swapping attacks). Use a reputable password manager like 1Password or Bitwarden to maintain unique passwords for every account. The small monthly cost of a password manager is trivial compared to the financial damage a compromised password can cause.",
+      "The CEO Silence Test is uncomfortable by design. Most business owners have trained their teams — often unintentionally — to bring every question upstairs. And most business owners have trained themselves to feel important when their phone buzzes with requests. But constant availability is not leadership; it is codependency. When you go silent for four hours, one of two things happens: your team steps up and solves problems on their own, or they sit and wait. If they step up, you have proof that you are the bottleneck. If they wait, you have proof that you have not empowered them — which is still your problem to solve, not theirs.",
   },
   {
     day: 13,
-    title: "Property and Casualty Insurance Gaps",
-    intention: "Identify coverage gaps across your property and casualty insurance portfolio.",
+    title: "The Decision Maker of the Day",
+    intention:
+      "Leadership development happens by doing, not by watching. Today you will give a team member the authority to lead in your absence.",
     tasks: [
       {
-        id: "p13-t1",
-        label: "Check if you need flood, earthquake, or wildfire supplemental coverage",
-        description: "Standard homeowners policies exclude these perils. Check FEMA flood maps for your area.",
+        id: "d13-t1",
+        label:
+          "Assign one team member as 'decision maker of the day' for operational issues",
+        description:
+          "Choose your most capable team member. Give them explicit authority: 'Today, all operational decisions go through [name], not me. I trust their judgment. If something is truly strategic or irreversible, they will loop me in.' Announce it to the team.",
       },
       {
-        id: "p13-t2",
-        label: "Review your policy for scheduled personal property endorsements",
-        description: "High-value items like jewelry, art, instruments, or collectibles may need separate scheduling.",
+        id: "d13-t2",
+        label: "Measure: how many issues were handled without you?",
+        description:
+          "At the end of the day, debrief with your decision maker. How many issues came up? How did they handle them? What decisions did they make? Track the total number resolved without your involvement.",
       },
       {
-        id: "p13-t3",
-        label: "Verify your dwelling coverage keeps pace with rebuilding costs",
-        description: "Construction costs rise annually. Ensure your coverage amount reflects current rebuilding estimates.",
+        id: "d13-t3",
+        label: "Reflect: how did it feel to step back?",
+        description:
+          "This is about your emotional relationship with control. Did you feel relief? Anxiety? Pride in your team member? Frustration at how they handled something? Your feelings reveal whether you are truly ready to lead at the CEO level or still clinging to operator mode.",
       },
     ],
     educationalContent:
-      "One of the most common insurance mistakes is assuming your homeowners policy covers everything. It does not. Flooding is excluded from standard policies and requires a separate National Flood Insurance Program (NFIP) policy or a private flood policy. Earthquake damage requires a separate endorsement or policy. Even water damage from a burst pipe differs from flood damage in how it is covered. Review your policy's exclusions section carefully. If you live in a disaster-prone area, the cost of supplemental coverage is small compared to the catastrophic loss of an uninsured event.",
+      "You cannot build a leadership pipeline if you never let anyone lead. The 'decision maker of the day' exercise does three things simultaneously: it gives your team member real leadership experience, it tests your delegation systems under live conditions, and it forces you to confront your own control tendencies. The CEOs who scale beyond themselves are the ones who find genuine satisfaction in watching their people grow. If your team member makes a different decision than you would have — but the outcome is acceptable — that is not a failure. That is evidence that your organization can function without you, which is the ultimate measure of leadership success.",
   },
   {
     day: 14,
-    title: "Week 2 Review and Consolidation",
-    intention: "Review your progress and consolidate all protection findings into a clear action list.",
+    title: "Week 2 Review — The Delegation Scorecard",
+    intention:
+      "Measure the concrete impact of one week of intentional delegation. The numbers tell the story your ego will not.",
     tasks: [
       {
-        id: "p14-t1",
-        label: "Review all notes and actions from Days 1-13",
-        description: "Compile your insurance gaps, coverage amounts, and pending action items into one document.",
+        id: "d14-t1",
+        label:
+          "Weekly review: how many decisions did you make this week vs. last week?",
+        description:
+          "Compare your decision counts from Week 2 to your Day 8 baseline. Calculate the percentage decrease. Every decision you did not make is a decision your team made — which means your organization is getting stronger.",
       },
       {
-        id: "p14-t2",
-        label: "Prioritize your top 3 protection gaps to address this month",
-        description: "Rank by financial impact: which gap would hurt you most if left unaddressed?",
+        id: "d14-t2",
+        label: "Measure: the decrease in decisions made by you",
+        description:
+          "Document the exact number. If you went from 40 decisions per day to 25, that is a 37% reduction. That represents real cognitive energy reclaimed for strategic work. Celebrate progress, even if it is incremental.",
       },
       {
-        id: "p14-t3",
-        label: "Schedule appointments or calls needed to close your gaps",
-        description: "Block time this week to call insurance agents, set up accounts, or submit applications.",
+        id: "d14-t3",
+        label: "Reflect: what is working in your delegation system?",
+        description:
+          "Identify the wins. Which decision rules did your team follow successfully? Which delegated tasks were handled well? What felt easier this week compared to last week? Double down on what is working.",
       },
     ],
     educationalContent:
-      "Financial protection is not a one-time event -- it is an ongoing system. The value of this protocol is not just in identifying gaps but in creating a habit of regular review. Your insurance needs change with life events: getting married, having children, buying property, starting a business, or reaching new net worth milestones. Set a recurring calendar reminder to review your protection portfolio annually. Keep a simple document listing all policies, coverage amounts, premiums, renewal dates, and agent contact information.",
+      "Two weeks in, you should be feeling a shift — and possibly some discomfort. The shift comes from reclaimed time and reduced decision load. The discomfort comes from loosening control. Both are signs of progress. The leaders who build great organizations are the ones who become comfortable with 'good enough' on operational decisions so they can pursue 'excellent' on strategic ones. Your team will make mistakes — that is part of the growth process. The cost of those mistakes is almost always less than the cost of you continuing to be the bottleneck. Trust is not given in one moment; it is built through repeated small acts of letting go.",
   },
+
+  // ───────────────────────────────────────────────
+  // WEEK 3 — Scorecard & Metrics Installation
+  // ───────────────────────────────────────────────
   {
     day: 15,
-    title: "Business Insurance Assessment",
-    intention: "Evaluate whether your business or side income is properly insured.",
+    title: "The Five Numbers That Matter",
+    intention:
+      "You cannot lead what you do not measure. Today you will define the five vital signs of your business and record your baseline.",
     tasks: [
       {
-        id: "p15-t1",
-        label: "Identify all income-generating activities that may need coverage",
-        description: "Include freelance work, consulting, rental properties, online businesses, or side hustles.",
+        id: "d15-t1",
+        label:
+          "Define your top 5 business KPIs: revenue, leads, close rate, customer satisfaction, profit margin",
+        description:
+          "These five metrics tell you whether your business is healthy, growing, or in trouble. Customize them for your business if needed, but do not exceed five. Simplicity is the point — these are the numbers you check every single week.",
       },
       {
-        id: "p15-t2",
-        label: "Research general liability insurance requirements for your activities",
-        description: "Many businesses need at minimum a general liability policy and professional liability (E&O) coverage.",
+        id: "d15-t2",
+        label: "Measure: record today's number for each KPI",
+        description:
+          "Pull the actual data for each KPI right now. If you cannot find the number easily, that is itself a critical finding — it means you are flying blind on that metric. Record what you have, even if some numbers are estimates.",
       },
       {
-        id: "p15-t3",
-        label: "Determine if you need professional liability or errors and omissions insurance",
-        description: "If you provide advice, services, or professional expertise, E&O coverage protects against claims of negligence.",
+        id: "d15-t3",
+        label: "Reflect: which KPI surprised you?",
+        description:
+          "Look at your five numbers. Which one was better than expected? Which one was worse? The gaps between your perception and reality are where the biggest opportunities and biggest risks hide.",
       },
     ],
     educationalContent:
-      "If you earn any income outside of traditional W-2 employment -- freelancing, consulting, rental income, or running a business -- your personal insurance policies likely do not cover business-related claims. A client who slips at your home office, a product that causes injury, or a professional recommendation that leads to a financial loss can all result in lawsuits that personal policies will not pay. Business insurance is the firewall between your business liabilities and your personal assets. Even sole proprietors and side-hustle operators should carry basic coverage.",
+      "Every CEO needs a dashboard, and it should fit on a single page. The five KPIs you choose should pass the 'so what' test: if this number changes, does it directly impact revenue, profitability, or growth? Revenue tells you if the market wants what you sell. Leads tell you if your pipeline is healthy. Close rate tells you if your sales process works. Customer satisfaction tells you if you will keep the revenue you have. Profit margin tells you if the revenue is actually making you money. If you master these five numbers, you will catch problems before they become crises and opportunities before your competitors do.",
   },
   {
     day: 16,
-    title: "Business Entity Protection",
-    intention: "Ensure your business structure provides personal asset protection.",
+    title: "Build Your Weekly Scorecard",
+    intention:
+      "A CEO without a scorecard is a pilot without instruments. Today you will build the simple tracking system that becomes your command center.",
     tasks: [
       {
-        id: "p16-t1",
-        label: "Review your current business entity structure",
-        description: "Are you operating as a sole proprietor, LLC, S-Corp, or C-Corp? Each has different liability protections.",
+        id: "d16-t1",
+        label: "Create a simple weekly scorecard with your 5 KPIs",
+        description:
+          "Use a spreadsheet, a whiteboard, or even a notebook. Columns: KPI name, last week's number, this week's number, target, trend (up/down/flat). Keep it simple enough that updating it takes less than 15 minutes per week.",
       },
       {
-        id: "p16-t2",
-        label: "Assess whether an LLC or corporate structure would better protect personal assets",
-        description: "An LLC creates a legal separation between business debts/lawsuits and your personal assets.",
+        id: "d16-t2",
+        label: "Measure: fill in today's numbers",
+        description:
+          "Populate your scorecard with current data. For KPIs tracked weekly, use this week's numbers. For KPIs tracked monthly, prorate or use the most recent data point. The goal is to have no blank cells.",
       },
       {
-        id: "p16-t3",
-        label: "Verify your business entity is in good standing with your state",
-        description: "Check that annual reports are filed and fees are paid to maintain your liability protection.",
+        id: "d16-t3",
+        label: "Reflect: which number do you want to move most?",
+        description:
+          "Look at your completed scorecard. If you could wave a magic wand and improve one number by 20%, which would have the biggest impact on your business? That is your leading indicator — the number that moves everything else.",
       },
     ],
     educationalContent:
-      "Operating as a sole proprietor means there is no legal distinction between you and your business. Every business debt and lawsuit is your personal responsibility. Forming an LLC or corporation creates a legal wall between your business and personal assets. However, this protection requires maintenance: you must keep business and personal finances strictly separate, file required annual reports, and maintain adequate capitalization. Piercing the corporate veil -- when courts ignore the entity's protection -- most commonly happens when business owners commingle personal and business funds or treat the entity as an alter ego.",
+      "The scorecard is the heartbeat monitor of your business. It is not a report you read passively — it is a tool that drives action. The best scorecards share three characteristics: they are updated consistently (same day, same time, every week), they include targets so you know whether a number is good or bad, and they show trends over time so you can spot momentum before it is obvious. Do not overthink the format. A Google Sheet works. A whiteboard works. What matters is that you look at these five numbers every single week, without exception, for the rest of your time as CEO.",
   },
   {
     day: 17,
-    title: "Long-Term Care Planning",
-    intention: "Begin planning for one of the largest potential expenses in later life.",
+    title: "Assign KPI Ownership",
+    intention:
+      "A number without an owner is a number nobody improves. Today you will make every KPI someone's personal responsibility.",
     tasks: [
       {
-        id: "p17-t1",
-        label: "Research the average cost of long-term care in your area",
-        description: "Nursing homes average $90,000-$110,000 per year. Home health aides average $50,000-$60,000 per year.",
+        id: "d17-t1",
+        label: "Assign one KPI to each team member to own and report on weekly",
+        description:
+          "Match each KPI to the person who has the most direct influence over it. The sales lead owns revenue and close rate. The marketing person owns leads. The operations manager owns customer satisfaction. Make the assignment explicit and public.",
       },
       {
-        id: "p17-t2",
-        label: "Explore long-term care insurance options or hybrid policies",
-        description: "Hybrid policies combine life insurance with LTC benefits, so premiums are never wasted.",
+        id: "d17-t2",
+        label: "Measure: did each person report their number today?",
+        description:
+          "Ask each KPI owner to report their number by end of day. Track who reported and who did not. Unreported numbers are the first sign of an accountability gap.",
       },
       {
-        id: "p17-t3",
-        label: "Discuss long-term care preferences with your family",
-        description: "Having this conversation now prevents crisis decision-making later.",
+        id: "d17-t3",
+        label: "Reflect: who needs more clarity on their KPI?",
+        description:
+          "Did any team member struggle to find their number, question why it matters, or seem unclear on how to influence it? Those are coaching opportunities. A KPI owner who does not understand their metric cannot improve it.",
       },
     ],
     educationalContent:
-      "Nearly 70% of people over 65 will need some form of long-term care. Medicare covers only short-term skilled nursing after a hospital stay, not ongoing custodial care. The average long-term care need lasts 3 years, but 20% of people need care for 5+ years. Traditional LTC insurance premiums have risen dramatically, leading many to choose hybrid life/LTC policies instead. These policies provide a death benefit if you never need LTC, but convert to LTC coverage if you do. The ideal time to purchase is in your 50s when premiums are lower and you are more likely to qualify medically.",
+      "Ownership changes behavior. When a number belongs to everyone, no one improves it. When a number belongs to one person, they think about it, track it, and take action on it. KPI ownership is not about blame — it is about focus. The person who owns a KPI should be able to answer three questions at any time: What is the current number? Is it on track? What are you doing to improve it? When your team members can answer those questions confidently, you have installed a management operating system that works whether you are in the room or not. That is the difference between a business that depends on you and a business that is led by you.",
   },
   {
     day: 18,
-    title: "Liability Exposure Assessment",
-    intention: "Identify personal liability risks that could threaten your financial security.",
+    title: "The 90-Day Targets",
+    intention:
+      "Without targets, metrics are just numbers. Today you will set 90-day goals that give your scorecard teeth.",
     tasks: [
       {
-        id: "p18-t1",
-        label: "List activities that increase your liability exposure",
-        description: "Pool ownership, dog ownership, hosting events, teenage drivers, rental properties, serving on boards.",
+        id: "d18-t1",
+        label: "Set a 90-day target for each KPI",
+        description:
+          "For each of your five KPIs, define where you want that number to be in 90 days. Make the target specific, measurable, and ambitious but achievable. 'Increase revenue' is not a target. 'Increase monthly revenue from $80K to $100K' is a target.",
       },
       {
-        id: "p18-t2",
-        label: "Review your liability coverage across all policies",
-        description: "Add up liability limits on auto, home, umbrella, and business policies for your total protection.",
+        id: "d18-t2",
+        label: "Measure: calculate the gap between current and target",
+        description:
+          "For each KPI, subtract today's number from your 90-day target. This gap is the work in front of you. Rank the gaps from largest to smallest — the biggest gap is either your biggest problem or your biggest opportunity.",
       },
       {
-        id: "p18-t3",
-        label: "Determine if your total liability coverage exceeds your net worth",
-        description: "Your liability coverage should be at least equal to your total net worth to prevent asset seizure.",
+        id: "d18-t3",
+        label:
+          "Reflect: which KPI will have the biggest impact on revenue if improved?",
+        description:
+          "Not all KPIs are equally powerful. A 10% improvement in close rate might matter more than a 10% increase in leads. Identify the KPI with the highest revenue leverage and make it your primary focus for the next 90 days.",
       },
     ],
     educationalContent:
-      "Liability exposure grows as your wealth grows, but most people do not adjust their coverage accordingly. The goal is to ensure your total liability coverage exceeds your net worth, including home equity, investment accounts, retirement savings (which have varying levels of protection depending on your state), and future earning potential. Courts can garnish wages and seize assets if a judgment exceeds your coverage. A simple umbrella policy provides millions in additional coverage at minimal cost and is the easiest way to close this gap.",
+      "The 90-day time horizon is the CEO's sweet spot. It is long enough to achieve meaningful change but short enough to maintain urgency. Annual goals feel distant and lose motivational power. Weekly goals are too reactive. Ninety days gives you enough time to implement a new system, train your team, and see measurable results. When setting targets, apply the 'uncomfortable but possible' test: if the target does not make you slightly nervous, it is too easy. If it feels impossible, it is too far. The right target stretches your team's capacity without breaking their belief that it can be done.",
   },
   {
     day: 19,
-    title: "Critical Document Organization",
-    intention: "Organize all insurance and financial protection documents in one accessible location.",
+    title: "Diagnose the Underperformer",
+    intention:
+      "Every underperforming metric has a root cause. Today you will stop guessing and start diagnosing with a structured framework.",
     tasks: [
       {
-        id: "p19-t1",
-        label: "Create a master list of all insurance policies with key details",
-        description: "Policy number, insurer, coverage amount, deductible, premium, renewal date, and agent contact.",
+        id: "d19-t1",
+        label:
+          "Review your scorecard and identify the number-one underperforming metric",
+        description:
+          "Look at your five KPIs. Which one has the biggest gap between current performance and target? Which one has been declining or flat the longest? That is your underperformer. Focus all of today's analysis on this single metric.",
       },
       {
-        id: "p19-t2",
-        label: "Store digital copies of all policies in a secure cloud location",
-        description: "Use encrypted cloud storage so documents are accessible even if physical copies are destroyed.",
+        id: "d19-t2",
+        label: "Measure: what specifically caused the underperformance?",
+        description:
+          "Dig into the data. Is the problem in volume (not enough activity), conversion (activity not producing results), or value (results not generating enough revenue)? Get specific. 'Sales are down' is not a diagnosis. 'We had 30% fewer discovery calls this month because lead flow dropped' is a diagnosis.",
       },
       {
-        id: "p19-t3",
-        label: "Share access credentials with a trusted person",
-        description: "Ensure a spouse, family member, or attorney knows where to find your insurance information.",
-      },
-      {
-        id: "p19-t4",
-        label: "Set calendar reminders for all policy renewal dates",
-        description: "Review coverage and shop for better rates 60 days before each renewal.",
+        id: "d19-t3",
+        label:
+          "Reflect: is this a people problem, process problem, or visibility problem?",
+        description:
+          "People problems mean the wrong person is in the role or they need training. Process problems mean the system is broken or missing. Visibility problems mean the data is not being tracked or reviewed. Each type requires a different solution. Name which one it is.",
       },
     ],
     educationalContent:
-      "In a crisis, the last thing you want is to be hunting for policy numbers and agent phone numbers. Create a simple spreadsheet or document listing every insurance policy you hold. Include: policy type, insurance company, policy number, coverage amount, deductible, annual premium, renewal date, and your agent's contact information. Store this in encrypted cloud storage and share access with your spouse or a trusted family member. This document becomes invaluable during emergencies, estate settlement, or when working with a financial advisor.",
+      "CEOs who rely on gut instinct to diagnose business problems are playing an expensive guessing game. The people-process-visibility framework gives you a structured way to find root causes. People problems are the most emotionally difficult to address but often the most impactful: one underperformer in a key role can drag an entire metric down. Process problems are the most common: the system either does not exist, has a gap, or is not being followed. Visibility problems are the most insidious: you cannot fix what you cannot see. Start with visibility — make sure you have accurate data. Then check the process. Only after those two are solid should you conclude it is a people issue.",
   },
   {
     day: 20,
-    title: "Workers Compensation and Employment Protection",
-    intention: "Ensure you are protected against workplace injuries and employment-related risks.",
+    title: "The Daily Standup",
+    intention:
+      "Install a daily rhythm that keeps your team aligned, accountable, and connected to the metrics that matter.",
     tasks: [
       {
-        id: "p20-t1",
-        label: "Review your employer's workers compensation coverage",
-        description: "Understand what is covered, how to file a claim, and what your benefits would be.",
+        id: "d20-t1",
+        label:
+          "Create a 15-minute daily standup agenda based on your scorecard metrics",
+        description:
+          "Design a tight agenda: each KPI owner reports their number and one priority for the day (2 minutes each). Then one round of 'stuck on' where anyone can flag a blocker. No problem-solving in the standup — just flag and assign follow-ups. Total time: 15 minutes maximum.",
       },
       {
-        id: "p20-t2",
-        label: "If self-employed, research workers comp requirements in your state",
-        description: "Some states require coverage even for sole proprietors in certain industries.",
+        id: "d20-t2",
+        label: "Measure: did you hold the standup today?",
+        description:
+          "Execute the standup. Time it. Did it stay under 15 minutes? Did every KPI owner report? Track completion as a binary: you either held it or you did not. Consistency matters more than perfection.",
       },
       {
-        id: "p20-t3",
-        label: "Review employment contracts for non-compete and severance provisions",
-        description: "Understanding your employment agreement is a form of financial protection.",
+        id: "d20-t3",
+        label:
+          "Reflect: what came up that you would not have caught otherwise?",
+        description:
+          "After the standup, note any issue, trend, or insight that surfaced because of the structured check-in. The daily standup is an early warning system. If it is working, it surfaces problems when they are small and solvable.",
       },
     ],
     educationalContent:
-      "Workers compensation is a form of insurance that provides wage replacement and medical benefits to employees injured on the job. If you are an employee, your employer is required to carry this coverage in nearly every state. If you are self-employed or a business owner, you may not be covered unless you opt in. Understanding your rights and the claims process before an injury occurs puts you in a much stronger position. Similarly, reviewing your employment agreement helps you understand severance provisions, non-compete clauses, and what protections you have if your position is eliminated.",
+      "The daily standup is the single most effective meeting format for small and mid-sized businesses. In 15 minutes, you get a pulse on every critical metric, surface blockers before they become crises, and create team-wide visibility into priorities. The keys to a successful standup: same time every day (morning is best), standing up (it keeps it short), focused on metrics not stories, and absolutely no problem-solving during the meeting. Problems get flagged and assigned, then solved offline. If your standup regularly runs over 15 minutes, you have too many people in it, you are allowing tangents, or you do not have a strong enough facilitator. Fix those, and this meeting becomes your team's most valuable 15 minutes.",
   },
   {
     day: 21,
-    title: "Tax Protection Strategies",
-    intention: "Implement strategies that protect your income from unnecessary tax liability.",
+    title: "Week 3 Review — The Metrics Milestone",
+    intention:
+      "Three weeks of tracking gives you the data to see trends. Today you will compare your scorecard to your Week 1 baseline and extract the insights.",
     tasks: [
       {
-        id: "p21-t1",
-        label: "Verify your tax withholding is optimized for your situation",
-        description: "Use the IRS Tax Withholding Estimator to check if you are over- or under-withholding.",
+        id: "d21-t1",
+        label: "Weekly scorecard review: compare Week 3 to your Week 1 baseline",
+        description:
+          "Pull out your Day 15 baseline numbers and compare them to today's numbers. For each KPI, calculate the change — both in absolute terms and as a percentage. Three weeks is enough to see early trends.",
       },
       {
-        id: "p21-t2",
-        label: "Confirm you are maximizing all available tax deductions and credits",
-        description: "Review: retirement contributions, HSA, mortgage interest, charitable giving, education credits.",
+        id: "d21-t2",
+        label: "Measure: which KPIs improved? Which declined?",
+        description:
+          "Categorize each KPI: improving, declining, or flat. For improving metrics, identify what drove the improvement. For declining metrics, identify the root cause. For flat metrics, ask whether the target is realistic or the actions are insufficient.",
       },
       {
-        id: "p21-t3",
-        label: "Assess whether you need audit protection or tax liability insurance",
-        description: "If your return is complex, audit protection services cover the cost of professional representation.",
+        id: "d21-t3",
+        label:
+          "Reflect: what is the single biggest insight from 3 weeks of tracking?",
+        description:
+          "Step back from the individual numbers and look for the pattern. What has three weeks of measurement taught you about your business that you did not know — or did not want to admit — before you started tracking?",
       },
     ],
     educationalContent:
-      "Tax optimization is a form of financial protection. Every dollar saved in taxes is a dollar that stays in your wealth-building system. Common overlooked deductions include: home office expenses for self-employed individuals, state and local taxes (SALT) up to $10,000, qualified business income deduction for pass-through entities, education credits, and charitable contribution strategies like donor-advised funds for bunching deductions. If you are not working with a CPA or tax advisor, you are likely leaving money on the table. The cost of professional tax preparation is almost always recouped in additional deductions found.",
+      "Three weeks of consistent measurement is enough to separate signal from noise. Random fluctuations smooth out, and genuine trends become visible. The most common insight CEOs report at this stage is some version of: 'I thought we were doing better than we are in [area]' or 'I had no idea this metric was so strong.' Both reactions are valuable because they replace assumption with evidence. From this point forward, your scorecard is not an exercise — it is infrastructure. It is how you lead. The businesses that grow predictably are the ones that measure relentlessly. Everything else is hope, and hope is not a strategy.",
   },
+
+  // ───────────────────────────────────────────────
+  // WEEK 4 — Five Core Functions Mapping
+  // ───────────────────────────────────────────────
   {
     day: 22,
-    title: "Asset Protection Structures",
-    intention: "Explore legal structures that shield your assets from creditors and lawsuits.",
+    title: "Sales Function Audit",
+    intention:
+      "Sales is the engine of revenue. Today you will map it, measure it, and find where it is leaking.",
     tasks: [
       {
-        id: "p22-t1",
-        label: "Research asset protection trusts available in your state",
-        description: "Some states allow domestic asset protection trusts (DAPTs) that shield assets from future creditors.",
+        id: "d22-t1",
+        label:
+          "Map your Sales function: who owns it? What is the process? Where is it breaking?",
+        description:
+          "Document your entire sales process from lead generation to closed deal. Who is responsible for each stage? What tools do they use? Where do leads stall or fall out of the pipeline? Where is there no defined process at all?",
       },
       {
-        id: "p22-t2",
-        label: "Understand which of your assets already have legal protection",
-        description: "Retirement accounts (ERISA plans), homestead exemptions, and certain insurance products have built-in protection.",
+        id: "d22-t2",
+        label: "Measure: rate your Sales function health on a scale of 1-10",
+        description:
+          "Be honest. A 10 means your sales process is predictable, scalable, and not dependent on any single person. A 1 means you have no process and you are the entire sales team. Record your score.",
       },
       {
-        id: "p22-t3",
-        label: "Consult with an asset protection attorney if your net worth exceeds $500K",
-        description: "Professional guidance is essential for complex asset protection planning.",
+        id: "d22-t3",
+        label: "Reflect: what is the number-one fix needed in Sales?",
+        description:
+          "If you could only change one thing about your sales function, what would have the biggest impact? More leads? Better conversion? A defined follow-up process? A dedicated salesperson? Name the single most impactful fix.",
       },
     ],
     educationalContent:
-      "Different types of assets have different levels of legal protection from creditors. ERISA-qualified retirement plans (401k, pension) have unlimited federal protection from creditors. Traditional and Roth IRAs are protected up to about $1.5 million in bankruptcy. Your primary residence may have homestead protection depending on your state (Florida and Texas have unlimited homestead exemption). Life insurance cash values and annuities are protected in many states. Understanding these built-in protections helps you strategically position assets for maximum security.",
+      "Sales is one of the five core functions every business must have working to operate as a true enterprise rather than a self-employment gig. The most common Sales dysfunction in small businesses is that the CEO is the sales department. When the CEO sells, growth is capped at the CEO's personal capacity. The first step to scaling sales is documenting the process so it can be taught, measured, and eventually transferred. If your sales process lives only in your head, it is not a process — it is a habit. And habits do not scale. Map it, write it down, and identify the one constraint that, if removed, would unlock the most revenue growth.",
   },
   {
     day: 23,
-    title: "Insurance Cost Optimization",
-    intention: "Reduce insurance premiums without sacrificing essential coverage.",
+    title: "Operations Function Audit",
+    intention:
+      "Operations is how you deliver on your promises. Today you will examine whether your delivery machine is built to scale or built to break.",
     tasks: [
       {
-        id: "p23-t1",
-        label: "Bundle auto, home, and umbrella policies with one carrier for multi-policy discounts",
-        description: "Bundling typically saves 10-25% on total premiums.",
+        id: "d23-t1",
+        label:
+          "Map your Operations and Delivery function: who runs it? What is the process? Where is it breaking?",
+        description:
+          "Document the journey from 'client says yes' to 'client receives value.' Every handoff, every step, every system. Who owns each phase? Where do things slow down, get lost, or require the CEO's intervention?",
       },
       {
-        id: "p23-t2",
-        label: "Increase deductibles on auto and home policies to reduce premiums",
-        description: "Raising your deductible from $500 to $1,000 can save 10-15% on premiums.",
+        id: "d23-t2",
+        label: "Measure: rate your Operations function health on a scale of 1-10",
+        description:
+          "A 10 means your operations run smoothly without you, quality is consistent, and the team can handle growth. A 1 means you personally manage every project and clients regularly fall through the cracks. Record your score.",
       },
       {
-        id: "p23-t3",
-        label: "Eliminate unnecessary coverage or riders",
-        description: "Review each line item: do you still need roadside assistance, rental car coverage, or identity theft riders?",
+        id: "d23-t3",
+        label: "Reflect: where are clients falling through the cracks?",
+        description:
+          "Think about the last three client complaints or missed deadlines. Where in your operations process did the breakdown occur? Is it a handoff problem, a capacity problem, a communication problem, or a systems problem?",
       },
     ],
     educationalContent:
-      "Insurance optimization is about paying the right amount for the right coverage -- not the least amount overall. Raising deductibles makes sense when you have an adequate emergency fund to cover the higher out-of-pocket cost. Bundling with one carrier simplifies your portfolio and usually unlocks significant discounts. However, always compare the bundled price against individual best-in-class policies. Sometimes the savings from bundling do not offset the better coverage or lower price available from a specialist insurer. Review your coverage annually and get competitive quotes every 2-3 years.",
+      "Operations is where reputation is built or destroyed. You can have the best sales team in the world, but if you cannot deliver on your promises, every new client becomes a future detractor. The most dangerous phase in operations is the handoff — from sales to onboarding, from onboarding to delivery, from delivery to follow-up. Each handoff is a moment where information can get lost, expectations can get misaligned, and clients can feel forgotten. Map every handoff in your operations process. For each one, ask: is there a system that ensures nothing falls through? If the answer is 'we just remember' or 'I handle it personally,' that is your vulnerability.",
   },
   {
     day: 24,
-    title: "Cyber Insurance and Digital Protection",
-    intention: "Protect against the growing risk of cyber fraud and digital financial crimes.",
+    title: "Finance Function Audit",
+    intention:
+      "Money is the oxygen of your business. Today you will examine whether your financial systems give you the visibility and control you need.",
     tasks: [
       {
-        id: "p24-t1",
-        label: "Review your bank and brokerage fraud protection policies",
-        description: "Understand your liability limits if unauthorized transactions occur on your accounts.",
+        id: "d24-t1",
+        label:
+          "Map your Finance function: who tracks money? How often? What is missing?",
+        description:
+          "Document how money flows through your business. Who handles invoicing, collections, payroll, expense management, and financial reporting? How frequently do you review financial statements? What financial data do you wish you had but do not?",
       },
       {
-        id: "p24-t2",
-        label: "Set up transaction alerts on all financial accounts",
-        description: "Configure alerts for transactions above a threshold you set -- $50 is a good starting point.",
+        id: "d24-t2",
+        label: "Measure: rate your Finance function health on a scale of 1-10",
+        description:
+          "A 10 means you have real-time financial visibility, strong cash flow management, clean books, and forward-looking financial projections. A 1 means you check your bank balance and hope for the best. Record your score.",
       },
       {
-        id: "p24-t3",
-        label: "Consider personal cyber insurance if not included in your homeowners policy",
-        description: "Some homeowners policies now include cyber coverage; standalone policies are also available.",
+        id: "d24-t3",
+        label:
+          "Reflect: do you know your cash position within $1,000 accuracy right now?",
+        description:
+          "Without looking at your accounts, what is your cash position? Now check the actual number. The gap between your guess and reality reveals how connected (or disconnected) you are from the financial pulse of your business.",
       },
     ],
     educationalContent:
-      "Cybercrime losses exceeded $10 billion in 2022 according to the FBI's Internet Crime Complaint Center. Common threats include phishing emails that steal login credentials, SIM-swapping attacks that hijack your phone number, and business email compromise schemes. Transaction alerts are your early warning system -- they notify you in real time when money moves. Many banks offer zero-liability fraud protection, but there are time limits for reporting. Understanding your bank's specific policies and setting up robust alerts can mean the difference between catching fraud early and discovering it when it is too late to recover funds.",
+      "CEOs who do not know their numbers are not leading — they are guessing. Financial visibility is not about being an accountant; it is about knowing three things at all times: how much cash you have, how much is coming in over the next 30-60-90 days, and how much is going out. Revenue is vanity, profit is sanity, and cash flow is reality. Many businesses with strong revenue fail because they run out of cash. Your finance function should give you a weekly cash flow forecast, a monthly P&L review, and a quarterly balance sheet check. If those three reports are not landing on your desk on a consistent schedule, your finance function has a gap that could threaten your entire business.",
   },
   {
     day: 25,
-    title: "Natural Disaster Preparedness",
-    intention: "Ensure you are financially prepared for natural disasters and catastrophic events.",
+    title: "Leadership Function Audit",
+    intention:
+      "Your business will never outgrow the capacity of your leadership team. Today you will assess whether you are building leaders or just managing workers.",
     tasks: [
       {
-        id: "p25-t1",
-        label: "Review your disaster coverage: flood, earthquake, wind, wildfire",
-        description: "Standard homeowners policies exclude most natural disasters. Verify your supplemental coverage.",
+        id: "d25-t1",
+        label:
+          "Map your Leadership function: how are you developing your team? Who is next in line?",
+        description:
+          "Document your current leadership development activities. Do you have regular one-on-ones? Are you investing in training? Is there a succession plan for key roles? Can anyone on your team step into your shoes for 30 days?",
       },
       {
-        id: "p25-t2",
-        label: "Prepare a financial disaster kit",
-        description: "Keep copies of critical documents, account information, and emergency cash in a fireproof safe or go-bag.",
+        id: "d25-t2",
+        label: "Measure: rate your Leadership function health on a scale of 1-10",
+        description:
+          "A 10 means you have a leadership pipeline, regular development conversations, and at least two people who could run the business in your absence. A 1 means you are the only leader and no one else can make decisions. Record your score.",
       },
       {
-        id: "p25-t3",
-        label: "Verify your home inventory is up to date and stored off-site",
-        description: "Your inventory should be in cloud storage or with a trusted person outside your immediate area.",
+        id: "d25-t3",
+        label: "Reflect: if you left for 30 days, who would lead?",
+        description:
+          "This is the ultimate leadership test. If you disappeared for a month, would the business survive? Grow? Struggle? Collapse? The answer reveals the true strength of your leadership function. Name the person who would take over — or acknowledge that no one could.",
       },
     ],
     educationalContent:
-      "The average natural disaster claim takes 30-60 days to process, and many claims are initially denied or underpaid. Having thorough documentation -- a current home inventory with photos and receipts, policy details readily accessible, and an understanding of your coverage and exclusions -- dramatically improves your claim outcome. Keep a physical kit with copies of insurance policies, identification documents, bank account information, and at least $500-$1,000 in cash in a fireproof safe. Also maintain digital copies in secure cloud storage accessible from any device.",
+      "The leadership function is the one most CEOs neglect because it does not feel urgent — until it is. When your best team member quits, when you get sick, when a growth opportunity requires you to focus elsewhere, the absence of a leadership pipeline becomes a crisis overnight. Developing leaders is not about sending people to seminars. It is about three practices: regular one-on-ones where you coach rather than direct, progressively increasing decision-making authority (like the Day 13 exercise), and honest conversations about career growth and capability gaps. The CEO's ultimate job is to make themselves replaceable in day-to-day operations. That requires intentionally developing the people around you.",
   },
   {
     day: 26,
-    title: "Insurance for Life Transitions",
-    intention: "Anticipate insurance needs for upcoming life changes and milestones.",
+    title: "Delivery Function Audit",
+    intention:
+      "Client experience is your brand in action. Today you will walk the entire client journey and find the moments that make or break loyalty.",
     tasks: [
       {
-        id: "p26-t1",
-        label: "Identify any life changes expected in the next 12 months",
-        description: "Marriage, baby, home purchase, job change, retirement, child starting college, etc.",
+        id: "d26-t1",
+        label:
+          "Map your Delivery function: from sale to fulfillment, what is the client experience?",
+        description:
+          "Walk through the entire client journey step by step. What happens after they say yes? How are they onboarded? How is the product or service delivered? How do you follow up? How do you measure satisfaction? Document every touchpoint.",
       },
       {
-        id: "p26-t2",
-        label: "Research insurance implications for each anticipated change",
-        description: "Each transition triggers coverage needs: new dependents need life insurance, new home needs homeowners, etc.",
+        id: "d26-t2",
+        label: "Measure: rate your Delivery function health on a scale of 1-10",
+        description:
+          "A 10 means clients consistently rave about their experience, refer others without being asked, and renew or repurchase automatically. A 1 means delivery is inconsistent, clients complain, and you lose business to poor experience. Record your score.",
       },
       {
-        id: "p26-t3",
-        label: "Create a timeline for insurance actions tied to your life milestones",
-        description: "Map out when to purchase, adjust, or cancel coverage based on your transition timeline.",
+        id: "d26-t3",
+        label: "Reflect: where do clients complain most?",
+        description:
+          "Think about the last five client complaints, negative reviews, or moments of friction. Is there a pattern? Do complaints cluster around a specific phase of delivery? That cluster is where your biggest improvement opportunity lives.",
       },
     ],
     educationalContent:
-      "Major life transitions create both opportunities and vulnerabilities in your protection plan. Getting married may let you combine policies for savings but also increases your shared liability. Having a child dramatically increases your life and disability insurance needs. Buying a home adds homeowners insurance and may trigger umbrella policy needs. Changing jobs can mean losing employer-provided life and disability coverage during the transition. Proactive planning ensures continuous coverage and prevents the dangerous gap that occurs when people react to changes instead of anticipating them.",
+      "Delivery is distinct from operations in an important way: operations is your internal process, but delivery is the client's experience of that process. You can have efficient operations and still deliver a poor client experience if communication is lacking, expectations are mismanaged, or the personal touch is missing. The moments that matter most in delivery are the transitions: the handoff from sales to onboarding (where excitement needs to be maintained), the mid-delivery check-in (where problems can be caught early), and the post-delivery follow-up (where loyalty is built or lost). Map these moments, assign ownership, and install systems to ensure consistency.",
   },
   {
     day: 27,
-    title: "Professional Advisor Assessment",
-    intention: "Evaluate whether you need professional guidance for your protection strategy.",
+    title: "The Five Functions Ranking",
+    intention:
+      "Now that you have audited all five core functions, it is time to face the truth about which one needs the most urgent attention.",
     tasks: [
       {
-        id: "p27-t1",
-        label: "Assess whether you work with a fee-only financial advisor",
-        description: "Fee-only advisors do not earn commissions on products they recommend, reducing conflicts of interest.",
+        id: "d27-t1",
+        label:
+          "Rank all 5 functions from weakest to strongest and create an action item for your weakest",
+        description:
+          "List your five function scores side by side: Sales, Operations, Finance, Leadership, Delivery. Rank them from lowest to highest. For the weakest function, write one specific action item you will complete in the next 7 days to begin strengthening it.",
       },
       {
-        id: "p27-t2",
-        label: "Evaluate your insurance agent: captive vs. independent",
-        description: "Independent agents can shop multiple carriers for the best coverage and price.",
+        id: "d27-t2",
+        label: "Measure: what is your weakest function score?",
+        description:
+          "Record the score and the function name. This is the bottleneck of your business. No matter how strong your other functions are, your business can only grow as fast as your weakest function allows. This is your constraint.",
       },
       {
-        id: "p27-t3",
-        label: "Determine if you need an estate planning attorney",
-        description: "If your net worth exceeds $500K or you have dependents, professional estate planning is essential.",
+        id: "d27-t3",
+        label: "Reflect: why has this function been neglected?",
+        description:
+          "Be honest with yourself. Is it neglected because you do not enjoy it? Because you do not have expertise in it? Because you assumed it would take care of itself? Understanding why it was neglected is the key to ensuring it does not stay neglected.",
       },
     ],
     educationalContent:
-      "The professionals you choose to work with can dramatically impact your financial protection. A captive insurance agent represents one company and can only offer that company's products. An independent agent shops multiple carriers and can find better coverage at better prices. Similarly, a commission-based financial advisor may recommend products that pay them the highest commission rather than what is best for you. Fee-only advisors (look for the CFP designation and fee-only compensation) are legally required to act in your best interest. The cost of professional advice is almost always offset by better coverage, lower premiums, and strategies you would not have found on your own.",
+      "The Theory of Constraints tells us that every system has exactly one bottleneck at any given time, and improving anything other than the bottleneck does not improve the system. Your weakest core function is your business's bottleneck. Pouring resources into your strongest function while your weakest function crumbles is like putting a bigger engine in a car with flat tires. The counterintuitive truth is that the biggest ROI in your business right now is in the area you have been avoiding most. CEOs tend to spend time on functions they enjoy and are good at, while neglecting the ones that make them uncomfortable. The discipline to work on your weakest function, not your favorite one, is what separates builders from hobbyists.",
   },
   {
     day: 28,
-    title: "Annual Protection Review System",
-    intention: "Build a repeatable system for reviewing your protection plan every year.",
+    title: "The CEO Command Center Meeting",
+    intention:
+      "Today you will hold your first formal CEO Command Center meeting — a weekly strategic review of all five functions. This is the meeting that runs your business.",
     tasks: [
       {
-        id: "p28-t1",
-        label: "Create an annual insurance review checklist",
-        description: "List every policy, coverage amount, and the key questions to ask at each review.",
+        id: "d28-t1",
+        label:
+          "Schedule a weekly CEO Command Center meeting with yourself — 1 hour reviewing all 5 functions",
+        description:
+          "Block one hour every week, same day and time, for your CEO Command Center review. The agenda: review your scorecard, check each of the five functions, identify the number-one priority for the coming week, and make one strategic decision. Put it on your calendar as a recurring, non-negotiable meeting.",
       },
       {
-        id: "p28-t2",
-        label: "Schedule your annual review on your calendar",
-        description: "Pick a consistent month each year (your birthday month works well) for your full protection audit.",
+        id: "d28-t2",
+        label: "Measure: did you hold it today?",
+        description:
+          "Execute the meeting today as a pilot run. Set a timer for 60 minutes. Walk through each function, review your KPIs, and document your decisions. Track whether you completed it and how long it actually took.",
       },
       {
-        id: "p28-t3",
-        label: "Identify trigger events that warrant an immediate review",
-        description: "Marriage, divorce, birth, death, home purchase, job change, large asset acquisition, inheritance.",
+        id: "d28-t3",
+        label: "Reflect: what did you discover?",
+        description:
+          "After your first Command Center meeting, note the insights that emerged from looking at all five functions together. What connections did you see between functions? What priority became obvious when you stepped back and looked at the full picture?",
       },
     ],
     educationalContent:
-      "The best protection plan is one that evolves with your life. An annual review ensures your coverage keeps pace with changes in your net worth, family situation, and risk exposure. During your annual review, check: Are all beneficiary designations current? Have your assets grown beyond your liability coverage? Do you have any new risks (teenage driver, home renovation, new business)? Have your insurance needs decreased (car paid off, mortgage reduced, children grown)? A systematic annual review prevents both gaps in coverage and overpaying for coverage you no longer need.",
+      "The weekly CEO Command Center meeting is the capstone habit of this entire protocol. It is where everything comes together — your scorecard, your five functions, your strategic priorities. This meeting is not a team meeting; it is a meeting with yourself. It is the one hour per week where you stop working IN the business and work ON the business. The most successful CEOs treat this meeting as sacred. They do not cancel it for client calls. They do not skip it when things are busy. They do not let fires invade it. Because this is the meeting where you catch the fires before they start, spot the opportunities before they pass, and make the decisions that shape the next quarter, year, and decade of your business.",
   },
   {
     day: 29,
-    title: "Protection Plan Stress Test",
-    intention: "Test your protection plan against real-world disaster scenarios.",
+    title: "The CEO Weekly Rhythm",
+    intention:
+      "Today you will codify your ideal weekly operating rhythm — the schedule that ensures you lead like a CEO, not survive like an operator.",
     tasks: [
       {
-        id: "p29-t1",
-        label: "Scenario test: What happens if you are unable to work for 6 months?",
-        description: "Calculate: emergency fund runway + disability benefits vs. your monthly obligations.",
+        id: "d29-t1",
+        label:
+          "Write your CEO Weekly Rhythm — what you do Monday through Friday by time block",
+        description:
+          "Map out your ideal week with specific time blocks for: CEO Command Center meeting, strategic work blocks, team one-on-ones, daily standups, client-facing time, administrative necessities, and personal recovery. Every hour should have a purpose.",
       },
       {
-        id: "p29-t2",
-        label: "Scenario test: What happens if your home is destroyed?",
-        description: "Review: dwelling coverage vs. rebuild cost, personal property coverage, additional living expenses coverage.",
+        id: "d29-t2",
+        label:
+          "Measure: what percentage of your week is allocated to CEO-level work?",
+        description:
+          "Add up all the hours in your weekly rhythm dedicated to strategic, CEO-level activities (vision, high-value relationships, scorecard review, leadership development). Divide by total work hours. Your target is at least 40%.",
       },
       {
-        id: "p29-t3",
-        label: "Scenario test: What happens if you are sued for $1 million?",
-        description: "Total your liability coverage across all policies and compare to the claim amount.",
+        id: "d29-t3",
+        label: "Reflect: compare to Day 1 — how has your time allocation changed?",
+        description:
+          "Pull out your Day 1 time log. Compare the percentage of CEO-level work then to your new weekly rhythm now. Document the shift. This is the tangible evidence of your transformation from operator to executive over the past 29 days.",
       },
     ],
     educationalContent:
-      "Stress testing is how financial institutions verify their resilience, and you should do the same for your personal protection plan. Run through the most likely catastrophic scenarios for your situation and trace the financial impact through your coverage. Where does the coverage hold? Where does it break? This exercise reveals gaps that are not obvious when you look at individual policies in isolation. The scenarios most worth testing are: prolonged disability, death of primary earner, major lawsuit, catastrophic property loss, and identity theft. If any scenario reveals a gap that would cause financial ruin, that is your next priority.",
+      "Your CEO Weekly Rhythm is not a rigid schedule — it is a strategic framework. It answers the question: if I run my week according to this rhythm, will my business get the leadership it needs? The best weekly rhythms have three elements: consistency (your team knows when they can reach you and when they cannot), flexibility (buffer time for the unexpected), and intentionality (every block has a purpose tied to a function or KPI). Compare your Day 1 time audit to your new rhythm and you will see the transformation in stark terms. The CEO who tracked their time on Day 1 is not the same leader who is designing their weekly rhythm on Day 29. That growth is the point of this entire protocol.",
   },
   {
     day: 30,
-    title: "Protection Protocol Completion and Commitment",
-    intention: "Celebrate your progress and commit to ongoing financial protection vigilance.",
+    title: "The 30-Day Transformation Assessment",
+    intention:
+      "Thirty days ago you started a journey from operator to CEO. Today you will measure how far you have come and set the course for what comes next.",
     tasks: [
       {
-        id: "p30-t1",
-        label: "Review your complete protection action list and mark completed items",
-        description: "Celebrate the actions you have taken and acknowledge the progress you have made.",
+        id: "d30-t1",
+        label: "30-day assessment: retake the Pillar 1 quiz",
+        description:
+          "Go back to the Pillar 1 CEO Command Center assessment and answer every question again with your current reality — not where you were 30 days ago. Be honest. Record your new score.",
       },
       {
-        id: "p30-t2",
-        label: "Identify your top 3 remaining action items and set deadlines",
-        description: "Not everything can be done in 30 days. Set realistic deadlines for remaining tasks.",
+        id: "d30-t2",
+        label: "Measure: compare your new score to your original score",
+        description:
+          "Calculate the difference between your Day 1 score and your Day 30 score. Document which areas improved most, which areas still need work, and which areas surprised you. The gap between your two scores is the measurable impact of 30 days of intentional CEO development.",
       },
       {
-        id: "p30-t3",
-        label: "Write a one-paragraph protection mission statement",
-        description: "Define what financial protection means to you and why it matters for your family.",
-      },
-      {
-        id: "p30-t4",
-        label: "Share one key insight from this protocol with someone you care about",
-        description: "Teaching others reinforces your own knowledge and helps protect the people around you.",
+        id: "d30-t3",
+        label:
+          "Reflect: what is the single biggest change you made this month?",
+        description:
+          "Looking back over 30 days, identify the one shift — in behavior, mindset, or systems — that had the greatest impact on how you lead. This is your keystone habit. Protect it, build on it, and never go back to the way things were.",
       },
     ],
     educationalContent:
-      "Completing this 30-day protection protocol puts you ahead of 90% of households when it comes to financial preparedness. But protection is not a destination -- it is a discipline. The habits you have built over these 30 days -- reviewing coverage, identifying gaps, documenting assets, and planning for contingencies -- are the foundation of lasting financial security. Your next step is to integrate these practices into your annual financial routine. Remember: the goal is not to eliminate all risk (that is impossible) but to ensure that no single event can destroy your financial foundation. You are building an unshakable empire -- and every empire needs strong walls.",
+      "Completing the CEO Command Center 30-day protocol is not the end — it is the foundation. You now have the tools, systems, and habits to lead your business like a true CEO: a time-awareness practice that keeps you focused on high-value work, a delegation system that empowers your team and frees your capacity, a scorecard that gives you weekly visibility into your business's vital signs, and a five-function framework that ensures nothing critical gets neglected. The businesses that thrive are not led by CEOs who work the hardest. They are led by CEOs who work on the right things. You have spent 30 days learning what those right things are. Now the real work begins: doing them consistently, week after week, quarter after quarter, until the empire you are building operates with the precision and power that your vision demands.",
   },
 ];

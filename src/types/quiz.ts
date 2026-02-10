@@ -1,5 +1,5 @@
 export type PillarId = 1 | 2 | 3 | 4;
-export type PillarSlug = 'protection' | 'assets' | 'income' | 'estate';
+export type PillarSlug = 'ceo-command' | 'team' | 'revenue' | 'conversion';
 
 export const CATEGORY_QUESTIONS_COUNT = 8;
 
@@ -15,41 +15,41 @@ export interface PillarInfo {
 export const PILLAR_MAP: Record<PillarId, PillarInfo> = {
   1: {
     id: 1,
-    label: 'Protection & Insurance',
-    slug: 'protection',
-    icon: 'Shield',
-    description: 'Safeguard your wealth with comprehensive insurance, emergency reserves, and risk management strategies.',
-    categories: ['Emergency Fund', 'Insurance Coverage', 'Identity Protection', 'Liability Management'],
+    label: 'CEO Command Center',
+    slug: 'ceo-command',
+    icon: 'Crosshair',
+    description: 'Install a weekly rhythm that transforms you from a firefighter to an actual CEO. Your week becomes predictable and growth becomes intentional.',
+    categories: ['Time & Focus', 'Decision Making & Delegation', 'Metrics & Visibility', 'The Five Core Functions'],
   },
   2: {
     id: 2,
-    label: 'Assets & Investments',
-    slug: 'assets',
-    icon: 'TrendingUp',
-    description: 'Build and grow your wealth through strategic investment allocation, diversification, and tax-advantaged accounts.',
-    categories: ['Portfolio Allocation', 'Retirement Accounts', 'Real Estate', 'Alternative Investments'],
+    label: 'Team Architecture',
+    slug: 'team',
+    icon: 'Users',
+    description: "Put people in place that execute without you. Your business runs whether you're there or not — that creates scalability.",
+    categories: ['Role Clarity & Structure', 'Performance & Accountability', 'Culture & Retention', 'Independence & Scalability'],
   },
   3: {
     id: 3,
-    label: 'Cash Flow & Income',
-    slug: 'income',
+    label: 'Revenue Pipeline',
+    slug: 'revenue',
     icon: 'DollarSign',
-    description: 'Optimize your cash flow, eliminate wasteful spending, and build multiple income streams for financial freedom.',
-    categories: ['Budgeting Systems', 'Debt Management', 'Income Streams', 'Expense Optimization'],
+    description: "Install a system that identifies your most profitable clients, builds an offer ladder, and creates tracking that shows exactly what's working.",
+    categories: ['Avatar & Client Clarity', 'Sales Process & Scripts', 'Offer Ladder & Client Retention', 'Revenue Tracking & Predictability'],
   },
   4: {
     id: 4,
-    label: 'Estate & Legacy',
-    slug: 'estate',
-    icon: 'Landmark',
-    description: 'Protect your legacy with estate planning, trusts, beneficiary designations, and succession strategies.',
-    categories: ['Wills & Trusts', 'Beneficiary Planning', 'Healthcare Directives', 'Succession Strategy'],
+    label: 'Conversion Intelligence',
+    slug: 'conversion',
+    icon: 'Target',
+    description: "Install tracking at every stage of your buyer's journey. Identify the drop-offs and build repeatable sequences that convert every lead to revenue.",
+    categories: ['Buyer Journey & Tracking', 'Marketing ROI & Spend', 'Automated Sequences & Systems', 'Repeatable & Scalable Marketing'],
   },
 };
 
 export const SLUG_TO_PILLAR: Record<PillarSlug, PillarId> = {
-  'protection': 1,
-  'assets': 2,
-  'income': 3,
-  'estate': 4,
+  'ceo-command': 1,
+  'team': 2,
+  'revenue': 3,
+  'conversion': 4,
 };

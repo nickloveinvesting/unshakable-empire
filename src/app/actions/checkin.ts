@@ -1,7 +1,17 @@
 'use server';
 
 import { createClient } from '@/lib/supabase/server';
+import { PILLAR_MAP } from '@/types/quiz';
+import type { PillarId } from '@/types/quiz';
 import type { Json } from '@/types/database';
+
+function getCategoryFocus(pillarId: number, dayNumber: number): string {
+  const pillar = PILLAR_MAP[pillarId as PillarId];
+  if (!pillar) return 'General';
+  const categories = pillar.categories;
+  const idx = dayNumber <= 7 ? 0 : dayNumber <= 14 ? 1 : dayNumber <= 22 ? 2 : 3;
+  return categories[idx] || 'General';
+}
 
 export async function saveCheckIn(data: {
   pillarId: number;
@@ -12,6 +22,8 @@ export async function saveCheckIn(data: {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { error: 'Not authenticated' };
+
+  const categoryFocus = getCategoryFocus(data.pillarId, data.dayNumber);
 
   const { data: existing } = await supabase
     .from('daily_checkins')
@@ -24,7 +36,12 @@ export async function saveCheckIn(data: {
   if (existing) {
     const { error } = await supabase
       .from('daily_checkins')
-      .update({ responses: data.responses as unknown as Json, completion_percentage: data.completionPercentage })
+      .update({
+        responses: data.responses as unknown as Json,
+        completion_percentage: data.completionPercentage,
+        category_focus: categoryFocus,
+        completed_at: data.completionPercentage >= 100 ? new Date().toISOString() : null,
+      })
       .eq('id', existing.id);
     if (error) return { error: error.message };
   } else {
@@ -34,8 +51,10 @@ export async function saveCheckIn(data: {
         user_id: user.id,
         pillar_id: data.pillarId,
         day_number: data.dayNumber,
+        category_focus: categoryFocus,
         responses: data.responses as unknown as Json,
         completion_percentage: data.completionPercentage,
+        completed_at: data.completionPercentage >= 100 ? new Date().toISOString() : null,
       });
     if (error) return { error: error.message };
   }

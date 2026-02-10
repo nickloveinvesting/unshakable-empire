@@ -2,17 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Shield, TrendingUp, DollarSign, Landmark, ArrowRight, Plus, Loader2 } from 'lucide-react';
+import { Shield, Crosshair, Users, DollarSign, Target, ArrowRight, Plus, Loader2 } from 'lucide-react';
 import { PILLAR_MAP } from '@/types/quiz';
 import type { PillarId } from '@/types/quiz';
 import { useUser } from '@/hooks/useUser';
 import { getCheckInHistory } from '@/app/actions/checkin';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  Shield: <Shield className="w-5 h-5" />,
-  TrendingUp: <TrendingUp className="w-5 h-5" />,
+  Crosshair: <Crosshair className="w-5 h-5" />,
+  Users: <Users className="w-5 h-5" />,
   DollarSign: <DollarSign className="w-5 h-5" />,
-  Landmark: <Landmark className="w-5 h-5" />,
+  Target: <Target className="w-5 h-5" />,
 };
 
 interface PillarProgress {

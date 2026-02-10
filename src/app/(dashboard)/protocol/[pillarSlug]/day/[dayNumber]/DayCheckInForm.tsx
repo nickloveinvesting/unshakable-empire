@@ -24,6 +24,7 @@ export function DayCheckInForm({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [saved, setSaved] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Initialize state from saved responses
   const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>(() => {
@@ -72,6 +73,7 @@ export function DayCheckInForm({
     responses.confidence_score = confidenceScore;
     responses.notes = notes;
 
+    setError(null);
     startTransition(async () => {
       const result = await saveCheckIn({
         pillarId,
@@ -83,6 +85,8 @@ export function DayCheckInForm({
       if (result.success) {
         setSaved(true);
         router.refresh();
+      } else if (result.error) {
+        setError(result.error);
       }
     });
   };
@@ -223,6 +227,13 @@ export function DayCheckInForm({
           )}
         </button>
       </div>
+
+      {/* Error message */}
+      {error && (
+        <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-4 py-3">
+          <p className="text-red-400 text-sm">{error}</p>
+        </div>
+      )}
 
       {/* Completion indicator */}
       {completionPercentage > 0 && (

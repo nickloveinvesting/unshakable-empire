@@ -5,13 +5,13 @@ import { SLUG_TO_PILLAR, PILLAR_MAP } from "@/types/quiz";
 import type { PillarSlug } from "@/types/quiz";
 import { getCheckInHistory } from "@/app/actions/checkin";
 import { getProtocolBySlug } from "@/data/protocols";
-import { Shield, TrendingUp, DollarSign, Landmark, CheckCircle2, Circle, Lock, ArrowLeft } from "lucide-react";
+import { Crosshair, Users, DollarSign, Target, CheckCircle2, Circle, Lock, ArrowLeft } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  Shield: <Shield className="w-6 h-6" />,
-  TrendingUp: <TrendingUp className="w-6 h-6" />,
+  Crosshair: <Crosshair className="w-6 h-6" />,
+  Users: <Users className="w-6 h-6" />,
   DollarSign: <DollarSign className="w-6 h-6" />,
-  Landmark: <Landmark className="w-6 h-6" />,
+  Target: <Target className="w-6 h-6" />,
 };
 
 export default async function ProtocolOverviewPage({
@@ -118,10 +118,15 @@ export default async function ProtocolOverviewPage({
             const isCurrent = day.day === currentDay;
             const isLocked = day.day > currentDay && !isCompleted && !isStarted;
 
+            const Wrapper = isLocked ? 'div' : Link;
+            const wrapperProps = isLocked
+              ? {}
+              : { href: `/protocol/${pillarSlug}/day/${day.day}` };
+
             return (
-              <Link
+              <Wrapper
                 key={day.day}
-                href={isLocked ? "#" : `/protocol/${pillarSlug}/day/${day.day}`}
+                {...wrapperProps as any}
                 className={`block rounded-xl border p-4 transition-all ${
                   isCompleted
                     ? "bg-amber-400/5 border-amber-400/20 hover:border-amber-400/40"
@@ -192,7 +197,7 @@ export default async function ProtocolOverviewPage({
                     </div>
                   )}
                 </div>
-              </Link>
+              </Wrapper>
             );
           })}
         </div>
