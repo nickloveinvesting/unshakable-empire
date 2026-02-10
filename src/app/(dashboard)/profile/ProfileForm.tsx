@@ -91,7 +91,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
               setSaved(false);
             }}
             placeholder="Your full name"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           />
         </div>
 
@@ -109,7 +109,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
               setSaved(false);
             }}
             placeholder="Your business name"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           />
         </div>
 
@@ -125,9 +125,9 @@ export function ProfileForm({ profile }: ProfileFormProps) {
               setBusinessType(e.target.value);
               setSaved(false);
             }}
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           >
-            <option value="">Select business type...</option>
+            <option value="">Select business type…</option>
             {BUSINESS_TYPES.map((type) => (
               <option key={type.value} value={type.value}>
                 {type.label}
@@ -148,9 +148,9 @@ export function ProfileForm({ profile }: ProfileFormProps) {
               setAnnualRevenue(e.target.value);
               setSaved(false);
             }}
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           >
-            <option value="">Select revenue range...</option>
+            <option value="">Select revenue range…</option>
             {REVENUE_RANGES.map((range) => (
               <option key={range.value} value={range.value}>
                 {range.label}
@@ -175,7 +175,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
                 setSaved(false);
               }}
               placeholder="Number of team members"
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
             />
           </div>
 
@@ -193,7 +193,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
                 setSaved(false);
               }}
               placeholder="Average hours worked"
-              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
             />
           </div>
         </div>
@@ -209,7 +209,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
         <button
           type="submit"
           disabled={isPending}
-          className={`w-full flex items-center justify-center gap-2 font-bold px-6 py-3 min-h-[48px] rounded-lg transition-all shadow-lg ${
+          className={`w-full flex items-center justify-center gap-2 font-bold px-6 py-3 min-h-[48px] rounded-lg transition-[background-color,border-color,box-shadow] duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 ${
             saved
               ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shadow-emerald-500/10'
               : 'bg-amber-400 text-black hover:bg-amber-300 shadow-amber-400/20'
@@ -218,7 +218,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
           {isPending ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Saving...
+              Saving…
             </>
           ) : saved ? (
             <>
