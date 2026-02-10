@@ -22,15 +22,26 @@ export default function AssessPage() {
   return (
     <div className="min-h-screen bg-black py-8 px-4">
       <div className="max-w-2xl mx-auto">
-        {user && (
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Dashboard
-          </Link>
-        )}
+        {/* Top Navigation */}
+        <div className="mb-6">
+          {user ? (
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Dashboard
+            </Link>
+          ) : (
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-amber-400 text-sm font-medium transition-colors"
+            >
+              Already have an account? <span className="text-amber-400">Login →</span>
+            </Link>
+          )}
+        </div>
+
         <div className="text-center mb-10">
           <div className="w-16 h-16 bg-amber-400/10 border border-amber-400/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Shield className="w-8 h-8 text-amber-400" />
@@ -50,6 +61,21 @@ export default function AssessPage() {
             );
           })}
         </div>
+
+        {/* Login CTA for existing users */}
+        {!user && (
+          <div className="mt-8 text-center">
+            <p className="text-zinc-500 text-sm">
+              Already completed an assessment?{' '}
+              <Link
+                href="/login"
+                className="text-amber-400 hover:text-amber-300 font-medium transition-colors"
+              >
+                Login to view your results
+              </Link>
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
