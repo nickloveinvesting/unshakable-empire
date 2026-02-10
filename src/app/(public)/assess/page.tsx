@@ -53,7 +53,11 @@ export default function AssessPage() {
           {([1, 2, 3, 4] as PillarId[]).map((id) => {
             const pillar = PILLAR_MAP[id];
             return (
-              <button key={id} onClick={() => router.push(`/assess/${pillar.slug}`)} className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-6 hover:border-amber-400/30 transition-all text-left group">
+              <button
+                key={id}
+                onClick={() => router.push(`/assess/${pillar.slug}`)}
+                className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-6 min-h-[120px] hover:border-amber-400/30 transition-[border-color] duration-200 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
+              >
                 <div className="text-amber-400 mb-3">{ICON_MAP[pillar.icon]}</div>
                 <h3 className="text-white font-semibold mb-1">{pillar.label}</h3>
                 <p className="text-zinc-500 text-sm">{pillar.description}</p>
