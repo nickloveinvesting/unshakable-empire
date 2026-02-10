@@ -16,7 +16,12 @@ export function ProgressRings({ activePillars }: ProgressRingsProps) {
   }, []);
 
   if (activePillars.length === 0) {
-    return null;
+    return (
+      <div className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-8 text-center">
+        <h2 className="text-white font-bold text-xl mb-2">Track Your Progress</h2>
+        <p className="text-zinc-500 text-sm">Complete an assessment to see your protocol progress rings here</p>
+      </div>
+    );
   }
 
   return (
