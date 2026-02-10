@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.greatgame.com)",
+      "WebFetch(domain:mooncamp.com)",
+      "WebFetch(domain:simplamo.com)",
+      "WebFetch(domain:www.ninety.io)",
+      "WebFetch(domain:blog.growthinstitute.com)",
+      "WebFetch(domain:www.shortform.com)",
+      "WebFetch(domain:www.whatmatters.com)",
+      "WebFetch(domain:readingraphics.com)",
+      "WebFetch(domain:www.perdoo.com)",
+      "WebFetch(domain:quantive.com)",
+      "WebFetch(domain:eosone.com)",
+      "WebFetch(domain:aligntoday.com)",
+      "WebFetch(domain:www.ggobcoach.com)",
+      "Bash(npm install:*)",
+      "Bash(npx next build:*)",
+      "Bash(npm run build:*)",
+      "mcp__desktop-commander__start_process",
+      "Bash(claude mcp add supabase-unshakable -s local -e SUPABASE_ACCESS_TOKEN=\"sbp_616a4f2b12e14fbd72322387cb548c1883bebbb3\" -- npx -y @supabase/mcp-server-supabase@latest)"
+    ]
+  }
+}

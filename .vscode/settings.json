@@ -1,0 +1,10 @@
+{
+    "claudeCodeChat.permissions.yoloMode": true,
+    "chat.mcp.serverSampling": {
+        "Claude/.vscode/mcp.json: com.vercel/vercel-mcp": {
+            "allowedModels": [
+                "copilot/auto"
+            ]
+        }
+    }
+}
