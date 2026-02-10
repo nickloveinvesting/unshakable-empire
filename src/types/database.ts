@@ -79,20 +79,25 @@ export interface Database {
           user_id: string;
           pillar_id: number;
           day_number: number;
+          category_focus: string;
           responses: Json;
           completion_percentage: number;
-          completed_at: string;
+          completed_at: string | null;
         };
         Insert: {
           user_id: string;
           pillar_id: number;
           day_number: number;
+          category_focus: string;
           responses: Json;
           completion_percentage: number;
+          completed_at?: string | null;
         };
         Update: {
+          category_focus?: string;
           responses?: Json;
           completion_percentage?: number;
+          completed_at?: string | null;
         };
       };
     };
