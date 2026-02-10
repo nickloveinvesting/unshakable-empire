@@ -73,6 +73,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             );
           })}
         </nav>
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-all mt-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
+        >
+          <LogOut className="w-4 h-4" />
+          Sign Out
+        </button>
       </aside>
 
       {/* Main content */}
@@ -89,6 +96,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </Link>
           );
         })}
+        <button
+          onClick={handleLogout}
+          className="flex flex-col items-center gap-0.5 min-w-[44px] min-h-[44px] justify-center rounded-lg text-zinc-500 hover:text-zinc-300 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
+        >
+          <LogOut className="w-5 h-5" />
+          <span className="text-[10px] font-medium">Sign Out</span>
+        </button>
       </nav>
     </div>
   );
