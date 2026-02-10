@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { BarChart3, ArrowLeft } from 'lucide-react';
 import { createClient } from '@/lib/supabase/server';
 import { getCompletionTimeline, getConfidenceTrend, getHeatmapData } from '@/app/actions/analytics';
-import { CompletionTimeline } from '@/components/analytics/CompletionTimeline';
-import { ConfidenceTrend } from '@/components/analytics/ConfidenceTrend';
-import { HeatmapGrid } from '@/components/analytics/HeatmapGrid';
+
+// Dynamic imports for heavy chart components
+const CompletionTimeline = dynamic(() => import('@/components/analytics/CompletionTimeline').then(mod => ({ default: mod.CompletionTimeline })), {
+  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />,
+  ssr: false
+});
+
+const ConfidenceTrend = dynamic(() => import('@/components/analytics/ConfidenceTrend').then(mod => ({ default: mod.ConfidenceTrend })), {
+  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />,
+  ssr: false
+});
+
+const HeatmapGrid = dynamic(() => import('@/components/analytics/HeatmapGrid').then(mod => ({ default: mod.HeatmapGrid })), {
+  loading: () => <div className="h-48 bg-zinc-800/50 animate-pulse rounded-lg" />,
+  ssr: false
+});
 
 const PILLAR_LABELS: Record<number, string> = {
   1: 'CEO Command Center',
