@@ -92,7 +92,7 @@ export function TodaysFocus({ activePillars }: TodaysFocusProps) {
                     </div>
                     <Link
                       href={`/protocol/${pillar.pillarSlug}/day/${pillar.currentDay}`}
-                      className="text-zinc-400 hover:text-amber-400 text-sm font-medium transition-colors"
+                      className="text-zinc-400 hover:text-amber-400 text-sm font-medium transition-colors min-h-[44px] inline-flex items-center px-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 rounded-lg"
                     >
                       Review
                     </Link>
@@ -100,7 +100,7 @@ export function TodaysFocus({ activePillars }: TodaysFocusProps) {
                 ) : (
                   <Link
                     href={`/protocol/${pillar.pillarSlug}/day/${pillar.currentDay}`}
-                    className="bg-amber-400 text-black font-bold px-4 py-2.5 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 inline-flex items-center gap-2 text-sm"
+                    className="bg-amber-400 text-black font-bold px-4 py-2.5 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color] duration-200 shadow-lg shadow-amber-400/20 inline-flex items-center gap-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
                   >
                     Start Today's Check-In
                   </Link>
