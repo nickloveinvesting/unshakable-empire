@@ -97,7 +97,7 @@ export function submitAnswer(
   const answer: QuestionAnswer = {
     questionId,
     value,
-    timestamp: new Date(),
+    answeredAt: new Date(),
   };
 
   // Add answer to state
