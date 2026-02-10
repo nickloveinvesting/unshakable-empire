@@ -138,11 +138,12 @@ export function DayCheckInForm({
           key={task.id}
           type="button"
           onClick={() => updateTaskResponse(task.id, !isChecked)}
-          className={`w-full text-left flex items-start gap-3 p-4 rounded-lg border transition-all ${
+          className={`w-full text-left flex items-start gap-3 p-4 rounded-lg border transition-[background-color,border-color] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 ${
             isChecked
               ? "bg-amber-400/5 border-amber-400/20"
               : "bg-zinc-900/40 border-zinc-800 hover:border-zinc-700"
           }`}
+          aria-label={`${isChecked ? 'Mark as incomplete' : 'Mark as complete'}: ${task.label}`}
         >
           <div className="shrink-0 mt-0.5">
             {isChecked ? (
@@ -192,8 +193,8 @@ export function DayCheckInForm({
             type="number"
             value={typeof response === 'number' ? response : ''}
             onChange={(e) => updateTaskResponse(task.id, parseFloat(e.target.value) || 0)}
-            placeholder="Enter number..."
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            placeholder="Enter number…"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           />
         </div>
       );
@@ -270,8 +271,8 @@ export function DayCheckInForm({
             value={textValue}
             onChange={(e) => updateTaskResponse(task.id, e.target.value)}
             rows={3}
-            placeholder="Write your reflection..."
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+            placeholder="Write your reflection…"
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 resize-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
           />
         </div>
       );
@@ -334,11 +335,12 @@ export function DayCheckInForm({
 
       {/* Notes */}
       <div className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-5">
-        <h2 className="text-sm font-semibold text-white mb-1">Notes</h2>
+        <label htmlFor="daily-notes" className="block text-sm font-semibold text-white mb-1">Notes</label>
         <p className="text-xs text-zinc-500 mb-3">
           Capture any reflections, action items, or insights from today.
         </p>
         <textarea
+          id="daily-notes"
           value={notes}
           onChange={(e) => {
             setNotes(e.target.value);
@@ -346,7 +348,7 @@ export function DayCheckInForm({
           }}
           rows={4}
           placeholder="What did you learn today? What actions will you take?"
-          className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+          className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-3 text-sm text-white placeholder-zinc-600 resize-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/30 focus-visible:border-amber-400/30 transition-[border-color,box-shadow] duration-200"
         />
       </div>
 
@@ -356,7 +358,7 @@ export function DayCheckInForm({
           type="button"
           onClick={handleSubmit}
           disabled={isPending}
-          className={`flex-1 flex items-center justify-center gap-2 font-bold px-6 py-3 min-h-[48px] rounded-xl transition-all shadow-lg ${
+          className={`flex-1 flex items-center justify-center gap-2 font-bold px-6 py-3 min-h-[48px] rounded-xl transition-[background-color,border-color,box-shadow] duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 ${
             saved
               ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shadow-emerald-500/10"
               : "bg-amber-400 text-black hover:bg-amber-300 shadow-amber-400/20"
@@ -365,7 +367,7 @@ export function DayCheckInForm({
           {isPending ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />
-              Saving...
+              Saving…
             </>
           ) : saved ? (
             <>
