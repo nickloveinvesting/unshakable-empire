@@ -28,20 +28,31 @@ export default async function DashboardPage() {
 
   if (!dashboardData) {
     return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="text-zinc-400">Error loading dashboard data</div>
+      <div className="min-h-screen bg-black flex items-center justify-center px-4">
+        <div className="max-w-md text-center">
+          <div className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-8">
+            <h2 className="text-white font-bold text-xl mb-2">Error Loading Dashboard</h2>
+            <p className="text-zinc-400 text-sm mb-6">
+              We couldn't load your dashboard data. Please try again.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-amber-400 text-black font-bold px-6 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color] duration-200 shadow-lg shadow-amber-400/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
+            >
+              Retry
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
 
   const today = new Date();
-  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const monthNames = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-  ];
-
-  const formattedDate = `${dayNames[today.getDay()]}, ${monthNames[today.getMonth()]} ${today.getDate()}`;
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+  }).format(today);
 
   return (
     <div className="min-h-screen bg-black py-8 px-4">
