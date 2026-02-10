@@ -288,7 +288,7 @@ export const P2_ROLE_CLARITY_QUESTIONS: AdaptiveQuestionNode[] = [
     pillarId: 2,
     category: 'Role Clarity & Structure',
     tier: 3,
-    text: 'Each role has defined authority — team members know what they CAN decide without asking.',
+    text: 'Each role has defined authority - team members know what they CAN decide without asking.',
     subtext: 'Rate whether your team members have clearly defined decision-making power.',
     responseType: 'scale',
     scaleMin: 1,

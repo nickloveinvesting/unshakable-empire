@@ -497,10 +497,10 @@ function generateRecommendationDescription(
   };
 
   const pillarDescriptions: Record<number, string> = {
-    1: 'Your CEO Command Center is the foundation—without time, focus, and visibility, nothing else scales.',
-    2: 'Team Architecture determines your scalability—you cannot grow beyond your team's capabilities.',
-    3: 'Revenue Pipeline is your lifeblood—predictable revenue unlocks everything else.',
-    4: 'Conversion Intelligence drives efficiency—better marketing ROI means faster growth.',
+    1: 'Your CEO Command Center is the foundation-without time, focus, and visibility, nothing else scales.',
+    2: 'Team Architecture determines your scalability-you cannot grow beyond your team's capabilities.',
+    3: 'Revenue Pipeline is your lifeblood-predictable revenue unlocks everything else.',
+    4: 'Conversion Intelligence drives efficiency-better marketing ROI means faster growth.',
   };
 
   return `${stageContext[stage]} ${pillarDescriptions[pillarId]}`;
@@ -516,7 +516,7 @@ function generateFirstThreeActions(
   const actionMap: Record<number, Record<string, string[]>> = {
     1: {
       'Time & Focus': [
-        'Audit your calendar—block 2-hour CEO time blocks for strategic work',
+        'Audit your calendar-block 2-hour CEO time blocks for strategic work',
         'Identify and eliminate your top 3 time-wasting activities',
         'Implement a structured weekly operating rhythm',
       ],
@@ -550,7 +550,7 @@ function generateFirstThreeActions(
     },
     3: {
       'Avatar & Client Clarity': [
-        'Interview your top 5 clients—identify common patterns',
+        'Interview your top 5 clients-identify common patterns',
         'Write a detailed ideal client profile (demographics, psychographics, pain)',
         'Document the specific outcomes your best clients achieve',
       ],

@@ -47,7 +47,7 @@ export const BUSINESS_CONTEXT_QUESTIONS: AdaptiveQuestionNode[] = [
     category: 'Business Context',
     tier: 1,
     text: 'How many hours per week do you work on average?',
-    subtext: 'Be honest — this helps us understand your current reality',
+    subtext: 'Be honest - this helps us understand your current reality',
     responseType: 'select',
     options: [
       { value: 'Less than 40', label: 'Less than 40 hours' },

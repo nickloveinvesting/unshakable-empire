@@ -347,7 +347,7 @@ export const P1_DECISION_QUESTIONS: AdaptiveQuestionNode[] = [
     pillarId: 1,
     category: 'Decision Making & Delegation',
     tier: 3,
-    text: "I have clear decision filters — I know which decisions require my input and which don't.",
+    text: "I have clear decision filters - I know which decisions require my input and which don't.",
     subtext:
       "Consider whether you have defined criteria for what escalates to you versus what doesn't.",
     responseType: 'scale',

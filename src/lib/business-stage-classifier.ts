@@ -34,7 +34,7 @@ export function classifyBusinessStage(context: BusinessContext): BusinessStageRe
   ) {
     return {
       stage: 'solo-overwhelmed',
-      label: 'Solo Operator — Overwhelmed',
+      label: 'Solo Operator - Overwhelmed',
       pillarWeights: {
         ceo: 0.4, // CEO time management is critical
         team: 0.05, // Team not relevant yet
@@ -55,7 +55,7 @@ export function classifyBusinessStage(context: BusinessContext): BusinessStageRe
   ) {
     return {
       stage: 'solo-optimizing',
-      label: 'Solo Operator — Optimizing',
+      label: 'Solo Operator - Optimizing',
       pillarWeights: {
         ceo: 0.3, // Still important but improving
         team: 0.15, // Starting to think about hiring
@@ -102,7 +102,7 @@ export function classifyBusinessStage(context: BusinessContext): BusinessStageRe
         revenue: 0.25, // Revenue predictability
         marketing: 0.25, // Marketing scalability
       },
-      recommendFocus: 'Balance all pillars — systematic growth across the board',
+      recommendFocus: 'Balance all pillars - systematic growth across the board',
     };
   }
 
@@ -121,7 +121,7 @@ export function classifyBusinessStage(context: BusinessContext): BusinessStageRe
         revenue: 0.25, // Revenue optimization
         marketing: 0.2, // Marketing efficiency
       },
-      recommendFocus: 'Build team that runs without you — true scalability',
+      recommendFocus: 'Build team that runs without you - true scalability',
     };
   }
 

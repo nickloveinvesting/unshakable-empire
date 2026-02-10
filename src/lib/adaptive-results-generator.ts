@@ -381,8 +381,8 @@ function getBandDescription(band: Band): string {
  */
 function getBusinessStageLabel(stage: BusinessStage): string {
   const labels: Record<BusinessStage, string> = {
-    'solo-overwhelmed': 'Solo Operator — Overwhelmed',
-    'solo-optimizing': 'Solo Operator — Optimizing',
+    'solo-overwhelmed': 'Solo Operator - Overwhelmed',
+    'solo-optimizing': 'Solo Operator - Optimizing',
     'small-team': 'Small Team (2-5 people)',
     growing: 'Growing Business (6-15 people)',
     established: 'Established Business (16-50 people)',

@@ -456,7 +456,7 @@ export const P4_SCALABILITY_QUESTIONS: AdaptiveQuestionNode[] = [
     pillarId: 4,
     category: 'Repeatable & Scalable Marketing',
     tier: 3,
-    text: 'My marketing generates leads predictably — I know roughly how many to expect each week.',
+    text: 'My marketing generates leads predictably - I know roughly how many to expect each week.',
     subtext: 'Rate whether your lead flow is consistent and predictable or sporadic and unpredictable.',
     responseType: 'scale',
     scaleMin: 1,
