@@ -38,7 +38,10 @@ export default function QuizPage() {
   if (!pillarId || !currentQuestion) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <p className="text-zinc-500">Loading...</p>
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-8 h-8 border-2 border-amber-400/30 border-t-amber-400 rounded-full animate-spin"></div>
+          <p className="text-zinc-400 text-sm">Loading assessment…</p>
+        </div>
       </div>
     );
   }
