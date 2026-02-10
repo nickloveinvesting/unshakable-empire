@@ -7,10 +7,10 @@ import { ConfidenceTrend } from '@/components/analytics/ConfidenceTrend';
 import { HeatmapGrid } from '@/components/analytics/HeatmapGrid';
 
 const PILLAR_LABELS: Record<number, string> = {
-  1: 'Income Pillar',
-  2: 'Assets Pillar',
-  3: 'Protection Pillar',
-  4: 'Estate Pillar',
+  1: 'CEO Command Center',
+  2: 'Team Architecture',
+  3: 'Revenue Pipeline',
+  4: 'Conversion Intelligence',
 };
 
 export default async function AnalyticsPage() {
