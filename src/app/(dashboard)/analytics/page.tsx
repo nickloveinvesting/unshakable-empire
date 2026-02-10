@@ -7,18 +7,15 @@ import { getCompletionTimeline, getConfidenceTrend, getHeatmapData } from '@/app
 
 // Dynamic imports for heavy chart components
 const CompletionTimeline = dynamic(() => import('@/components/analytics/CompletionTimeline').then(mod => ({ default: mod.CompletionTimeline })), {
-  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />,
-  ssr: false
+  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />
 });
 
 const ConfidenceTrend = dynamic(() => import('@/components/analytics/ConfidenceTrend').then(mod => ({ default: mod.ConfidenceTrend })), {
-  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />,
-  ssr: false
+  loading: () => <div className="h-64 bg-zinc-800/50 animate-pulse rounded-lg" />
 });
 
 const HeatmapGrid = dynamic(() => import('@/components/analytics/HeatmapGrid').then(mod => ({ default: mod.HeatmapGrid })), {
-  loading: () => <div className="h-48 bg-zinc-800/50 animate-pulse rounded-lg" />,
-  ssr: false
+  loading: () => <div className="h-48 bg-zinc-800/50 animate-pulse rounded-lg" />
 });
 
 const PILLAR_LABELS: Record<number, string> = {
