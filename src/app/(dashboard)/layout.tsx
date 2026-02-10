@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, BookOpen, User, LogOut } from 'lucide-react';
+import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, BookOpen, FileText, User, LogOut } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@/hooks/useUser';
@@ -9,7 +9,8 @@ import { createClient } from '@/lib/supabase/client';
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/playbook', label: 'Playbook', icon: BookOpen },
+  { href: '/assessments', label: 'Assess', icon: BookOpen },
+  { href: '/playbook', label: 'Playbook', icon: FileText },
   { href: '/analytics', label: 'Analytics', icon: BarChart3 },
   { href: '/profile', label: 'Profile', icon: User },
 ];
@@ -92,7 +93,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           return (
             <Link key={item.href} href={item.href} className={`flex flex-col items-center gap-0.5 min-w-[44px] min-h-[44px] justify-center rounded-lg transition-all ${active ? 'text-amber-400' : 'text-zinc-500 hover:text-zinc-300'}`}>
               <item.icon className="w-5 h-5" />
-              <span className="text-[10px] font-medium">{item.label}</span>
+              <span className="text-[9px] font-medium">{item.label}</span>
             </Link>
           );
         })}
@@ -101,7 +102,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           className="flex flex-col items-center gap-0.5 min-w-[44px] min-h-[44px] justify-center rounded-lg text-zinc-500 hover:text-zinc-300 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50"
         >
           <LogOut className="w-5 h-5" />
-          <span className="text-[10px] font-medium">Sign Out</span>
+          <span className="text-[9px] font-medium">Sign Out</span>
         </button>
       </nav>
     </div>

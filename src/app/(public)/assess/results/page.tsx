@@ -167,9 +167,12 @@ export default function ResultsPage() {
 
         <div className="flex flex-col items-center gap-4">
           {user ? (
-            <button onClick={() => router.push(`/protocol/${result.pillarSlug}`)} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 button-press">
-              <Shield className="w-5 h-5" />Get My 30-Day Protocol<ArrowRight className="w-4 h-4" />
-            </button>
+            <>
+              <button onClick={() => router.push(`/protocol/${result.pillarSlug}`)} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 button-press">
+                <Shield className="w-5 h-5" />Get My 30-Day Protocol<ArrowRight className="w-4 h-4" />
+              </button>
+              <button onClick={() => router.push('/assessments')} className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors">View Assessment History</button>
+            </>
           ) : (
             <button onClick={() => router.push('/signup')} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 button-press">
               <Shield className="w-5 h-5" />Sign Up to Get Your Protocol<ArrowRight className="w-4 h-4" />

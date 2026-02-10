@@ -1,0 +1,1 @@
+Get-ChildItem -Path 'd:\OneDrive\OneDrive - Global Integrity Finance LLC\Desktop\Global Investments\Empire O.S. App' -Filter 'next.config*' -Recurse -Depth 5 -ErrorAction SilentlyContinue | Where-Object { $_.DirectoryName -notlike '*node_modules*' } | Select-Object -ExpandProperty FullName
