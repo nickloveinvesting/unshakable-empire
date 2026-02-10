@@ -11,6 +11,11 @@ export interface Database {
           active_pillars: number[];
           onboarding_completed: boolean;
           is_pilot_participant: boolean;
+          business_name: string | null;
+          business_type: string | null;
+          annual_revenue: string | null;
+          team_size: number | null;
+          hours_per_week: number | null;
           created_at: string;
           updated_at: string;
         };
@@ -21,12 +26,22 @@ export interface Database {
           active_pillars?: number[];
           onboarding_completed?: boolean;
           is_pilot_participant?: boolean;
+          business_name?: string | null;
+          business_type?: string | null;
+          annual_revenue?: string | null;
+          team_size?: number | null;
+          hours_per_week?: number | null;
         };
         Update: {
           full_name?: string | null;
           active_pillars?: number[];
           onboarding_completed?: boolean;
           is_pilot_participant?: boolean;
+          business_name?: string | null;
+          business_type?: string | null;
+          annual_revenue?: string | null;
+          team_size?: number | null;
+          hours_per_week?: number | null;
         };
       };
       assessments: {

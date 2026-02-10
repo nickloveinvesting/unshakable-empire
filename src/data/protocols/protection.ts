@@ -15,18 +15,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Write down every task you did today and how long it took",
         description:
           "Carry a notepad or use your phone. Log every activity from the moment you start working until you stop — emails, calls, meetings, fires, deep work, everything. No task is too small to record.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t2",
         label: "Measure your total hours worked today",
         description:
           "Add up every logged minute. Get an exact count of how many hours you actually spent working today — not how many hours you think you worked.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d1-t3",
         label: "Reflect: which tasks could someone else have done?",
         description:
           "Review your log with fresh eyes. Highlight every task that did not require your unique expertise, relationships, or decision-making authority. Be brutally honest.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -43,18 +49,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Categorize yesterday's tasks as $10/hr, $100/hr, or $1000/hr work",
         description:
           "Go through your Day 1 time log. $10/hr tasks are things anyone can do (data entry, scheduling, basic emails). $100/hr tasks require skill but not you specifically (project management, standard client calls). $1000/hr tasks are CEO-level — vision, strategy, key relationships, high-value deals.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d2-t2",
         label: "Measure: what percentage of your time went to $1000/hr tasks?",
         description:
           "Calculate the percentage. Most first-time CEOs discover they spend less than 10% of their time on $1000/hr work. Record this number — it is your baseline.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d2-t3",
         label: "Reflect: identify one $10/hr task you will delegate this week",
         description:
           "Pick the easiest win. Choose one low-value task you do repeatedly and commit to handing it off this week. Write down who will take it, when you will train them, and what 'good enough' looks like.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -71,18 +83,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Create a CEO-Only task list — things ONLY you can do",
         description:
           "Write down every task that genuinely cannot be done by anyone else in your organization. These are tasks that require your unique vision, your key relationships, your signature authority, or your strategic judgment.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d3-t2",
         label: "Measure: how many items are on it? (Target: under 5)",
         description:
           "Count the items. If your list has more than five items, you are still holding on to work that could be delegated. Challenge each item: is this truly CEO-only, or is it CEO-comfortable?",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d3-t3",
         label: "Reflect: what are you holding onto that is not on this list?",
         description:
           "This is the hard question. What tasks do you keep doing out of habit, perfectionism, or distrust? Those are the biggest drains on your leadership capacity. Write them down.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -99,18 +117,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Block 2 hours of strategic time on tomorrow's calendar — no meetings, no fires",
         description:
           "Open your calendar right now and block two consecutive hours for CEO-level strategic work. Label it 'CEO Strategic Block' and treat it as the most important meeting of your day. No phone, no email, no interruptions.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d4-t2",
         label: "Measure: did you protect yesterday's strategic block? (Y/N)",
         description:
           "If you set a block yesterday, answer honestly: did you keep it? If not, what invaded it? Track this daily — the pattern of what breaks your blocks reveals your biggest operational gaps.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d4-t3",
         label: "Reflect: what would you work on if you had 2 uninterrupted hours?",
         description:
           "Write down the one project, strategy, or relationship that would move the needle most if you gave it two full hours of focused attention. This is likely the work you have been avoiding because the urgent keeps crowding out the important.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -127,18 +151,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Identify your top 3 fire-fighting triggers this week",
         description:
           "Look back over the past five days. What pulled you out of CEO-level work and into firefighting mode? Name the three most common or most disruptive triggers. Be specific: 'client complaint about delivery timeline' not 'client issues.'",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d5-t2",
         label: "Measure: how many times were you pulled into a fire today?",
         description:
           "Track it in real time. Every time someone brings you a problem that is not on your CEO-Only list, make a tally mark. Count them at the end of the day.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d5-t3",
         label: "Reflect: which fire could have been prevented with a system?",
         description:
           "Choose the most recurring fire from your list. Ask: what process, checklist, decision rule, or team empowerment would have prevented this from ever reaching my desk? Write down the system that would solve it.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -155,18 +185,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Draft your ideal weekly schedule — assign CEO blocks, team blocks, and off blocks",
         description:
           "Map out Monday through Friday. Allocate specific time blocks for: CEO strategic work, team development and meetings, client-facing activities, administrative necessities, and personal recovery. Be intentional about every hour.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d6-t2",
         label: "Measure: hours allocated to strategy vs. operations",
         description:
           "In your ideal schedule, count the hours dedicated to strategic CEO work versus operational execution. Your target: at least 40% of your work week should be CEO-level strategic time.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d6-t3",
         label: "Reflect: what has to change for this schedule to become real?",
         description:
           "Compare your ideal schedule to your current reality. What gaps exist? What needs to be delegated, automated, or eliminated to make this schedule possible within 90 days? Write down the three biggest changes required.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -183,18 +219,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Review your week: how many hours did you work? How many were CEO-level?",
         description:
           "Total your hours for the week. Then calculate how many of those hours were spent on tasks from your CEO-Only list. Express it as a percentage. This is your Week 1 CEO Effectiveness Score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d7-t2",
         label: "Measure: compare your actual week to your ideal week from Day 6",
         description:
           "Lay your ideal schedule next to your actual time log. Where are the biggest gaps? Which blocks got protected and which got invaded? Document the variance.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d7-t3",
         label: "Reflect: what is one thing you will do differently next week?",
         description:
           "Choose one specific, actionable change for Week 2. Not a vague intention like 'delegate more' but a concrete commitment like 'I will not answer Slack messages between 9 and 11 AM.' Write it down and share it with an accountability partner.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -215,18 +257,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "List every decision you made today",
         description:
           "From the moment you started working, write down every decision — big and small. Approving an expense, answering a client question, choosing a vendor, resolving a team conflict. Capture them all.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d8-t2",
         label: "Measure: how many decisions required YOU specifically?",
         description:
           "Review your list and mark each decision as 'CEO-required' or 'could have been delegated.' Count the totals. Most CEOs find that fewer than 20% of their daily decisions truly require their involvement.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d8-t3",
         label: "Reflect: which decisions could your team make with clear guidelines?",
         description:
           "Identify the delegatable decisions that keep landing on your desk. For each one, ask: what guideline, rule, or authority level would my team need to handle this without me? Write down the top three.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -243,18 +291,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Write 3 decision rules your team can follow without asking you",
         description:
           "Based on your Day 8 analysis, create three clear, specific rules. Example: 'Any expense under $500 is auto-approved by the department manager.' 'Client reschedule requests are handled by the account manager — no CEO approval needed.' Make them unambiguous.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t2",
         label: "Measure: number of decisions that hit your desk today",
         description:
           "Keep a running count of every decision someone brings to you or you involve yourself in. Compare this to yesterday's count. The goal is a downward trend starting this week.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d9-t3",
         label: "Reflect: what is the worst that happens if your team makes a wrong call?",
         description:
           "For each decision rule you created, imagine the worst-case scenario if your team gets it wrong. Most of the time, the cost of a bad delegated decision is far less than the cost of bottlenecking every decision through you.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -271,18 +325,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Delegate one recurring task to a team member today with written instructions",
         description:
           "Choose a task you do weekly or daily that is not on your CEO-Only list. Write step-by-step instructions. Include: what the task is, why it matters, what 'done well' looks like, common mistakes to avoid, and who to ask if they get stuck.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d10-t2",
         label: "Measure: estimate the weekly time saved by this delegation",
         description:
           "Calculate how many minutes or hours per week this task currently costs you. Multiply by 50 weeks. That is the annual time you are reclaiming for CEO-level work.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d10-t3",
         label: "Reflect: did the result meet your standard? If not, what instruction was missing?",
         description:
           "After the task is completed, review the output. If it falls short of your expectations, do not take the task back — improve the instructions. The gap is almost always in the briefing, not in the person.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -300,18 +360,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Create an 'If X, Then Y' decision guide for your team's 3 most common questions",
         description:
           "Identify the three questions your team asks you most frequently. For each one, write a clear If-Then rule. Example: 'If a client requests a refund under $200, then process it immediately and log the reason. If over $200, escalate to [manager name].'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d11-t2",
         label: "Measure: how many questions from your team today?",
         description:
           "Track every question, request, or decision that a team member brings to you today. Record the question and who asked it. This data reveals your delegation gaps.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d11-t3",
         label: "Reflect: which question keeps coming back that should not?",
         description:
           "Look for the repeat offenders — questions you have answered multiple times. These are the highest-value candidates for your If-Then playbook because eliminating them creates permanent time savings.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -328,18 +394,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Do NOT answer any non-urgent team question for 4 hours today",
         description:
           "Set the boundary clearly: tell your team you are in a strategic block and will not be available for non-emergency issues from [start time] to [end time]. Define what constitutes a genuine emergency (hint: very few things qualify).",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t2",
         label: "Measure: how many questions resolved themselves?",
         description:
           "At the end of your 4-hour block, review the questions or messages that came in. How many were already resolved by the time you looked? How many turned out to not need your input at all? Track the numbers.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d12-t3",
         label: "Reflect: what did you do with that reclaimed time?",
         description:
           "Honestly assess how you used those four hours. Did you do CEO-level strategic work? Did you catch up on tasks? Did you feel anxious about being unavailable? Your emotional response reveals how dependent you have become on being needed.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -357,18 +429,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Assign one team member as 'decision maker of the day' for operational issues",
         description:
           "Choose your most capable team member. Give them explicit authority: 'Today, all operational decisions go through [name], not me. I trust their judgment. If something is truly strategic or irreversible, they will loop me in.' Announce it to the team.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t2",
         label: "Measure: how many issues were handled without you?",
         description:
           "At the end of the day, debrief with your decision maker. How many issues came up? How did they handle them? What decisions did they make? Track the total number resolved without your involvement.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d13-t3",
         label: "Reflect: how did it feel to step back?",
         description:
           "This is about your emotional relationship with control. Did you feel relief? Anxiety? Pride in your team member? Frustration at how they handled something? Your feelings reveal whether you are truly ready to lead at the CEO level or still clinging to operator mode.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -386,18 +464,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Weekly review: how many decisions did you make this week vs. last week?",
         description:
           "Compare your decision counts from Week 2 to your Day 8 baseline. Calculate the percentage decrease. Every decision you did not make is a decision your team made — which means your organization is getting stronger.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d14-t2",
         label: "Measure: the decrease in decisions made by you",
         description:
           "Document the exact number. If you went from 40 decisions per day to 25, that is a 37% reduction. That represents real cognitive energy reclaimed for strategic work. Celebrate progress, even if it is incremental.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d14-t3",
         label: "Reflect: what is working in your delegation system?",
         description:
           "Identify the wins. Which decision rules did your team follow successfully? Which delegated tasks were handled well? What felt easier this week compared to last week? Double down on what is working.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -419,18 +503,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Define your top 5 business KPIs: revenue, leads, close rate, customer satisfaction, profit margin",
         description:
           "These five metrics tell you whether your business is healthy, growing, or in trouble. Customize them for your business if needed, but do not exceed five. Simplicity is the point — these are the numbers you check every single week.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d15-t2",
         label: "Measure: record today's number for each KPI",
         description:
           "Pull the actual data for each KPI right now. If you cannot find the number easily, that is itself a critical finding — it means you are flying blind on that metric. Record what you have, even if some numbers are estimates.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d15-t3",
         label: "Reflect: which KPI surprised you?",
         description:
           "Look at your five numbers. Which one was better than expected? Which one was worse? The gaps between your perception and reality are where the biggest opportunities and biggest risks hide.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -447,18 +537,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Create a simple weekly scorecard with your 5 KPIs",
         description:
           "Use a spreadsheet, a whiteboard, or even a notebook. Columns: KPI name, last week's number, this week's number, target, trend (up/down/flat). Keep it simple enough that updating it takes less than 15 minutes per week.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d16-t2",
         label: "Measure: fill in today's numbers",
         description:
           "Populate your scorecard with current data. For KPIs tracked weekly, use this week's numbers. For KPIs tracked monthly, prorate or use the most recent data point. The goal is to have no blank cells.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d16-t3",
         label: "Reflect: which number do you want to move most?",
         description:
           "Look at your completed scorecard. If you could wave a magic wand and improve one number by 20%, which would have the biggest impact on your business? That is your leading indicator — the number that moves everything else.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -475,18 +571,24 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Assign one KPI to each team member to own and report on weekly",
         description:
           "Match each KPI to the person who has the most direct influence over it. The sales lead owns revenue and close rate. The marketing person owns leads. The operations manager owns customer satisfaction. Make the assignment explicit and public.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t2",
         label: "Measure: did each person report their number today?",
         description:
           "Ask each KPI owner to report their number by end of day. Track who reported and who did not. Unreported numbers are the first sign of an accountability gap.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d17-t3",
         label: "Reflect: who needs more clarity on their KPI?",
         description:
           "Did any team member struggle to find their number, question why it matters, or seem unclear on how to influence it? Those are coaching opportunities. A KPI owner who does not understand their metric cannot improve it.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -503,12 +605,16 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Set a 90-day target for each KPI",
         description:
           "For each of your five KPIs, define where you want that number to be in 90 days. Make the target specific, measurable, and ambitious but achievable. 'Increase revenue' is not a target. 'Increase monthly revenue from $80K to $100K' is a target.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d18-t2",
         label: "Measure: calculate the gap between current and target",
         description:
           "For each KPI, subtract today's number from your 90-day target. This gap is the work in front of you. Rank the gaps from largest to smallest — the biggest gap is either your biggest problem or your biggest opportunity.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d18-t3",
@@ -516,6 +622,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: which KPI will have the biggest impact on revenue if improved?",
         description:
           "Not all KPIs are equally powerful. A 10% improvement in close rate might matter more than a 10% increase in leads. Identify the KPI with the highest revenue leverage and make it your primary focus for the next 90 days.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -533,12 +641,16 @@ export const protectionProtocol: DayProtocol[] = [
           "Review your scorecard and identify the number-one underperforming metric",
         description:
           "Look at your five KPIs. Which one has the biggest gap between current performance and target? Which one has been declining or flat the longest? That is your underperformer. Focus all of today's analysis on this single metric.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d19-t2",
         label: "Measure: what specifically caused the underperformance?",
         description:
           "Dig into the data. Is the problem in volume (not enough activity), conversion (activity not producing results), or value (results not generating enough revenue)? Get specific. 'Sales are down' is not a diagnosis. 'We had 30% fewer discovery calls this month because lead flow dropped' is a diagnosis.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d19-t3",
@@ -546,6 +658,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: is this a people problem, process problem, or visibility problem?",
         description:
           "People problems mean the wrong person is in the role or they need training. Process problems mean the system is broken or missing. Visibility problems mean the data is not being tracked or reviewed. Each type requires a different solution. Name which one it is.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -563,12 +677,16 @@ export const protectionProtocol: DayProtocol[] = [
           "Create a 15-minute daily standup agenda based on your scorecard metrics",
         description:
           "Design a tight agenda: each KPI owner reports their number and one priority for the day (2 minutes each). Then one round of 'stuck on' where anyone can flag a blocker. No problem-solving in the standup — just flag and assign follow-ups. Total time: 15 minutes maximum.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t2",
         label: "Measure: did you hold the standup today?",
         description:
           "Execute the standup. Time it. Did it stay under 15 minutes? Did every KPI owner report? Track completion as a binary: you either held it or you did not. Consistency matters more than perfection.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d20-t3",
@@ -576,6 +694,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: what came up that you would not have caught otherwise?",
         description:
           "After the standup, note any issue, trend, or insight that surfaced because of the structured check-in. The daily standup is an early warning system. If it is working, it surfaces problems when they are small and solvable.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -592,12 +712,16 @@ export const protectionProtocol: DayProtocol[] = [
         label: "Weekly scorecard review: compare Week 3 to your Week 1 baseline",
         description:
           "Pull out your Day 15 baseline numbers and compare them to today's numbers. For each KPI, calculate the change — both in absolute terms and as a percentage. Three weeks is enough to see early trends.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d21-t2",
         label: "Measure: which KPIs improved? Which declined?",
         description:
           "Categorize each KPI: improving, declining, or flat. For improving metrics, identify what drove the improvement. For declining metrics, identify the root cause. For flat metrics, ask whether the target is realistic or the actions are insufficient.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d21-t3",
@@ -605,6 +729,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: what is the single biggest insight from 3 weeks of tracking?",
         description:
           "Step back from the individual numbers and look for the pattern. What has three weeks of measurement taught you about your business that you did not know — or did not want to admit — before you started tracking?",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -626,18 +752,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Map your Sales function: who owns it? What is the process? Where is it breaking?",
         description:
           "Document your entire sales process from lead generation to closed deal. Who is responsible for each stage? What tools do they use? Where do leads stall or fall out of the pipeline? Where is there no defined process at all?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t2",
         label: "Measure: rate your Sales function health on a scale of 1-10",
         description:
           "Be honest. A 10 means your sales process is predictable, scalable, and not dependent on any single person. A 1 means you have no process and you are the entire sales team. Record your score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d22-t3",
         label: "Reflect: what is the number-one fix needed in Sales?",
         description:
           "If you could only change one thing about your sales function, what would have the biggest impact? More leads? Better conversion? A defined follow-up process? A dedicated salesperson? Name the single most impactful fix.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -655,18 +787,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Map your Operations and Delivery function: who runs it? What is the process? Where is it breaking?",
         description:
           "Document the journey from 'client says yes' to 'client receives value.' Every handoff, every step, every system. Who owns each phase? Where do things slow down, get lost, or require the CEO's intervention?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d23-t2",
         label: "Measure: rate your Operations function health on a scale of 1-10",
         description:
           "A 10 means your operations run smoothly without you, quality is consistent, and the team can handle growth. A 1 means you personally manage every project and clients regularly fall through the cracks. Record your score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d23-t3",
         label: "Reflect: where are clients falling through the cracks?",
         description:
           "Think about the last three client complaints or missed deadlines. Where in your operations process did the breakdown occur? Is it a handoff problem, a capacity problem, a communication problem, or a systems problem?",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -684,12 +822,16 @@ export const protectionProtocol: DayProtocol[] = [
           "Map your Finance function: who tracks money? How often? What is missing?",
         description:
           "Document how money flows through your business. Who handles invoicing, collections, payroll, expense management, and financial reporting? How frequently do you review financial statements? What financial data do you wish you had but do not?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d24-t2",
         label: "Measure: rate your Finance function health on a scale of 1-10",
         description:
           "A 10 means you have real-time financial visibility, strong cash flow management, clean books, and forward-looking financial projections. A 1 means you check your bank balance and hope for the best. Record your score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d24-t3",
@@ -697,6 +839,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: do you know your cash position within $1,000 accuracy right now?",
         description:
           "Without looking at your accounts, what is your cash position? Now check the actual number. The gap between your guess and reality reveals how connected (or disconnected) you are from the financial pulse of your business.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -714,18 +858,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Map your Leadership function: how are you developing your team? Who is next in line?",
         description:
           "Document your current leadership development activities. Do you have regular one-on-ones? Are you investing in training? Is there a succession plan for key roles? Can anyone on your team step into your shoes for 30 days?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d25-t2",
         label: "Measure: rate your Leadership function health on a scale of 1-10",
         description:
           "A 10 means you have a leadership pipeline, regular development conversations, and at least two people who could run the business in your absence. A 1 means you are the only leader and no one else can make decisions. Record your score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d25-t3",
         label: "Reflect: if you left for 30 days, who would lead?",
         description:
           "This is the ultimate leadership test. If you disappeared for a month, would the business survive? Grow? Struggle? Collapse? The answer reveals the true strength of your leadership function. Name the person who would take over — or acknowledge that no one could.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -743,18 +893,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Map your Delivery function: from sale to fulfillment, what is the client experience?",
         description:
           "Walk through the entire client journey step by step. What happens after they say yes? How are they onboarded? How is the product or service delivered? How do you follow up? How do you measure satisfaction? Document every touchpoint.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d26-t2",
         label: "Measure: rate your Delivery function health on a scale of 1-10",
         description:
           "A 10 means clients consistently rave about their experience, refer others without being asked, and renew or repurchase automatically. A 1 means delivery is inconsistent, clients complain, and you lose business to poor experience. Record your score.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d26-t3",
         label: "Reflect: where do clients complain most?",
         description:
           "Think about the last five client complaints, negative reviews, or moments of friction. Is there a pattern? Do complaints cluster around a specific phase of delivery? That cluster is where your biggest improvement opportunity lives.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -772,18 +928,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Rank all 5 functions from weakest to strongest and create an action item for your weakest",
         description:
           "List your five function scores side by side: Sales, Operations, Finance, Leadership, Delivery. Rank them from lowest to highest. For the weakest function, write one specific action item you will complete in the next 7 days to begin strengthening it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t2",
         label: "Measure: what is your weakest function score?",
         description:
           "Record the score and the function name. This is the bottleneck of your business. No matter how strong your other functions are, your business can only grow as fast as your weakest function allows. This is your constraint.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d27-t3",
         label: "Reflect: why has this function been neglected?",
         description:
           "Be honest with yourself. Is it neglected because you do not enjoy it? Because you do not have expertise in it? Because you assumed it would take care of itself? Understanding why it was neglected is the key to ensuring it does not stay neglected.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -801,18 +963,24 @@ export const protectionProtocol: DayProtocol[] = [
           "Schedule a weekly CEO Command Center meeting with yourself — 1 hour reviewing all 5 functions",
         description:
           "Block one hour every week, same day and time, for your CEO Command Center review. The agenda: review your scorecard, check each of the five functions, identify the number-one priority for the coming week, and make one strategic decision. Put it on your calendar as a recurring, non-negotiable meeting.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d28-t2",
         label: "Measure: did you hold it today?",
         description:
           "Execute the meeting today as a pilot run. Set a timer for 60 minutes. Walk through each function, review your KPIs, and document your decisions. Track whether you completed it and how long it actually took.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d28-t3",
         label: "Reflect: what did you discover?",
         description:
           "After your first Command Center meeting, note the insights that emerged from looking at all five functions together. What connections did you see between functions? What priority became obvious when you stepped back and looked at the full picture?",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -830,6 +998,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Write your CEO Weekly Rhythm — what you do Monday through Friday by time block",
         description:
           "Map out your ideal week with specific time blocks for: CEO Command Center meeting, strategic work blocks, team one-on-ones, daily standups, client-facing time, administrative necessities, and personal recovery. Every hour should have a purpose.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d29-t2",
@@ -837,12 +1007,16 @@ export const protectionProtocol: DayProtocol[] = [
           "Measure: what percentage of your week is allocated to CEO-level work?",
         description:
           "Add up all the hours in your weekly rhythm dedicated to strategic, CEO-level activities (vision, high-value relationships, scorecard review, leadership development). Divide by total work hours. Your target is at least 40%.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d29-t3",
         label: "Reflect: compare to Day 1 — how has your time allocation changed?",
         description:
           "Pull out your Day 1 time log. Compare the percentage of CEO-level work then to your new weekly rhythm now. Document the shift. This is the tangible evidence of your transformation from operator to executive over the past 29 days.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -859,12 +1033,16 @@ export const protectionProtocol: DayProtocol[] = [
         label: "30-day assessment: retake the Pillar 1 quiz",
         description:
           "Go back to the Pillar 1 CEO Command Center assessment and answer every question again with your current reality — not where you were 30 days ago. Be honest. Record your new score.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d30-t2",
         label: "Measure: compare your new score to your original score",
         description:
           "Calculate the difference between your Day 1 score and your Day 30 score. Document which areas improved most, which areas still need work, and which areas surprised you. The gap between your two scores is the measurable impact of 30 days of intentional CEO development.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d30-t3",
@@ -872,6 +1050,8 @@ export const protectionProtocol: DayProtocol[] = [
           "Reflect: what is the single biggest change you made this month?",
         description:
           "Looking back over 30 days, identify the one shift — in behavior, mindset, or systems — that had the greatest impact on how you lead. This is your keystone habit. Protect it, build on it, and never go back to the way things were.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, Settings, BookOpen, LogOut } from 'lucide-react';
+import { Shield, Lock, ArrowRight, LayoutDashboard, BarChart3, BookOpen, User, LogOut } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@/hooks/useUser';
@@ -9,8 +9,9 @@ import { createClient } from '@/lib/supabase/client';
 
 const NAV_ITEMS = [
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/assess', label: 'Assess', icon: BookOpen },
+  { href: '/playbook', label: 'Playbook', icon: BookOpen },
   { href: '/analytics', label: 'Analytics', icon: BarChart3 },
+  { href: '/profile', label: 'Profile', icon: User },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -72,12 +73,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             );
           })}
         </nav>
-        <button
-          onClick={handleLogout}
-          className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-zinc-500 hover:text-red-400 hover:bg-red-400/5 transition-all mt-auto"
-        >
-          <LogOut className="w-4 h-4" />Sign Out
-        </button>
       </aside>
 
       {/* Main content */}
@@ -94,10 +89,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </Link>
           );
         })}
-        <button onClick={handleLogout} className="flex flex-col items-center gap-0.5 min-w-[44px] min-h-[44px] justify-center rounded-lg transition-all text-zinc-500 hover:text-red-400">
-          <LogOut className="w-5 h-5" />
-          <span className="text-[10px] font-medium">Sign Out</span>
-        </button>
       </nav>
     </div>
   );

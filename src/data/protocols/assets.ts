@@ -13,18 +13,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "List every team member and their current role title",
         description:
           "Create a simple roster: name, title, department, and who they report to. Include part-time, contract, and virtual team members.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d1-t2",
         label: "Document what each person ACTUALLY does each day",
         description:
           "Shadow or interview each team member. Write down the real tasks they spend time on — not the idealized version, the truth.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t3",
         label: "Compare actual daily activities to each person's job description",
         description:
           "Place the job description next to the reality list. Highlight every gap, extra duty, and missing responsibility. This is your baseline.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -41,18 +47,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Define the top 3 outcomes each role should deliver",
         description:
           "For every position on your roster, write down the three most important results that role exists to produce. Think outcomes, not activities.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d2-t2",
         label: "Rate each person's current delivery against those outcomes",
         description:
           "Score 1-5 for each outcome: 1 = not happening, 3 = inconsistent, 5 = consistently delivered. Be honest, not generous.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d2-t3",
         label: "Identify the biggest outcome gaps across the team",
         description:
           "Where is the greatest distance between what the role should produce and what it actually produces? These gaps are costing you money every day.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -69,18 +81,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Create a 'right seat, right person' matrix",
         description:
           "Build a two-axis grid: X-axis = competency (can they do the job?), Y-axis = cultural fit (do they align with your values?). Plot every team member.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d3-t2",
         label: "Rate each person on competency (1-10) and cultural fit (1-10)",
         description:
           "High competency + high culture = keeper. High competency + low culture = dangerous. Low competency + high culture = trainable. Low both = exit.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d3-t3",
         label: "Identify immediate actions for each quadrant",
         description:
           "Document one action per person based on their quadrant: invest, train, coach, or begin a transition plan. Do not ignore the data.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -97,18 +115,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Identify roles with overlapping responsibilities",
         description:
           "Review your Day 1 activity lists. Where are two or more people doing the same thing? Where does work fall through the cracks because everyone assumes someone else owns it?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d4-t2",
         label: "Document who should own each overlapping responsibility",
         description:
           "For every overlap, assign a single owner. One throat to choke, one person to praise. Shared ownership is no ownership.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d4-t3",
         label: "Communicate ownership changes to affected team members",
         description:
           "Have a direct conversation with each person affected. Explain what they now own, what they no longer own, and why the change was made.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -125,18 +149,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "List the most common decisions each team member faces daily",
         description:
           "Think about refunds, scheduling, pricing, vendor orders, customer complaints, hiring temps, and spending. What decisions come to you that should not?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d5-t2",
         label: "Assign authority levels to each decision type",
         description:
           "Use three levels: (1) Decide and act — no approval needed. (2) Decide and inform — act, then tell me. (3) Recommend and wait — propose a solution, I approve. Document these for every role.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d5-t3",
         label: "Share the authority framework with each team member",
         description:
           "Walk each person through their decision rights. Make it clear: 'These are yours. Own them. I trust you.' Watch their confidence shift.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -153,18 +183,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Write 3 measurable KPIs for each role",
         description:
           "KPIs must be specific and numeric. Not 'provide great service' but 'respond to every customer inquiry within 2 hours.' Not 'sell more' but 'close 5 new accounts per week.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d6-t2",
         label: "Verify each KPI is within the team member's control",
         description:
           "A KPI someone cannot influence is demoralizing, not motivating. Make sure every metric reflects effort and skill, not external luck.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d6-t3",
         label: "Set baseline targets using last month's actual performance data",
         description:
           "Do not set aspirational targets on day one. Start with current reality, then raise the bar incrementally. People need to win early.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -181,18 +217,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Review all notes from Days 1-6",
         description:
           "Pull together your roster, outcome gaps, right-seat matrix, ownership assignments, authority levels, and KPIs. Look at the full picture.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d7-t2",
         label: "Identify your single biggest team gap",
         description:
           "What is the one thing that, if fixed, would have the largest positive impact on team performance? A missing role? A wrong-seat person? A broken process?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d7-t3",
         label: "Define one specific action to close that gap this week",
         description:
           "Write down the action, the deadline, and who is responsible. Do not list five things — pick one and execute. Momentum beats perfection.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -211,18 +253,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Design a daily scorecard template",
         description:
           "Keep it simple: name, date, 3-5 metrics, a yes/no or numeric value for each, and one line for notes. It should take under 2 minutes to fill out.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d8-t2",
         label: "Customize the scorecard for each role using Day 6 KPIs",
         description:
           "Translate weekly KPIs into daily inputs. If the weekly target is 5 closed accounts, the daily metric might be 'proposals sent' or 'follow-up calls made.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d8-t3",
         label: "Choose a delivery format: spreadsheet, form, or app",
         description:
           "Use whatever your team will actually fill out. A Google Form that takes 90 seconds beats a complex dashboard nobody updates.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -239,18 +287,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Meet with each team member individually to introduce their scorecard",
         description:
           "Walk through every metric. Explain why it matters, how it connects to the team's goals, and what a 'good day' looks like on their scorecard.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t2",
         label: "Set the daily submission expectation",
         description:
           "Define when scorecards are due — end of day is standard. Make it non-negotiable but low-friction. Consistency is what creates value.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t3",
         label: "Fill out your own scorecard as the leader",
         description:
           "Lead by example. If you ask the team to track their metrics daily, you should track yours too. Share it visibly.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -267,18 +321,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Schedule a recurring weekly 1-on-1 with each direct report",
         description:
           "Block 20-30 minutes per person. Same day, same time each week. Consistency signals that this meeting is a priority, not an afterthought.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d10-t2",
         label: "Create a simple 1-on-1 meeting agenda template",
         description:
           "Structure: (1) Review scorecard data from the week. (2) What is going well? (3) What is your biggest obstacle? (4) One thing to improve next week. (5) Anything you need from me?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d10-t3",
         label: "Communicate the purpose of 1-on-1s to the team",
         description:
           "Frame it clearly: 'This is YOUR meeting. It is not a performance review. It is 20 minutes every week for me to help you succeed and for you to tell me what you need.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -295,18 +355,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Document your performance improvement process",
         description:
           "Write out the steps: (1) Verbal coaching conversation. (2) Written warning with specific expectations and timeline. (3) Formal Performance Improvement Plan (PIP) with 30-day measurable goals. (4) Termination if PIP goals are not met.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d11-t2",
         label: "Create a written warning template",
         description:
           "Include: date, specific behavior or metric that is below standard, the expected standard, the timeline to improve, and consequences of continued underperformance.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d11-t3",
         label: "Create a PIP (Performance Improvement Plan) template",
         description:
           "Include: specific goals with measurable targets, resources and support provided, weekly check-in dates, and a clear 30-day deadline. Fair, documented, and objective.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -323,18 +389,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Review each person's scorecard data before their 1-on-1",
         description:
           "Look for patterns across the week. Which metrics are consistently strong? Which are lagging? Come prepared with observations, not opinions.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t2",
         label: "Conduct each 1-on-1 using your agenda template",
         description:
           "Follow the structure: review data, celebrate wins, identify obstacles, agree on one improvement focus for next week. Keep it conversational, not interrogational.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t3",
         label: "Document the agreed improvement focus for each person",
         description:
           "Write it down. Both of you should know what 'better' looks like next week. This becomes the first item you review in the next 1-on-1.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -351,18 +423,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Design a recognition system for your team",
         description:
           "Decide what you will recognize (hitting KPIs, living the values, going above and beyond) and how (public shout-out, bonus, gift card, extra time off, team lunch).",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t2",
         label: "Set a budget and cadence for recognition",
         description:
           "Weekly small recognition (verbal, public praise) costs nothing. Monthly larger recognition (gift card, bonus) needs a budget. Plan both.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t3",
         label: "Announce the recognition system to the team",
         description:
           "Tell the team exactly what gets recognized and how. Transparency makes recognition motivating rather than political. Everyone should know how to earn it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -379,18 +457,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Audit scorecard compliance: who filled them in and who did not?",
         description:
           "Check every day of the past week. Missing scorecards are an early warning sign. Address non-compliance immediately — the system only works if it is used.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d14-t2",
         label: "Analyze scorecard data for team-wide patterns",
         description:
           "Are there metrics nobody is hitting? That might be a system problem, not a people problem. Are there standout performers? Learn what they are doing differently.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d14-t3",
         label: "Refine any metrics that proved unclear or unmeasurable",
         description:
           "If a metric confused people or could not be tracked accurately, fix it now. The scorecard must be simple, clear, and trusted to survive long-term.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -409,18 +493,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Draft 3-5 core values for your company",
         description:
           "Use language that is real and specific, not corporate fluff. Think: 'Givers, not takers.' 'Burn the boats mentality.' 'We solve problems, we do not sell.' 'Say it to their face, not behind their back.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d15-t2",
         label: "For each value, write a one-sentence definition and one example behavior",
         description:
           "A value without a behavior is just a poster on the wall. Define what each value looks like in action on a Tuesday afternoon.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d15-t3",
         label: "Pressure-test each value: would you fire a top performer for violating it?",
         description:
           "If the answer is no, it is a preference, not a value. Real values have teeth. They cost you something to enforce.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -437,18 +527,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Share your draft values with the entire team",
         description:
           "Present the values in a team meeting or shared document. Do not present them as final — present them as a draft you want their honest input on.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d16-t2",
         label: "Ask each team member: do these resonate? What is missing?",
         description:
           "Give people space to respond honestly. Use anonymous written responses if your culture is not yet safe enough for public disagreement.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d16-t3",
         label: "Note which values generated the strongest agreement and which generated pushback",
         description:
           "Pushback is valuable data. If a value does not resonate with the team, either the wording is wrong or the value is aspirational rather than real.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -465,18 +561,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Finalize your 3-5 core values based on team feedback",
         description:
           "Incorporate the strongest input. Remove anything that felt forced. Keep the language direct and memorable — if it sounds like a mission statement, simplify it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t2",
         label: "Create a values document with definitions and example behaviors",
         description:
           "One page. Each value, its definition, and one concrete 'this is what it looks like' example. Print it, post it, share it digitally.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t3",
         label: "Commit to using values language in your daily leadership",
         description:
           "Start referencing values in meetings, 1-on-1s, and decisions: 'That is a givers-not-takers move.' 'That decision has burn-the-boats energy.' Values live in language.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -493,18 +595,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Choose a feedback format: anonymous survey or open forum",
         description:
           "If trust is high, an open forum works. If trust is still building, start with an anonymous weekly survey (Google Form, Typeform, or similar). Ask 3-5 questions max.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d18-t2",
         label: "Design your first weekly feedback survey",
         description:
           "Suggested questions: (1) What went well this week? (2) What frustrated you? (3) What is one thing leadership could do better? (4) Rate your energy this week 1-10.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d18-t3",
         label: "Send the first survey and commit to reviewing results every week",
         description:
           "The survey only builds trust if people see that you read it and act on it. Share a summary of themes with the team each week — even if you cannot fix everything immediately.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -521,18 +629,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Choose a real operational problem to bring to the team",
         description:
           "Pick something meaningful but not catastrophic. A recurring customer complaint, a workflow bottleneck, a communication breakdown. Something they experience daily.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d19-t2",
         label: "Facilitate the session: present the problem, then step back",
         description:
           "State the problem clearly. Then say: 'I want the team to solve this. I am here to listen.' Resist the urge to jump in with your solution. Let them think, debate, and decide.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d19-t3",
         label: "Document the team's solution and assign an owner to implement it",
         description:
           "Whatever they decide, support it. Assign one person to own the implementation. Follow up next week. This builds problem-solving muscle in the team.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -549,18 +663,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Introduce the peer recognition concept to the team",
         description:
           "Explain the idea: every week, each team member can publicly call out one colleague who did something great. It can be a Slack message, a meeting shout-out, or a shared document.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t2",
         label: "Choose a format and launch it today",
         description:
           "Options: a dedicated Slack channel (#wins), a section in the weekly team meeting, a shared Google Doc, or a physical board in the office. Pick one and launch it now.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t3",
         label: "Lead by example — post the first peer recognition yourself",
         description:
           "Recognize someone on the team publicly using the new system. Be specific about what they did and why it mattered. Model the behavior you want to see.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -577,18 +697,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Review feedback survey results from this week",
         description:
           "Read every response. Look for themes: what keeps coming up? What surprised you? Where is energy high? Where is it low?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d21-t2",
         label: "Assess: what does culture look like now vs. Day 1?",
         description:
           "Has communication improved? Are people more engaged? Is there more ownership? Be honest about both the progress and the gaps.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d21-t3",
         label: "Identify the biggest culture crack and one action to address it",
         description:
           "Every team has a crack — a place where the values are not lived consistently. Name it. Define one action to reinforce the standard. Culture is maintained through correction, not just celebration.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -607,18 +733,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Step away for 2 hours — tell no one what to do before leaving",
         description:
           "Do not prep the team. Do not assign tasks. Do not say 'call me if you need anything.' Just leave. Let them operate. This is the test.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t2",
         label: "Document what happened during your absence",
         description:
           "When you return, review: Were customers served? Were decisions made? Did anyone panic? Did anything fall through the cracks? Write it all down.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d22-t3",
         label: "Note what questions or issues waited for your return",
         description:
           "What piled up in your inbox? What did someone 'save for when you got back'? These are the areas where the team still depends on you.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -635,18 +767,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Identify the #1 thing that went wrong during your absence",
         description:
           "Was it a customer issue nobody handled? A decision nobody made? A process that stalled? Pick the single most impactful failure.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d23-t2",
         label: "Write an SOP for that specific issue",
         description:
           "Standard Operating Procedure: step-by-step instructions anyone on the team can follow to handle this situation without you. Keep it to one page.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d23-t3",
         label: "Share the SOP with the relevant team member and walk through it",
         description:
           "Do not just email it. Sit with the person, walk through each step, and ask them to explain it back to you. Understanding is confirmed by teaching, not reading.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -663,18 +801,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Choose a team lead for tomorrow's half-day absence",
         description:
           "Pick the person who scored highest on your right-seat matrix for both competency and cultural fit. This is a development opportunity, not a punishment.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d24-t2",
         label: "Brief the team lead on their authority and responsibilities",
         description:
           "Be explicit: 'You make all decisions while I am gone. Use the authority framework from Day 5. If something falls outside that framework, use your best judgment and document the decision.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d24-t3",
         label: "Announce to the team that this person is in charge tomorrow",
         description:
           "Public announcement matters. It gives the team lead legitimacy and tells the rest of the team who to go to. Do not undermine this by saying 'but call me if it is really important.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -691,18 +835,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Step away for half a day — your team lead runs everything",
         description:
           "Leave for 4-5 hours. Do not check in. Do not hover. Do not text 'How is it going?' Trust the system you built and the person you chose.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d25-t2",
         label: "Have your team lead document every decision they made",
         description:
           "Ask them to keep a simple log: time, situation, decision, outcome. This gives you visibility without micromanagement.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d25-t3",
         label: "Document results when you return",
         description:
           "What went well? What went wrong? How did the team lead perform? How did the rest of the team respond to someone else being in charge? Write it all down.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -719,18 +869,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Debrief with your team lead one-on-one",
         description:
           "Review their decision log. Discuss each situation: what did they consider? What was hard? What would they do differently? Coach, do not criticize.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d26-t2",
         label: "Identify what worked well and what needs an SOP",
         description:
           "Separate the wins from the gaps. For every gap, ask: 'Could an SOP have prevented this?' If yes, add it to your SOP backlog.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d26-t3",
         label: "Give the team lead specific feedback and a development action",
         description:
           "Tell them one thing they did exceptionally well and one specific thing to work on. Assign a development action they can practice before the full-day test on Day 28.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -747,18 +903,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "List the top 3 recurring issues that required your involvement",
         description:
           "Pull from your 2-hour test, half-day test, and daily experience. What situations keep landing on your desk that the team should handle themselves?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d27-t2",
         label: "Write a one-page SOP for each of the 3 issues",
         description:
           "Each SOP: problem description, step-by-step resolution process, decision thresholds, escalation criteria, and who owns it. Keep it clear enough that a new hire could follow it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t3",
         label: "Review all 3 SOPs with the relevant team members",
         description:
           "Walk through each SOP with the person who will use it. Have them practice the scenario if possible. Confirm understanding before tomorrow's full-day test.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -775,18 +937,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Step away for a full day — you are unreachable",
         description:
           "No phone, no email, no Slack, no 'just checking in.' Your team lead is in charge. Your SOPs are in place. Your authority framework is clear. Trust the system.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d28-t2",
         label: "Have your team lead keep a detailed decision and incident log",
         description:
           "Every decision, every issue, every customer interaction — logged with time, situation, action taken, and result. This is your data for tomorrow's debrief.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d28-t3",
         label: "Observe your own emotional response during the day away",
         description:
           "Are you anxious? Relieved? Bored? Your emotional reaction reveals how much of your identity is tied to being needed vs. being effective. Journal about it.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -803,18 +971,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Debrief the full-day test with your team lead and the full team",
         description:
           "Review the decision log. What went right? What broke? What was handled without any issue? Celebrate the wins publicly — the team just ran your business without you.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d29-t2",
         label: "Rate your team's independence 1-10",
         description:
           "1 = total chaos without you. 10 = you could leave for a month and nothing would miss a beat. Be honest. Most teams after this protocol land between 6 and 8. That is real progress.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d29-t3",
         label: "Define the gap between your current rating and a 10",
         description:
           "What specific capabilities, SOPs, or leadership development would close the remaining gap? Write them down. These become your next 30-day priorities.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -831,18 +1005,24 @@ export const assetsProtocol: DayProtocol[] = [
         label: "Retake the Team Architecture quiz and compare to your Day 1 score",
         description:
           "Answer every question honestly. Compare your answers to 30 days ago. Where did you improve the most? Where is there still work to do?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d30-t2",
         label: "Document your single biggest team improvement over the past 30 days",
         description:
           "What changed the most? Was it role clarity, performance visibility, cultural alignment, or team independence? Name it, measure it, and own it.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d30-t3",
         label: "Write your top 3 priorities for the next 30 days of team development",
         description:
           "Based on your independence rating gap, your scorecard data, and your feedback surveys, define the three most impactful things to work on next. The protocol ends; the building never stops.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:

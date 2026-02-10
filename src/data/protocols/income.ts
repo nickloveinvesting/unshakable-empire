@@ -12,12 +12,16 @@ export const incomeProtocol: DayProtocol[] = [
         label: "List your top 10 clients ranked by total revenue generated",
         description:
           "Pull actual numbers. Who has paid you the most over their lifetime as a client?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t2",
         label: "Note how long each top-10 client has been with you",
         description:
           "Document the start date of each relationship. Are your best clients long-term or recent?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t3",
@@ -25,6 +29,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Write down why each of the top 10 originally chose to work with you",
         description:
           "What problem brought them to you? What made them say yes? This is the seed of your avatar.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -42,18 +48,24 @@ export const incomeProtocol: DayProtocol[] = [
           "For each top-10 client, document their industry and business type",
         description:
           "Are they in the same industry? Adjacent industries? Completely scattered? Look for clusters.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d2-t2",
         label: "Record company size, annual revenue, and number of employees",
         description:
           "Do your best clients tend to be startups, mid-market, or enterprise? There is a sweet spot.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d2-t3",
         label: "Note their geographic location and market position",
         description:
           "Are they local, regional, or national? Are they market leaders or challengers? Document the pattern.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -71,12 +83,16 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the primary pain point each top-10 client had before working with you",
         description:
           "What was keeping them up at night? What problem were they desperate to solve?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d3-t2",
         label: "Document what motivated each client to finally take action",
         description:
           "Was it a triggering event, a deadline, frustration, or an aspiration? What made them move NOW?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d3-t3",
@@ -84,6 +100,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Note the emotional language each client used when describing their problem",
         description:
           "Did they say 'frustrated,' 'overwhelmed,' 'stuck,' 'scared'? Their words become your marketing language.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -101,6 +119,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the top 3 patterns your best clients share across demographics and psychographics",
         description:
           "What industry, size, pain point, or motivation appears most frequently? These are your avatar anchors.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d4-t2",
@@ -108,12 +128,16 @@ export const incomeProtocol: DayProtocol[] = [
           "Write a one-page ideal client avatar document with specific details",
         description:
           "Include industry, company size, revenue range, decision-maker title, primary pain point, buying trigger, and desired outcome.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d4-t3",
         label: "Give your avatar a name and make it feel like a real person",
         description:
           "Naming your avatar makes it concrete. 'We are targeting Regional Rick' is more actionable than 'mid-market companies.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -131,6 +155,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Present the ideal client avatar to your team in a meeting or document share",
         description:
           "Walk through the demographics, psychographics, pain points, and buying triggers. Make it vivid.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d5-t2",
@@ -138,6 +164,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Ask your team: does this match who we are currently targeting in our marketing and sales?",
         description:
           "Get honest feedback. Your frontline team often sees mismatches that leadership misses.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d5-t3",
@@ -145,6 +173,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify any gaps between the avatar and your current marketing, messaging, or targeting",
         description:
           "Document where your outreach does not match your avatar. These gaps are revenue leaks.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -162,6 +192,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Score each current client on a 1-10 scale for avatar fit",
         description:
           "10 = perfect match on demographics, psychographics, and profitability. 1 = total misfit.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d6-t2",
@@ -169,6 +201,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Calculate the percentage of clients that score 7 or above",
         description:
           "This is your avatar alignment rate. Below 50% means you are spending too much energy on wrong-fit clients.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d6-t3",
@@ -176,6 +210,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify your lowest-scoring clients and assess whether to transition or release them",
         description:
           "Misfit clients consume disproportionate time, create complaints, and drag down profitability. Be honest.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -193,12 +229,16 @@ export const incomeProtocol: DayProtocol[] = [
           "Review all notes from Days 1-6 and identify the single biggest insight about your ideal client",
         description:
           "What surprised you? What pattern did you not expect? This insight should reshape how you sell.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d7-t2",
         label: "Refine your avatar document based on this week's findings",
         description:
           "Update any details that changed as you dug deeper. The avatar is a living document.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d7-t3",
@@ -206,6 +246,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Set one specific action for next week based on your avatar insight",
         description:
           "Will you adjust targeting, change messaging, fire a client, or shift your marketing? Decide now.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -223,6 +265,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Map every step in your current sales process from initial contact to signed deal",
         description:
           "Include lead generation, first response, discovery call, proposal, follow-up, negotiation, and close.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d8-t2",
@@ -230,6 +274,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the average time between each step and overall sales cycle length",
         description:
           "How long does it take from first touch to closed deal? Where do deals stall or die?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d8-t3",
@@ -237,6 +283,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Document any steps that are inconsistent, skipped, or handled differently by different team members",
         description:
           "Inconsistency in the sales process means unpredictable results. Find the variations.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -254,6 +302,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Write 10 discovery questions your team should ask BEFORE presenting any solution",
         description:
           "Focus on understanding the prospect's situation, pain, impact, and desired outcome before you ever talk about what you sell.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t2",
@@ -261,6 +311,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Organize questions into categories: Situation, Problem, Impact, and Need",
         description:
           "Situation: where are you now? Problem: what is not working? Impact: what is it costing you? Need: what would success look like?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t3",
@@ -268,6 +320,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Practice asking these questions out loud until they sound natural, not scripted",
         description:
           "Read them aloud, adjust the wording, and rehearse until the questions flow like a conversation.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -285,6 +339,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Write down your current pitch -- the way you describe what you do today",
         description:
           "Be honest. Record or write exactly what you say when someone asks 'what does your company do?'",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d10-t2",
@@ -292,6 +348,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Rewrite the pitch to lead with the problem you solve, not the product you sell",
         description:
           "Before: 'We offer cloud-based accounting software.' After: 'We help small business owners stop losing money to bookkeeping errors.'",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d10-t3",
@@ -299,6 +357,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Test the new pitch on 3 people today and note their reaction",
         description:
           "Does the new version spark curiosity and conversation? Or do their eyes glaze over? Adjust accordingly.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -316,6 +376,8 @@ export const incomeProtocol: DayProtocol[] = [
           "List the top 5 objections your sales team hears most often",
         description:
           "Common ones: too expensive, need to think about it, we are happy with our current provider, bad timing, need to talk to my partner.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d11-t2",
@@ -323,6 +385,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Write a handling script for each objection that acknowledges, reframes, and redirects",
         description:
           "Acknowledge the concern. Reframe it as a reason to move forward. Redirect to the value and the cost of inaction.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d11-t3",
@@ -330,6 +394,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Practice each objection response until your team can deliver it naturally",
         description:
           "Role-play the objection and response. Confidence comes from repetition, not talent.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -347,6 +413,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Role-play the full sales process with a team member: discovery, diagnosis, presentation, close",
         description:
           "One person plays the prospect, the other runs the process. Switch roles and repeat.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t2",
@@ -354,6 +422,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Record the role-play and review it together for strengths and improvement areas",
         description:
           "Watching yourself sell is uncomfortable but incredibly revealing. Note pacing, tone, and question quality.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t3",
@@ -361,6 +431,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the top 3 improvements and practice those specific moments again",
         description:
           "Did you rush through discovery? Fumble an objection? Forget to ask for the close? Drill the weak spots.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -378,6 +450,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Audit your website, emails, and sales collateral for salesy language",
         description:
           "Look for phrases like 'buy now,' 'limited time,' 'best in class,' or anything that feels like a pitch instead of a conversation.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t2",
@@ -385,6 +459,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Rewrite salesy copy to focus on problems solved and outcomes delivered",
         description:
           "Replace 'Our award-winning platform' with 'Stop losing 10 hours a week to manual processes.' Lead with the client's world, not yours.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t3",
@@ -392,6 +468,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Create a 'banned words' list and a 'preferred language' guide for your team",
         description:
           "Ban: cutting-edge, synergy, best-in-class, revolutionary. Prefer: solve, fix, save, grow, protect, simplify.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -409,6 +487,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Confirm that your sales process, discovery questions, objection scripts, and pitch are documented in one place",
         description:
           "Everything should be in a single playbook that any team member can reference at any time.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d14-t2",
@@ -416,6 +496,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Ask your team: are you following the documented process on every deal? What needs adjustment?",
         description:
           "Process adoption is the real challenge. Get honest feedback about what works and what feels forced.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d14-t3",
@@ -423,6 +505,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the one biggest weakness in your sales process and create a plan to fix it this week",
         description:
           "Is discovery too shallow? Are objections fumbled? Is follow-up inconsistent? Pick one and fix it.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -440,6 +524,8 @@ export const incomeProtocol: DayProtocol[] = [
           "List every product or service you currently offer with its price point",
         description:
           "Include one-time purchases, recurring services, add-ons, and any bundled offerings.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d15-t2",
@@ -447,6 +533,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Arrange them from lowest to highest price on a visual ladder or chart",
         description:
           "Can a client see a clear path from entry-level purchase to premium offering? Or are there gaps?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d15-t3",
@@ -454,6 +542,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Note which offerings generate the most revenue and which generate the most profit",
         description:
           "Revenue and profit are different. Some high-revenue offerings may have thin margins while smaller offerings may be highly profitable.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -471,6 +561,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify gaps in your offer ladder -- is there a clear path from entry offer to premium?",
         description:
           "Can someone start with a low-risk, low-cost offering and naturally progress to your highest-value service?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d16-t2",
@@ -478,6 +570,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Determine if you have an entry-level offer that reduces risk for new clients",
         description:
           "A low-cost or free entry point (audit, assessment, trial, consultation) gets people in the door. Do you have one?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d16-t3",
@@ -485,6 +579,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Design one new offering that fills the biggest gap in your ladder",
         description:
           "If there is a jump from $500 to $5,000, you need something in between. Design it today.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -502,6 +598,8 @@ export const incomeProtocol: DayProtocol[] = [
           "For each offering, define the natural next purchase a client should make",
         description:
           "After someone buys X, what should they buy next? Map the logical progression for every product.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t2",
@@ -509,6 +607,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Create upsell scripts or prompts that your team can use at key moments",
         description:
           "When is the right time to suggest the next step? What should the team say? Write it down.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t3",
@@ -516,6 +616,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify cross-sell opportunities between different product or service lines",
         description:
           "Does buying product A make product B more valuable? Bundle them or offer B as a natural complement.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -533,12 +635,16 @@ export const incomeProtocol: DayProtocol[] = [
           "Calculate the total revenue from each of your top 10 clients over the entire relationship",
         description:
           "Add up every dollar they have ever paid you. Include initial purchase, renewals, upsells, and add-ons.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d18-t2",
         label: "Calculate your average client lifetime value (LTV) across all clients",
         description:
           "Total revenue from all clients divided by total number of clients. This is your baseline LTV.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d18-t3",
@@ -546,6 +652,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Compare your top-10 LTV to your average LTV -- what is the gap?",
         description:
           "If your top 10 are worth 5x or 10x your average client, that tells you the power of avatar-fit clients and a complete offer ladder.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -563,6 +671,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Map your current client onboarding process from signed deal to first value delivered",
         description:
           "What happens after someone says yes? Is it smooth and intentional, or chaotic and inconsistent?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d19-t2",
@@ -570,6 +680,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Design a structured onboarding experience that delivers a quick win within the first 7 days",
         description:
           "The faster a new client sees value, the more confident they feel about their decision. Create that early win.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d19-t3",
@@ -577,6 +689,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Build a welcome sequence -- emails, calls, or touchpoints that make new clients feel valued",
         description:
           "A welcome email, a personal call from leadership, a kickoff meeting, and a 30-day check-in. Map the touchpoints.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -594,6 +708,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Document how your current referrals happen -- is it structured or random?",
         description:
           "Do you actively ask for referrals? Do you have a process? Or do they just happen occasionally by accident?",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d20-t2",
@@ -601,6 +717,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Design a formal referral program with clear incentives and a simple ask",
         description:
           "What does the referring client get? What does the new client get? Make it easy and rewarding for both sides.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t3",
@@ -608,6 +726,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Create the referral ask script and identify the best moment to use it",
         description:
           "The best time to ask for a referral is right after delivering a win. Script the ask so it feels natural, not awkward.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -625,6 +745,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Review your complete offer ladder -- is every step filled from entry to premium?",
         description:
           "Walk through the ladder. Can a new client enter at the bottom and progress naturally to the top?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d21-t2",
@@ -632,6 +754,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Assess whether your upsell, cross-sell, and referral systems are documented and ready to execute",
         description:
           "Documentation without execution is academic. Are these systems live and being used?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d21-t3",
@@ -639,6 +763,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the biggest revenue gap remaining -- what single change would increase revenue the most?",
         description:
           "Is it a missing offer? A broken upsell path? No referral system? A weak onboarding experience? Name it.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -656,6 +782,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Define your pipeline stages: Lead, Qualified, Proposal, Negotiation, Close",
         description:
           "Every deal should sit in one stage at all times. Define exactly what qualifies a deal to move to the next stage.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t2",
@@ -663,6 +791,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Set up your pipeline in a CRM or tracking tool with these stages",
         description:
           "Use a CRM, spreadsheet, or project management tool. The format matters less than the discipline of tracking every deal.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t3",
@@ -670,6 +800,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Enter every current open deal into the pipeline at the correct stage",
         description:
           "Get a real-time snapshot of your pipeline today. How many deals are at each stage? What is the total value?",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -687,6 +819,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Calculate the conversion rate from each pipeline stage to the next",
         description:
           "What percentage of leads become qualified? Qualified to proposal? Proposal to close? Track each transition.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d23-t2",
@@ -694,6 +828,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify the stage with the biggest drop-off in your pipeline",
         description:
           "This is your revenue bottleneck. If 80% of deals die between proposal and close, that is where you focus.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d23-t3",
@@ -701,6 +837,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Develop a specific plan to improve conversion at your weakest stage",
         description:
           "Better qualification? Stronger proposals? Faster follow-up? Address the root cause of the drop-off.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -718,6 +856,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Track every deal this week by its original source: referral, organic, paid, networking, cold outreach",
         description:
           "Ask every prospect: how did you hear about us? Log the answer for every deal in your pipeline.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d24-t2",
@@ -725,6 +865,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Analyze historical data -- which source has generated the most revenue over the past 12 months?",
         description:
           "Look at closed deals, not just leads. Some sources generate lots of leads but few deals; others convert at a high rate.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d24-t3",
@@ -732,6 +874,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Rank your revenue sources by both volume and conversion quality",
         description:
           "The best source is not the one that produces the most leads -- it is the one that produces the most closed revenue.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -749,6 +893,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Calculate your total customer acquisition cost (CAC) across all channels",
         description:
           "Total sales and marketing spend divided by total new clients acquired. This is your blended CAC.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d25-t2",
@@ -756,6 +902,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Break down CAC by channel -- what does it cost to acquire a client from each source?",
         description:
           "Referral CAC, paid advertising CAC, organic CAC, networking CAC. They will be dramatically different.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d25-t3",
@@ -763,6 +911,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Compare CAC to LTV for each channel -- which channels are profitable and which are not?",
         description:
           "A healthy LTV-to-CAC ratio is 3:1 or higher. If a channel's ratio is below 2:1, it may not be sustainable.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -780,6 +930,8 @@ export const incomeProtocol: DayProtocol[] = [
           "List every deal in your pipeline with its stage, value, and estimated close date",
         description:
           "This is your raw forecast data. Be realistic about close dates -- optimism bias kills forecasts.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d26-t2",
@@ -787,6 +939,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Apply your stage conversion rates to weight each deal by probability of closing",
         description:
           "A deal in the proposal stage with a 40% historical close rate should be weighted at 40% of its value.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d26-t3",
@@ -794,6 +948,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Create a 90-day forecast by month: Month 1, Month 2, Month 3 expected revenue",
         description:
           "Sum the weighted values by expected close month. This is your probability-weighted forecast.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -811,6 +967,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Schedule a weekly revenue review meeting with a fixed day, time, and attendee list",
         description:
           "Put it on the calendar as a recurring event. This meeting is non-negotiable -- it is the heartbeat of your revenue system.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t2",
@@ -818,6 +976,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Create the meeting agenda: pipeline review, conversion rates, forecast updates, action items",
         description:
           "Cover: new leads added, deals advanced, deals lost, conversion rates by stage, updated forecast, and blockers.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t3",
@@ -825,6 +985,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Assign ownership -- who is responsible for updating the pipeline before each meeting?",
         description:
           "Data hygiene is critical. If the pipeline is not updated, the meeting is useless. Assign clear responsibility.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -842,6 +1004,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Calculate the profit margin on each revenue stream or product line",
         description:
           "Revenue minus cost of delivery, including labor, materials, overhead, and your time.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d28-t2",
@@ -849,6 +1013,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Rank your revenue streams from most profitable to least profitable",
         description:
           "Not by revenue -- by profit margin. The highest-revenue stream may not be the most profitable.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d28-t3",
@@ -856,6 +1022,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Decide what to double down on, what to optimize, and what to eliminate",
         description:
           "Double down on high-margin streams. Optimize mid-margin streams. Eliminate or price-increase low-margin streams.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -873,6 +1041,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Design a one-page revenue dashboard with key metrics: pipeline value, close rate, CAC, LTV, and forecast",
         description:
           "Keep it simple. Five to seven metrics maximum. If it takes more than 60 seconds to read, it is too complex.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d29-t2",
@@ -880,6 +1050,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Populate the dashboard with your current data from this month's work",
         description:
           "Fill in real numbers, not placeholders. This is your baseline -- the starting point for improvement.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d29-t3",
@@ -887,6 +1059,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Commit to updating the dashboard weekly as part of your revenue review meeting",
         description:
           "A dashboard that is not updated is worse than no dashboard. Build the update into your weekly cadence.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -904,6 +1078,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Retake the Revenue Pipeline assessment and compare your scores to Day 1",
         description:
           "How has your avatar clarity, sales process, offer ladder, and revenue tracking improved? Measure the change.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d30-t2",
@@ -911,6 +1087,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Document your top 3 revenue insights from the past 30 days",
         description:
           "What did you learn about your clients, your process, your offers, or your numbers that changed your perspective?",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d30-t3",
@@ -918,6 +1096,8 @@ export const incomeProtocol: DayProtocol[] = [
           "Identify your single biggest revenue improvement opportunity for the next 90 days",
         description:
           "What one change -- in your avatar targeting, sales process, offer ladder, or pipeline management -- would have the biggest impact?",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:

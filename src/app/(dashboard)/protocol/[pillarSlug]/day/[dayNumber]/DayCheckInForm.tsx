@@ -26,11 +26,20 @@ export function DayCheckInForm({
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Initialize state from saved responses
-  const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>(() => {
-    const initial: Record<string, boolean> = {};
+  // Initialize task responses based on task types
+  const [taskResponses, setTaskResponses] = useState<Record<string, string | number | boolean>>(() => {
+    const initial: Record<string, string | number | boolean> = {};
     for (const task of tasks) {
-      initial[task.id] = savedResponses?.[task.id] === true || false;
+      const savedValue = savedResponses?.[task.id];
+      const inputType = task.input_type || 'checkbox';
+
+      if (inputType === 'checkbox') {
+        initial[task.id] = savedValue === true || false;
+      } else if (inputType === 'number' || inputType === 'scale') {
+        initial[task.id] = typeof savedValue === 'number' ? savedValue : inputType === 'scale' ? 5 : 0;
+      } else if (inputType === 'text') {
+        initial[task.id] = typeof savedValue === 'string' ? savedValue : '';
+      }
     }
     return initial;
   });
@@ -49,25 +58,32 @@ export function DayCheckInForm({
     return "";
   });
 
-  const toggleTask = (taskId: string) => {
-    setCompletedTasks((prev) => ({
+  const updateTaskResponse = (taskId: string, value: string | number | boolean) => {
+    setTaskResponses((prev) => ({
       ...prev,
-      [taskId]: !prev[taskId],
+      [taskId]: value,
     }));
     setSaved(false);
   };
 
-  const completedCount = Object.values(completedTasks).filter(Boolean).length;
+  // Calculate completion - count tasks where:
+  // - checkbox tasks are true
+  // - number/scale tasks have non-zero values
+  // - text tasks have non-empty strings
+  const completedCount = tasks.filter((task) => {
+    const response = taskResponses[task.id];
+    const inputType = task.input_type || 'checkbox';
+    if (inputType === 'checkbox') return response === true;
+    if (inputType === 'number' || inputType === 'scale') return typeof response === 'number' && response > 0;
+    if (inputType === 'text') return typeof response === 'string' && response.trim().length > 0;
+    return false;
+  }).length;
+
   const totalTasks = tasks.length;
   const completionPercentage = totalTasks > 0 ? Math.round((completedCount / totalTasks) * 100) : 0;
 
   const handleSubmit = async () => {
-    const responses: Record<string, string | number | boolean> = {};
-
-    // Save task completion states
-    for (const task of tasks) {
-      responses[task.id] = completedTasks[task.id] || false;
-    }
+    const responses: Record<string, string | number | boolean> = { ...taskResponses };
 
     // Save confidence score and notes
     responses.confidence_score = confidenceScore;
@@ -91,6 +107,179 @@ export function DayCheckInForm({
     });
   };
 
+  // Badge component for task types
+  const TaskTypeBadge = ({ type }: { type: 'action' | 'measure' | 'reflect' }) => {
+    const badgeStyles = {
+      action: 'bg-amber-400/10 text-amber-400 border-amber-400/20',
+      measure: 'bg-blue-400/10 text-blue-400 border-blue-400/20',
+      reflect: 'bg-purple-400/10 text-purple-400 border-purple-400/20',
+    };
+
+    return (
+      <span className={`inline-flex px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${badgeStyles[type]}`}>
+        {type}
+      </span>
+    );
+  };
+
+  // Render individual task based on type
+  const renderTask = (task: ProtocolTask) => {
+    const response = taskResponses[task.id];
+
+    // Default to 'action' and 'checkbox' if not specified
+    const taskType = task.type || 'action';
+    const inputType = task.input_type || 'checkbox';
+
+    // ACTION tasks (checkbox)
+    if (inputType === 'checkbox') {
+      const isChecked = response === true;
+      return (
+        <button
+          key={task.id}
+          type="button"
+          onClick={() => updateTaskResponse(task.id, !isChecked)}
+          className={`w-full text-left flex items-start gap-3 p-4 rounded-lg border transition-all ${
+            isChecked
+              ? "bg-amber-400/5 border-amber-400/20"
+              : "bg-zinc-900/40 border-zinc-800 hover:border-zinc-700"
+          }`}
+        >
+          <div className="shrink-0 mt-0.5">
+            {isChecked ? (
+              <CheckSquare className="w-5 h-5 text-amber-400" />
+            ) : (
+              <Square className="w-5 h-5 text-zinc-600" />
+            )}
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <p
+                className={`text-sm font-medium ${
+                  isChecked ? "text-zinc-300 line-through" : "text-white"
+                }`}
+              >
+                {task.label}
+              </p>
+              <TaskTypeBadge type={taskType} />
+            </div>
+            {task.description && (
+              <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
+                {task.description}
+              </p>
+            )}
+          </div>
+        </button>
+      );
+    }
+
+    // MEASURE/REFLECT tasks (number input)
+    if (task.input_type === 'number') {
+      return (
+        <div key={task.id} className="bg-zinc-900/40 border border-zinc-800 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <label htmlFor={task.id} className="text-sm font-medium text-white flex-1">
+              {task.label}
+            </label>
+            <TaskTypeBadge type={taskType} />
+          </div>
+          {task.description && (
+            <p className="text-xs text-zinc-500 mb-3 leading-relaxed">
+              {task.description}
+            </p>
+          )}
+          <input
+            id={task.id}
+            type="number"
+            value={typeof response === 'number' ? response : ''}
+            onChange={(e) => updateTaskResponse(task.id, parseFloat(e.target.value) || 0)}
+            placeholder="Enter number..."
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+          />
+        </div>
+      );
+    }
+
+    // MEASURE/REFLECT tasks (scale/slider)
+    if (task.input_type === 'scale') {
+      const scaleValue = typeof response === 'number' ? response : 5;
+      return (
+        <div key={task.id} className="bg-zinc-900/40 border border-zinc-800 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <label htmlFor={task.id} className="text-sm font-medium text-white flex-1">
+              {task.label}
+            </label>
+            <TaskTypeBadge type={taskType} />
+          </div>
+          {task.description && (
+            <p className="text-xs text-zinc-500 mb-3 leading-relaxed">
+              {task.description}
+            </p>
+          )}
+          <div className="space-y-3">
+            <input
+              id={task.id}
+              type="range"
+              min={1}
+              max={10}
+              value={scaleValue}
+              onChange={(e) => updateTaskResponse(task.id, parseInt(e.target.value, 10))}
+              className="w-full h-2 bg-zinc-800 rounded-full appearance-none cursor-pointer accent-blue-400
+                [&::-webkit-slider-thumb]:appearance-none
+                [&::-webkit-slider-thumb]:w-5
+                [&::-webkit-slider-thumb]:h-5
+                [&::-webkit-slider-thumb]:rounded-full
+                [&::-webkit-slider-thumb]:bg-blue-400
+                [&::-webkit-slider-thumb]:cursor-pointer
+                [&::-webkit-slider-thumb]:shadow-lg
+                [&::-webkit-slider-thumb]:shadow-blue-400/20
+                [&::-moz-range-thumb]:w-5
+                [&::-moz-range-thumb]:h-5
+                [&::-moz-range-thumb]:rounded-full
+                [&::-moz-range-thumb]:bg-blue-400
+                [&::-moz-range-thumb]:border-0
+                [&::-moz-range-thumb]:cursor-pointer"
+            />
+            <div className="flex items-center justify-between">
+              <span className="text-xs text-zinc-600">1</span>
+              <span className="text-lg font-bold text-blue-400">{scaleValue}</span>
+              <span className="text-xs text-zinc-600">10</span>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // REFLECT tasks (text area)
+    if (task.input_type === 'text') {
+      const textValue = typeof response === 'string' ? response : '';
+      return (
+        <div key={task.id} className="bg-zinc-900/40 border border-zinc-800 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <label htmlFor={task.id} className="text-sm font-medium text-white flex-1">
+              {task.label}
+            </label>
+            <TaskTypeBadge type={taskType} />
+          </div>
+          {task.description && (
+            <p className="text-xs text-zinc-500 mb-3 leading-relaxed">
+              {task.description}
+            </p>
+          )}
+          <textarea
+            id={task.id}
+            value={textValue}
+            onChange={(e) => updateTaskResponse(task.id, e.target.value)}
+            rows={3}
+            placeholder="Write your reflection..."
+            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2.5 text-white text-sm placeholder-zinc-600 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400/30 transition-all"
+          />
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <div className="space-y-6">
       {/* Tasks */}
@@ -99,43 +288,7 @@ export function DayCheckInForm({
           Today&apos;s Tasks ({completedCount}/{totalTasks})
         </h2>
         <div className="space-y-3">
-          {tasks.map((task) => {
-            const isChecked = completedTasks[task.id] || false;
-            return (
-              <button
-                key={task.id}
-                type="button"
-                onClick={() => toggleTask(task.id)}
-                className={`w-full text-left flex items-start gap-3 p-3 rounded-lg border transition-all ${
-                  isChecked
-                    ? "bg-amber-400/5 border-amber-400/20"
-                    : "bg-zinc-900/40 border-zinc-800 hover:border-zinc-700"
-                }`}
-              >
-                <div className="shrink-0 mt-0.5">
-                  {isChecked ? (
-                    <CheckSquare className="w-5 h-5 text-amber-400" />
-                  ) : (
-                    <Square className="w-5 h-5 text-zinc-600" />
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p
-                    className={`text-sm font-medium ${
-                      isChecked ? "text-zinc-300 line-through" : "text-white"
-                    }`}
-                  >
-                    {task.label}
-                  </p>
-                  {task.description && (
-                    <p className="text-xs text-zinc-500 mt-1 leading-relaxed">
-                      {task.description}
-                    </p>
-                  )}
-                </div>
-              </button>
-            );
-          })}
+          {tasks.map(renderTask)}
         </div>
       </div>
 
@@ -143,7 +296,7 @@ export function DayCheckInForm({
       <div className="bg-zinc-900/60 border border-zinc-800 rounded-xl p-5">
         <h2 className="text-sm font-semibold text-white mb-1">Confidence Score</h2>
         <p className="text-xs text-zinc-500 mb-4">
-          How confident do you feel about this area of your financial life? (1 = not confident, 10 = very confident)
+          How confident do you feel about executing today's protocol? (1 = not confident, 10 = very confident)
         </p>
         <div className="space-y-3">
           <input

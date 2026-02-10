@@ -12,18 +12,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "List every stage a prospect goes through before buying",
         description:
           "Start from the very first touchpoint (ad, referral, social post, Google search) and map each step all the way to the signed contract or purchase. Include awareness, interest, consideration, decision, and close.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t2",
         label: "Document the specific actions and channels at each stage",
         description:
           "For each stage write down what the prospect actually does: clicks an ad, visits a landing page, fills out a form, books a call, attends a demo, receives a proposal, signs. Track every stage: Ad to Landing Page to Website to Booking to Call to Close.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d1-t3",
         label: "Create a visual funnel map you can reference and share",
         description:
           "Use a whiteboard, spreadsheet, or tool like Miro or Lucidchart. This map becomes your conversion intelligence blueprint. Every team member should be able to look at it and understand the journey.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -40,18 +46,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Check which analytics and tracking tools are currently installed",
         description:
           "Review your website for Google Analytics, Facebook Pixel, LinkedIn Insight Tag, Google Tag Manager, heatmap tools, and any other tracking scripts. Document what is active and what is missing.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d2-t2",
         label: "Identify gaps in your tracking at each funnel stage",
         description:
           "Walk through your funnel map from Day 1. At each stage ask: Can I see how many people are here? Can I see who drops off? If the answer is no, mark it as a tracking gap.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d2-t3",
         label: "Verify UTM codes and source attribution are in place",
         description:
           "Check that every ad, email link, and social post uses UTM parameters so you know exactly where every lead came from. Without UTMs you are guessing which channels work.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -68,18 +80,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Install missing analytics and pixels on your website and landing pages",
         description:
           "Set up Google Analytics 4 if not already active. Install or verify your Facebook/Meta Pixel, Google Ads conversion tracking, and any platform-specific pixels. Use Google Tag Manager to centralize all tags.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d3-t2",
         label: "Set up form tracking and CRM logging for lead capture points",
         description:
           "Ensure every form submission, chat inquiry, and phone call is logged in your CRM with the source and timestamp. If a lead comes in, you should know exactly where they came from and when.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d3-t3",
         label: "Test every tracking point to confirm data is flowing correctly",
         description:
           "Submit test forms, click test ads, and walk through your funnel as a prospect would. Check that every event fires and every lead appears in your CRM with correct attribution.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -96,18 +114,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Calculate conversion rates at each stage of your funnel",
         description:
           "How many people see your ad vs. click it? How many land on your page vs. fill out the form? How many book a call vs. show up? How many calls convert to sales? Get the percentage at every transition.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d4-t2",
         label: "Document your baseline metrics in a single reference sheet",
         description:
           "Create a spreadsheet or dashboard row with today's date and every conversion rate: impressions to clicks, clicks to leads, leads to appointments, appointments to closes, and overall funnel conversion rate.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d4-t3",
         label: "Calculate your current cost per acquisition and customer lifetime value",
         description:
           "Total marketing spend divided by total customers acquired gives you CPA. Compare that to what a customer is worth over their lifetime. If CPA is higher than LTV, your funnel is losing money.",
+        type: 'measure',
+        input_type: 'number',
       },
     ],
     educationalContent:
@@ -124,18 +148,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Compare conversion rates across all funnel stages to find the weakest link",
         description:
           "Look at your baseline numbers from Day 4. Which transition has the lowest percentage? That is your biggest leak. It might be landing page to lead, or lead to booked call, or booked call to close.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d5-t2",
         label: "Quantify the revenue impact of the drop-off",
         description:
           "Calculate how much additional revenue you would generate if you improved that one conversion rate by even 10-20%. This gives you a dollar figure to justify the optimization effort.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d5-t3",
         label: "Gather qualitative data around the drop-off point",
         description:
           "Talk to your sales team, read support tickets, check chat logs, and review any feedback from prospects who dropped off. The numbers tell you where; the stories tell you why.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -152,18 +182,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Evaluate messaging at the drop-off stage",
         description:
           "Is the message clear? Does the headline match what the ad promised? Is the value proposition obvious within 5 seconds? Misaligned messaging between stages is the number one cause of drop-off.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d6-t2",
         label: "Assess friction and user experience at the drop-off stage",
         description:
           "How many form fields are you asking for? How many clicks to complete the action? Does the page load fast on mobile? Every extra step or second of load time costs you conversions.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d6-t3",
         label: "Review timing and follow-up processes at the drop-off stage",
         description:
           "How long does it take to respond to a new lead? If it is more than 5 minutes you are losing deals. Check whether automated follow-up exists and whether the timing matches buyer urgency.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -180,18 +216,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Finalize your visual funnel map with conversion rates at each stage",
         description:
           "Update your Day 1 funnel map with the actual conversion percentages from Day 4. Label every transition with its rate. This is your Conversion Intelligence baseline document.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d7-t2",
         label: "Document your biggest drop-off point and diagnosis",
         description:
           "Write a clear summary: where the biggest leak is, why it is happening (messaging, timing, friction, or follow-up), and the estimated revenue impact of fixing it.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d7-t3",
         label: "Set Week 2 priorities based on your funnel analysis",
         description:
           "Next week focuses on channel audit. Prepare by listing every marketing channel and gathering spend data. Know where your money is going before you start evaluating ROI.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -208,18 +250,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "List every marketing channel you currently use",
         description:
           "Include paid channels (Google Ads, Facebook/Meta Ads, LinkedIn Ads, YouTube Ads), organic channels (SEO, social media, content marketing), referrals, email, direct mail, events, partnerships, and any other source of leads.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d8-t2",
         label: "Document monthly spend on each channel including hidden costs",
         description:
           "Include ad spend, software tools, agency fees, content creation costs, and the value of time your team spends on each channel. If you are doing it yourself, your time has a dollar value too.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d8-t3",
         label: "Record the number of leads generated from each channel last month",
         description:
           "Pull data from your CRM, analytics, and ad platforms. If you cannot attribute leads to a specific channel, that is a tracking gap from Week 1 that needs to be fixed.",
+        type: 'measure',
+        input_type: 'number',
       },
     ],
     educationalContent:
@@ -236,18 +284,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Calculate cost per lead for every channel",
         description:
           "Divide total monthly spend on each channel by the number of leads it generated. Example: $2,000 on Facebook Ads producing 40 leads = $50 CPL. Do this for every single channel.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d9-t2",
         label: "Rank channels from lowest to highest cost per lead",
         description:
           "Create a ranked list. The cheapest CPL channel is not always the best (lead quality matters) but this ranking reveals which channels are inefficient at the top of the funnel.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d9-t3",
         label: "Note lead quality differences between channels",
         description:
           "A $20 lead that never converts is more expensive than a $100 lead that closes. Flag which channels produce leads that actually become customers vs. which produce tire-kickers.",
+        type: 'measure',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -264,18 +318,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Calculate ROAS for each paid channel",
         description:
           "ROAS = Revenue generated from channel divided by spend on channel. A ROAS of 5x means every $1 spent produced $5 in revenue. Calculate this for every paid channel you run.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d10-t2",
         label: "Compare ROAS across channels to identify clear winners and losers",
         description:
           "Side by side, which channel gives you the most revenue per dollar? Which gives the least? A channel with 2x ROAS and a channel with 10x ROAS should not receive equal budgets.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d10-t3",
         label: "Factor in customer lifetime value for a true ROI picture",
         description:
           "If a customer from Google Ads spends $500 upfront but $5,000 over their lifetime, the true ROAS is much higher than the initial purchase suggests. Calculate LTV-adjusted ROAS for each channel.",
+        type: 'measure',
+        input_type: 'number',
       },
     ],
     educationalContent:
@@ -292,18 +352,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Identify your top 2 performing marketing channels",
         description:
           "Based on CPL, ROAS, lead quality, and total revenue generated, which two channels are your strongest? These are the channels you should be investing more in.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d11-t2",
         label: "Identify your bottom 2 performing marketing channels",
         description:
           "Which two channels have the worst combination of high cost and low return? These are candidates for reduction or elimination. Do not keep spending out of habit.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d11-t3",
         label: "Document why each channel performs the way it does",
         description:
           "Is your top channel winning because of audience fit, creative quality, or offer alignment? Is your bottom channel losing because of targeting, budget, or fundamental channel mismatch? Understanding why prevents repeating mistakes.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -320,18 +386,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Reduce or eliminate spend on your worst-performing channel",
         description:
           "If a channel has negative or marginal ROAS and low lead quality, cut it. Do not reduce by 10% -- make a meaningful cut or shut it off entirely. Half measures produce half results.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t2",
         label: "Reallocate that budget to your best-performing channel",
         description:
           "Take the dollars you freed up and invest them into the channel with the highest ROAS. Test whether increased spend maintains the same return rate or if there are diminishing returns at higher budgets.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d12-t3",
         label: "Set a 2-week checkpoint to evaluate the reallocation results",
         description:
           "Mark your calendar for 14 days from now. At that point compare CPL, ROAS, and total revenue against your baseline. Data will tell you whether the reallocation is working.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -348,18 +420,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Choose one variable to test on your best-performing channel",
         description:
           "Pick ONE thing to test: ad headline, ad image/video, landing page headline, call-to-action, offer, or audience targeting. Never test multiple variables at once or you will not know what caused the change.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t2",
         label: "Create the variation and launch the A/B test",
         description:
           "Build the alternate version. Set up the test in your ad platform or landing page tool with equal budget split. Ensure both versions run to the same audience under the same conditions.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d13-t3",
         label: "Define the success metric and minimum sample size before results come in",
         description:
           "Decide in advance what you are measuring (CTR, conversion rate, CPL) and how many impressions or leads you need before declaring a winner. Do not call the test early based on gut feeling.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -376,18 +454,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Compare your current CPL to your Day 4 baseline",
         description:
           "Has your overall cost per lead improved since you cut the underperformer and reallocated budget? If yes, quantify the improvement. If not, investigate what went wrong.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d14-t2",
         label: "Review A/B test progress and any early indicators",
         description:
           "Check if your test from Day 13 has enough data yet. If not, let it run. If early results are dramatic (one version is 3x better), note it but wait for statistical significance before acting.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d14-t3",
         label: "Plan your Week 3 automation priorities",
         description:
           "Next week you will build lead follow-up automations, nurture sequences, and re-engagement campaigns. Audit your current follow-up process now so you know exactly what needs to be automated.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -404,18 +488,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Measure your current average lead response time",
         description:
           "From the moment a lead fills out a form or sends an inquiry, how long does it take for someone to respond? Check your CRM timestamps. The industry benchmark is under 5 minutes. Most businesses take hours or days.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d15-t2",
         label: "Document your current follow-up sequence step by step",
         description:
           "What happens after a lead comes in? Who gets notified? What is the first outreach? How many follow-ups happen? What is the cadence? If the answer is 'it depends on who is working,' that is a broken process.",
+        type: 'measure',
+        input_type: 'text',
       },
       {
         id: "d15-t3",
         label: "Identify follow-up gaps and inconsistencies",
         description:
           "Are some leads falling through the cracks? Are follow-ups happening on weekends and evenings? Is the messaging consistent regardless of who responds? Document every gap you find.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -432,18 +522,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Set up an automated email or SMS response triggered on lead submission",
         description:
           "Configure your CRM or email tool to send an immediate, personalized response the moment a new lead comes in. Include their name, acknowledge what they inquired about, and set expectations for next steps.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d16-t2",
         label: "Set up internal notifications so your team is alerted instantly",
         description:
           "Configure Slack, email, or SMS alerts to your sales team the moment a new lead arrives. The automation buys you time but a human follow-up within 15 minutes is still the goal.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d16-t3",
         label: "Test the automation end to end as if you were a new lead",
         description:
           "Submit a test inquiry through every lead capture form. Verify the automated response arrives within 5 minutes, the content is correct and personalized, and the internal notification fires properly.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -460,18 +556,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Write Email 1: Value-first welcome that establishes credibility",
         description:
           "Deliver a quick win, useful insight, or relevant resource within the first email. Do not sell. Build trust by proving you understand their problem better than they do.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t2",
         label: "Write Emails 2-4: Education, case studies, and objection handling",
         description:
           "Email 2: teach something relevant to their problem. Email 3: share a case study or testimonial. Email 4: address the biggest objection your prospects have (price, timing, trust). Each email should provide value and build toward the offer.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d17-t3",
         label: "Write Email 5: Clear call to action with urgency or scarcity",
         description:
           "The final email in the sequence should present a clear next step (book a call, schedule a demo, make a purchase) with a reason to act now. This is where you ask for the sale directly.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -488,18 +590,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Load your 5-email sequence into your email marketing or CRM platform",
         description:
           "Set up the emails with proper spacing (typically 2-3 days apart), correct sender information, subject lines, and any personalization tokens. Configure the trigger so new leads automatically enter the sequence.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d18-t2",
         label: "Test the entire sequence by enrolling yourself as a test lead",
         description:
           "Go through the full sequence as a recipient. Check formatting on mobile and desktop, verify links work, confirm personalization fields populate correctly, and read every email for clarity and tone.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d18-t3",
         label: "Set up tracking on every email in the sequence",
         description:
           "Enable open rate tracking, click tracking, and reply tracking. Tag leads who click specific links so you can identify warm prospects. Set up alerts for replies so your team can jump on engaged leads.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -516,18 +624,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Pull a list of all leads from the past 90 days who did not convert",
         description:
           "Query your CRM for contacts who entered as leads in the last 90 days but have no associated sale, closed deal, or purchase. This is your cold lead list. Count them.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d19-t2",
         label: "Segment cold leads by how far they got in your funnel",
         description:
           "Did they just fill out a form? Did they book a call but not show? Did they attend a call but not buy? Each segment needs a different re-engagement approach because their objections are different.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d19-t3",
         label: "Estimate the potential revenue if you re-engaged even 10% of cold leads",
         description:
           "Multiply your cold lead count by 10% and then by your average deal value. This is money sitting in your CRM waiting to be activated. Most businesses are shocked by this number.",
+        type: 'measure',
+        input_type: 'number',
       },
     ],
     educationalContent:
@@ -544,18 +658,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Write a re-engagement email sequence for cold leads",
         description:
           "Create 3 emails: (1) A 'we noticed you were interested' email with a new value offer. (2) A case study or testimonial showing results. (3) A final 'last chance' email with a specific call to action and deadline.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t2",
         label: "Set up a retargeting ad campaign for cold leads",
         description:
           "Upload your cold lead list as a custom audience in Facebook/Meta and Google. Run retargeting ads with a different angle than what they originally saw -- new offer, new social proof, or new messaging.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d20-t3",
         label: "Launch both the email and retargeting campaigns simultaneously",
         description:
           "Coordinate timing so cold leads see your email and your retargeting ads in the same window. Multi-channel re-engagement converts at 2-3x the rate of single-channel outreach.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -572,18 +692,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Check that instant follow-up automation is firing for every new lead",
         description:
           "Review your CRM logs from the past week. Did every new lead receive an automated response within 5 minutes? If any were missed, find out why and fix the gap.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d21-t2",
         label: "Review nurture sequence performance: open rates, click rates, replies",
         description:
           "Check email analytics. Industry average open rates are 20-25%. Click rates are 2-5%. If you are below these benchmarks, your subject lines or content need work. If you are above, your messaging is resonating.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d21-t3",
         label: "Review re-engagement campaign early results",
         description:
           "How many cold leads opened the re-engagement email? How many clicked? Has anyone replied or re-booked? Check retargeting ad impressions and clicks. Document early indicators even if the campaign is still young.",
+        type: 'reflect',
+        input_type: 'text',
       },
     ],
     educationalContent:
@@ -600,18 +726,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Choose your single best-performing marketing campaign and document every step",
         description:
           "From ad creation to targeting to landing page to follow-up to close -- write down every single step in order. Include the tools used, the copy, the images, the targeting parameters, and the timing.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t2",
         label: "Include performance benchmarks and expected results in the playbook",
         description:
           "Document what a successful run looks like: expected CPL, conversion rate, ROAS, and timeline to results. This gives whoever runs the campaign a standard to measure against.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d22-t3",
         label: "Test the playbook by having someone else review it for clarity",
         description:
           "Hand the document to a team member or contractor and ask if they could execute it without your help. If they have questions, the playbook needs more detail. Iterate until it is self-contained.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -628,18 +760,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Review your messaging across website, social media, email, and ads",
         description:
           "Pull up your website homepage, your social media bios and recent posts, your email templates, and your ad copy. Read them side by side. Is the core message, value proposition, and tone consistent?",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d23-t2",
         label: "Identify messaging inconsistencies or contradictions",
         description:
           "Does your website say one thing while your ads promise something different? Does your social media tone match your email tone? Inconsistency confuses prospects and erodes trust.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d23-t3",
         label: "Create a core messaging document with approved language",
         description:
           "Write your official value proposition, tagline, key benefits, and brand voice guidelines in one document. This becomes the reference that every piece of content and every ad must align with.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -656,18 +794,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Define your content pillars -- 3-5 core topics you will consistently cover",
         description:
           "These should align with your prospects' biggest questions, pain points, and objections. Every piece of content should relate back to one of these pillars and ultimately drive toward your offer.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d24-t2",
         label: "Map out 12 weeks of content with specific topics and formats",
         description:
           "For each week assign: what topic, what format (blog, video, social post, email, podcast), what channel, and what call to action. You do not need to create the content yet -- just plan it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d24-t3",
         label: "Schedule content creation and publishing deadlines",
         description:
           "Assign dates for when each piece of content needs to be drafted, reviewed, and published. If you have a team, assign ownership. If it is just you, batch creation days for efficiency.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -684,18 +828,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Identify the optimal moment to ask for a review or testimonial",
         description:
           "This is usually right after a positive outcome, successful delivery, or key milestone. Map the trigger point in your customer journey where satisfaction is highest.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d25-t2",
         label: "Set up an automated review request email or SMS at that trigger point",
         description:
           "Configure your CRM to send a review request automatically when the trigger event occurs. Include a direct link to your Google, Yelp, or industry-specific review platform. Make it one click, not three.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d25-t3",
         label: "Create a system to capture and repurpose testimonials across channels",
         description:
           "Build a testimonial library. When a great review comes in, save it and repurpose it as social media content, landing page proof, email copy, and ad creative. One testimonial should be used in at least 5 places.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -712,18 +862,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Select your 5-7 key marketing metrics",
         description:
           "At minimum: cost per lead (CPL), return on ad spend (ROAS), conversion rate by funnel stage, total pipeline value, and lead response time. Add customer acquisition cost (CAC) and lifetime value (LTV) if available.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d26-t2",
         label: "Build a one-page dashboard using a spreadsheet or BI tool",
         description:
           "Use Google Sheets, Excel, Google Data Studio, or a tool like Databox or Geckoboard. The dashboard should update weekly at minimum and be accessible to everyone who needs it.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d26-t3",
         label: "Set up data sources to feed the dashboard automatically where possible",
         description:
           "Connect your ad platforms, CRM, and analytics tools so the dashboard pulls live data. Manual data entry is acceptable for now but automation is the goal for sustainability.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -740,18 +896,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Schedule a recurring weekly marketing review meeting",
         description:
           "Block 30-60 minutes every week, same day and time. If you are a solo operator, this is a meeting with yourself. If you have a team, include everyone who touches marketing and sales.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t2",
         label: "Create a standing meeting agenda",
         description:
           "Agenda items: (1) Review dashboard metrics vs. targets. (2) What tests are running and results. (3) Budget allocation review. (4) What worked this week. (5) What to test next week. (6) Action items with owners and deadlines.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d27-t3",
         label: "Run your first weekly marketing review using the agenda and dashboard",
         description:
           "Go through the agenda with your dashboard in front of you. Make at least one data-driven decision about budget, testing, or strategy. Document the decision and the action item. This is now your weekly rhythm.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -768,18 +930,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Choose one marketing variable to test based on your biggest opportunity",
         description:
           "Review your funnel data and dashboard. Where is the biggest remaining gap? Choose a test that targets that gap: new ad copy, new landing page design, new offer, new audience segment, or new channel.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d28-t2",
         label: "Design and launch the test with a clear hypothesis",
         description:
           "Write your hypothesis: 'If I change X, I expect Y to improve by Z%.' Set up the test with a control and variation, equal budget or traffic split, and a defined timeframe.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d28-t3",
         label: "Add the test to your weekly review agenda for tracking",
         description:
           "Document what you are testing, when it launched, what the success metric is, and when you will evaluate results. This ensures the test gets reviewed and actioned, not forgotten.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -796,18 +964,24 @@ export const estateProtocol: DayProtocol[] = [
         label: "Forecast expected leads per month based on current channel performance",
         description:
           "Using your CPL and budget data, project how many leads each channel will produce over the next 3 months. Factor in any budget changes, seasonal trends, or new channels you plan to launch.",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d29-t2",
         label: "Forecast expected revenue based on current conversion rates and deal values",
         description:
           "Multiply projected leads by your conversion rate and average deal value. This gives you a marketing-driven revenue forecast. Compare it to your revenue goals -- is there a gap?",
+        type: 'measure',
+        input_type: 'number',
       },
       {
         id: "d29-t3",
         label: "Identify what must improve to hit your revenue goal and build an action plan",
         description:
           "If your forecast falls short, identify the lever to pull: more leads (increase budget), higher conversion rate (optimize funnel), or higher deal value (adjust pricing or upsells). Write the specific actions you will take.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
@@ -824,24 +998,32 @@ export const estateProtocol: DayProtocol[] = [
         label: "Retake the Conversion Intelligence quiz and compare scores to Day 1",
         description:
           "Go back to the Pillar 4 assessment and answer every question again based on where you are today. Compare your new score to your original score. Quantify the improvement.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d30-t2",
         label: "Document your biggest marketing improvement from this 30-day protocol",
         description:
           "What single change had the biggest impact? Was it fixing the drop-off point, reallocating budget, automating follow-up, or re-engaging cold leads? Write it down as your top lesson learned.",
+        type: 'reflect',
+        input_type: 'text',
       },
       {
         id: "d30-t3",
         label: "Review all systems: funnel tracking, automations, dashboard, weekly review",
         description:
           "Walk through every system you built this month. Is tracking still working? Are automations still firing? Is the dashboard current? Is the weekly review on the calendar? Fix anything that has drifted.",
+        type: 'action',
+        input_type: 'checkbox',
       },
       {
         id: "d30-t4",
         label: "Set your next 90-day Conversion Intelligence goals",
         description:
           "Based on your forecast and assessment, set 3 specific goals for the next quarter: a CPL target, a conversion rate target, and a revenue target. Put them on your dashboard and review them weekly.",
+        type: 'action',
+        input_type: 'checkbox',
       },
     ],
     educationalContent:
