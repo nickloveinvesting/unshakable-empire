@@ -130,7 +130,7 @@ export default function ResultsPage() {
   return (
     <div className="min-h-screen bg-black py-8 px-4">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8 animate-fade-in">
           <div className="w-16 h-16 bg-amber-400/10 border border-amber-400/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <Shield className="w-8 h-8 text-amber-400" />
           </div>
@@ -138,7 +138,7 @@ export default function ResultsPage() {
           <p className="text-zinc-400 text-sm">Here&apos;s how your {result.pillarLabel} pillar scored.</p>
         </div>
 
-        <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 mb-6 text-center">
+        <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl p-6 mb-6 text-center animate-scale-in">
           <p className="text-zinc-500 text-xs uppercase tracking-wider mb-2">Overall Score</p>
           <p className={`text-5xl font-extrabold ${bandColor}`}>{result.overallPercentage}%</p>
           <p className={`text-sm font-semibold uppercase mt-1 ${bandColor}`}>{result.overallBand}</p>
@@ -167,11 +167,11 @@ export default function ResultsPage() {
 
         <div className="flex flex-col items-center gap-4">
           {user ? (
-            <button onClick={() => router.push(`/protocol/${result.pillarSlug}`)} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2">
+            <button onClick={() => router.push(`/protocol/${result.pillarSlug}`)} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 button-press">
               <Shield className="w-5 h-5" />Get My 30-Day Protocol<ArrowRight className="w-4 h-4" />
             </button>
           ) : (
-            <button onClick={() => router.push('/signup')} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2">
+            <button onClick={() => router.push('/signup')} className="w-full sm:w-auto bg-amber-400 text-black font-bold px-8 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2 button-press">
               <Shield className="w-5 h-5" />Sign Up to Get Your Protocol<ArrowRight className="w-4 h-4" />
             </button>
           )}
