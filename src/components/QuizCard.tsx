@@ -21,7 +21,7 @@ export default function QuizCard({ questionNumber, totalQuestions, pillarLabel, 
   const progressPercent = (questionNumber / totalQuestions) * 100;
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4">
+    <div className="w-full max-w-2xl mx-auto px-4 animate-fade-in">
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <span className="text-zinc-500 text-xs font-medium">Question {questionNumber} of {totalQuestions}</span>
@@ -31,7 +31,7 @@ export default function QuizCard({ questionNumber, totalQuestions, pillarLabel, 
           <div className="h-full bg-amber-400 rounded-full transition-all duration-500 ease-in-out" style={{ width: `${progressPercent}%` }} />
         </div>
       </div>
-      <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 md:p-8">
+      <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl p-6 md:p-8 card-hover">
         <div className="mb-6">
           <span className="bg-amber-400/10 text-amber-400 border border-amber-400/20 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider inline-block">{pillarLabel}</span>
         </div>
@@ -51,7 +51,7 @@ export default function QuizCard({ questionNumber, totalQuestions, pillarLabel, 
                       onAnswer(value);
                     }
                   }}
-                  className={`w-12 h-12 md:w-14 md:h-14 min-h-[44px] rounded-lg text-lg font-bold transition-[background-color,border-color,transform,box-shadow] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 ${isSelected ? 'bg-amber-400 text-black scale-105 shadow-lg shadow-amber-400/25' : 'bg-zinc-800 text-zinc-400 border border-zinc-700 hover:border-amber-400/50 hover:text-zinc-200'}`}
+                  className={`w-12 h-12 md:w-14 md:h-14 min-h-[44px] rounded-lg text-lg font-bold transition-[background-color,border-color,transform,box-shadow] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 button-press ${isSelected ? 'bg-amber-400 text-black scale-105 shadow-lg shadow-amber-400/25' : 'bg-zinc-800 text-zinc-400 border border-zinc-700 hover:border-amber-400/50 hover:text-zinc-200'}`}
                   aria-label={`Rate ${value} out of 5`}
                   aria-pressed={isSelected}
                 >
@@ -77,7 +77,7 @@ export default function QuizCard({ questionNumber, totalQuestions, pillarLabel, 
           <button
             onClick={onNext}
             disabled={selectedValue === undefined}
-            className={`flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-lg font-bold text-sm transition-[background-color,box-shadow] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 ${selectedValue !== undefined ? 'bg-amber-400 text-black hover:bg-amber-300 shadow-lg shadow-amber-400/20' : 'bg-zinc-800 text-zinc-600 cursor-not-allowed'}`}
+            className={`flex items-center gap-2 px-6 py-3 min-h-[44px] rounded-lg font-bold text-sm transition-[background-color,box-shadow] duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 button-press ${selectedValue !== undefined ? 'bg-amber-400 text-black hover:bg-amber-300 shadow-lg shadow-amber-400/20' : 'bg-zinc-800 text-zinc-600 cursor-not-allowed'}`}
             aria-label={isLast ? 'Complete assessment' : 'Go to next question'}
           >
             {isLast ? (<><CheckCircle className="w-4 h-4" />Complete</>) : (<>Next<ChevronRight className="w-4 h-4" /></>)}
