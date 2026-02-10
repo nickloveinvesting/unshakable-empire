@@ -2,6 +2,8 @@
 
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import { useQuizStore } from '@/stores/quiz-store';
 import { getQuestionsForPillar } from '@/data/questions';
 import { SLUG_TO_PILLAR } from '@/types/quiz';
@@ -47,20 +49,31 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center py-8">
-      <QuizCard
-        questionNumber={currentQuestionIndex + 1}
-        totalQuestions={questions.length}
-        pillarLabel={currentQuestion.category}
-        question={currentQuestion.text}
-        subtext={currentQuestion.subtext}
-        selectedValue={answers[currentQuestion.id]}
-        onAnswer={(value) => answerQuestion(currentQuestion.id, value)}
-        onNext={handleNext}
-        onPrev={prevQuestion}
-        canGoBack={currentQuestionIndex > 0}
-        isLast={isLast}
-      />
+    <div className="min-h-screen bg-black flex items-center justify-center py-8 px-4">
+      <div className="w-full max-w-2xl">
+        {/* Back link */}
+        <Link
+          href="/assess"
+          className="inline-flex items-center gap-2 text-zinc-500 hover:text-zinc-300 text-sm mb-6 transition-colors min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400/50 rounded-lg px-2"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Pillar Selection
+        </Link>
+
+        <QuizCard
+          questionNumber={currentQuestionIndex + 1}
+          totalQuestions={questions.length}
+          pillarLabel={currentQuestion.category}
+          question={currentQuestion.text}
+          subtext={currentQuestion.subtext}
+          selectedValue={answers[currentQuestion.id]}
+          onAnswer={(value) => answerQuestion(currentQuestion.id, value)}
+          onNext={handleNext}
+          onPrev={prevQuestion}
+          canGoBack={currentQuestionIndex > 0}
+          isLast={isLast}
+        />
+      </div>
     </div>
   );
 }
