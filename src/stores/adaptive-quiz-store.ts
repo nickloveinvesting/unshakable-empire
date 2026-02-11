@@ -103,17 +103,18 @@ export const useAdaptiveQuizStore = create<AdaptiveQuizStoreState>()(
 
       /**
        * Initialize a new session with business context
-       * Gets the first question from the adaptive engine
+       * Gets the first PILLAR question (skips business context since it's already answered)
        */
       initializeSession: (sessionId, businessContext, businessStage) => {
-        // Get initial state from adaptive engine (includes first question)
-        const initialState = initializeAssessment();
+        // Get the first pillar question (p1-q1) - skip business context questions
+        const { getQuestionById } = require('@/data/questions/adaptive');
+        const firstPillarQuestion = getQuestionById('p1-q1');
 
         // Build assessment context with business context
         const context = buildAssessmentContext(
           businessContext,
           {}, // Empty answers initially
-          initialState.questionsAsked,
+          ['p1-q1'], // Mark first pillar question as asked
           []  // Empty paths initially
         );
 
@@ -122,9 +123,13 @@ export const useAdaptiveQuizStore = create<AdaptiveQuizStoreState>()(
           startedAt: new Date(),
           businessStage,
           state: {
-            ...initialState,
-            businessContext,  // Set from form
-            context,          // Set from engine
+            currentQuestion: firstPillarQuestion,
+            answers: {},
+            questionsAsked: ['p1-q1'],
+            pathsTaken: [],
+            businessContext,
+            isComplete: false,
+            context,
           },
         });
       },
