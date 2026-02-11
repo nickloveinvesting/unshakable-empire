@@ -74,7 +74,7 @@ export default async function AssessmentsPage() {
                 Start with the pillar where your business feels weakest. The assessment takes 5 minutes and reveals your exact roadmap.
               </p>
               <Link
-                href="/assess"
+                href="/assess-adaptive/start"
                 className="inline-flex items-center gap-2 bg-amber-400 text-black font-bold px-6 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-[background-color,box-shadow] duration-200 shadow-lg shadow-amber-400/20 button-press"
               >
                 <Shield className="w-5 h-5" />

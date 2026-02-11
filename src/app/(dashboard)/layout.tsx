@@ -46,7 +46,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             You&apos;re not enrolled in the pilot yet. The daily protocol dashboard is currently available to pilot participants only.
           </p>
           <div className="space-y-3">
-            <button onClick={() => router.push('/assess')} className="w-full bg-amber-400 text-black font-bold px-6 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2">
+            <button onClick={() => router.push('/assess-adaptive/start')} className="w-full bg-amber-400 text-black font-bold px-6 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 flex items-center justify-center gap-2">
               <Shield className="w-5 h-5" />Take a Free Assessment<ArrowRight className="w-4 h-4" />
             </button>
             <button onClick={() => router.push('/')} className="w-full text-zinc-500 hover:text-zinc-300 text-sm py-2 transition-colors">Back to Home</button>

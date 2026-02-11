@@ -36,7 +36,7 @@ export function TodaysFocus({ activePillars }: TodaysFocusProps) {
           Take your first pillar assessment to discover your critical constraint and unlock your personalized 30-day protocol.
         </p>
         <Link
-          href="/assess"
+          href="/assess-adaptive/start"
           className="bg-amber-400 text-black font-bold px-6 py-3 min-h-[44px] rounded-lg hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 inline-flex items-center gap-2"
         >
           Begin Assessment
