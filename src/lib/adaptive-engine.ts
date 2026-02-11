@@ -27,8 +27,25 @@ export function getInitialQuestion(): AdaptiveQuestionNode | null {
 export function getNextQuestion(
   currentQuestion: AdaptiveQuestionNode,
   answer: QuestionAnswer,
-  context: AssessmentContext
+  context: AssessmentContext,
+  visited: Set<string> = new Set()
 ): AdaptiveQuestionNode | null {
+  // Prevent infinite loops - if we've visited this question in this call chain, stop
+  if (visited.has(currentQuestion.id)) {
+    console.error(`Circular reference detected at question ${currentQuestion.id}`);
+    return null;
+  }
+
+  // Add current question to visited set
+  const newVisited = new Set(visited);
+  newVisited.add(currentQuestion.id);
+
+  // Safeguard: If we've skipped more than 20 questions, something is wrong
+  if (newVisited.size > 50) {
+    console.error(`Too many questions skipped (${newVisited.size}), aborting`);
+    return null;
+  }
+
   // Check if this is the final question
   if (currentQuestion.defaultNext === 'COMPLETE') {
     return null; // Assessment complete
@@ -43,7 +60,7 @@ export function getNextQuestion(
           // Check skip conditions before returning
           if (shouldSkipQuestion(nextQuestion, context)) {
             // Recursively get the next question after the skipped one
-            return getNextQuestion(nextQuestion, answer, context);
+            return getNextQuestion(nextQuestion, answer, context, newVisited);
           }
           return nextQuestion;
         }
@@ -57,7 +74,7 @@ export function getNextQuestion(
     if (nextQuestion) {
       // Check skip conditions
       if (shouldSkipQuestion(nextQuestion, context)) {
-        return getNextQuestion(nextQuestion, answer, context);
+        return getNextQuestion(nextQuestion, answer, context, newVisited);
       }
       return nextQuestion;
     }
