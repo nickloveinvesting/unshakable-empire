@@ -61,18 +61,24 @@ export function AdaptiveQuizCard() {
     if (state.businessContext && !state.currentQuestion && !state.isComplete) {
       // Either fresh start or resume from saved state
       if (Object.keys(state.answers).length === 0) {
-        // Fresh start - initialize with first question
-        const initialState = initializeAssessment();
+        // Fresh start - get first PILLAR question (skip business context)
+        const { getQuestionById } = require('@/data/questions/adaptive');
+        const firstPillarQuestion = getQuestionById('p1-q1');
+
         const context = buildAssessmentContext(
           state.businessContext,
           {},
-          initialState.questionsAsked,
+          ['p1-q1'],
           []
         );
 
         setState({
-          ...initialState,
+          currentQuestion: firstPillarQuestion,
+          answers: {},
+          questionsAsked: ['p1-q1'],
+          pathsTaken: [],
           businessContext: state.businessContext,
+          isComplete: false,
           context,
         });
       } else {
