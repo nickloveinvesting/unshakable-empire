@@ -95,6 +95,13 @@ export function AdaptiveQuizCard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.businessContext, state.currentQuestion, state.isComplete]);
 
+  // Redirect to results when assessment completes
+  useEffect(() => {
+    if (state.isComplete && sessionId) {
+      router.push(`/assess-adaptive/results/${sessionId}`);
+    }
+  }, [state.isComplete, sessionId, router]);
+
   // Redirect if no business context (session not started)
   if (!state.businessContext) {
     return (
@@ -127,10 +134,20 @@ export function AdaptiveQuizCard() {
     );
   }
 
-  // If complete but still on quiz page, redirect to results
-  if (state.isComplete && sessionId) {
-    router.push(`/assess-adaptive/results/${sessionId}`);
-    return null;
+  // Show loading while navigating to results
+  if (state.isComplete) {
+    return (
+      <Card className="mx-auto max-w-2xl">
+        <CardContent className="py-12 text-center">
+          <div className="flex flex-col items-center gap-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+            <p className="text-muted-foreground">
+              Generating your results...
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    );
   }
 
   // At this point, currentQuestion is guaranteed to be non-null due to checks above
