@@ -140,10 +140,10 @@ export function submitAnswer(
     }
   }
 
-  // Get next question
-  const nextQuestion = context
+  // Get next question (coalesce undefined → null for type safety)
+  const nextQuestion = (context
     ? getNextQuestion(question, answer, context)
-    : getQuestionById(question.defaultNext || '');
+    : getQuestionById(question.defaultNext || '')) ?? null;
 
   // Update questions asked
   const newQuestionsAsked = [...state.questionsAsked];
@@ -198,7 +198,7 @@ export function submitAnswer(
 
   return {
     success: true,
-    nextQuestion,
+    nextQuestion: nextQuestion ?? null,
     pathLabel,
     isComplete,
     results,
