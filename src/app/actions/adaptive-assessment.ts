@@ -105,6 +105,7 @@ export async function completeAdaptiveSession(
 
 /**
  * Get an assessment session by ID
+ * Supports both authenticated and anonymous sessions
  */
 export async function getAdaptiveSession(
   sessionId: string
@@ -114,14 +115,18 @@ export async function getAdaptiveSession(
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) return { error: 'Not authenticated' };
-
-  const { data, error } = await supabase
+  // Build query - if authenticated, filter by user_id, otherwise just by session id
+  let query = supabase
     .from('assessment_sessions_v2')
     .select('*')
-    .eq('id', sessionId)
-    .eq('user_id', user.id)
-    .single();
+    .eq('id', sessionId);
+
+  // If authenticated, also verify ownership
+  if (user) {
+    query = query.eq('user_id', user.id);
+  }
+
+  const { data, error } = await query.single();
 
   if (error) return { error: error.message };
   return { success: true, data: { session: data } };
