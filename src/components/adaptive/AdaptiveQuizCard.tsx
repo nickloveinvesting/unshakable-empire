@@ -25,13 +25,20 @@ import { Textarea } from '@/components/ui/textarea';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { useAdaptiveQuizStore } from '@/stores/adaptive-quiz-store';
-import { submitAnswer, getAssessmentProgress } from '@/lib/adaptive-assessment-service';
+import {
+  submitAnswer,
+  getAssessmentProgress,
+  initializeAssessment,
+  resumeAssessment,
+} from '@/lib/adaptive-assessment-service';
+import { buildAssessmentContext } from '@/lib/adaptive-engine';
 import {
   updateAdaptiveSession,
   completeAdaptiveSession,
   createAdaptiveResult,
 } from '@/app/actions/adaptive-assessment';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import type { Band, BusinessStage } from '@/types/adaptive-quiz';
 
 export function AdaptiveQuizCard() {
   const router = useRouter();
@@ -49,14 +56,74 @@ export function AdaptiveQuizCard() {
     setError(null);
   }, [currentQuestion?.id]);
 
-  if (!currentQuestion || !state.businessContext) {
+  // Initialize first question if not set (handles edge cases and resume)
+  useEffect(() => {
+    if (state.businessContext && !state.currentQuestion && !state.isComplete) {
+      // Either fresh start or resume from saved state
+      if (Object.keys(state.answers).length === 0) {
+        // Fresh start - initialize with first question
+        const initialState = initializeAssessment();
+        const context = buildAssessmentContext(
+          state.businessContext,
+          {},
+          initialState.questionsAsked,
+          []
+        );
+
+        setState({
+          ...initialState,
+          businessContext: state.businessContext,
+          context,
+        });
+      } else {
+        // Resume - reconstruct state from saved answers
+        const resumedState = resumeAssessment(
+          state.answers,
+          state.questionsAsked,
+          state.pathsTaken
+        );
+
+        setState(resumedState);
+      }
+    }
+  }, [state.businessContext, state.currentQuestion, state.answers, state.isComplete, setState]);
+
+  // Redirect if no business context (session not started)
+  if (!state.businessContext) {
     return (
       <Card className="mx-auto max-w-2xl">
         <CardContent className="py-12 text-center">
-          <p className="text-muted-foreground">Loading assessment...</p>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-muted-foreground">No active assessment found.</p>
+            <Button onClick={() => router.push('/assess-adaptive/start')}>
+              Start Assessment
+            </Button>
+          </div>
         </CardContent>
       </Card>
     );
+  }
+
+  // Show loading while initializing question
+  if (!currentQuestion && !state.isComplete) {
+    return (
+      <Card className="mx-auto max-w-2xl">
+        <CardContent className="py-12 text-center">
+          <div className="flex flex-col items-center gap-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+            <p className="text-muted-foreground">
+              Preparing your personalized assessment...
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
+  // If complete but still on quiz page, redirect to results
+  if (state.isComplete && sessionId) {
+    router.push(`/assess-adaptive/results/${sessionId}`);
+    return null;
   }
 
   const handleSubmit = async () => {
@@ -97,12 +164,12 @@ export function AdaptiveQuizCard() {
         // Create result record
         await createAdaptiveResult({
           sessionId: sessionId!,
-          businessStage: result.results.businessStage,
+          businessStage: result.results.businessStage as BusinessStage,
           questionCount: result.results.questionCount,
           timeSpentSeconds: result.results.timeSpent,
           pillarScores: result.results.pillarScores,
           overallScore: result.results.overallScore,
-          overallBand: result.results.overallBand,
+          overallBand: result.results.overallBand as Band,
           weakestPillarId: result.results.weakestPillar.pillarId,
           strongestPillarId: result.results.strongestPillar.pillarId,
           recommendedPillarId: result.results.recommendation.focusPillar,

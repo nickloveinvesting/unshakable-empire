@@ -10,7 +10,11 @@ import type {
   QuestionAnswer,
   ComprehensiveAssessmentResult,
 } from '@/types/adaptive-quiz';
-import type { AssessmentState } from '@/lib/adaptive-assessment-service';
+import {
+  initializeAssessment,
+  type AssessmentState
+} from '@/lib/adaptive-assessment-service';
+import { buildAssessmentContext } from '@/lib/adaptive-engine';
 import type { FormattedResults } from '@/lib/adaptive-results-generator';
 
 export interface AdaptiveQuizStoreState {
@@ -99,17 +103,31 @@ export const useAdaptiveQuizStore = create<AdaptiveQuizStoreState>()(
 
       /**
        * Initialize a new session with business context
+       * Gets the first question from the adaptive engine
        */
-      initializeSession: (sessionId, businessContext, businessStage) =>
-        set((store) => ({
+      initializeSession: (sessionId, businessContext, businessStage) => {
+        // Get initial state from adaptive engine (includes first question)
+        const initialState = initializeAssessment();
+
+        // Build assessment context with business context
+        const context = buildAssessmentContext(
+          businessContext,
+          {}, // Empty answers initially
+          initialState.questionsAsked,
+          []  // Empty paths initially
+        );
+
+        set({
           sessionId,
           startedAt: new Date(),
           businessStage,
           state: {
-            ...store.state,
-            businessContext,
+            ...initialState,
+            businessContext,  // Set from form
+            context,          // Set from engine
           },
-        })),
+        });
+      },
 
       /**
        * Start a new assessment session
