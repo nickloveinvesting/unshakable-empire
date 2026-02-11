@@ -163,7 +163,7 @@ export function AdaptiveQuizCard() {
       updateAnswer(currentQuestion.id, currentValue);
 
       // Save progress to database
-      const timeSpent = startedAt ? Math.floor((Date.now() - startedAt.getTime()) / 1000) : 0;
+      const timeSpent = startedAt ? Math.floor((Date.now() - new Date(startedAt).getTime()) / 1000) : 0;
       await updateAdaptiveSession(
         sessionId!,
         state.answers,
