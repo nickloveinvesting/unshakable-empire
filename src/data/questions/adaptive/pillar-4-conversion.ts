@@ -2,7 +2,7 @@ import type { AdaptiveQuestionNode } from '@/types/adaptive-quiz';
 
 /**
  * PILLAR 4: CONVERSION INTELLIGENCE
- * Adaptive question tree focusing on tracking → ROI → automation → scalability
+ * Adaptive question tree focusing on tracking -> ROI -> automation -> scalability
  */
 
 // ============================================================================

@@ -497,10 +497,10 @@ function generateRecommendationDescription(
   };
 
   const pillarDescriptions: Record<number, string> = {
-    1: 'Your CEO Command Center is the foundation-without time, focus, and visibility, nothing else scales.',
-    2: 'Team Architecture determines your scalability-you cannot grow beyond your team's capabilities.',
-    3: 'Revenue Pipeline is your lifeblood-predictable revenue unlocks everything else.',
-    4: 'Conversion Intelligence drives efficiency-better marketing ROI means faster growth.',
+    1: "Your CEO Command Center is the foundation - without time, focus, and visibility, nothing else scales.",
+    2: "Team Architecture determines your scalability - you cannot grow beyond your team capabilities.",
+    3: "Revenue Pipeline is your lifeblood - predictable revenue unlocks everything else.",
+    4: "Conversion Intelligence drives efficiency - better marketing ROI means faster growth.",
   };
 
   return `${stageContext[stage]} ${pillarDescriptions[pillarId]}`;
@@ -561,13 +561,13 @@ function generateFirstThreeActions(
       ],
       'Revenue Tracking & Predictability': [
         'Implement CRM to track every opportunity',
-        'Calculate your sales velocity (deals × close rate × avg deal size ÷ sales cycle)',
+        'Calculate your sales velocity (deals * close rate * avg deal size / sales cycle)',
         'Build a 90-day revenue forecast',
       ],
     },
     4: {
       'Buyer Journey & Tracking': [
-        'Map your buyer journey stages (Awareness → Consideration → Decision → Advocacy)',
+        'Map your buyer journey stages (Awareness -> Consideration -> Decision -> Advocacy)',
         'Install tracking pixels on your website',
         'Audit where leads drop off in your funnel',
       ],

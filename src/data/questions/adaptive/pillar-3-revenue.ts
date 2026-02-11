@@ -2,7 +2,7 @@ import type { AdaptiveQuestionNode } from '@/types/adaptive-quiz';
 
 /**
  * PILLAR 3: REVENUE PIPELINE
- * Adaptive question tree focusing on avatar clarity → sales process → predictability
+ * Adaptive question tree focusing on avatar clarity -> sales process -> predictability
  */
 
 // ============================================================================
@@ -287,7 +287,7 @@ export const P3_SALES_PROCESS_NONE_QUESTIONS: AdaptiveQuestionNode[] = [
     category: 'Sales Process & Scripts',
     tier: 3,
     text: 'My sales conversations focus on solving problems rather than pitching features.',
-    subtext: 'Rate whether your approach leads with the client's pain or with your product details.',
+    subtext: "Rate whether your approach leads with the client pain or with your product details.",
     responseType: 'scale',
     scaleMin: 1,
     scaleMax: 5,
