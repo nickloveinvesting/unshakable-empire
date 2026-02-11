@@ -1,153 +1,160 @@
 /**
  * Adaptive Quiz Store
- * Zustand store for managing adaptive assessment state with persistence
+ * Zustand store for managing adaptive assessment state
+ * Wraps the AssessmentState from adaptive-assessment-service
  */
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type {
-  BusinessContext,
-  BusinessStageResult,
   QuestionAnswer,
+  ComprehensiveAssessmentResult,
 } from '@/types/adaptive-quiz';
+import type { AssessmentState } from '@/lib/adaptive-assessment-service';
+import type { FormattedResults } from '@/lib/adaptive-results-generator';
 
-interface AdaptiveQuizState {
-  // Business context
-  businessContext: BusinessContext | null;
-  businessStage: BusinessStageResult | null;
+export interface AdaptiveQuizStoreState {
+  // Core assessment state (matches AssessmentState from service)
+  state: AssessmentState;
 
-  // Quiz state
-  currentQuestionIndex: number;
-  questionsAsked: string[];
-  pathsTaken: string[];
-  answers: Record<string, QuestionAnswer>;
-  timeStarted: Date | null;
-  timeSpent: number; // seconds
-
-  // Completion
-  quizCompleted: boolean;
+  // Session tracking
   sessionId: string | null;
+  startedAt: Date | null;
+  businessStage: string | null;
+
+  // Results (populated on completion)
+  results: ComprehensiveAssessmentResult | null;
+  formattedResults: FormattedResults | null;
 
   // Actions
-  setBusinessContext: (
-    context: BusinessContext,
-    stage: BusinessStageResult
-  ) => void;
-  answerQuestion: (questionId: string, answer: QuestionAnswer) => void;
-  recordPath: (pathLabel: string) => void;
-  nextQuestion: () => void;
-  prevQuestion: () => void;
-  completeQuiz: () => void;
-  reset: () => void;
-
-  // Session management
+  setState: (partial: Partial<AssessmentState>) => void;
+  updateAnswer: (questionId: string, value: number | string | string[] | boolean) => void;
+  completeAssessment: (results: ComprehensiveAssessmentResult, formattedResults: FormattedResults) => void;
+  initializeSession: (sessionId: string, businessContext: any, businessStage: string) => void;
   startSession: (sessionId: string) => void;
-  updateTimeSpent: () => void;
+  setBusinessStage: (stage: string) => void;
+  reset: () => void;
 }
 
-const initialState = {
-  businessContext: null,
-  businessStage: null,
-  currentQuestionIndex: 0,
+const initialAssessmentState: AssessmentState = {
+  currentQuestion: null,
+  answers: {},
   questionsAsked: [],
   pathsTaken: [],
-  answers: {},
-  timeStarted: null,
-  timeSpent: 0,
-  quizCompleted: false,
-  sessionId: null,
+  businessContext: null,
+  isComplete: false,
+  context: null,
 };
 
-export const useAdaptiveQuizStore = create<AdaptiveQuizState>()(
+export const useAdaptiveQuizStore = create<AdaptiveQuizStoreState>()(
   persist(
     (set, get) => ({
-      ...initialState,
+      // Initial state
+      state: initialAssessmentState,
+      sessionId: null,
+      startedAt: null,
+      businessStage: null,
+      results: null,
+      formattedResults: null,
 
       /**
-       * Set business context and stage after initial classification
+       * Merge partial updates into the assessment state
+       * Used by AdaptiveQuizCard to update currentQuestion, isComplete, etc.
        */
-      setBusinessContext: (context, stage) =>
+      setState: (partial) =>
+        set((store) => ({
+          state: { ...store.state, ...partial },
+        })),
+
+      /**
+       * Record an answer for a question
+       */
+      updateAnswer: (questionId, value) =>
+        set((store) => ({
+          state: {
+            ...store.state,
+            answers: {
+              ...store.state.answers,
+              [questionId]: {
+                questionId,
+                value,
+                answeredAt: new Date(),
+              },
+            },
+            questionsAsked: [
+              ...new Set([...store.state.questionsAsked, questionId]),
+            ],
+          },
+        })),
+
+      /**
+       * Mark assessment as complete with results
+       */
+      completeAssessment: (results, formattedResults) =>
+        set((store) => ({
+          state: { ...store.state, isComplete: true },
+          results,
+          formattedResults,
+        })),
+
+      /**
+       * Initialize a new session with business context
+       */
+      initializeSession: (sessionId, businessContext, businessStage) =>
+        set((store) => ({
+          sessionId,
+          startedAt: new Date(),
+          businessStage,
+          state: {
+            ...store.state,
+            businessContext,
+          },
+        })),
+
+      /**
+       * Start a new assessment session
+       */
+      startSession: (sessionId) =>
         set({
-          businessContext: context,
-          businessStage: stage,
-          timeStarted: new Date(),
+          sessionId,
+          startedAt: new Date(),
         }),
 
       /**
-       * Record an answer to a question
+       * Set business stage after classification
        */
-      answerQuestion: (questionId, answer) =>
-        set((state) => ({
-          answers: { ...state.answers, [questionId]: answer },
-          questionsAsked: [...new Set([...state.questionsAsked, questionId])],
-        })),
-
-      /**
-       * Record a path taken in the adaptive tree
-       */
-      recordPath: (pathLabel) =>
-        set((state) => ({
-          pathsTaken: [...state.pathsTaken, pathLabel],
-        })),
-
-      /**
-       * Move to next question
-       */
-      nextQuestion: () =>
-        set((state) => ({
-          currentQuestionIndex: state.currentQuestionIndex + 1,
-        })),
-
-      /**
-       * Move to previous question
-       */
-      prevQuestion: () =>
-        set((state) => ({
-          currentQuestionIndex: Math.max(0, state.currentQuestionIndex - 1),
-        })),
-
-      /**
-       * Mark quiz as completed
-       */
-      completeQuiz: () => set({ quizCompleted: true }),
+      setBusinessStage: (stage) =>
+        set({ businessStage: stage }),
 
       /**
        * Reset all state
        */
-      reset: () => set(initialState),
-
-      /**
-       * Start a new session with session ID
-       */
-      startSession: (sessionId) =>
-        set({ sessionId, timeStarted: new Date() }),
-
-      /**
-       * Update time spent (call periodically during quiz)
-       */
-      updateTimeSpent: () => {
-        const { timeStarted } = get();
-        if (timeStarted) {
-          const now = new Date();
-          const spent = Math.floor(
-            (now.getTime() - timeStarted.getTime()) / 1000
-          );
-          set({ timeSpent: spent });
-        }
-      },
+      reset: () =>
+        set({
+          state: initialAssessmentState,
+          sessionId: null,
+          startedAt: null,
+          businessStage: null,
+          results: null,
+          formattedResults: null,
+        }),
     }),
     {
       name: 'unshakable-adaptive-quiz',
-      partialize: (state) => ({
-        businessContext: state.businessContext,
-        businessStage: state.businessStage,
-        questionsAsked: state.questionsAsked,
-        pathsTaken: state.pathsTaken,
-        answers: state.answers,
-        timeStarted: state.timeStarted,
-        timeSpent: state.timeSpent,
-        quizCompleted: state.quizCompleted,
-        sessionId: state.sessionId,
+      partialize: (store) => ({
+        state: {
+          answers: store.state.answers,
+          questionsAsked: store.state.questionsAsked,
+          pathsTaken: store.state.pathsTaken,
+          businessContext: store.state.businessContext,
+          isComplete: store.state.isComplete,
+          // Don't persist currentQuestion or context (non-serializable / rebuilt on resume)
+          currentQuestion: null,
+          context: null,
+        },
+        sessionId: store.sessionId,
+        startedAt: store.startedAt,
+        businessStage: store.businessStage,
       }),
     }
   )
