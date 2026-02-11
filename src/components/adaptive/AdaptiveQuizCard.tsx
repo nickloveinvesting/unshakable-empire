@@ -191,7 +191,7 @@ export function AdaptiveQuizCard() {
 
       // Save progress to database with updated answers
       const timeSpent = startedAt ? Math.floor((Date.now() - new Date(startedAt).getTime()) / 1000) : 0;
-      await updateAdaptiveSession(
+      const updateResult = await updateAdaptiveSession(
         sessionId!,
         updatedAnswers, // Use updatedAnswers instead of state.answers
         state.questionsAsked,
@@ -199,16 +199,22 @@ export function AdaptiveQuizCard() {
         timeSpent
       );
 
+      if (updateResult.error) {
+        console.error('Failed to update session:', updateResult.error);
+        throw new Error(`Failed to save progress: ${updateResult.error}`);
+      }
+
       // Check if complete
       if (result.isComplete && result.results && result.formattedResults) {
         // Mark session as complete
         const completeResult = await completeAdaptiveSession(sessionId!);
         if (completeResult.error) {
           console.error('Failed to mark session as complete:', completeResult.error);
+          throw new Error(`Failed to complete assessment: ${completeResult.error}`);
         }
 
         // Create result record
-        await createAdaptiveResult({
+        const createResultResponse = await createAdaptiveResult({
           sessionId: sessionId!,
           businessStage: result.results.businessStage as BusinessStage,
           questionCount: result.results.questionCount,
