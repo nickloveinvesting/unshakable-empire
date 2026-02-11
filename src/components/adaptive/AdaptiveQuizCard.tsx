@@ -126,6 +126,10 @@ export function AdaptiveQuizCard() {
     return null;
   }
 
+  // At this point, currentQuestion is guaranteed to be non-null due to checks above
+  // TypeScript needs this assertion since it can't track the early returns
+  if (!currentQuestion) return null;
+
   const handleSubmit = async () => {
     if (!currentQuestion) {
       setError('No question available');
