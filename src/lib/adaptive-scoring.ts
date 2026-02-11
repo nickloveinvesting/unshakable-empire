@@ -339,14 +339,30 @@ function getPillarWeight(
  * Identify the weakest pillar (lowest raw score)
  */
 function identifyWeakestPillar(pillarScores: PillarScoreResult[]): PillarScoreResult {
-  return [...pillarScores].sort((a, b) => a.rawScore - b.rawScore)[0];
+  // Filter out pillars with no scores
+  const scoredPillars = pillarScores.filter(p => p.categoryScores.length > 0);
+
+  if (scoredPillars.length === 0) {
+    // Fallback to first pillar if none have scores
+    return pillarScores[0];
+  }
+
+  return [...scoredPillars].sort((a, b) => a.rawScore - b.rawScore)[0];
 }
 
 /**
  * Identify the strongest pillar (highest raw score)
  */
 function identifyStrongestPillar(pillarScores: PillarScoreResult[]): PillarScoreResult {
-  return [...pillarScores].sort((a, b) => b.rawScore - a.rawScore)[0];
+  // Filter out pillars with no scores
+  const scoredPillars = pillarScores.filter(p => p.categoryScores.length > 0);
+
+  if (scoredPillars.length === 0) {
+    // Fallback to first pillar if none have scores
+    return pillarScores[0];
+  }
+
+  return [...scoredPillars].sort((a, b) => b.rawScore - a.rawScore)[0];
 }
 
 /**
@@ -368,9 +384,11 @@ function generateRecommendation(
   businessStage: BusinessStage,
   weakestPillar: PillarScoreResult
 ): AssessmentRecommendation {
+  // Safely get weakest category with fallback
   const weakestCategory =
-    weakestPillar.categoryScores.sort((a, b) => a.rawScore - b.rawScore)[0]
-      ?.category || '';
+    weakestPillar?.categoryScores?.length > 0
+      ? [...weakestPillar.categoryScores].sort((a, b) => a.rawScore - b.rawScore)[0]?.category || ''
+      : '';
 
   // Generate protocol slug from pillar and category
   const protocolSlug = generateProtocolSlug(
