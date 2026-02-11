@@ -35,7 +35,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export function AdaptiveQuizCard() {
   const router = useRouter();
-  const { state, updateAnswer, completeAssessment, setState } = useAdaptiveQuizStore();
+  const { state, updateAnswer, completeAssessment, setState, startedAt, sessionId, businessStage } = useAdaptiveQuizStore();
   const [currentValue, setCurrentValue] = useState<number | string | string[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -80,9 +80,9 @@ export function AdaptiveQuizCard() {
       updateAnswer(currentQuestion.id, currentValue);
 
       // Save progress to database
-      const timeSpent = Math.floor((Date.now() - state.startedAt.getTime()) / 1000);
+      const timeSpent = startedAt ? Math.floor((Date.now() - startedAt.getTime()) / 1000) : 0;
       await updateAdaptiveSession(
-        state.sessionId!,
+        sessionId!,
         state.answers,
         state.questionsAsked,
         state.pathsTaken,
@@ -92,11 +92,11 @@ export function AdaptiveQuizCard() {
       // Check if complete
       if (result.isComplete && result.results && result.formattedResults) {
         // Mark session as complete
-        await completeAdaptiveSession(state.sessionId!);
+        await completeAdaptiveSession(sessionId!);
 
         // Create result record
         await createAdaptiveResult({
-          sessionId: state.sessionId!,
+          sessionId: sessionId!,
           businessStage: result.results.businessStage,
           questionCount: result.results.questionCount,
           timeSpentSeconds: result.results.timeSpent,
@@ -115,7 +115,7 @@ export function AdaptiveQuizCard() {
         completeAssessment(result.results, result.formattedResults);
 
         // Navigate to results
-        router.push(`/assess-adaptive/results/${state.sessionId}`);
+        router.push(`/assess-adaptive/results/${sessionId}`);
       } else {
         // Update state with next question
         setState({
@@ -304,13 +304,13 @@ export function AdaptiveQuizCard() {
       </Card>
 
       {/* Business Stage Info */}
-      {state.businessStage && (
+      {businessStage && (
         <Card className="border-dashed">
           <CardContent className="py-4">
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Your Business Stage:</span>
               <Badge variant="secondary">
-                {state.businessStage
+                {businessStage
                   .split('-')
                   .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
                   .join(' ')}
