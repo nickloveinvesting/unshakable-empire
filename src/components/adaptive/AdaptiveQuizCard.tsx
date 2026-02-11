@@ -92,7 +92,8 @@ export function AdaptiveQuizCard() {
         setState(resumedState);
       }
     }
-  }, [state.businessContext, state.currentQuestion, state.answers, state.isComplete, setState]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.businessContext, state.currentQuestion, state.isComplete]);
 
   // Redirect if no business context (session not started)
   if (!state.businessContext) {
@@ -198,12 +199,15 @@ export function AdaptiveQuizCard() {
 
         // Navigate to results
         router.push(`/assess-adaptive/results/${sessionId}`);
-      } else {
-        // Update state with next question
+      } else if (result.nextQuestion) {
+        // Only update state if we have a next question
         setState({
           currentQuestion: result.nextQuestion,
-          isComplete: result.isComplete,
+          isComplete: false,
         });
+      } else {
+        // Edge case: incomplete but no next question
+        setError('Assessment flow error. Please contact support.');
       }
     } catch (err) {
       console.error('Failed to submit answer:', err);
