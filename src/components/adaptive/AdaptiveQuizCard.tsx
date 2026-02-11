@@ -176,14 +176,24 @@ export function AdaptiveQuizCard() {
         throw new Error(result.error || 'Failed to submit answer');
       }
 
+      // Create updated answers object with current answer
+      const updatedAnswers = {
+        ...state.answers,
+        [currentQuestion.id]: {
+          questionId: currentQuestion.id,
+          value: currentValue,
+          answeredAt: new Date(),
+        },
+      };
+
       // Update answer in store
       updateAnswer(currentQuestion.id, currentValue);
 
-      // Save progress to database
+      // Save progress to database with updated answers
       const timeSpent = startedAt ? Math.floor((Date.now() - new Date(startedAt).getTime()) / 1000) : 0;
       await updateAdaptiveSession(
         sessionId!,
-        state.answers,
+        updatedAnswers, // Use updatedAnswers instead of state.answers
         state.questionsAsked,
         state.pathsTaken,
         timeSpent
@@ -192,7 +202,10 @@ export function AdaptiveQuizCard() {
       // Check if complete
       if (result.isComplete && result.results && result.formattedResults) {
         // Mark session as complete
-        await completeAdaptiveSession(sessionId!);
+        const completeResult = await completeAdaptiveSession(sessionId!);
+        if (completeResult.error) {
+          console.error('Failed to mark session as complete:', completeResult.error);
+        }
 
         // Create result record
         await createAdaptiveResult({
