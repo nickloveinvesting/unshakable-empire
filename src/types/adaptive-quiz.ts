@@ -220,7 +220,7 @@ export interface ComprehensiveAssessmentResult {
   timeSpent: number;
   pillarScores: PillarScoreResult[];
   overallScore: number;
-  overallBand: string;
+  overallBand: Band;
   weakestPillar: PillarScoreResult;
   strongestPillar: PillarScoreResult;
   recommendation: AssessmentRecommendation;
