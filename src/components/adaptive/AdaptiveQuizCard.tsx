@@ -127,6 +127,11 @@ export function AdaptiveQuizCard() {
   }
 
   const handleSubmit = async () => {
+    if (!currentQuestion) {
+      setError('No question available');
+      return;
+    }
+
     if (currentValue === null || currentValue === '') {
       setError('Please select an answer');
       return;
