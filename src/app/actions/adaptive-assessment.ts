@@ -26,6 +26,7 @@ import type { PillarId, PillarSlug } from '@/types/quiz';
 
 /**
  * Create a new adaptive assessment session
+ * Allows anonymous sessions for lead generation
  */
 export async function createAdaptiveSession(
   businessContext: BusinessContext,
@@ -36,12 +37,11 @@ export async function createAdaptiveSession(
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) return { error: 'Not authenticated' };
-
+  // Allow anonymous sessions - user_id will be null for unauthenticated users
   const { data, error } = await supabase
     .from('assessment_sessions_v2')
     .insert({
-      user_id: user.id,
+      user_id: user?.id || null,
       business_context: businessContext,
       business_stage: businessStage,
     })
@@ -54,6 +54,7 @@ export async function createAdaptiveSession(
 
 /**
  * Update an existing assessment session with answers and paths
+ * Supports both authenticated and anonymous sessions
  */
 export async function updateAdaptiveSession(
   sessionId: string,
@@ -63,12 +64,8 @@ export async function updateAdaptiveSession(
   timeSpentSeconds: number
 ): Promise<ActionResponse<void>> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
 
-  if (!user) return { error: 'Not authenticated' };
-
+  // Update session by ID only (works for both authenticated and anonymous)
   const { error } = await supabase
     .from('assessment_sessions_v2')
     .update({
@@ -78,8 +75,7 @@ export async function updateAdaptiveSession(
       time_spent_seconds: timeSpentSeconds,
       updated_at: new Date().toISOString(),
     })
-    .eq('id', sessionId)
-    .eq('user_id', user.id);
+    .eq('id', sessionId);
 
   if (error) return { error: error.message };
   return { success: true };
@@ -87,25 +83,21 @@ export async function updateAdaptiveSession(
 
 /**
  * Mark session as completed
+ * Supports both authenticated and anonymous sessions
  */
 export async function completeAdaptiveSession(
   sessionId: string
 ): Promise<ActionResponse<void>> {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
 
-  if (!user) return { error: 'Not authenticated' };
-
+  // Update session by ID only (works for both authenticated and anonymous)
   const { error } = await supabase
     .from('assessment_sessions_v2')
     .update({
       completed_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
     })
-    .eq('id', sessionId)
-    .eq('user_id', user.id);
+    .eq('id', sessionId);
 
   if (error) return { error: error.message };
   return { success: true };
@@ -187,13 +179,12 @@ export async function createAdaptiveResult(data: {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) return { error: 'Not authenticated' };
-
+  // Allow anonymous results - user_id will be null for unauthenticated users
   const { data: result, error } = await supabase
     .from('assessment_results_v2')
     .insert({
       session_id: data.sessionId,
-      user_id: user.id,
+      user_id: user?.id || null,
       business_stage: data.businessStage,
       question_count: data.questionCount,
       time_spent_seconds: data.timeSpentSeconds,
