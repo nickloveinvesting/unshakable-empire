@@ -227,7 +227,7 @@ export function AdaptiveQuizCard() {
               <span>Strongly Agree</span>
             </div>
             <RadioGroup
-              value={currentValue?.toString()}
+              value={currentValue?.toString() ?? ""}
               onValueChange={(value) => setCurrentValue(parseInt(value))}
               className="flex justify-between"
             >
@@ -256,7 +256,7 @@ export function AdaptiveQuizCard() {
       case 'select':
         return (
           <Select
-            value={currentValue as string}
+            value={(currentValue as string) ?? ""}
             onValueChange={(value) => setCurrentValue(value)}
           >
             <SelectTrigger className="w-full">
